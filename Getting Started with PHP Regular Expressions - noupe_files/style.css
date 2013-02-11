@@ -1,0 +1,17 @@
+/*
+Theme Name: Noupe
+*/
+
+/* main elements */
+
+#content .post h2 a {
+   width:150px;
+}
+
+.comment-reply-link {
+   color: #FFFFFF;
+}
+
+.comments-form .btn-submit {
+   float:right;
+}

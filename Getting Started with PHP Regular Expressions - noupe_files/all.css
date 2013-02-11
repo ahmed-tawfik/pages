@@ -1,0 +1,2190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+.clear 
+{
+	clear: both;
+}
+/* clearfix */
+.clearfix:after 
+{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix
+{
+	zoom: 1;
+} /* IE6 */
+*:first-child+html .clearfix
+{
+	zoom: 1;
+} /* IE7 */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul, ol, dl, p, h1, h2, h3, h4, h5, h6, address, form, table, blockquote, applet, embed, object, iframe, frameset{margin:0 0 14px;}
+html, body, div, span, applet, embed, object, iframe, frameset,
+p, q, blockquote, sub, sup, a, abbr, acronym, font, img, small, center,
+h1, h2, h3, h4, h5, h6, b, strong, big, u, ins,
+i, cite, em, var, dfn, address, s, strike, del,
+dl, dt, dd, ol, ul, li, pre, code, kbd, samp, tt,
+fieldset, legend, form, label, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio,video{
+	border:0;
+	background:none;
+}
+h1, h2, h3, h4, h5, h6, b, strong, th{font-weight:bold;}
+h1{font-size:200%;}
+h2{font-size:150%;}
+h3{font-size:120%;}
+h4{font-size:110%;}
+h5{font-size:100%;}
+h6{font-size:90%;}
+i, cite, em, var, dfn, address{font-style:italic;}
+u, ins {text-decoration: underline;}
+s, strike, del {text-decoration: line-through;}
+table, caption, tbody, tfoot, thead, tr, th, td{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td{
+	border:1px solid #ccc;
+	padding:3px 7px;
+	text-align:left;
+	vertical-align:top;
+}
+th{
+	border-color:#999;
+	text-align:center;
+	vertical-align:middle;
+}
+ul li, ol li{list-style-position:outside;}
+ul li{list-style-type:disc;}
+* {
+	font-size: 100.01%;
+	margin:0; 
+	padding:0;
+}
+html {
+	font-size: 62.5%;
+	height: 100%;
+	margin: 0;
+}
+body{
+	margin:0;
+	color:#000;
+	font:1em 'Droid Sans', Arial, Helvetica, sans-serif;
+	background:#161511;
+	min-width:1253px;
+}
+img{border-style:none;} 
+a{
+	text-decoration:none;
+	color:#004694;
+}
+a:hover{text-decoration:underline;}
+a:active {outline:none;}
+input, textarea, select{
+	font:100% 'Droid Sans', Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+}
+form, fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+legend{
+	display:none;
+}
+.hidden{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	font-size:16px;
+	line-height:18px;
+	color:#fff;
+}
+.hidden:focus{
+	width:auto;
+	height:auto;
+	left:0;
+	z-index:1000;
+}
+/* wrapper */
+#wrapper{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+/* main bg */
+.bg-top,
+.bg-top,
+.bg-bottom{
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-1000px;
+}
+.bg-bottom{
+	top:auto;
+	bottom:0;
+}
+.w1{
+	width:1253px;
+	margin:0 auto;
+	position:relative;
+	z-index:2;
+}
+.print-logo{
+	position:absolute;
+	top:-9999px;
+	left:0;
+}
+/* header */
+#header{
+	height:1%;
+	position:relative;
+	margin: 0 0 8px;
+	z-index:10;
+}
+#header:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+/* logo */
+.logo{
+	overflow:hidden;
+	width: 234px;
+	height: 51px;
+	text-indent:-9999px;
+	float:left;
+	margin: 26px 0 0 20px;
+	display:inline;
+	position:relative;
+	z-index:1000;
+}
+.logo a{
+	display:block;
+	height:100%;
+	position:relative;
+background:url(http://www.noupe.com/wp-content/themes/noupe/images/logo.png) no-repeat;
+}
+/* header bar */
+#header .bar{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-bar.png) no-repeat;
+	width:595px;
+	height: 105px;
+	float:right;
+	padding:14px 0 0 291px;
+	margin: 0 -63px 0 0;
+	display:inline;
+}
+/* search form */
+#header .search-form{
+	float:left;
+	margin: 7px 12px 0 12px;
+	width:260px;
+	position:relative;
+	display:inline;
+}
+#header .search-form .text{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg.gif) no-repeat 0 -103px;
+	width: 176px;
+	height: 24px;
+	margin:0 3px 0 0;
+}
+#header .search-form .text input{
+	background:none;
+	border:none;
+	width:158px;
+	color:#b5b5af;
+	font-size:12px;
+	padding:5px 9px;
+	margin:0;
+	float:left;
+}
+#header .search-form .btn-submit{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg.gif) no-repeat 0 -300px;
+	width: 77px;
+	height: 27px;
+	text-align:center;
+	margin:0;
+	padding:0 0 2px;
+	font-size:14px;
+	line-height:14px;
+	font-weight:bold;
+	color:#434343;
+	cursor:pointer;
+	border:none;
+	text-shadow:1px 1px 1px #fff;
+}
+#header .search-form .text input:focus{
+	color:#000;
+}
+* html #header .search-form .btn-submit{
+	padding:0;
+}
+/* social networks */
+#header .social-networks {
+	margin:6px 0 0 0;
+ 	padding: 0 0 0 8px;
+	list-style:none;
+	float:left;
+	width:auto;
+	position:relative;
+}
+#header .social-networks li{
+	list-style:none;
+	list-style-position:outside;
+	float:left;
+	margin:0 10px  0 0;
+}
+#header .social-networks li a{
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/social-icons.png) no-repeat;
+	width:29px;
+	height:29px;
+}
+#header .social-networks li .rss{
+	background-position:0 0;
+}
+#header .social-networks li .twitter{
+	background-position:-29px 0;
+}
+#header .social-networks li .facebook{
+	background-position:-60px 0;
+}
+/* main */
+#main{
+	position: relative;
+	width:100%;
+}
+#main .main-t{
+	width:1165px;
+	padding:0 65px 0 23px;
+}
+#main .main-t .main-t-add{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-main-t.jpg) no-repeat;
+	width: 1165px;
+	height: 2334px;
+	-webkit-background-size: 1165px 2334px;
+}
+#main .main-b{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-main-b.png) no-repeat;
+	width: 1253px;
+	height: 77px;
+}
+#main .main-c{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-main-c.jpg) repeat-y 23px 0;
+	width:100%;
+	position:relative;
+}
+#main .main-c:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#main .main-holder{
+	width:1165px;
+	float:left;
+	position:relative;
+	margin: -2334px 0 -77px;
+	padding:0 65px 0 23px;
+	min-height:2694px;
+	z-index:2;
+}
+* html #main .main-holder{
+	height:2708px;
+}
+/* decor page */
+#main .decor-5{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/decor-1.png) no-repeat;
+	width: 584px;
+	height: 211px;
+	position:absolute;
+	left: -97px;
+	top: -123px;
+}
+#main .decor-1{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/decor-1.png) no-repeat;
+	width: 584px;
+	height: 211px;
+	position:absolute;
+	left: -97px;
+	top: -123px;
+}
+#main .decor-2{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/decor-2.png) no-repeat;
+	width: 166px;
+	height: 515px;
+	position:absolute;
+	top:86px;
+	left: -109px;
+}
+#main .decor-3{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/decor-3.png) no-repeat;
+	width: 107px;
+	height: 679px;
+	position:absolute;
+	top:100px;
+	right: -29px;
+}
+#main .decor-4{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/decor-4.png) no-repeat;
+	width: 545px;
+	height: 1004px;
+	position:absolute;
+	bottom: -180px;
+	right: -197px;
+}
+#main .main-frame{
+	width:100%;
+	position:relative;
+	padding: 0 0 105px;
+}
+#main .main-frame:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+/* content */
+#content{
+	width:600px;
+	padding: 12px 0 0 84px;
+	float:left;
+}
+#contentadcontainer {
+        padding-bottom: 6px;
+}
+.home{
+	padding: 92px 0 0 84px !important;
+}
+#content .buy-link{
+	width:110px;
+	color:#1159aa;
+	text-decoration:underline;
+	font-size:12px;
+	line-height:14px;
+	position:absolute;
+	top: 13px;
+	left: 453px;
+}
+#content .buy-link:hover{
+	text-decoration:none;
+}
+/* post */
+#content .post{
+	width:100%;
+	font-size:1.4em;
+	line-height:1.5em;
+	color:#252525;
+	margin:0 0 55px;
+}
+#content .post:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#content .post .date{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-post-date.png) no-repeat;
+	width:78px;
+	height: 58px;
+	text-align:right;
+	color:#fff;
+	text-shadow:-1px -1px 1px #000;
+	padding:10px 15px 0 0;
+	margin: 0 0 0 -97px;
+	position:relative;
+}
+#content .post .date strong{
+	display:block;
+	font-size:18px;
+	line-height:20px;
+	margin:0 0 10px;
+}
+#content .post .date span{
+	display:block;
+	font-size:13px;
+	line-height:15px;
+	font-weight:bold;
+}
+#content .post h2{
+	font-size:1.929em;
+	line-height: 1.12em;
+	margin:0;
+	padding: 0 0 11px;
+	border-bottom:1px solid #dddad3;
+}
+#content .post h2 a{
+	color:#252525;
+}
+#content .post h3{
+	margin-top:35px;
+        font-size: 1.5em;
+}
+#content .post h4{
+	margin-top:40px;
+}
+#content .post .post-details {
+	margin: 0 0 12px;
+	padding: 5px 0;
+	list-style:none;
+	border-bottom:1px solid #dddad3;
+	color:#484842;
+	font-size:1.3em;
+	line-height:1.167em;
+	width:100%;
+	overflow:hidden;
+}
+#content .post .post-details li{
+	list-style:none;
+	list-style-position:outside;
+	float:left;
+	margin: 0 26px 0 0;
+}
+#content .post .post-details li a{
+	color:#484842;
+	text-decoration:underline;
+}
+#content .post .post-details li a:hover{
+	text-decoration:none;
+}
+#content .post p{
+	margin: 0 0 15px;
+}
+#content .post .image{
+	display:block;
+	border:8px solid #fff;
+	margin: 0 0 13px;
+}
+#content .post .more{
+	display:inline-block;
+	font-size:13px;
+	line-height:15px;
+	color:#fff;
+	overflow:hidden;
+	position:relative;
+}
+#content .post .more span{
+	float:left;
+	padding: 6px 8px 7px 13px;
+	cursor:pointer;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-more.png) no-repeat;
+}
+#content .post .more:hover span{
+	text-decoration:underline;
+}
+#content .post .more em{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-more-r.png) no-repeat;
+	width: 7px;
+	height: 27px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#content .post code {
+    font-family: monospace;
+	font-size: 130%;
+}
+#content .post small {
+    font-size: smaller;
+}
+#content .post blockquote {
+    quotes: "« " " »";
+    padding-left: 15px;
+    border-left: 5px solid #DDDAD3;
+	font-style: italic;
+}
+/* // closing quotes not working reliably in IE9 - disabled
+#content .post blockquote p:first-child::before {
+    content: open-quote;
+}
+#content .post blockquote p:last-child::after {
+    content: close-quote;
+}*/
+#content .post ul {
+    padding-left: 20px;
+}
+#content .post ul ul,
+#content .post ol ol {
+    margin: 0;
+}
+#content .post ol {
+	list-style-type: decimal;
+	padding-left: 20px;
+}
+#content .post pre {
+    margin: 0 0 15px;
+}
+/* ads box */
+#content .ads-box{
+	margin: 0 -31px 12px -154px;
+	position:relative;
+	width:785px;
+}
+#content .ads-box .ads-holder{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-ads-box.png) no-repeat;
+	width:648px;
+	height:132px;
+	overflow:hidden;
+	color:#fff;
+	padding: 45px 73px 37px 64px;
+	font:15px/17px 'CaptureitRegular', Arial, Helvetica, sans-serif;
+}
+#content .ads-box .ads-frame{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-ads-box-add.jpg) no-repeat;
+	width: 648px;
+	height: 132px;
+}
+#content .ads-box .ads-frame:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#content .ads-box .ads{
+	float:right;
+	position:relative;
+	margin:0 -26px 0 6px;
+	display:inline;
+	border:3px solid #fff;
+}
+#content .ads-box .ads img{
+	display:block;
+}
+#content .ads-box .text-block{
+	overflow:hidden;
+	text-align:right;
+	position:relative;
+}
+#content .ads-box strong{
+	font-weight:normal;
+	display:block;
+}
+#content .ads-box .ads-link{
+	position:absolute;
+	bottom: 43px;
+	left: 247px;
+	text-align:right;
+}
+#content .ads-box span{
+	display:none;
+}
+#content .ads-box .link{
+	color:#fff;
+	text-decoration:underline;
+}
+#content .ads-box .link:hover{
+	text-decoration:none;
+}
+/* pager */
+#content .pager {
+	margin: -6px 0 0 -6px;
+	padding:0;
+	list-style:none;
+	width:100%;
+	font-size:33px;
+	line-height:35px;
+	font-weight:bold;
+}
+#content .pager:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+#content .pager li,
+#content .pager a
+{
+	list-style:none;
+	list-style-position:outside;
+	float:left;
+	margin: 0 -4px 0 0;
+}
+#content .pager li a,
+#content .pager a span
+{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-pager.png) no-repeat;
+	width: 58px;
+	height:50px;
+	color:#fff;
+	text-align:center;
+	padding:13px 0 0;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+#content .pager li span,
+#content .pager > span{
+	width: 62px;
+	height:50px;
+	color:#fff;
+	text-align:center;
+	padding:13px 0 0;
+	float:left;
+	position:relative;
+}
+#content .pager li a:hover,
+#content .pager li span,
+#content .pager a:hover span,
+#content .pager > span
+{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-pager-hover.png) no-repeat;
+}
+#content .pager li a:hover,
+#content .pager a:hover span
+{
+	text-decoration:none;
+}
+#content .pager li.next,
+#content .pager a.next
+{
+	float:left;
+	margin: 0 -11px 0 0;
+	position:relative;
+	font-size:25px;
+	line-height:35px;
+}
+#content .pager li.next a,
+#content .pager a.next span{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-pager.png) no-repeat;
+	width: 90px;
+	height: 63px;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+#content .pager li.next a:hover,
+#content .pager a.next:hover span
+{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-pager.png) no-repeat;
+}
+#content .pager li.prev,
+#content .pager a.previous
+{
+	float:left;
+	margin: 0;
+	position:relative;
+	font-size:25px;
+	line-height:35px;
+}
+#content .pager li.prev a,
+#content .pager a.previous span{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-pager.png) no-repeat;
+	width: 80px;
+	height: 63px;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+#content .pager li.prev a:hover,
+#content .pager a.previous:hover span{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-pager.png) no-repeat;
+}
+#content .post div.pager {
+	margin-bottom: 20px;
+}
+#content .post div.pager-description {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+/* blog */
+.blog{
+	padding: 82px 0 0;
+}
+#content .blog h1{
+	font-size:1.929em;
+	line-height:1.074em;
+	margin:0;
+	padding: 0 0 14px;
+	border-bottom:1px solid #dddad3;
+}
+#content .blog h1 a{
+	color:#252525;
+}
+#content .blog h2{
+	font-size:1.429em;
+	line-height:1.1em;
+	color:#252525;
+	margin:0 0 12px;
+	border-bottom:1px solid #c7c5c0;
+	padding: 0 0 2px;
+}
+#content .blog h2 a{
+	color:#252525;
+}
+#content .blog p a{
+	color:#004694;
+	text-decoration:underline;
+}
+#content .blog p a:hover{
+	text-decoration:none;
+}
+#content .block{
+	padding: 25px 0 0;
+}
+/* blockquote */
+.blog .quote{
+	position:relative;
+	margin: 0 -4px 11px -108px;
+	width: 712px;
+	padding: 17px 0 0;
+}
+.blog .quote .t{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-quote-t.png) no-repeat;
+	width: 712px;
+	height: 125px;
+}
+.blog .quote .b{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-quote-b.png) no-repeat;
+	width: 712px;
+	height: 51px;
+}
+.blog .quote .c{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-quote-c.png) repeat-y;
+	width:100%;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+.blog .quote .c:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.blog .quote .quote-holder{
+	float:left;
+	width:518px;
+	padding: 17px 20px 0 174px;
+	position:relative;
+	margin:-125px 0 -13px;
+	color:#363636 !important;
+}
+.blog .quote blockquote{
+	margin:0;
+	padding:0;
+}
+.blog .quote p{
+	margin:0 !important;
+}
+.blog .quote q{
+	display:block;
+	padding: 0 0 8px;
+}
+* html .blog .quote q{
+	padding:0 0 12px;
+}
+.blog .quote cite{
+	color:#696969;
+	font-style:normal;
+	font-size:0.857em;
+	line-height:1.167em;
+}
+.blog .quote a{
+	color:#696969 !important;
+}
+/* about box */
+.about-box{
+	width:100%;
+	overflow:hidden;
+	margin:0 0 50px;
+}
+.about-box .head{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-about-head.png);
+	padding: 14px 0 7px 16px;
+height:1%;
+}
+.about-box .head h3{
+	margin:0;
+	color:#000;
+	font-size:1.357em;
+	line-height:1.105em;
+}
+.about-box .about-holder{
+	width:100%;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-about.png);
+	font-size:0.929em;
+	line-height:1.462em;
+}
+.about-box .about-holder:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.about-box .avatar{
+	float:right;
+	margin:-21px 19px 0 41px;
+	display:inline;
+}
+/* avatar */
+.avatar{
+	border:2px solid #8e8d8c;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+.avatar img{
+	display:block;
+	border:2px solid #fff;
+}
+.about-box .text-holder{
+	overflow:hidden;
+	padding: 12px 0 0 15px;
+}
+.about-box p{
+	margin:0;
+}
+/* comments */
+.comments {
+	margin: -6px 0 0;
+	padding: 0 0 11px;
+	list-style:none;
+	font-size:0.929em;
+	line-height:1.462em;
+	position:relative;
+}
+.comments li{
+	list-style:none;
+	list-style-position:outside;
+	overflow:hidden;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-about.png);
+	padding:11px 25px 19px 11px;
+	margin:0 0 8px;
+}
+.comments li.odd{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-even.png);
+}
+.comments li .children{
+	margin-top: 10px;
+}
+.comments li .controls{
+	float:left;
+	margin:0 9px 0 0;
+	width:74px;
+}
+* html .comments li .controls{
+	margin:0 5px 0 0;
+}
+.comments li .avatar{
+	/*
+	margin:0 0 4px;
+	*/
+}
+.comments li .btn-reply{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-reply.png) no-repeat;
+	width: 76px;
+	height:18px;
+	cursor:pointer;
+	color:#fff;
+	font-size:12px;
+	line-height:14px;
+	text-align:center;
+	display:block;
+	padding:4px 0 0;
+}
+#content .comments li .btn-reply{
+	color:#fff;
+text-decoration:none;
+}
+#content .comments li .btn-reply:hover{text-decoration:underline;}
+.comments li h4{
+	margin: 0 0 5px;
+	color:#252525;
+	font-size:1.385em;
+	line-height:1.111em;
+}
+.comments li h4 a{
+	color:#252525;
+}
+.comments li h4 span{
+	color:#888;
+}
+.comments li p{
+	margin:0 !important;
+}
+.comments li .text-holder{
+	overflow:hidden;
+height:1%;
+}
+/* comments form */
+.comments-form{
+	padding:12px 0 0;
+	font-size:11px;
+	line-height:13px;
+	color:#353535;
+}
+.comments-form .row{
+	width:100%;
+	overflow:hidden;
+	padding:0 0 4px;
+}
+.comments-form .text{
+	margin:0 17px 0 0;
+	padding:5px 10px;
+	float:left;
+	width:213px;
+	background:#fff;
+	border:1px solid #b5b2ae;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(js/PIE.htc);
+	position:relative;
+	font-size:12px;
+}
+.comments-form label{
+	float:right;
+	width:348px;
+	font-weight:bold;
+	padding:7px 0 0;
+}
+.comments-form label span{
+	color:#829e2c;
+}
+.comments-form .area{
+	margin:0 0 5px;
+	padding:10px;
+	width:578px !important;
+	height:116px;
+	background:#fff;
+	border:1px solid #b5b2ae;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(js/PIE.htc);
+	position:relative;
+	font-size:12px;
+	z-index: 100;
+}
+.comments-form .btn-submit{
+	margin:0 0 0 auto;
+	padding:0 0 2px;
+	display:block;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-submit-comments.png) no-repeat;
+	width: 146px;
+	height: 26px;
+	color:#fff;
+	font-size:13px;
+	text-align:center;
+	cursor:pointer;
+	border:none;
+}
+* html .comments-form .btn-submit{
+	padding:0;
+}
+/* 404 error */
+#main .error-box{
+	color:#252525;
+}
+#main .error-box h1{
+	font-size:3.286em;
+	line-height:1.043em;
+	color:#252525;
+	border:none;
+	margin:0;
+	padding:0;
+}
+#main .error-box h2{
+	margin: 0 0 16px;
+	color:#839e2c;
+	font-size:1.929em;
+	line-height:1.074em;
+	border:none;
+}
+#main .error-box h3{
+	margin:0 0 13px;
+	color:#252525;
+	font-size:1.286em;
+	line-height:1.111em;
+	padding:0 0 5px;
+	border-bottom:1px solid #c8c7c3;
+}
+#main .error-box p{
+	margin: 0 0 15px;
+}
+.error-search{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-error-search.png);
+	padding:24px 20px 21px 22px;
+	margin: 0 0 25px;
+}
+.error-search fieldset{
+position:relative;
+}
+.error-search:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.error-search .text{
+	float:left;
+	margin:0 6px 0 0;
+	padding: 5px 7px 4px;
+	width:219px;
+	border:1px solid #b0ae9f;
+	color:#bdbdbd;
+	background:#fff;
+	font-size:13px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+.error-search .btn-submit{
+	float:left;
+	margin:0;
+	padding:0 0 4px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-submit-error.png) no-repeat;
+	width: 79px;
+	height: 30px;
+	text-align:center;
+	font-size:14px;
+	line-height:14px;
+	cursor:pointer;
+	color:#434343;
+	font-weight:bold;
+	text-shadow:2px 2px 1px #fff;
+	border:none;
+}
+* html .error-search .btn-submit{
+	padding:0;
+}
+.error-search .mole{
+	position:absolute;
+	right: 0;
+	top: -56px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-mole-03.png) no-repeat;
+	width: 110px;
+	height: 121px;
+}
+.error-box .articles-list{
+	padding:0;
+}
+.error-box .articles-list li{
+	margin: 0 0 -1px;
+}
+/* archive box */
+#main .archive-box{
+	width:100%;
+}
+#main .archive-box p{
+	margin:0 0 14px;
+}
+#main .archive-box h1{
+	color:#252525;
+	font-size:3.286em;
+	line-height:1.043em;
+	border:none;
+	margin:0;
+	padding:0;
+}
+#main .archive-box h1 a{
+	color:#252525;
+}
+#main .archive-box h2{
+	margin: 0 0 24px;
+	color:#839e2c;
+	font-size:1.929em;
+	line-height:1.074em;
+	border:none;
+}
+/* categories */
+.categories {
+	margin:0;
+	padding: 8px 8px 11px;
+	list-style:none;
+	font-size:13px;
+	line-height:15px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories.png);
+}
+#sidebar .categories{
+	padding: 12px 70px 0 0;
+	background:none !important;
+	text-align:center;
+}
+* html #sidebar .categories{
+	padding: 12px 60px 0 0;
+}
+*+html #sidebar .categories{
+	padding: 12px 60px 0 0;
+}
+.categories li{
+	list-style:none;
+	list-style-position:outside;
+	display:inline-block;
+	overflow:hidden;
+	margin: 0 -12px -11px 0;
+}
+* html .categories li span{
+	padding: 9px 0 10px 10px;
+}
+* html .categories li{
+	margin: 0 -10px -9px 0;
+}
+*+html .categories li span{
+	padding: 9px 0 10px 10px;
+}
+*+html .categories li{
+	margin: 0 -10px -9px 0;
+}
+.categories li a{
+	float:left;
+	color:#fff;
+	font-weight:bold;
+}
+.categories li a:hover{
+	text-decoration:none;
+}
+.categories li span{
+	cursor:pointer;
+	float:left;
+	padding: 9px 0 10px 11px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/link-categories.png) no-repeat;
+}
+.categories li em{
+	float:left;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/link-categories-r.png) no-repeat;
+	width: 13px;
+	height: 36px;
+	cursor:pointer;
+}
+.categories li a:hover span,
+.categories li.active a span{background:url(http://www.noupe.com/wp-content/themes/noupe/images/link-categories-hover.png) no-repeat;}
+.categories li a:hover em,
+.categories li.active a em{background:url(http://www.noupe.com/wp-content/themes/noupe/images/link-categories-r-hover.png) no-repeat;}
+#main .archive-list {
+	margin:0 -33px 0 -84px;
+	padding:0 0 175px;
+	list-style:none;
+	width:709px;
+	font-size:0.929em;
+	line-height:1.385em;
+}
+#main .archive-list li{
+	list-style:none;
+	list-style-position:outside;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+	padding: 17px 30px 17px 84px;
+	overflow:hidden;
+}
+#main .archive-list li.even{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-error-search.png);
+}
+#main .archive-list li .avatar{
+	float:left;
+	margin:0 13px 0 0;
+	-webkit-box-shadow: 2px 2px 2px -1px #999;
+	-moz-box-shadow: 2px 2px 2px -1px #999;
+	box-shadow: 2px 2px 2px -1px #999;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+* html #main .archive-list li .avatar{
+	margin:0 10px 0 0;
+}
+#main .archive-list .text-holder{
+	overflow:hidden;
+}
+#main .archive-list h3{
+	margin:0 0 10px;
+	color:#252525;
+	font-size:2.077em;
+	line-height:1.074em;
+	padding:0 0 7px;
+	border-bottom:1px solid #d6d4d1;
+}
+#main .archive-list h3 a{
+	color:#252525;
+}
+#main .archive-list p{
+	margin:0;
+}
+#main .archive-list p a{
+	color:#1a3b92;
+	text-decoration:underline;
+}
+#main .archive-list p a:hover{
+	text-decoration:none;
+}
+/* sidebar */
+#sidebar{
+	width:410px;
+	padding:0 23px;
+	float:right;
+	position:relative;
+	margin:0 -4px 0 4px;
+}
+* html #sidebar{
+	margin:0 -8px 0 8px;
+}
+/* categories box */
+.categories-box{
+	position:relative;
+	margin: -77px -76px 0 -46px;
+	width: 534px;
+}
+* html .categories-box{
+	margin: -77px -78px 0 -43px;
+}
+.categories-box .t{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories-t.png) no-repeat;
+	width:457px;
+	height:58px;
+	padding:74px 55px 0 22px;
+}
+.categories-box .t .t-add{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories-t-add.jpg) no-repeat;
+	margin: 0 -1px;
+	width: 458px;
+	height: 58px;
+}
+.categories-box .b{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories-b.png) no-repeat;
+	width: 534px;
+	height: 56px;
+	overflow:hidden;
+}
+.categories-box .c{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories-c.png) repeat-y 6px 0;
+	width:100%;
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+}
+.categories-box .c:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.categories-box .box-holder{
+	width:516px;
+	position:relative;
+	margin: -89px 0 -26px;
+	float:left;
+	padding: 22px 0 0 18px;
+}
+.categories-box .right{
+	position:absolute;
+	right: -9px;
+	top: 45px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-categories-right.png) no-repeat;
+	width: 60px;
+	height: 98px;
+}
+.categories-box .text-categories{
+	margin:0;
+	text-indent:-9999px;
+	overflow:hidden;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg.gif) no-repeat 0 -392px;
+	width: 145px;
+	height: 24px;
+}
+/* ads box */
+#sidebar .ads-box{
+	width:100%;
+	font:1.1em/1.182em Tahoma, Geneva, sans-serif;
+	margin: -4px 0 3px;
+	position:relative;
+}
+#sidebar .ads-box .bar{
+	width:100%;
+	overflow:hidden;
+	padding: 0 0 3px;
+	border-bottom:1px solid #cac3bc;
+	margin:0 0 5px;
+}
+#sidebar .ads-box .bar h3{
+	font:1em/1.182em Tahoma, Geneva, sans-serif;
+	margin:0;
+	color:#726e6b;
+	float:left;
+}
+#sidebar .ads-box .bar a{
+	float:right;
+	color:#2d2c2a;
+	text-decoration:underline;
+}
+#sidebar .ads-box .bar a:hover{
+	text-decoration:none;
+}
+#sidebar .ads-box .ads-list {
+	margin:0 -15px 0 0;
+	padding:0;
+	list-style:none;
+	width: 425px;
+	overflow:hidden;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+#sidebar .ads-box .ads-list li{
+	list-style:none;
+	list-style-position:outside;
+	display:inline-block;
+	margin:0 5px 10px 0;
+	width:200px;
+	overflow:hidden;
+	vertical-align:top;
+}
+#sidebar .ads-box .ads-list a{
+	float:left;
+	text-align:center;
+	color:#7d51c2;
+	text-decoration:underline;
+}
+#sidebar .ads-box .ads-list a:hover{
+	text-decoration:none;
+}
+#sidebar .ads-box .ads-list img{
+	display:block;
+	margin: 0 0 3px;
+}
+/* widget area */
+#sidebar .box{
+	width:100%;
+	font-size:1.4em;
+	line-height:1.143em;
+	color:#000;
+	margin:0 0 30px;
+}
+#sidebar .box .title{
+	position:relative;
+	margin: 0 -46px -36px -47px;
+	width:508px;
+}
+#sidebar .box .title h3{
+	margin:0;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-sidebar-title-01.png) no-repeat;
+	width:461px;
+	height:99px;
+	padding: 54px 0 0 47px;
+	font:27px/29px 'CaptureitRegular', Arial, Helvetica, sans-serif;
+	color:#fff;
+}
+#sidebar .box-add .title{
+	position:relative;
+	margin: 0 -72px 0 -35px;
+	width:510px;
+}
+#sidebar .box-add .title h3{
+	margin:0;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-sidebar-title-02.png) no-repeat;
+	width:470px;
+	height:72px;
+	font:29px/31px 'CaptureitRegular', Arial, Helvetica, sans-serif;
+	color:#fff;
+	padding: 78px 0 0 40px;
+}
+#sidebar .box p{
+	margin:0;
+	position:relative;
+}
+#sidebar .box p a{
+	color:#012f62;
+	text-decoration:underline;
+}
+#sidebar .box p a:hover{
+	text-decoration:none;
+}
+#sidebar .list {
+	margin: 0 -18px 0 0;
+	padding: 15px 0 0;
+	list-style:none;
+	font-size:0.857em;
+	line-height:1.167em;
+	width:428px;
+position:relative;
+}
+* html #sidebar .list{
+	margin: 0 -20px -7px 0;
+	width:430px;
+}
+#sidebar .list li{
+	list-style:none;
+	list-style-position:outside;
+	overflow:hidden;
+	vertical-align:middle;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-sidebar-list.png);
+	padding:10px;
+	margin:0 0 5px;
+	
+height:1%;
+}
+#sidebar .list li a{
+	display:block;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bullet-list.gif) no-repeat;
+	color:#605f5e;
+	padding:0 0 0 41px;
+	overflow:hidden;
+	height:1%;
+position:relative;
+}
+#sidebar .list li a:hover{
+	text-decoration:none;
+}
+#sidebar .list li a span{
+	text-decoration:underline;
+	padding:0 0 0 2px;
+	display:block;
+}
+#sidebar .list li a:hover span{
+	text-decoration:none !important;
+}
+#sidebar .list li strong{
+	display:block;
+	color:#2f2e2d;
+	font-size:1.167em;
+	line-height:1.143em;
+	margin:0 0 2px;
+}
+#sidebar .ads-block{
+	overflow:hidden;
+	width:436px;
+	margin:0 -26px 0 0;
+}
+#sidebar .ads-block a{
+	float:left;
+	margin:0 26px 0 0;
+}
+#sidebar .ads-block img{
+	float:left;
+}
+/* articles */
+.articles-list {
+	margin:0;
+	padding: 20px 0 0 4px;
+	list-style:none;
+}
+.articles-list li{
+	list-style:none;
+	list-style-position:outside;
+	padding: 3px 0 4px 26px;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bullet-articles.gif) no-repeat;
+	margin: 0 0 4px;
+}
+.articles-list li a{
+	color:#2d5177;
+	text-decoration:underline;
+}
+.articles-list li a:hover{
+	text-decoration:none;
+}
+/* main panel */
+#main .panel{
+	position:absolute;
+	bottom: 44px;
+	left: -1px;
+}
+#main .panel .panel-holder{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-main-panel.png) no-repeat;
+	height: 59px;
+	padding: 0 0 0 101px;
+	width: 1128px;
+}
+#main .panel .box{
+	float:left;
+}
+#main .panel .image{
+	-pie-png-fix: true;
+	behavior: url(js/PIE.htc);
+	position:relative;
+	float:left;
+	margin: -10px 1px -7px 0;
+}
+#main .panel .text-holder{
+	float:left;
+	color:#fff;
+	font-size:14px;
+	line-height:16px;
+	font-weight:bold;
+	padding: 12px 13px 0 0;
+	position:relative;
+}
+#main .panel .text-holder span{
+	display:block;
+	font-size:12px;
+	line-height:14px;
+	margin:0;
+}
+#main .panel .text-holder a{
+	color:#fff;
+	text-decoration:underline;
+}
+#main .panel .text-holder a:hover{
+	text-decoration:none;
+}
+#main .panel .btn-buy{
+	float:left;
+	color:#fff;
+	font-size:12px;
+	line-height:14px;
+	font-weight:bold;
+	margin: 14px 0 0;
+	position:relative;
+}
+#main .panel .btn-buy span{
+	cursor:pointer;
+	padding: 7px 6px 14px 10px;
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-buy.png) no-repeat;
+}
+#main .panel .btn-buy:hover span{
+	text-decoration:underline;
+}
+#main .panel .btn-buy em{
+	float:left;
+	cursor:pointer;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-buy-r.png) no-repeat;
+	width: 9px;
+	height: 31px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#main .panel .search-form{
+	float:right;
+	padding: 15px 25px 0 0;
+	width:310px;
+	position:relative;
+}
+#main .panel .search-form .text{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg.gif) no-repeat;
+	width: 217px;
+	height: 28px;
+	margin:0 4px 0 0;
+}
+#main .panel .search-form .text input{
+	float:left;
+	margin:0;
+	padding:6px 9px;
+	width:199px;
+	border:none;
+	background:none;
+	color:#a0a097;
+	font-size:12px;
+}
+#main .panel .search-form .text input:focus{
+	color:#000;
+}
+#main .panel .search-form .btn-submit{
+	float:left;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg.gif) no-repeat 0 -198px;
+	width: 76px;
+	height: 26px;
+	text-align:center;
+	margin:0;
+	padding:0 0 2px;
+	font-size:14px;
+	line-height:14px;
+	font-weight:bold;
+	color:#434343;
+	cursor:pointer;
+	border:none;
+	text-shadow:2px 2px 1px #fff;
+}
+* html #main .panel .search-form .btn-submit{
+	padding:0;
+}
+/* footer */
+#footer{
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-footer-l.jpg) repeat-x;
+	width:100%;
+	position:relative;
+	z-index:1;
+	margin: -60px 0 0;
+}
+#footer .bg-footer-r{
+	position:absolute;
+	width:50%;
+	right:0;
+	top:0;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-footer-r.jpg) repeat-x;
+	height: 241px;
+}
+#footer .holder{
+	width:100%;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-footer.jpg) no-repeat 50% 0;
+	position:relative;
+}
+#footer .frame{
+	width:1253px;
+	margin:0 auto;
+	height: 241px;
+	position:relative;
+	z-index:2;
+}
+#footer .top{
+	left: -205px;
+	position: absolute;
+	top: -115px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#footer .top a{
+	display:block;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/btn-top.png) no-repeat;
+	width: 126px;
+	height: 186px;
+	cursor:pointer;
+}
+/* columns */
+#footer .columns{
+	overflow:hidden;
+	color:#d3cfcd;
+	padding: 109px 0 0 42px;
+	font-size:13px;
+	line-height:15px;
+}
+#footer .columns h4{
+	margin: 0 0 6px;
+	font-size:14px;
+	line-height:16px;
+}
+#footer .columns ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#footer .columns ul li{
+	list-style:none;
+	list-style-position:outside;
+	padding: 0 0 4px;
+}
+#footer .columns ul li a{
+	color:#d3cfcd;
+	text-decoration:underline;
+}
+#footer .columns ul li a:hover{
+	text-decoration:none;
+}
+#footer .col-1{
+	float:left;
+	width:140px;
+	margin:0 140px 0 0;
+}
+#footer .col-2{
+	float:left;
+	width:240px;
+	margin:0 172px 0 0;
+	padding: 3px 0 0;
+}
+#footer .col-3{
+	float:left;
+	width:182px;
+	padding:33px 0 0;
+}
+.design{
+	position:absolute;
+	bottom: -159px;
+	right: -69px;
+	text-indent:-9999px;
+	overflow:hidden;
+	z-index:1000;
+}
+.design a{
+	display:block;
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-design.png) no-repeat;
+	width: 119px;
+	height: 54px;
+	cursor:pointer;
+}
+/* font style */
+@font-face {
+	font-family: 'CaptureitRegular';
+	src: url('http://www.noupe.com/wp-content/themes/noupe/fonts/capture_it-webfont.eot');
+	src: url('http://www.noupe.com/wp-content/themes/noupe/fonts/capture_it-webfont.eot?#iefix') format('embedded-opentype'),
+		url('http://www.noupe.com/wp-content/themes/noupe/fonts/capture_it-webfont.woff') format('woff'),
+		url('http://www.noupe.com/wp-content/themes/noupe/fonts/capture_it-webfont.ttf') format('truetype'),
+		url('http://www.noupe.com/wp-content/themes/noupe/fonts/capture_it-webfont.svg#CaptureitRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* top banner */
+.sponsor {
+	margin: 7px 0 26px;
+}
+.home .sponsor {
+	margin: 9px 0 26px;
+}
+/* ad layout fix */
+#homepagepremiumadcontainer .declare {
+	display: none;
+}
+/* top shop-link link */
+.shop-link {
+	position: absolute;
+	top: -25px;
+	left: 338px;
+	width: 138px;
+	height: 113px;
+	display: block;
+	z-index: 900;
+}
+
+#sidebarbanners {
+  width: 100%;
+  display: block;
+}
+#sidebarbanners img {
+  border: 0;
+  clear: right;
+}
+#sidebarbanners a img {
+  padding: 0;
+}
+.sidebarbanner {
+	width: 200px;
+	float: right;
+	margin-right: 5px;
+	line-height: 12px;
+	margin-bottom: 7px;
+	text-align: center;
+}
+#sidebarbanners .premiumsponsor {
+	margin-bottom: 10px;
+}
+
+#skyscraper .banner {
+	margin-bottom: 15px;
+}
+
+#skyscraper .banner iframe {
+	margin: 0;
+}
+#sidebar .ads-block #skyscraper a,
+#sidebar .ads-block #skyscraper img {
+	float: none;
+}
+
+
+#cse-search-results {
+	background: #fff;
+	padding: 20px 20px 0 20px;
+}
+#cse-search-results iframe {
+	width: 560px;
+	background-color: none;
+}
+#cse-search-results iframe body,
+#cse-search-results iframe td,
+#cse-search-results iframe div,
+#cse-search-results iframe .p,
+#cse-search-results iframe a {
+	background-color: none;
+}
+#contentadcontainer .bar{
+	width:100%;
+	overflow:hidden;
+	padding: 0 0 3px;
+	margin:0 0 5px;
+}
+#contentadcontainer .bar h3{
+	font:1em/1.180em Tahoma, Geneva, sans-serif;
+	margin:0;
+	color:#726e6b;
+	float:left;
+}
+div.smashingwidget.smwidgetdemo,
+div.smashingwidget.smwidgetdemo div,
+div.smashingwidget.smwidgetdemo span,
+div.smashingwidget.smwidgetdemo h3,
+div.smashingwidget.smwidgetdemo a,
+div.smashingwidget.smwidgetdemo img,
+div.smashingwidget.smwidgetdemo ul,
+div.smashingwidget.smwidgetdemo ol,
+div.smashingwidget.smwidgetdemo li {
+    /*
+    background-color: #fff;
+    */
+    border:0 none;
+    font-family:inherit;
+    font-size:13px;
+    font-style:inherit;
+    font-weight:inherit;
+    margin:0;
+    outline-style:none;
+    outline-width:0;
+    padding:0;
+}
+
+div.smashingwidget.smwidgetdemo {
+    color:#f00;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height: 1.55em;
+    padding:0px;
+    padding-bottom: 15px;
+}
+
+
+* div.smashingwidget.smwidgetdemo {
+    font-size:small;
+}
+
+div.smashingwidget.smwidgetdemo a {
+    cursor:pointer;
+    text-decoration:underline;
+    font:bold 1.08em Helvetica, Arial, Helvetica, sans-serif;
+    color:#3151a2;
+}
+
+div.smashingwidget.smwidgetdemo a:hover {
+    text-decoration:underline;
+}
+div.smashingwidget.smwidgetdemo a:focus {
+    outline-style:none;
+}
+div.smashingwidget.smwidgetdemo a:active {
+    outline-style:none;
+    outline-width:medium;
+}
+div.smashingwidget.smwidgetdemo a img {
+    border:medium none;
+}
+
+div.smashingwidget.smwidgetdemo h3 {
+    color: #000;
+    margin: 0;
+    padding:6px 0 0 5px;
+    font-size:20px;
+    font-weight:normal;
+    cursor: pointer;
+    height: 40px;
+    background:url(http://www.smashingmagazine.com/files/smashing-widget/v006/img/header_v1.gif) no-repeat scroll 0 0 transparent;
+    text-decoration: none;
+}
+
+div.smashingwidget.smwidgetdemo h3 a {
+    background-color:transparent;
+    border:none;
+    top:0;
+    right:0;
+    width:110px;
+    height:50px;
+    color:inherit;
+    padding-right:10px;
+    text-decoration: none;
+    font-weight:normal;
+}
+
+div.smashingwidget.smwidgetdemo h3 a span {
+    float:left;
+    font-size:20px;
+    background-color: transparent;
+}
+
+div.smashingwidget.smwidgetdemo h3 a img {
+    float:right;
+    background-color: transparent;
+    margin: -5px 5px 0 0px;
+}
+
+div.smashingwidget.smwidgetdemo h3 a:hover {
+    text-decoration: none;
+}
+
+div.smashingwidget.smwidgetdemo ol {
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+div.smashingwidget.smwidgetdemo li {
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    border-color:#EBEBEB;
+    border-style:solid;
+    border-width:0 0 1px;
+    padding:5px 0 10px 3px;
+    margin: 10px 0;
+}
+
+div.smashingwidget.smwidgetdemo li a {
+    display: block;
+}
+
+div.smashingwidget.smwidgetdemo .sw-source {
+    display: block;
+    color:#555;
+    font-size:12px;
+    font-weight:normal;
+}
+
+div.smashingwidget.smwidgetdemo li.sw-last {
+    border: none;
+}
+
+div.smashingwidget.smwidgetdemo li a.sw-title {
+    font-size:12px;
+    font-weight: normal;
+}
+
+/* smashing widget */
+.sidebartabs
+{
+	margin-top: 30px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.sidebartabs ul.topiclist
+{
+    margin:30px 0 0;
+    padding:0;
+    list-style:none;
+	left: -17px;
+    position: relative;
+}
+
+.sidebartabs ul.topiclist li
+{
+    margin:0 0 27px;
+    padding-right: 10px;
+}
+
+.sidebartabs ul.topiclist li img
+{
+    margin-right:10px;
+    float:left;
+}
+
+.sidebartabs ul.topiclist li a,
+.sidebartabs ul.topiclist li p
+{
+    float:right;
+    width:325px;
+}
+.sidebartabs ul.topiclist li
+{
+    background: url(http://media.smashingmagazine.com/themes/smashing/images/sprt-gen/sprt.png?v=364354) no-repeat scroll 30px -1540px;
+    /* .sprt.gen.forum-icon */
+    min-height: 39px;
+}
+
+.sidebartabs ul.topiclist li a
+{
+    font:bold 1.08em Helvetica, Arial, Helvetica, sans-serif;
+    color:#3151a2;
+    text-decoration:none;
+}
+
+.sidebartabs ul.topiclist li a.postlink
+{
+    font-size:1.00em;
+}
+
+.sidebartabs ul.topiclist li a:hover
+{
+    color:#6a7fb4;
+}
+
+.sidebartabs ul.topiclist li p
+{
+    margin:3px 0;
+    color:#484747;
+    font-size:0.92em;
+    line-height:1.5em;
+}
+
+.home .post p img {
+	border: 2px solid #9E9E9E;
+}
+
+#sidebar .box-add .articles-list p {
+	color: rgba(51, 51, 51, 0.8);
+	margin-top: 5px;
+	line-height: 1.5em;
+}
+#sidebar .box-add .articles-list a {
+	line-height: 1.5em;
+}
+#sidebar .box-add .title h3 a {
+	color: #fff;
+}
+
+#sidebar .box-add.smashing-feed .title h3,
+#sidebar .box-add.directory-feed .title h3,
+#sidebar .box-add.jobs-feed .title h3 {
+	background:url(http://www.noupe.com/wp-content/themes/noupe/images/bg-sidebar-title-01.png) -10px 24px no-repeat;
+}
+
+#sidebar .sidebar-smash-box {
+	margin: 2em 0;
+	background-color: rgba(237,237,237,0.4);
+	padding: 0.75em 1em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+#sidebar .sidebar-smash-box img { float: left; margin: 1em 20px 1em 0; }
+#sidebar .sidebar-smash-box p { padding: 0.75em 20px 1em 0; font-size: 1.4em; line-height: 1.5em; margin:  0;}
+#sidebar .sidebar-smash-box p a { text-decoration: underline; }
+
+/* social media */
+div.socialmedia > div {
+    float:left;
+}
+div.socialmedia .facebook iframe {
+    width: 110px;
+    height: 30px;
+    position: static;
+}
+div.socialmedia .stumbleupon {
+    margin: 0;
+    margin-top: 1px;
+    margin-right: 20px;
+}
+div.socialmedia .pinterest {
+    margin-top: -3px;
+    margin-right: 20px;
+}
+.fblike {
+	border: none;
+	overflow: hidden;
+	width: 450px;
+	height: 30px;
+	z-index: 99;
+}
+
+.noupe-404-image {
+	width: 100%;
+	margin-bottom: 15px;
+}
+/* image galleries */
+.galleryNavigation {
+	text-align: center;
+	margin-bottom: 15px;
+}
+#content .galleryNavigation ul.pager li a.imagelink,
+#content .galleryNavigation ul.pager li.current span {
+	padding-top: 11px;
+}
+#content .galleryNavigation ul.pager li.current img {
+	margin-right: 2px;
+}
+#content .galleryNavigation ul.pager li.current {
+	margin-right: -9px;
+}
+ul.pager li.prev.empty {
+	width: 80px;
+}
+h2.gallery.caption {
+	margin-top: 10px;
+}
+#content .galleryNavigation .pageinfo {
+	font-weight: bold;
+	font-size: 120%;
+	margin-bottom: 7px;
+	margin-top: 10px;
+}
+
+#content .galleryNavigation ul.pager {
+	margin-left: auto;
+	margin-right: auto;
+	display:inline-block;
+	padding-left: 0;
+	width: auto;
+}
+
+/* related posts */
+#content p.related-articles-header {
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+ul.related-articles-list {
+	margin-bottom: 20px;
+}
+
+/* Galerie-Übersicht */
+.gallery.masonry {
+	line-height: 0;
+}
+.gallery.masonry .gallery-item {
+	float: left;
+	margin: 0;
+	width: 192px;
+	margin-bottom: 3px;
+	display: block;
+}
+.gallery.masonry .gallery-icon {
+	width: 192px;
+}
+.gallery.masonry img {
+	margin: 0;
+	border: 1px solid #DDDAD3;
+	filter: saturate(20%);
+	-webkit-filter: saturate(20%);
+	-moz-filter: saturate(20%);
+	-ms-filter: saturate(20%);
+	-o-filter: saturate(20%);
+}
+.gallery.masonry img:hover {
+	filter: saturate(100%);
+	-webkit-filter: saturate(100%);
+	-moz-filter: saturate(100%);
+	-ms-filter: saturate(100%);
+	-o-filter: saturate(100%);
+	border: 1px solid black;
+}
+

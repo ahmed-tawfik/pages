@@ -1,0 +1,1782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0053)http://www.noupe.com/php/php-regular-expressions.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+		
+		
+		<link rel="shortcut icon" href="http://www.noupe.com/favicon.ico">
+		<link rel="stylesheet" media="screen" href="./Getting Started with PHP Regular Expressions - noupe_files/all.css" type="text/css">
+		<link rel="stylesheet" media="print" href="./Getting Started with PHP Regular Expressions - noupe_files/print.css" type="text/css">
+		<link rel="stylesheet" media="print" href="./Getting Started with PHP Regular Expressions - noupe_files/style.css" type="text/css">
+		<link rel="stylesheet" media="screen" href="./Getting Started with PHP Regular Expressions - noupe_files/ui.all.css" type="text/css">
+		<link href="./Getting Started with PHP Regular Expressions - noupe_files/css" rel="stylesheet" type="text/css">
+		
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.3.4.4 - http://yoast.com/wordpress/seo/ -->
+<title>Getting Started with PHP Regular Expressions - noupe</title>
+<meta name="description" content="1. What are Regular Expressions The main purpose of regular expressions, also called regex or regexp, is to efficiently search for patterns in a given t">
+<link rel="canonical" href="./Getting Started with PHP Regular Expressions - noupe_files/Getting Started with PHP Regular Expressions - noupe.html">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="stylesheet" id="wp-syntax-css-css" href="./Getting Started with PHP Regular Expressions - noupe_files/wp-syntax.css" type="text/css" media="all">
+<script type="text/javascript" async="" src="./Getting Started with PHP Regular Expressions - noupe_files/ga.js"></script><script id="twitter-wjs" src="./Getting Started with PHP Regular Expressions - noupe_files/widgets.js"></script><script type="text/javascript" async="" src="./Getting Started with PHP Regular Expressions - noupe_files/widgets(1).js"></script><script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/jquery.js"></script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/smashcommonfunc.js"></script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/jquery.imagesloaded.min.js"></script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/jquery.masonry.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpAjax = {"noPerm":"You do not have permission to do that.","broken":"An unidentified error has occurred."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/wp-ajax-response.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.noupe.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/www.noupe.com\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/thickbox.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpajaxeditcomments = {"AEC_PluginUrl":"http:\/\/www.noupe.com\/wp-content\/plugins\/smash-edit-comments","AEC_CanScroll":"0","AEC_Minutes":"minutes","AEC_Minute":"minute","AEC_And":"and","AEC_Seconds":"seconds","AEC_Second":"second","AEC_Moderation":"Mark for Moderation?","AEC_Approve":"Approve Comment?","AEC_Spam":"Mark as Spam?","AEC_Delete":"Delete this comment?","AEC_Anon":"Anonymous","AEC_Loading":"Loading...","AEC_Ready":"Ready","AEC_Sending":"Sending...","AEC_Sent":"Message Sent","AEC_LoadSuccessful":"Comment Loaded Successfully","AEC_Saving":"Saving...","AEC_Saved":"Comment Successfully Saved","AEC_Delink":"De-link Successful"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/wp-ajax-edit-comments.js"></script>
+<link rel="shortlink" href="http://www.noupe.com/?p=21096">
+<link rel="stylesheet" href="./Getting Started with PHP Regular Expressions - noupe_files/edit-comments.css" type="text/css" media="screen"><!-- Ajax Edit Comments -->
+<!--[if IE]>
+<style>
+  .clearfix {display: inline-block;}
+  /* Hides from IE-mac \*/
+  * html .clearfix {height: 1%;}
+  .clearfix {display: block;}
+  /* End hide from IE-mac */
+</style>
+<![endif]-->
+<link rel="stylesheet" href="./Getting Started with PHP Regular Expressions - noupe_files/thickbox.css" type="text/css" media="all">		<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/jquery-ui-1.8.2-min.js"></script>
+		<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/main.js"></script>
+		<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://www.noupe.com/wp-content/themes/noupe/ie.css" /><![endif]-->
+				<script type="text/javascript">
+			(function() {
+			var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+			li.src = 'https://platform.stumbleupon.com/1/widgets.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+			})();
+		</script>
+			</head>
+	<body data-twttr-rendered="true">
+	<!-- wrapper -->
+	<div id="wrapper">
+		<noscript>&lt;div&gt;Javascript must be enabled for the correct page display&lt;/div&gt;</noscript>
+		<a href="http://www.noupe.com/php/php-regular-expressions.html#content" tabindex="1" accesskey="S" class="hidden">Skip to Content</a>
+		<strong class="print-logo"><img src="./Getting Started with PHP Regular Expressions - noupe_files/logo-print.gif" alt="image description" width="234" height="51"></strong>
+		<div class="w1">
+			<!-- header -->
+			<div id="header">
+				<h1 class="logo"><a accesskey="1" href="http://www.noupe.com/">noupe</a></h1>
+				<!-- bar -->
+				<div class="bar">
+					<form target="_top" action="http://www.noupe.com/search-results/" method="get" class="search-form">
+	<fieldset>
+		<legend>search form</legend>
+		<div class="text"><input accesskey="4" type="text" title="text" name="q" value="e.g. talking parrot"></div>
+		<input type="submit" class="btn-submit" value="Search">
+		<input type="hidden" value="partner-pub-6779860845561969:8400215435" name="cx">
+		<input type="hidden" value="FORID:10" name="cof">
+		<input type="hidden" value="UTF-8" name="ie">
+	</fieldset>
+</form>					<!-- social-networks -->
+					<ul class="social-networks">
+						<li><a class="twitter" href="http://twitter.com/NoupeMag">twitter</a></li>
+						<li><a class="facebook" href="http://www.facebook.com/noupemag">facebook</a></li>
+						<li><a class="rss" href="http://www.noupe.com/feed/">rss</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- main -->
+			<div id="main">
+				<div class="main-t"><div class="main-t-add">&nbsp;</div></div>
+				<div class="main-c">
+					<div class="main-holder" id="main-holder" style="height: 16618px;">
+						<div class="decor-5">&nbsp;</div>
+						<div class="decor-2">&nbsp;</div>
+						<div class="decor-3">&nbsp;</div>
+						<div class="decor-4">&nbsp;</div>
+						<div class="main-frame" id="main-frame">
+							<!-- content -->
+							<div id="content">
+								<div class="blog">
+									<div id="logobadgecontainer"><script type="text/javascript"><!--// <![CDATA[
+									if(window.OA_zones === undefined) { var OA_zones = []; }
+									OA_zones['Logo Badge'] = 15;
+									// ]]> --></script>
+									<div id="logobadge">
+    <script type="text/javascript"><!--// <![CDATA[
+      OA_show('Logo Badge');
+    // ]]> --></script>
+  </div></div>
+									<div class="sponsor">
+										<!-- Top Ad -->
+										<div id="topadcontainer">
+											<script type="text/javascript"><!--// <![CDATA[
+											if(window.OA_zones === undefined) { var OA_zones = []; }
+											OA_zones['Top Ad'] = 12;
+											// ]]> -->
+											</script>
+										<div id="topad">
+		<script type="text/javascript"><!--// <![CDATA[
+		  OA_show('Top Ad');
+		// ]]> --></script><a href="http://www.zoho.com/sites/?utm_source=noupe&utm_medium=banner&utm_content=fruits&utm_campaign=noupe" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5210__zoneid=12__OXLCA=1__cb=098dda1209__oadest=http%3A%2F%2Fwww.zoho.com%2Fsites%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3Dfruits%26utm_campaign%3Dnoupe&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai.php" width="616" height="70" alt="" title="" border="0"></a><div id="beacon_098dda1209" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg.php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+
+  </div></div>
+									</div>
+									<!-- post -->
+																											<div class="post">
+										<div class="date">
+											<strong>Aug 24</strong>
+											<span>2009</span>
+										</div>
+										<h1>Getting Started with PHP Regular Expressions</h1>
+										<ul class="post-details">
+											<li>By <a href="http://www.noupe.com/author/noupe-editorial" title="Posts by Noupe Editorial" rel="author">Noupe Editorial</a></li>
+											<li>Posted in <a href="http://www.noupe.com/category/php" title="View all posts in PHP" rel="category tag">PHP</a></li>
+											<li><a href="http://www.noupe.com/php/php-regular-expressions.html#comments" class="comments" title="Comment on Getting Started with PHP Regular Expressions">50 comments</a></li>
+																					</ul>
+										<div id="contentadcontainer">
+											<div class="bar">
+												<h3>Advertisement</h3>
+											</div>
+											<script type="text/javascript">/* <![CDATA[ */  if(window.OA_zones === undefined) { var OA_zones = []; }  OA_zones['Content Ad'] = 11;  /*  // ]]> */</script>
+										<div id="contentad">
+		<script type="text/javascript"><!--// <![CDATA[
+		  OA_show('Content Ad');
+		// ]]> --></script><script src="./Getting Started with PHP Regular Expressions - noupe_files/adServer.bs"></script><a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.bs?cn=brd&FlightID=6080754&Page=&PluID=0&EyeblasterID=12571327&Pos=41316121084604&ord=[timestamp]" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5225__zoneid=11__OXLCA=1__cb=11ff527f80__oadest=http%3a//bs.serving%2dsys.com/BurstingPipe/BannerRedirect.bs?cn=brd%26FlightID=6080754%26Page=%26PluID=0%26EyeblasterID=12571327%26Pos=41316121084604%26ord=%5btimestamp%5d&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/3a3b5210-4fbc-4fb7-bf32-c16c5acd6bc1.jpg" width="300" height="250" title="" border="0"></a>
+<noscript>
+&lt;a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5225__zoneid=11__OXLCA=1__cb=11ff527f80__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080754%26Page%3D%26PluID%3D0%26Pos%3D4608" target="_blank"&gt;&lt;img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&amp;FlightID=6080754&amp;Page=&amp;PluID=0&amp;Pos=4608" border=0 width=300 height=250&gt;&lt;/a&gt;
+</noscript><div id="beacon_11ff527f80" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(1).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+
+  </div></div>
+										
+                                                                                            <div id="textadscontainer"><script type="text/javascript">/* <![CDATA[ */  if(window.OA_zones === undefined) { var OA_zones = []; }  OA_zones["Textads"] = 69;  /*  // ]]>*/</script><div id="textads">
+    <script type="text/javascript"><!--// <![CDATA[
+      OA_show('Textads');
+    // ]]> --></script> 
+  </div></div><h3 class="title">1. What are Regular Expressions</h3>
+<p><strong>The main purpose of regular expressions, also called regex or regexp, is to efficiently search for patterns in a given text</strong>. These search patterns are written using a special format which a regular expression parser understands.</p>
+<p><span id="more-21096"></span></p>
+<p class="showcase"><img src="./Getting Started with PHP Regular Expressions - noupe_files/express-1.gif" alt=""></p>
+<p>Regular expressions are originating from Unix systems, where a program was designed, called grep, to help users work with strings and manipulate text. <strong>By following a few basic rules, one can create very complex search patterns.</strong></p>
+<p>As an example, let’s say you’re given the task to check wether an e-mail or a telephone number has the correct form. Using a few simple commands these problems can easily be solved thanks to regular expressions. The syntax doesn’t always seems straightforward at first, but once you learn it, you’ll realize that you can do pretty complex searches easily, just by typing in a few characters and you’ll approach problems from a different perspective.</p>
+<h3 class="title">2. Perl Compatible Regular Expressions</h3>
+<p>PHP has implemented quite a few <em>regex</em> functions which uses different parsing engines. There are two major parser in PHP. One called <strong>POSIX</strong> and the other <strong>PCRE</strong> or Perl Compatible Regular Expression.</p>
+<p>The PHP <a href="http://www.php.net/manual/en/ref.regex.php" title="php.net/manual/en/ref.regex.php">function prefix</a> for POSIX is <em>ereg_</em>. <strong>Since the release of PHP 5.3 this engine is deprecated</strong>, but let’s have a look at the more optimal and faster PCRE engine.</p>
+<p>In PHP every PCRE function starts with <em>preg_</em> such as <a href="http://www.php.net/manual/en/function.preg-match.php" title="php.net/manual/en/function.preg-match.php">preg_match</a> or <a href="http://www.php.net/manual/en/function.preg-replace.php" title="php.net/manual/en/function.preg-replace.php">preg_replace</a>. You can read the full function list in <a href="http://www.php.net/manual/en/ref.pcre.php" title="php.net/manual/en/ref.pcre.php">PHP’s documentation</a>.</p>
+<h3 class="title">3. Basic Syntax</h3>
+<p>To use regular expressions first you need to learn the syntax. This syntax consists in a series of letters, numbers, dots, hyphens and special signs, which we can group together using different parentheses.</p>
+<p>In PHP every regular expression pattern is defined as a string using the Perl format. In Perl, a regular expression pattern is written between forward slashes, such as <em>/hello/</em>. In PHP this will become a string, <em>‘/hello/’</em>.</p>
+<p>Now, <strong>let’s have a look at some operators, the basic building blocks of regular expressions</strong></p>
+<table>
+<tbody>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>^</td>
+<td>The circumflex symbol marks the beginning of a pattern, although in some cases it can be omitted</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Same as with the circumflex symbol, the dollar sign marks the end of a search pattern</td>
+</tr>
+<tr>
+<td>.</td>
+<td>The period matches any single character</td>
+</tr>
+<tr>
+<td>?</td>
+<td>It will match the preceding pattern zero or one times</td>
+</tr>
+<tr>
+<td>+</td>
+<td>It will match the preceding pattern one or more times</td>
+</tr>
+<tr>
+<td>*</td>
+<td>It will match the preceding pattern zero or more times</td>
+</tr>
+<tr>
+<td>|</td>
+<td>Boolean <em>OR</em></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Matches a range of elements</td>
+</tr>
+<tr>
+<td>()</td>
+<td>Groups a different pattern elements together</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>Matches any single character between the square brackets</td>
+</tr>
+<tr>
+<td>{min, max}</td>
+<td>It is used to match exact character counts</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>Matches any single digit</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>Matches any single non digit caharcter</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>Matches any alpha numeric character including underscore (_)</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>Matches any non alpha numeric character excluding the underscore character</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>Matches whitespace character</td>
+</tr>
+</tbody>
+</table>
+<p>As an addition in PHP the forward slash character is escaped using the simple slash <em><strong>\</strong></em>. Example: <em><strong>‘/he\/llo/’</strong></em></p>
+<p><strong>To have a brief understanding how these operators are used, let’s have a look at a few examples:</strong></p>
+<table>
+<tbody>
+<tr>
+<th>Example</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>‘/hello/’</td>
+<td>It will match the word <em>hello</em></td>
+</tr>
+<tr>
+<td>‘/^hello/’</td>
+<td>It will match <em>hello</em> at the start of a string. Possible matches are <em>hello</em> or <em>helloworld</em>, but not <em>worldhello</em></td>
+</tr>
+<tr>
+<td>‘/hello$/’</td>
+<td>It will match <em>hello</em> at the end of a string.</td>
+</tr>
+<tr>
+<td>‘/he.o/’</td>
+<td>It will match any character between <em>he</em> and <em>o</em>. Possible matches are <em>helo</em> or <em>heyo</em>, but not <em>hello</em></td>
+</tr>
+<tr>
+<td>‘/he?llo/’</td>
+<td>It will match either <em>llo</em> or <em>hello</em></td>
+</tr>
+<tr>
+<td>‘/hello+/’</td>
+<td>It will match <em>hello</em> on or more time. E.g. <em>hello</em> or <em>hellohello</em></td>
+</tr>
+<tr>
+<td>‘/he*llo/’</td>
+<td>Matches <em>llo</em>, <em>hello</em> or <em>hehello</em>, but not <em>hellooo</em></td>
+</tr>
+<tr>
+<td>‘/hello|world/’</td>
+<td>It will either match the word <em>hello</em> or <em>world</em></td>
+</tr>
+<tr>
+<td>‘/(A-Z)/’</td>
+<td>Using it with the hyphen character, this pattern will match every uppercase character from A to Z. E.g. A, B, C…</td>
+</tr>
+<tr>
+<td>‘/[abc]/’</td>
+<td>It will match any single character <em>a</em>, <em>b</em> or <em>c</em></td>
+</tr>
+<tr>
+<td>‘/abc{1}/’</td>
+<td>Matches precisely one <em>c</em> character after the characters <em>ab</em>. E.g. matches <em>abc</em>, but not <em>abcc</em></td>
+</tr>
+<tr>
+<td>‘/abc{1,}/’</td>
+<td>Matches one or more <em>c</em> character after the characters <em>ab</em>. E.g. matches <em>abc</em> or <em>abcc</em></td>
+</tr>
+<tr>
+<td>‘/abc{2,4}/’</td>
+<td>Matches between two and four <em>c</em> character after the characters <em>ab</em>. E.g. matches <em>abcc</em>, <em>abccc</em> or <em>abcccc</em>, but not <em>abc</em></td>
+</tr>
+</tbody>
+</table>
+<p>Besides operators, there are <strong>regular expression modifiers</strong>, which can globally alter the behavior of search patterns.</p>
+<p>The <em>regex</em> modifiers are placed after the pattern, like this <em><strong>‘/hello/i’</strong></em> and they consists of single letters such as <em>i</em> which marks a pattern case insensitive or <em>x</em> which ignores white-space characters. For a full list of modifiers please visit <a href="http://www.php.net/manual/en/reference.pcre.pattern.modifiers.php" title="php.net/manual/en/reference.pcre.pattern.modifiers.php">PHP’s online documentation</a>.</p>
+<p>The real power of regular expressions relies in combining these operators and modifiers, therefore creating rather complex search patterns.</p>
+<h3 class="title">4. Using Regex in PHP</h3>
+<p class="showcase"><img src="./Getting Started with PHP Regular Expressions - noupe_files/express-2.gif" alt=""></p>
+<p>In PHP we have a total of nine PCRE functions which we can use. Here’s the list:</p>
+<ul class="post">
+<li><a href="http://www.php.net/manual/en/function.preg-filter.php">preg_filter</a> – performs a regular expression search and replace</li>
+<li><a href="http://www.php.net/manual/en/function.preg-grep.php">preg_grep</a> – returns array entries that match a pattern</li>
+<li><a href="http://www.php.net/manual/en/function.preg-last-error.php">preg_last_error</a> – returns the error code of the last PCRE regex execution</li>
+<li><a href="http://www.php.net/manual/en/function.preg-match.php">preg_match</a> – perform a regular expression match</li>
+<li><a href="http://www.php.net/manual/en/function.preg-match-all.php">preg_match_all</a> – perform a global regular expression match</li>
+<li><a href="http://www.php.net/manual/en/function.preg-quote.php">preg_quote</a> – quote regular expression characters</li>
+<li><a href="http://www.php.net/manual/en/function.preg-replace.php">preg_replace</a> – perform a regular expression search and replace</li>
+<li><a href="http://www.php.net/manual/en/function.preg-replace-callback.php">preg_replace_callback</a> – perform a regular expression search and replace using a callback</li>
+<li><a href="http://www.php.net/manual/en/function.preg-split.php">preg_split</a> – split string by a regular expression</li>
+</ul>
+<p><strong>The two most commonly used functions are <em>preg_match</em> and <em>preg_replace</em>.</strong></p>
+<p>Let’s begin by creating a test string on which we will perform our regular expression searches. The classical <em>hello world</em> should do it.</p>
+<pre class="php" name="code">$test_string = 'hello world';</pre>
+<p>If we simply want to search for the word <em>hello</em> or <em>world</em> then the search pattern would look something like this:</p>
+<pre name="code" class="php">preg_match('/hello/', $test_string);
+preg_match('/world/', $test_string);
+</pre>
+<p>If we wish to see if the string begins with the word <em>hello</em>, we would simply put the ^ character in the beginning of the search pattern like this:</p>
+<pre class="php" name="code">preg_match('/^hello/', $test_string);
+</pre>
+<p>Please note that <strong>regular expressions are case sensitive</strong>, the above pattern won’t match the word <em>hElLo</em>. If we want our pattern to be <strong>case insensitive</strong> we should apply the following modifier:</p>
+<pre class="php" name="code">preg_match('/^hello/i', $test_string);	
+</pre>
+<p>Notice the character <em>i</em> at the end of the pattern <strong>after the forward slash</strong>.</p>
+<p>Now let’s examine a more complex search pattern. What if we want to check that the first five characters in the string are alpha numeric characters.</p>
+<pre class="php" name="code">preg_match('/^[A-Za-z0-9]{5}/', $test_string);
+</pre>
+<p>Let’s dissect this search pattern. First, by using the caret character (^) we specify that the string must begin with an alpha numeric character. This is specified by <em>[A-Za-z0-9]</em>.</p>
+<p><em>A-Z</em> means all the characters from A to Z followed by <em>a-z</em> which is the same except for lowercase character, this is important, because regular expressions are case sensitive. I think you’ll figure out by yourself what <em>0-9</em> means.</p>
+<p><em>{5}</em> simply tells the <em>regex</em> parser to count exactly five characters. If we put six instead of five, the parser wouldn’t match anything, because in our test string the word <em>hello</em> is five characters long, followed by a white-space character which in our case doesn’t count.</p>
+<p>Also, this regular expression could be optimized to the following form:</p>
+<pre class="php" name="code">preg_match('/^\w{5}/', $test_string);
+</pre>
+<p><em>\w</em> specifies any alpha numeric characters plus the underscore character (_).</p>
+<h1>6. Useful Regex Functions</h1>
+<p>Here are a few PHP functions using regular expressions which you could use on a daily basis.</p>
+<p><strong>Validate e-mail</strong>. This function will validate a given e-mail address string to see if it has the correct form.</p>
+<pre class="php" name="code">function validate_email($email_address)
+{
+    if( !preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+
+                     ([a-zA-Z0-9\._-]+)+$/", $email_address))
+    {
+        return false;
+    }	
+    return true;
+}
+</pre>
+<p><strong>Validate a URL</strong></p>
+<pre class="php" name="code">function validate_url($url)
+{
+    return preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?
+                      (/.*)?$|i', $url);
+}
+</pre>
+<p><strong>Remove repeated words</strong>. I often found repeated words in a text, such as <em>this this</em>. This handy function will remove such duplicate words.</p>
+<pre class="php" name="code">function remove_duplicate_word($text)
+{
+    return preg_replace("/s(w+s)1/i", "$1", $text);
+}
+</pre>
+<p><strong>Validate alpha numeric, dashes, underscores and spaces</strong></p>
+<pre class="php" name="code">function validate_alpha($text)
+{
+    return preg_match("/^[A-Za-z0-9_- ]+$/", $text);
+}
+</pre>
+<p><strong>Validate US ZIP codes</strong></p>
+<pre class="php" name="code">function validate_zip($zip_code)
+{
+    return preg_match("/^([0-9]{5})(-[0-9]{4})?$/i",$zip_code);	
+}
+</pre>
+<h3 class="title">7. Regex Cheat Sheet</h3>
+<p>Because cheat sheets are cool nowadays, below you can find a PCRE cheat sheet that you can run through quickly anytime you forget something.</p>
+<h3>Meta Characters</h3>
+<table border="0" cellpadding="2" cellspacing="2">
+<colgroup><col class="symbol">
+<col>
+</colgroup><tbody>
+<tr>
+<th>&nbsp;</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>^</td>
+<td>Marks the start of a string</td>
+</tr>
+<tr>
+<td>$</td>
+<td>Marks the end of a string</td>
+</tr>
+<tr>
+<td>.</td>
+<td>Matches any single character</td>
+</tr>
+<tr>
+<td>|</td>
+<td>Boolean OR</td>
+</tr>
+<tr>
+<td>()</td>
+<td>Group elements</td>
+</tr>
+<tr>
+<td>[abc]</td>
+<td>Item in range (a,b or c)</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>NOT in range (every character except a,b or c)</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>White-space character</td>
+</tr>
+<tr>
+<td>a?</td>
+<td>Zero or one b characters. Equals to a{0,1}</td>
+</tr>
+<tr>
+<td>a*</td>
+<td>Zero or more of a</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>One or more of a</td>
+</tr>
+<tr>
+<td>a{2}</td>
+<td>Exactly two of a</td>
+</tr>
+<tr>
+<td>a{,5}</td>
+<td>Up to five of a</td>
+</tr>
+<tr>
+<td>a{5,10}</td>
+<td>Between five to ten of a</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>Any alpha numeric character plus underscore. Equals to [A-Za-z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>Any non alpha numeric characters</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>Any white-space character</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>Any non white-space character</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>Any digits. Equals to [0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>Any non digits. Equals to [^0-9]</td>
+</tr>
+</tbody>
+</table>
+<h3>Pattern Modifiers</h3>
+<table border="0" cellpadding="2" cellspacing="2">
+<colgroup><col class="symbol">
+<col>
+</colgroup><tbody>
+<tr>
+<th>&nbsp;</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>i</td>
+<td>Ignore case</td>
+</tr>
+<tr>
+<td>m</td>
+<td>Multiline mode</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Extra analysis of pattern</td>
+</tr>
+<tr>
+<td>u</td>
+<td>Pattern is treated as UTF-8</td>
+</tr>
+</tbody>
+</table>
+<h3 class="title">8. Useful Readings</h3>
+<ul class="post">
+<li><a href="http://www.catswhocode.com/blog/15-php-regular-expressions-for-web-developers">15 PHP Regular Expression for Web Developers</a></li>
+<li><a href="http://www.ibm.com/developerworks/opensource/library/os-php-regex1/index.html">Mastering Regular Expressions in PHP</a></li>
+<li><a href="http://www.phpro.org/tutorials/Introduction-to-PHP-Regex.html">Introduction to PHP Regex</a></li>
+</ul>
+<div class="author-box">
+<div class="author-text">
+<h4><strong>Author</strong>: Joel Reyes</h4>
+<p>Joel Reyes Has been designing and coding web sites for several years, this has lead him to be the creative mind behind Looney Designer a design resource and portfolio site that revolves around web and graphic design.</p>
+<p></p></div>
+<div class="write-for-us"><strong class="red">Write for Us!</strong> We are looking for exciting and creative articles, if you want to contribute, just send us an <a href="mailto:info@noupe.com">email</a>.</div>
+<p></p></div>
+																					
+																					
+											<div class="yarpp-related">
+<p class="related-articles-header">You might also be interested in the following articles:</p><ul class="related-articles-list">
+<li><a href="http://www.noupe.com/php/how-to-create-your-own-stats.html" rel="bookmark" title="How To Create Your Own Stats Program (JavaScript, AJAX, PHP)">How To Create Your Own Stats Program (JavaScript, AJAX, PHP)</a></li>
+<li><a href="http://www.noupe.com/css/css-techniques-i-wish-i-knew-when-i-started-designing-websites.html" rel="bookmark" title="CSS Techniques I Wish I Knew When I Started Designing Websites">CSS Techniques I Wish I Knew When I Started Designing Websites</a></li>
+<li><a href="http://www.noupe.com/wordpress/building-community-sites-with-wordpress-15-plugins-to-get-started.html" rel="bookmark" title="Building Community Sites with WordPress: 15 Plugins to Get Started">Building Community Sites with WordPress: 15 Plugins to Get Started</a></li>
+<li><a href="http://www.noupe.com/php/20-useful-php-components-tutorials-for-everyday-project.html" rel="bookmark" title="20 Useful PHP Components &amp; Tutorials for Everyday Project">20 Useful PHP Components &amp; Tutorials for Everyday Project</a></li>
+</ul>
+</div>
+											
+											<div class="socialmedia">
+												<div class="twitter">
+                                                  <iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Getting Started with PHP Regular Expressions - noupe_files/tweet_button.1359159993.html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+                                                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                                </div>
+                                                <div class="stumbleupon">
+												    <iframe scrolling="no" frameborder="0" allowtransparency="true" style="overflow: hidden; margin: 0px; padding: 0px; border: 0px;" src="./Getting Started with PHP Regular Expressions - noupe_files/saved_resource.html" width="74" height="18" id="iframe-stmblpn-widget-1"></iframe>
+												</div>
+												<div class="pinterest">
+												    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img style="margin: 0 0 -5px 0;" onclick="doPinIt();" src="./Getting Started with PHP Regular Expressions - noupe_files/3i4NG.png" alt="Pin It"></a>
+												</div>
+												<div class="facebook">
+												    <iframe class="fblike" src="./Getting Started with PHP Regular Expressions - noupe_files/like.html" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+												</div>
+											</div>
+											
+											<!-- about-box -->
+											<div class="about-box">
+												<div class="head">
+													<h3>About the Author</h3>
+												</div>
+												<div class="about-holder">
+													<img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/e07b14a1f1db280760c508465114c062" class="avatar avatar-78 photo" height="78" width="78">													<div class="text-holder">
+														<p>The Noupe Editorial <a href="http://www.noupe.com/about">Team</a>.</p>
+														<p><a href="http://www.noupe.com/" class="author-homepage">Homepage</a></p>																											</div>
+												</div>
+											</div>
+											
+											<a id="acom" name="comments"></a>
+											<div id="commentadcontainer">
+											<script type="text/javascript">
+											<!--// <![CDATA[
+												if(window.OA_zones === undefined) { var OA_zones = []; }
+												OA_zones['Comment Ad'] = 14;
+											// ]]> -->
+											</script>
+											<div id="commentad">
+		<script type="text/javascript"><!--// <![CDATA[
+		  OA_show('Comment Ad');
+		// ]]> --></script><script src="./Getting Started with PHP Regular Expressions - noupe_files/adServer(1).bs"></script><a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.bs?cn=brd&FlightID=6080750&Page=&PluID=0&EyeblasterID=12578551&Pos=41316243082276&ord=[timestamp]" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5226__zoneid=14__OXLCA=1__cb=b6a3405b76__oadest=http%3a//bs.serving%2dsys.com/BurstingPipe/BannerRedirect.bs?cn=brd%26FlightID=6080750%26Page=%26PluID=0%26EyeblasterID=12578551%26Pos=41316243082276%26ord=%5btimestamp%5d&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/72d002d4-171f-4b4d-a533-6ce39d79bb00.jpg" width="468" height="90" title="" border="0"></a>
+<noscript>
+&lt;a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5226__zoneid=14__OXLCA=1__cb=b6a3405b76__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080750%26Page%3D%26PluID%3D0%26Pos%3D8189" target="_blank"&gt;&lt;img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&amp;FlightID=6080750&amp;Page=&amp;PluID=0&amp;Pos=8189" border=0 width=468 height=90&gt;&lt;/a&gt;
+</noscript><div id="beacon_b6a3405b76" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(2).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+
+  </div></div>
+											
+
+	<h2>Comments and Discussions</h2>
+	<!-- comments -->
+	<ul class="comments">
+					
+	
+	<li class="comment even thread-even depth-1">
+		<div class="controls" id="comment-50239">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/53d35b3593b23ce05ae00db2e755d929" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50239#respond" onclick="return addComment.moveForm(&quot;comment-50239&quot;, &quot;50239&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.devwords.com/" rel="external nofollow" class="url">Ben</a>, <span>24 August 2009</span></h4>
+						<p>Great article there :)</p>
+<p>I think regular expressions are something you will learn over time, not something you can be done with after 1 tutorial.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50243">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/f2f43a32896521c63e93e1e8ae016c75" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50243#respond" onclick="return addComment.moveForm(&quot;comment-50243&quot;, &quot;50243&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://gman-blog.blogspot.com/" rel="external nofollow" class="url">Gman</a>, <span>24 August 2009</span></h4>
+						<p>I think you have some mistakes</p>
+<p>‘/he?llo/’	It will match either <b>hllo</b> or hello<br>
+‘/hello+/’	It will match hell <b>and o</b> on or more time. E.g. hello or <b>helloooooooooo</b><br>
+‘/he*llo/’	Matches <b>hllo, hello or heeello</b>, but not hellooo<br>
+‘/hello|world/’	It will either match the word <b>helloorld</b> or <b>hellworld</b><br>
+….<br>
+there might be some more, but I haven’t read all</p>
+		</div>
+					
+			
+	<ul class="children">
+	
+	
+	<li class="comment even depth-2">
+		<div class="controls" id="comment-50308">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/bb00b97308e5fa210d2a1fbbf09591c3" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50308#respond" onclick="return addComment.moveForm(&quot;comment-50308&quot;, &quot;50308&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://looneydesigner.com/" rel="external nofollow" class="url">Joel Reyes</a>, <span>26 August 2009</span></h4>
+						<p>Hello!</p>
+<p>I tested the regular expressions again.</p>
+<p>You’re right mentioned conditions are correct.</p>
+<p>The last one should be condition should be like this ‘/(hello)|(world)/’ then it will match either hello or world.</p>
+<p>Regards :)</p>
+		</div>
+					
+			
+		</li>
+	</ul>
+	</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50246">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/1052b18ba7e05ca799d3fc933965f92e" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50246#respond" onclick="return addComment.moveForm(&quot;comment-50246&quot;, &quot;50246&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://tutorijali.hdonweb.com/" rel="external nofollow" class="url">Ivan Miši?</a>, <span>24 August 2009</span></h4>
+						<p>Good explained, but after this tutorial, I’ll need lot of practice.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50247">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/cdf5ad0baf2be3ff66da555fda590218" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50247#respond" onclick="return addComment.moveForm(&quot;comment-50247&quot;, &quot;50247&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.wparchive.com/" rel="external nofollow" class="url">Ahmed</a>, <span>24 August 2009</span></h4>
+						<p>Very good tut ill try some tips of it</p>
+		</div>
+					
+			
+	<ul class="children">
+	
+	
+	<li class="comment odd alt depth-2">
+		<div class="controls" id="comment-137681">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/8ff3210ea814b368b8172f3cce40ec0d" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=137681#respond" onclick="return addComment.moveForm(&quot;comment-137681&quot;, &quot;137681&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>shad, <span>14 June 2010</span></h4>
+						<p>hi all </p>
+<p>i am planing to do my final year projcet in UNIV can u HElP me with PHP please if you can email me on shad24×7@hotmail.co.uk</p>
+		</div>
+					
+			
+		</li>
+	</ul>
+	</li>
+		
+	
+	<li class="comment even thread-even depth-1">
+		<div class="controls" id="comment-50254">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/f2c3d671852d28044c203cd2ddf9b782" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50254#respond" onclick="return addComment.moveForm(&quot;comment-50254&quot;, &quot;50254&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>ed, <span>24 August 2009</span></h4>
+						<p>great! ive been looking for such a guide for a while now!<br>
+thanks so much!</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50256">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/5b786a918c434eb9de8b734096e9dd66" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50256#respond" onclick="return addComment.moveForm(&quot;comment-50256&quot;, &quot;50256&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://whoislike.it/" rel="external nofollow" class="url">S.Krol</a>, <span>24 August 2009</span></h4>
+						<p>Try the RegexCoach<br>
+<a href="http://weitz.de/regex-coach/" rel="nofollow">http://weitz.de/regex-coach/</a></p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-even depth-1">
+		<div class="controls" id="comment-50258">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/6ca1a84b6c4c7e8c195addbcc30ccc40" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50258#respond" onclick="return addComment.moveForm(&quot;comment-50258&quot;, &quot;50258&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://joyoge.com/" rel="external nofollow" class="url">joyoge designers' bookmark</a>, <span>24 August 2009</span></h4>
+						<p>useful tutorial, thanks for tips..</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50264">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/f321e478f38ea0b345c331b7ab5683fe" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50264#respond" onclick="return addComment.moveForm(&quot;comment-50264&quot;, &quot;50264&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>fly2279, <span>24 August 2009</span></h4>
+						<p>Thank you for this great article. What theme or style are you using for your code editor?</p>
+		</div>
+					
+			
+	<ul class="children">
+	
+	
+	<li class="comment even depth-2">
+		<div class="controls" id="comment-50294">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/fab324587e3a87be16d0b2c9fa41138c" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50294#respond" onclick="return addComment.moveForm(&quot;comment-50294&quot;, &quot;50294&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.kalicomm.com/" rel="external nofollow" class="url">Zac</a>, <span>25 August 2009</span></h4>
+						<p>+1… what editor/theme is that is looks really easy on the eyes.</p>
+		</div>
+					
+			
+		</li>
+	</ul>
+	</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50270">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/440544122e0e7228e7c9d49247cbacfc" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50270#respond" onclick="return addComment.moveForm(&quot;comment-50270&quot;, &quot;50270&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://derschreckliche.wordpress.com/" rel="external nofollow" class="url">derschreckliche</a>, <span>25 August 2009</span></h4>
+						<p>@Gman: I had the same thoughts reading it – so here are the right versions:<br>
+(You just have to add bracets to match a quantifier ( ? , * , + , {min, max} ) or | (union) on more than one character.)</p>
+<p>‘/(he)?llo/’ It will match either llo or hello<br>
+‘/(hello)+/’ It will match hello on or more time. E.g. hello or hellohello<br>
+‘/(he)*llo/’ Matches llo, hello or hehello, but not hellooo<br>
+‘/(hello)|(world)/’ It will either match the word hello or world</p>
+<p>here is a very useful website to test regexp online: <a href="http://www.regex-tester.de/regex.html" rel="nofollow">http://www.regex-tester.de/regex.html</a></p>
+<p>Even it’s a german site it’s the best i know – for all of you who need practice, like me sometimes ;)<br>
+Checking “Color-Pattern anzeigen” highlights your regular expression with colors and “Treffer anzeigen” will highlight the matches in the text you entered.<br>
+The resulting $matches array is also shown.<br>
+(Enter the regexp only, without the  ‘/ and /’ )</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50272">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/8da89e6cbb90ed07881c558f6d5f3df5" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50272#respond" onclick="return addComment.moveForm(&quot;comment-50272&quot;, &quot;50272&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>RCKY, <span>25 August 2009</span></h4>
+						<p>Thank you…<br>
+dont think the if statement in the email validator function is needed… return preg_match(…); would be enough… wouldn’t it?</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50274">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/8f3075dc2278a39b600098685cfae85d" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50274#respond" onclick="return addComment.moveForm(&quot;comment-50274&quot;, &quot;50274&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://tb50.com/" rel="external nofollow" class="url">Alex</a>, <span>25 August 2009</span></h4>
+						<p><a href="http://www.regular-expressions.info/reference.html" rel="nofollow">http://www.regular-expressions.info/reference.html</a><br>
+has helped me a lot :)</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50281">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/74c7f4d67f1120d69c91cac65b6dbf21" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50281#respond" onclick="return addComment.moveForm(&quot;comment-50281&quot;, &quot;50281&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.graphiks.net/" rel="external nofollow" class="url">Sky</a>, <span>25 August 2009</span></h4>
+						<p>PHP has some integrated functions to validate things like url’s or email’s : <a href="http://www.php.net/manual/fr/filter.filters.validate.php" rel="nofollow">http://www.php.net/manual/fr/filter.filters.validate.php</a><br>
+I know that this is a tutorial, but still, why code something that already exists. :) Nice day to all.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50284">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/d078ef3a2678124eeb14d1c34799d674" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50284#respond" onclick="return addComment.moveForm(&quot;comment-50284&quot;, &quot;50284&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Pierre, <span>25 August 2009</span></h4>
+						<p>Great article</p>
+<p>For the 2 first example of useful regex ( Email and Url ), the best way to validate thata is to use the filter_var() function from the filter extension activated in php5.2.0</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50285">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/257213fcb107b1e203d531983408dad1" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50285#respond" onclick="return addComment.moveForm(&quot;comment-50285&quot;, &quot;50285&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.suburban-glory.com/" rel="external nofollow" class="url">Andy Walpole</a>, <span>25 August 2009</span></h4>
+						<p>When you first look at a regex pattern you think, “Oh my god that looks ridiculously complicated”</p>
+<p>But it’s not actually as complex as it initially looks.</p>
+<p>They are well worth learning about as they really come in handy in PHP and mod_rewrite</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50290">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/b95932ff25fc70e4bb49fc1ed5de0031" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50290#respond" onclick="return addComment.moveForm(&quot;comment-50290&quot;, &quot;50290&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Arkh, <span>25 August 2009</span></h4>
+						<p>Woot, another regex tutorial for newbies.<br>
+Nothing about comments in the regex (yes, you can do that and it’s freakin’ usefull for big ones).<br>
+Awesome, slash delimiters only, guess ‘`/*`’ doesn’t work. Snap.</p>
+<p>Why lose time writing about simple regexp when you can just link to <a href="http://www.regular-expressions.info/" rel="nofollow">http://www.regular-expressions.info/</a> and write about php specific topics like preg_quote which helps avoid using things like \\\ in your regexp.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50293">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/45872d0ddd5ec01fde407a6f05eca55c" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50293#respond" onclick="return addComment.moveForm(&quot;comment-50293&quot;, &quot;50293&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.december14.biz/" rel="external nofollow" class="url">Keith</a>, <span>25 August 2009</span></h4>
+						<p>Not a bad introduction, except for the mistakes pointed out by Gman above (see, they’re tricky things, regexes!)</p>
+<p>Also, don’t use the example shown for email validation — it’s too simple, and will fail valid addresses such as <a href="mailto:john+doe@example.com">john+doe@example.com</a>. To validate addresses against all the forms permitted by the relevant RFCs requires a MUCH more complex regular expression.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50295">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/719501a0e60783cfe4edaac5b61dd0c1" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50295#respond" onclick="return addComment.moveForm(&quot;comment-50295&quot;, &quot;50295&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.gelengeliyo.com/fx15lidayilanyagikarincayumurtasixacc/" rel="external nofollow" class="url">fx15 lida y?lan ya?? kar?nca yumurtas? xacc</a>, <span>25 August 2009</span></h4>
+						<p>thank you. very good post.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-50298">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/60064d04f289a07d25c01db741bc3ef3" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50298#respond" onclick="return addComment.moveForm(&quot;comment-50298&quot;, &quot;50298&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.ajmedwards.wordpress.com/" rel="external nofollow" class="url">Alex Edwards</a>, <span>25 August 2009</span></h4>
+						<p>Nice post.</p>
+<p>Might be worth mentioning some off the online testing tools? I found these invaluable when learning regexp. Here’s a couple:</p>
+<p><a href="http://www.quanetic.com/Regex" rel="nofollow">http://www.quanetic.com/Regex</a><br>
+<a href="http://www.regextester.com/" rel="nofollow">http://www.regextester.com/</a></p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-50508">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/b821ee1231994faa5a6259818e1ec0f8" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=50508#respond" onclick="return addComment.moveForm(&quot;comment-50508&quot;, &quot;50508&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://bijayrungta.com/" rel="external nofollow" class="url">Bijay Rungta (@rungss), Sharing Knowledge</a>, <span>31 August 2009</span></h4>
+						<p>Very nicely written… </p>
+<p>Hope this helps People who have difficulty understanding the concept of Regular Expressions and using them in PHP..</p>
+<p>@rungss on Twitter</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-51952">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/2dfb34e745148c3ad4c6b00cc280045f" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=51952#respond" onclick="return addComment.moveForm(&quot;comment-51952&quot;, &quot;51952&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Hamranhansen, <span>16 September 2009</span></h4>
+						<p>&gt; As an addition in PHP the forward slash character<br>
+&gt; is escaped using the simple slash \. </p>
+<p>This is a “slash”: /</p>
+<p>This is a “backslash”: \</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-52259">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/981b46396a22bf5a8190506fe892b3b5" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=52259#respond" onclick="return addComment.moveForm(&quot;comment-52259&quot;, &quot;52259&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.alfystudio.com/" rel="external nofollow" class="url">Ahmad Alfy</a>, <span>19 September 2009</span></h4>
+						<p>On Pattern Modifiers, you forgot g (global)<br>
+It’s pretty useful</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-62470">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/ba2a1a114bbb94a6348e3829e680322b" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=62470#respond" onclick="return addComment.moveForm(&quot;comment-62470&quot;, &quot;62470&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.mehedibd.com/" rel="external nofollow" class="url">Mehedi Hasan</a>, <span>17 November 2009</span></h4>
+						<p>great great great tutorial. today i learn many things… thanks a lot for sharing…</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-64812">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/6f46e903eba6e4a002fdca598e5e27da" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=64812#respond" onclick="return addComment.moveForm(&quot;comment-64812&quot;, &quot;64812&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="./Getting Started with PHP Regular Expressions - noupe_files/Getting Started with PHP Regular Expressions - noupe.html" rel="external nofollow" class="url">krisha</a>, <span>25 November 2009</span></h4>
+						<p>good tutorial i improved my knowledge</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-78630">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/a3f97b8c19d995ad0a36407650dde619" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=78630#respond" onclick="return addComment.moveForm(&quot;comment-78630&quot;, &quot;78630&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.blogopreneur.com/" rel="external nofollow" class="url">Kian Ann</a>, <span>01 February 2010</span></h4>
+						<p>This is a great tutorial! But I don’t get the remove duplicate words thing?</p>
+<p>return preg_replace(“/s(w+s)1/i”, “$1″, $text);</p>
+<p>I’d assume the text is “this this”, and we “/s(w+s)1/i” is aupposed to match “this this” and replace with “this”?</p>
+<p>Does the second part “$1″ refers to the (w+s) group?  How do we match two identical words?</p>
+		</div>
+					
+			
+	<ul class="children">
+	
+	
+	<li class="comment odd alt depth-2">
+		<div class="controls" id="comment-78700">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/a3f97b8c19d995ad0a36407650dde619" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=78700#respond" onclick="return addComment.moveForm(&quot;comment-78700&quot;, &quot;78700&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.astorescript.com/" rel="external nofollow" class="url">Kian Ann</a>, <span>01 February 2010</span></h4>
+						<p>Further to my confusion, I’ve went to test the replace duplicate words regex out and it doesn’t work… at least not for me.</p>
+<p>return preg_replace(”/s(w+s)1/i”, “$1?, $text);</p>
+<p>I went around doing some searches and ended up asking a friend.  This works to replace duplicate words:</p>
+<p>return preg_replace(“/(\w+)\s(\\1)/”, “$1″, “Oh this this is good”);<br>
+// returns “Oh this is good”</p>
+<p>But this replaces only 1 duplicate word.  If the text was “Oh this this this is good”, then it will not replace 3 copies of the words at once – you’ll have to do an iteration (or recursion)… whatever u call it.</p>
+		</div>
+					
+			
+	<ul class="children">
+	
+	
+	<li class="comment even depth-3">
+		<div class="controls" id="comment-85047">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/0ba55011dd850ec83531a8381f1d76ff" class="avatar avatar-66 photo" height="66" width="66"></div>
+					</div>
+		<div class="text-holder">
+			<h4><a href="http://www.pagecolumn.com/javascript/fade.htm" rel="external nofollow" class="url">Hans Lee</a>, <span>18 February 2010</span></h4>
+						<p>You could test your regexp in the PHP regexp tester.</p>
+<p><a href="http://www.pagecolumn.com/tool/pregtest.htm" rel="nofollow">http://www.pagecolumn.com/tool/pregtest.htm</a></p>
+<p>The regexp should be<br>
+/(\w+)\s(\1)/</p>
+		</div>
+					
+			
+		</li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-97074">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/249ae6765846c46da293a4bc901a0a32" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=97074#respond" onclick="return addComment.moveForm(&quot;comment-97074&quot;, &quot;97074&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>chandan dutta, <span>15 March 2010</span></h4>
+						<p>web designer<br>
+Thanks for great article.Its very useful for me.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-113451">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/8901ed5b43ef64277c50a367c8b6b0e4" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=113451#respond" onclick="return addComment.moveForm(&quot;comment-113451&quot;, &quot;113451&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>mehdy, <span>22 April 2010</span></h4>
+						<p>Thank you for this clean and great tutorial,<br>
+Best Regards :)</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-137544">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/d491f8b292ed1e1fe04d8bce3da6c58c" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=137544#respond" onclick="return addComment.moveForm(&quot;comment-137544&quot;, &quot;137544&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://bem.ipb.ac.id/" rel="external nofollow" class="url">bem km ipb</a>, <span>13 June 2010</span></h4>
+						<p>“REGEX” is Oke.. :D</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-142642">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/7e29e7078beff5858d462c231fbb068b" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=142642#respond" onclick="return addComment.moveForm(&quot;comment-142642&quot;, &quot;142642&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://muhammadz06.student.ipb.ac.id/" rel="external nofollow" class="url">zakki</a>, <span>26 June 2010</span></h4>
+						<p>basic syntax help me very much</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-153676">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/4ee269972b044bf6d56a5c4cf1395984" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=153676#respond" onclick="return addComment.moveForm(&quot;comment-153676&quot;, &quot;153676&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://ekos06.student.ipb.ac.id/" rel="external nofollow" class="url">Kojeje</a>, <span>16 July 2010</span></h4>
+						<p>Hey Master..<br>
+thanks for teaching me this code…</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-276976">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/760aa2cc285fd2cba2f53920bdc7fd13" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=276976#respond" onclick="return addComment.moveForm(&quot;comment-276976&quot;, &quot;276976&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.tools-and-design.com/" rel="external nofollow" class="url">Who Knows</a>, <span>01 November 2010</span></h4>
+						<p>Nice article, also you should consider using the filter_var php function in some cases:<br>
+<a href="http://php.net/manual/en/function.filter-var.php" rel="nofollow">http://php.net/manual/en/function.filter-var.php</a></p>
+<p>It can validate email, urls etc. without using regular expressions.</p>
+<p>Cheers!</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-336174">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/8f9375ec4ec2f66448fdd94dcf7f0044" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=336174#respond" onclick="return addComment.moveForm(&quot;comment-336174&quot;, &quot;336174&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.iamdesigning.com/" rel="external nofollow" class="url">Prakash</a>, <span>04 December 2010</span></h4>
+						<p>I think this is an effective &amp; useful post for the professional designers to boost up their creativity.  Simple to read &amp; understand &amp; easy to work out. We need this actually.  Thanks for giving your advice at a right time. Keep on doing this great job &amp; thx again.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-394551">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/b278f023b381894482a77c1945e909c0" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=394551#respond" onclick="return addComment.moveForm(&quot;comment-394551&quot;, &quot;394551&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.codedrinks.com/" rel="external nofollow" class="url">Denker</a>, <span>31 December 2010</span></h4>
+						<p>Great article, thanks for share it.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-406183">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/3c419745fc73b2747f26b5d256befb4c" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=406183#respond" onclick="return addComment.moveForm(&quot;comment-406183&quot;, &quot;406183&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Donald, <span>06 January 2011</span></h4>
+						<p>But I’m wandering where to register.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-518338">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/cace1c377f849c0d337ea676f71438eb" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=518338#respond" onclick="return addComment.moveForm(&quot;comment-518338&quot;, &quot;518338&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.techrecto.com/" rel="external nofollow" class="url">Ahmed</a>, <span>14 February 2011</span></h4>
+						<p>Before reading this I knew nothing about regex (except the name), now I am leaving this page with lot of info plus good example to be kept in mind whenever dealing Regex.<br>
+Thanks a lot.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-590801">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/cb31983c8b54babe2235c820addbcf84" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=590801#respond" onclick="return addComment.moveForm(&quot;comment-590801&quot;, &quot;590801&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://maxomax.de/" rel="external nofollow" class="url">Claude Lomack</a>, <span>13 March 2011</span></h4>
+						<p>Gibt es da noch Alternativen?</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-707737">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/216c409be1cbf323cbd714f4010e6797" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=707737#respond" onclick="return addComment.moveForm(&quot;comment-707737&quot;, &quot;707737&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.brettwidmann.com/" rel="external nofollow" class="url">Brett Widmann</a>, <span>24 April 2011</span></h4>
+						<p>This was a really helpful guide.  I will be showing this article to some other beginners to give them a basis behind PHP.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-724559">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/34560018bc4dfe43a60c26d4e4fc17b2" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=724559#respond" onclick="return addComment.moveForm(&quot;comment-724559&quot;, &quot;724559&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://itcutives.com/" rel="external nofollow" class="url">Jatin</a>, <span>30 April 2011</span></h4>
+						<p>I was thinking of learning regular expression, thanks for showing up the article at a perfect time.</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-765112">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/b8b6617c0eb1a5180a910803711fcaca" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=765112#respond" onclick="return addComment.moveForm(&quot;comment-765112&quot;, &quot;765112&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Lemon, <span>14 May 2011</span></h4>
+						<p>I want to make a program which will read a big string and search all the words that started with “C” and Ending with “T” by PHP. </p>
+<p>Please Guide me , how to?</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-791596">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/00d76566109c7bdfd3418d273b435dc1" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=791596#respond" onclick="return addComment.moveForm(&quot;comment-791596&quot;, &quot;791596&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Neeraj, <span>24 May 2011</span></h4>
+						<p>Hey Lemon, I think the following may work for you</p>
+<p>&lt;?php<br>
+$pattern 	= 	'/C.*T/';<br>
+$string		=	"A cat tear a coat";</p>
+<p>if (preg_match($pattern, $string)) {<br>
+    echo "Valid String”;<br>
+}else{<br>
+	echo “Invalid String”;<br>
+}<br>
+?&gt;</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-842991">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/158fa819c54355d97fe7691047e482a5" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=842991#respond" onclick="return addComment.moveForm(&quot;comment-842991&quot;, &quot;842991&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Valmir, <span>11 June 2011</span></h4>
+						<p>I need help on this –&gt;   ^N[[:alpha:]]*{-8}[0-9] what is the rezult?</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-1702331">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/56f3f8a9f615a8acc7e0573a96c79af6" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=1702331#respond" onclick="return addComment.moveForm(&quot;comment-1702331&quot;, &quot;1702331&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>meeni, <span>07 February 2012</span></h4>
+						<p>great article..thanks for the help..</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-1708894">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/31ce534f74bb5d1f41640e9bd5f95b1f" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=1708894#respond" onclick="return addComment.moveForm(&quot;comment-1708894&quot;, &quot;1708894&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://gerardable.com/" rel="external nofollow" class="url">Gerard</a>, <span>28 March 2012</span></h4>
+						<p>Thanks a lot for this. Really helped me out. I hate Regular Expressions!!!!!</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-1728100">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/a5b6d0f11203302b303f7f90c0a02aab" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=1728100#respond" onclick="return addComment.moveForm(&quot;comment-1728100&quot;, &quot;1728100&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4><a href="http://www.testlink.com/" rel="external nofollow" class="url">Akash</a>, <span>10 August 2012</span></h4>
+						<p>Quit helpful for the beginners…</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment even thread-odd thread-alt depth-1">
+		<div class="controls" id="comment-1743988">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/f6b9e7ad6b121dab99ef2ac1c5b19f1c" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=1743988#respond" onclick="return addComment.moveForm(&quot;comment-1743988&quot;, &quot;1743988&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>nothingchen, <span>13 October 2012</span></h4>
+						<p>very useful. thank you so much. :)</p>
+<p>Follow me on twitter:<br>
+nothingchen</p>
+		</div>
+					
+			
+		</li>
+		
+	
+	<li class="comment odd alt thread-even depth-1">
+		<div class="controls" id="comment-1771159">
+			<div class="avatar"><img alt="" src="./Getting Started with PHP Regular Expressions - noupe_files/7015f9e04c5995c90f8cf726fdff6bbe" class="avatar avatar-66 photo" height="66" width="66"></div>
+			<p><a class="comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html?replytocom=1771159#respond" onclick="return addComment.moveForm(&quot;comment-1771159&quot;, &quot;1771159&quot;, &quot;respond&quot;, &quot;21096&quot;)">Reply</a></p>		</div>
+		<div class="text-holder">
+			<h4>Md Aijaz, <span>18 December 2012</span></h4>
+						<p>awesome. thanks</p>
+		</div>
+					
+			
+		</li>
+		</ul>
+
+
+ 
+
+
+<div class="section respond" id="respond">
+	<!-- comments-form -->
+	<form action="http://www.noupe.com/wp-comments-post.php" method="post" id="commentform" class="comments-form">
+		<fieldset>
+			<h2>Leave a Reply</h2>
+			
+			<p><b>Comments are moderated - and rel="nofollow" is in use. Please no link dropping, no keywords or domains as names; do not spam, and do not advertise!</b></p>
+	
+			<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.noupe.com/php/php-regular-expressions.html#respond" style="display:none;">Click here to cancel reply.</a></div>
+		
+						
+						<legend>comments form</legend>
+			<dl>
+				<div class="row">
+				<dt><label for="text-1">Name (<span>required</span>)</label></dt>
+				<dd><input type="text" name="author" id="text-1" value="" class="text"></dd>
+				</div>
+				<div class="row">
+				<dt><label for="text-2">Mail (will not be published) (<span>required</span>)</label></dt>
+				<dd><input type="text" name="email" id="text-2" value="" class="text"></dd>
+				</div>
+				<div class="row">
+				<dt><label for="text-3">Website</label></dt>
+				<dd><input type="text" name="url" id="text-3" value="" class="text"></dd>
+				</div>
+							<dd><textarea class="area" title="text-area" name="comment" id="comment" cols="30" rows="10"></textarea>
+				<input name="submit" type="submit" id="submit" value="Submit Comment" class="btn-submit"></dd>
+			</dl>
+			
+			<input type="hidden" name="comment_post_ID" value="21096" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e736b625bc"></p>			
+			
+		</fieldset>
+	</form>
+</div>
+			
+										</div>
+																		</div>
+							</div>
+							<!-- sidebar -->
+							<div id="sidebar">
+	<!-- categories-box -->
+	<div class="categories-box">
+		<div class="t"><div class="t-add">&nbsp;</div></div>
+		<div class="c">
+			<div class="box-holder">
+				<div class="right">&nbsp;</div>
+				<h2 class="text-categories">categories</h2>
+				<ul class="categories" id="menu-cat-sidebar">
+					<li><a href="http://www.noupe.com/category/ajax/"><span>AJAX</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/css3/"><span>CSS</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/design/"><span>Design</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/photoshop/"><span>Photoshop</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/tutorial/"><span>Tutorials</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/wordpress/"><span>WordPress</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/tools/"><span>Tools</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/inspiration/"><span>Inspiration</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/freelance/"><span>Freelance</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/showcases/"><span>Showcases</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/photography/"><span>Photography</span><em>&nbsp;</em></a></li>
+<li><a href="http://www.noupe.com/category/wallpaper/"><span>Wallpaper</span><em>&nbsp;</em></a></li>				</ul>
+			</div>
+		</div>
+		<div class="b">&nbsp;</div>
+	</div>
+
+	<!-- ads-box -->
+		<div class="ads-box">
+		<div class="bar">
+			<h3>Advertisement</h3>
+			<a href="mailto:m.dobler@commindo-media.com" title="Advertise with us!">Advertise with us!</a>
+		</div>
+		<!-- Above Premium Sponsor -->       
+		<div id="abovepremiumcontainer">
+			<script type="text/javascript"><!--// <![CDATA[
+			if(window.OA_zones === undefined) { var OA_zones = []; }
+			OA_zones['Above Premium Sponsor'] = 71;
+			// ]]> --></script>
+		<div id="abovepremium">
+      <script type="text/javascript"><!--// <![CDATA[
+		    OA_show('Above Premium Sponsor');
+		  // ]]> --></script>    
+  </div></div>
+		<!-- Premium Sponsor -->
+		<div id="premiumsponsorscontainer">
+			<script type="text/javascript"><!--// <![CDATA[
+			if(window.OA_zones === undefined) { var OA_zones = []; }
+			OA_zones['Premium Sponsor 1'] = 13;
+			OA_zones['Premium Sponsor 2'] = 13;
+			OA_zones['Premium Sponsor 3'] = 13;
+			OA_zones['Premium Sponsor 4'] = 13;
+			OA_zones['Premium Sponsor 5'] = 13;
+			// ]]> --></script>
+		</div>
+		<!-- Sidebar Banners -->
+		<div id="sidebarbannerscontainer">
+			<script type="text/javascript"><!--// <![CDATA[
+			if(window.OA_zones === undefined) { var OA_zones = []; }
+			OA_zones['Sidebar 1'] = 5;
+			OA_zones['Sidebar 2'] = 5;
+			OA_zones['Sidebar 3'] = 5;
+			OA_zones['Sidebar 4'] = 5;
+			OA_zones['Sidebar 5'] = 5;
+			OA_zones['Sidebar 6'] = 5;
+			OA_zones['Sidebar 7'] = 5;
+			OA_zones['Sidebar 8'] = 5;
+			OA_zones['Sidebar 9'] = 5;
+			OA_zones['Sidebar 10'] = 5;
+			OA_zones['Sidebar 11'] = 5;
+			OA_zones['Sidebar 12'] = 5;
+			OA_zones['Sidebar 13'] = 5;
+			OA_zones['Sidebar 14'] = 5;
+			// ]]> --></script>
+		<div id="sidebarbanners">
+    <script type="text/javascript"><!--// <![CDATA[
+    <!--// <![CDATA[
+		  sm_print_adrow_mix('Sidebar ', '<div class="sidebarbanner">', '</div>', 'Premium Sponsor ', '<div class="premiumsponsor">', '</div>');
+		// ]]> --></script><div class="sidebarbanner"><a href="http://www.zoho.com/projects/lp/project-management-and-collaboration.html" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5193__zoneid=5__OXLCA=1__cb=80f7c83be0__oadest=http%3A%2F%2Fwww.zoho.com%2Fprojects%2Flp%2Fproject-management-and-collaboration.html&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(1).php" width="200" height="125" alt="Online Project Management" title="Online Project Management" border="0"></a><br><a href="http://www.zoho.com/projects/lp/project-management-and-collaboration.html" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5193__zoneid=5__OXLCA=1__cb=80f7c83be0__oadest=http%3A%2F%2Fwww.zoho.com%2Fprojects%2Flp%2Fproject-management-and-collaboration.html&#39;">Online Project Management</a><div id="beacon_80f7c83be0" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(3).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="http://www.zoho.com/invoice?utm_source=smashing-magazine&utm_medium=banner&utm_content=banana&utm_campaign=online-advertising" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=4897__zoneid=5__OXLCA=1__cb=466c111b9d__oadest=http%3A%2F%2Fwww.zoho.com%2Finvoice%3Futm_source%3Dsmashing-magazine%26utm_medium%3Dbanner%26utm_content%3Dbanana%26utm_campaign%3Donline-advertising&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(2).php" width="200" height="125" alt="Hassle free invoicing" title="Hassle free invoicing" border="0"></a><br><a href="http://www.zoho.com/invoice?utm_source=smashing-magazine&utm_medium=banner&utm_content=banana&utm_campaign=online-advertising" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=4897__zoneid=5__OXLCA=1__cb=466c111b9d__oadest=http%3A%2F%2Fwww.zoho.com%2Finvoice%3Futm_source%3Dsmashing-magazine%26utm_medium%3Dbanner%26utm_content%3Dbanana%26utm_campaign%3Donline-advertising&#39;">Hassle free invoicing</a><div id="beacon_466c111b9d" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(4).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="premiumsponsor"><style type="text/css" title="text/css" media="screen">
+#premiumsponsors .premiumsponsor {
+margin-bottom:10px;width:405px;overflow:hidden;
+}
+</style>
+<div><a href="http://blackberryappgenerator.com/blackberry/" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5070__zoneid=13__OXLCA=1__cb=a35834061c__oadest=http%3A%2F%2Fblackberryappgenerator.com%2Fblackberry%2F&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(3).php" width="405" height="125" alt="" title="" border="0"></a><div id="beacon_a35834061c" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(5).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></div>
+</div><div class="sidebarbanner"><a href="http://www.typekit.com/?utm_source=smashingmagazine&utm_medium=Display&utm_content=shwf120515&utm_campaign=General" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5183__zoneid=5__OXLCA=1__cb=619d253cc3__oadest=http%3A%2F%2Fwww.typekit.com%2F%3Futm_source%3Dsmashingmagazine%26utm_medium%3DDisplay%26utm_content%3Dshwf120515%26utm_campaign%3DGeneral&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(4).php" width="200" height="125" alt="Web fonts with Typekit" title="Web fonts with Typekit" border="0"></a><br><a href="http://www.typekit.com/?utm_source=smashingmagazine&utm_medium=Display&utm_content=shwf120515&utm_campaign=General" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5183__zoneid=5__OXLCA=1__cb=619d253cc3__oadest=http%3A%2F%2Fwww.typekit.com%2F%3Futm_source%3Dsmashingmagazine%26utm_medium%3DDisplay%26utm_content%3Dshwf120515%26utm_campaign%3DGeneral&#39;">Web fonts with Typekit</a><div id="beacon_619d253cc3" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(6).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="http://www.jotform.com/?utm_source=noupe&utm_medium=banner&utm_content=logo&utm_campaign=noupe" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5190__zoneid=5__OXLCA=1__cb=40c8445537__oadest=http%3A%2F%2Fwww.jotform.com%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3Dlogo%26utm_campaign%3Dnoupe&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(5).php" width="200" height="125" alt="Online Form Builder" title="Online Form Builder" border="0"></a><br><a href="http://www.jotform.com/?utm_source=noupe&utm_medium=banner&utm_content=logo&utm_campaign=noupe" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5190__zoneid=5__OXLCA=1__cb=40c8445537__oadest=http%3A%2F%2Fwww.jotform.com%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3Dlogo%26utm_campaign%3Dnoupe&#39;">Online Form Builder</a><div id="beacon_40c8445537" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(7).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="http://www.dreamtemplate.com/" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=10__zoneid=5__OXLCA=1__cb=5de2eda687__oadest=http%3A%2F%2Fwww.dreamtemplate.com%2F&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(6).php" width="200" height="125" alt="" title="" border="0"></a><br><a href="http://www.dreamtemplate.com/" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=10__zoneid=5__OXLCA=1__cb=5de2eda687__oadest=http%3A%2F%2Fwww.dreamtemplate.com%2F&#39;">Premium Website Templates</a><div id="beacon_5de2eda687" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(8).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="http://www.zoho.com/books?utm_source=smashmag&utm_medium=banner&utm_content=pear&utm_campaign=online-advertising" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5205__zoneid=5__OXLCA=1__cb=8ca041f2f0__oadest=http%3A%2F%2Fwww.zoho.com%2Fbooks%3Futm_source%3Dsmashmag%26utm_medium%3Dbanner%26utm_content%3Dpear%26utm_campaign%3Donline-advertising&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(7).php" width="200" height="125" alt="The Online Accounting Software" title="The Online Accounting Software" border="0"></a><br><a href="http://www.zoho.com/books?utm_source=smashmag&utm_medium=banner&utm_content=pear&utm_campaign=online-advertising" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5205__zoneid=5__OXLCA=1__cb=8ca041f2f0__oadest=http%3A%2F%2Fwww.zoho.com%2Fbooks%3Futm_source%3Dsmashmag%26utm_medium%3Dbanner%26utm_content%3Dpear%26utm_campaign%3Donline-advertising&#39;">The Online Accounting Software</a><div id="beacon_8ca041f2f0" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(9).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="premiumsponsor"><style type="text/css" title="text/css" media="screen">
+#premiumsponsors .premiumsponsor {
+margin-bottom:10px;width:405px;overflow:hidden;
+}
+</style>
+<div><script src="./Getting Started with PHP Regular Expressions - noupe_files/adServer(2).bs"></script><a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.bs?cn=brd&FlightID=6080752&Page=&PluID=0&EyeblasterID=12575301&Pos=413161036028&ord=[timestamp]" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5227__zoneid=13__OXLCA=1__cb=819b7f8a8d__oadest=http%3a//bs.serving%2dsys.com/BurstingPipe/BannerRedirect.bs?cn=brd%26FlightID=6080752%26Page=%26PluID=0%26EyeblasterID=12575301%26Pos=413161036028%26ord=%5btimestamp%5d&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/d00aa355-44b8-4d78-b02f-ec5da7980033.jpg" width="405" height="125" title="" border="0"></a>
+<noscript>
+&lt;a href="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5227__zoneid=13__OXLCA=1__cb=819b7f8a8d__oadest=http%3A%2F%2Fbs.serving-sys.com%2FBurstingPipe%2FadServer.bs%3Fcn%3Dbrd%26FlightID%3D6080752%26Page%3D%26PluID%3D0%26Pos%3D2655" target="_blank"&gt;&lt;img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&amp;FlightID=6080752&amp;Page=&amp;PluID=0&amp;Pos=2655" border=0 width=405 height=125&gt;&lt;/a&gt;
+</noscript><div id="beacon_819b7f8a8d" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(10).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></div>
+</div><div class="sidebarbanner"><a href="http://ad.au.doubleclick.net/clk;268093556;92859839;k" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5057__zoneid=5__OXLCA=1__cb=5fd718fc50__oadest=http%3A%2F%2Fad.au.doubleclick.net%2Fclk%3B268093556%3B92859839%3Bk&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(8).php" width="200" height="125" alt="Create Exceptional Websites" title="Create Exceptional Websites" border="0"></a><br><a href="http://ad.au.doubleclick.net/clk;268093556;92859839;k" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5057__zoneid=5__OXLCA=1__cb=5fd718fc50__oadest=http%3A%2F%2Fad.au.doubleclick.net%2Fclk%3B268093556%3B92859839%3Bk&#39;">Create Exceptional Websites</a><div id="beacon_5fd718fc50" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(11).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="https://www.psd2html.com/order-now.html" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5018__zoneid=5__OXLCA=1__cb=78b3f6b28b__oadest=https%3A%2F%2Fwww.psd2html.com%2Forder-now.html&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(9).php" width="200" height="125" alt="PSD2HTML.com" title="PSD2HTML.com" border="0"></a><br><a href="https://www.psd2html.com/order-now.html" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5018__zoneid=5__OXLCA=1__cb=78b3f6b28b__oadest=https%3A%2F%2Fwww.psd2html.com%2Forder-now.html&#39;">PSD2HTML.com</a><div id="beacon_78b3f6b28b" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(12).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="sidebarbanner"><a href="http://chop-chop.org/?utm_source=noupe&utm_medium=banner&utm_content=v2&utm_campaign=noupe-banner" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5197__zoneid=5__OXLCA=1__cb=4743e32906__oadest=http%3A%2F%2Fchop-chop.org%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3Dv2%26utm_campaign%3Dnoupe-banner&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(10).php" width="200" height="125" alt="" title="" border="0"></a><br><a href="http://chop-chop.org/?utm_source=noupe&utm_medium=banner&utm_content=v2&utm_campaign=noupe-banner" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5197__zoneid=5__OXLCA=1__cb=4743e32906__oadest=http%3A%2F%2Fchop-chop.org%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3Dv2%26utm_campaign%3Dnoupe-banner&#39;">We Convert PSD To XHTML &amp; CSS</a><div id="beacon_4743e32906" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(13).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="premiumsponsor"><style type="text/css" title="text/css" media="screen">
+#premiumsponsors .premiumsponsor {
+margin-bottom:10px;width:405px;overflow:hidden;
+}
+</style>
+<div><a href="http://mediatemple.net/landing/gs-grid-service/index-v2.php/?utm_source=noupe&utm_medium=banner&utm_content=405x125premspr_wh2mofree&utm_campaign=gs" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5295__zoneid=13__OXLCA=1__cb=5578b00366__oadest=http%3A%2F%2Fmediatemple.net%2Flanding%2Fgs-grid-service%2Findex-v2.php%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3D405x125premspr_wh2mofree%26utm_campaign%3Dgs&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(11).php" width="405" height="125" alt="Best value in web hosting" title="Best value in web hosting" border="0"></a><div id="beacon_5578b00366" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(14).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div></div>
+</div>
+  </div></div>
+
+		<!-- Premium Sponsor -->
+		<div id="premiumsponsorbottomcontainer">
+			<script type="text/javascript"><!--// <![CDATA[
+			if(window.OA_zones === undefined) { var OA_zones = []; }
+			OA_zones['Premium Sponsor Bottom'] = 23;
+			// ]]> --></script>
+		<div id="premiumsponsorbottom">
+	  <script type="text/javascript"><!--// <![CDATA[
+		OA_show('Premium Sponsor Bottom');
+	 // ]]> --></script>
+  </div></div>
+		<br class="clear">
+	</div>
+		<!-- box -->
+	<div class="box box-add">
+		<div class="title">
+			<h3>Popular Articles</h3>
+		</div>
+		<ul class="articles-list">
+			<li><a href="http://www.noupe.com/design/education-resources-for-studying-graphic-design.html">Educational Resources for Studying Graphic Design</a></li>
+<li><a href="http://www.noupe.com/css/50-useful-css-tools-and-generators-for-developers.html">50+ Useful CSS Tools And Generators for Developers</a></li>
+<li><a href="http://www.noupe.com/illustrator/best-illustrator-tutorials-from-2010.html">Best Illustrator Tutorials from 2010</a></li>
+<li><a href="http://www.noupe.com/ajax/30-fresh-ajax-tutorials-and-techniques.html">30 Fresh AJAX Tutorials And Techniques</a></li>
+<li><a href="http://www.noupe.com/graphics/a-showcase-of-beautifully-designed-infographics.html">A Showcase of Beautifully Designed Infographics</a></li>
+<li><a href="http://www.noupe.com/tutorial/css3-tutorials-to-brighten-up-your-day.html">CSS3 Tutorials to Brighten Up Your Day</a></li>
+<li><a href="http://www.noupe.com/jquery/excellent-jquery-navigation-menu-tutorials.html">Excellent jQuery Navigation Menu Tutorials</a></li>
+<li><a href="http://www.noupe.com/design/an-explosion-of-adobe-fireworks-resources.html">An Explosion of Adobe Fireworks Resources</a></li>
+<li><a href="http://www.noupe.com/jquery/cool-and-useful-jquery-image-and-content-sliders-and-slideshows.html">Cool and Useful jQuery Image and Content Sliders ..</a></li>
+<li><a href="http://www.noupe.com/tutorial/photoshop-tutorials-to-suit-your-taste.html">Photoshop Tutorials To Suit Your Taste</a></li>
+		</ul>
+	</div>
+	
+	<!-- box -->
+	<div class="box">
+		<div class="ads-block">
+		<!-- Skyscraper -->
+		<div id="skyscrapercontainer">
+		    <script type="text/javascript"><!--// <![CDATA[
+		    if(window.OA_zones === undefined) { var OA_zones = []; }
+		    OA_zones['Skyscraper 1'] = 62;
+		    OA_zones['Skyscraper 2'] = 62;
+			OA_zones['Skyscraper 3'] = 62;
+		    // ]]> --></script>
+		<div id="skyscraper"> 
+		<script type="text/javascript"><!--// <![CDATA[
+			sm_print_adrow('Skyscraper ', '<div class="banner">', '</div>');
+		// ]]> --></script><div class="banner"><a href="http://blackberryappgenerator.com/blackberry/" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5065__zoneid=62__OXLCA=1__cb=1fd34a5a41__oadest=http%3A%2F%2Fblackberryappgenerator.com%2Fblackberry%2F&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(12).php" width="420" height="200" alt="The BlackBerry® App Generator" title="The BlackBerry® App Generator" border="0"></a><div id="beacon_1fd34a5a41" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(15).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div><div class="banner"><a href="http://mediatemple.net/landing/gs-grid-service/index-v2.php/?utm_source=noupe&utm_medium=banner&utm_content=420x200sp_special_whspecs2mo&utm_campaign=gs" target="_blank" onmousedown="this.href=&#39;http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php?oaparams=2__bannerid=5300__zoneid=62__OXLCA=1__cb=65143fce17__oadest=http%3A%2F%2Fmediatemple.net%2Flanding%2Fgs-grid-service%2Findex-v2.php%2F%3Futm_source%3Dnoupe%26utm_medium%3Dbanner%26utm_content%3D420x200sp_special_whspecs2mo%26utm_campaign%3Dgs&#39;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/ai(13).php" width="420" height="200" alt="Amazing Value, Amazing Performance" title="Amazing Value, Amazing Performance" border="0"></a><div id="beacon_65143fce17" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Getting Started with PHP Regular Expressions - noupe_files/lg(16).php" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div>
+</div> 
+	</div></div>
+		</div>
+	</div>
+
+	<!-- box -->
+	<div class="box box-add jobs-feed">
+		<div class="title">
+		<h3><a href="http://jobs.smashingmagazine.com/?pk_campaign=sm&piwik_kwd=widget" target="_blank">Smashing Job Board</a></h3>
+		</div>
+		<ul class="articles-list">
+			<li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/829AeLonyt4/2308925">Senior Front-End (Web) Engineer for the Hydra System - Nemea Bank - (St. Julian's, Malta) - FullTime</a><p>You love to write code for extraordinary user interfaces. You are capable of developing, implementing and improving great modern user interfaces for PC/Mac browsers,…</p></li><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/ma-NXgh0CUI/2308691">UX Manager - Ooyala - (Mountain View, CA) - FullTime</a><p>Bring your experiences to mentor junior designers and set up processes for a rapid development and agile UX design environment. We'll have you work with Ooyala product…</p></li><li class="clearfix"><a href="http://feedproxy.google.com/~r/smjobs/~3/KVSLZo0pysU/2308645">UI Developer - Bullhorn, Inc. - (St. Louis, MO) - FullTime</a><p>Position Overview: As a key member of the core development team, the UI Developer will collaborate with a team of developers and quality assurance engineers…</p></li>		</ul>
+	</div>
+</div>						</div>
+						<!-- panel -->
+						<div class="panel">
+							<div class="panel-holder">
+								<form target="_top" action="http://www.noupe.com/search-results/" method="get" class="search-form">
+	<fieldset>
+		<legend>search form</legend>
+		<div class="text"><input accesskey="4" type="text" title="text" name="q" value="e.g. talking parrot"></div>
+		<input type="submit" class="btn-submit" value="Search">
+		<input type="hidden" value="partner-pub-6779860845561969:8400215435" name="cx">
+		<input type="hidden" value="FORID:10" name="cof">
+		<input type="hidden" value="UTF-8" name="ie">
+	</fieldset>
+</form>							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-b">&nbsp;</div>
+					</div>
+		</div>
+		<!-- footer -->
+		<div id="footer">
+			<div class="bg-footer-r">&nbsp;</div>
+			<div class="holder">
+				<div class="frame">
+					<span class="top"><a href="http://www.noupe.com/php/php-regular-expressions.html#">top</a></span>
+					<!-- columns -->
+					<div class="columns">
+						<div class="col-1">
+							<h4>Noupe Links</h4>
+							<ul class="menu" id="menu-noupe-link">
+								<li><a href="http://www.noupe.com/about">About / Impressum</a></li>
+								<li><a href="mailto:editor@noupe.com">Contact Noupe</a></li>
+								
+							</ul>
+				                </div>
+						<div class="col-2">
+						</div>
+						<div class="col-3">
+							<ul class="menu" id="menu-subscribe">
+								<li><a href="http://twitter.com/NoupeMag">Twitter</a></li>
+								<li><a href="http://www.facebook.com/noupemag">Facebook</a></li>
+								<li><a href="http://www.noupe.com/feed/">RSS Feed</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<img src="./Getting Started with PHP Regular Expressions - noupe_files/bg-top.jpg" alt="image description" class="bg-top" id="bg-top">
+		<img src="./Getting Started with PHP Regular Expressions - noupe_files/bg-bottom.jpg" alt="image description" class="bg-bottom" id="bg-bottom">
+	</div>
+   	<script type="text/javascript">
+		dp.SyntaxHighlighter.ClipboardSwf = 'http://www.noupe.com/wp-content/plugins/google-syntax-highlighter/Scripts/clipboard.swf';
+		dp.SyntaxHighlighter.HighlightAll('code');
+	</script>
+	<!-- Banner  -->
+	<!-- Anfang Bannersammelstelle -->
+
+<!-- Banner abrufen -->
+<script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/spcjs.php"></script><script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/spc.php"></script><script type="text/javascript" src="./Getting Started with PHP Regular Expressions - noupe_files/fl.js"></script>
+
+<script type="text/javascript">
+/* Kompatibilitätsfunktion für indexOf für ältere Browser.
+* Quelle: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/indexOf (MIT License oder Public Domain) 
+*/
+if (!Array.prototype.indexOf)
+{
+  Array.prototype.indexOf = function(elt /*, from*/)
+  {
+    var len = this.length >>> 0;
+
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0)
+         ? Math.ceil(from)
+         : Math.floor(from);
+    if (from < 0)
+      from += len;
+
+    for (; from < len; from++)
+    {
+      if (from in this &&
+          this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
+
+  function shuffle(arr) {
+    var i = arr.length;
+  
+  	if(i < 2) return;
+  	do {
+  		var ii = Math.floor(Math.random() * i);
+  		var temp = arr[ii];
+  		arr[ii] = arr[--i];
+  		arr[i] = temp;
+  	} while(i) 
+  }
+  
+  function sm_print_adrow(name, prepend, append) {
+    if (typeof(OA_output) === 'undefined') {
+      return;
+    }
+
+    var list = [];
+    
+    var i = 1;
+    while (typeof(OA_output[name+i.toString()]) !== 'undefined') {
+      if (OA_output[name+i.toString()] != '')
+        list.push(OA_output[name+i.toString()]);
+      i++;
+    }
+    shuffle(list);
+    
+    for (i = 0; i < list.length; i++) {
+      document.write(prepend+list[i]+append);
+    }
+  }
+
+function sm_print_adrow_mix(basename, base_prepend, base_append, mixinname, mixin_prepend, mixin_append) {
+    if (typeof(OA_output) === 'undefined') {
+      return;
+    }
+	
+	var base = [], mixins = [], mixin_lines = [];
+    
+    // Werte zur einfacheren Verarbeitung in Liste packen
+	var i = 1;
+    while (typeof(OA_output[basename+i.toString()]) !== 'undefined') {
+      if (OA_output[basename+i.toString()] != '')
+        base.push(OA_output[basename+i.toString()]);
+      i++;
+    }
+    var i = 1;
+    while (typeof(OA_output[mixinname+i.toString()]) !== 'undefined') {
+      if (OA_output[mixinname+i.toString()] != '')
+        mixins.push(OA_output[mixinname+i.toString()]);
+      i++;
+    }
+	
+	shuffle(base);
+	shuffle(mixins);
+	
+    // Position der XXL-Sponsoren festlegen
+    for (var i = 0; i < mixins.length; i++) {
+      var line = null, foo = 1;
+      do {
+        line = Math.floor(Math.random() * ((base.length / 2)+1));
+        foo++;
+      } while ((mixin_lines.indexOf(line) != -1) && (foo < 30));  // foo nur zur Sicherheit, da in der Entwicklung ein paar Endlosschleifen entstanden waren. Sollte aber nicht mehr auftreten.        
+      mixin_lines.push(line);
+      //spnsr_xxl[i] = spnsr_xxl[i] + 'Line: '+line;
+    }
+	
+    for (var i = 0; base[i] !== undefined; i++) {
+        var sxxl_index = mixin_lines.indexOf(i/2);
+        if (sxxl_index > -1) {
+          document.write(mixin_prepend+mixins.shift()+mixin_append);
+        }
+        document.write(base_prepend+base[i]+base_append);
+    }
+
+    // Falls der Doppel-Sponsor an letzter Stelle kommt, wird er innerhalb der Schleife nicht mehr erfasst, daher hier nochmal separat
+    while (mixins.length > 0)
+      document.write(mixin_prepend+mixins.shift()+mixin_append);
+}
+
+</script>
+
+<div id="adpool" style="visibility:hidden">
+
+  
+     
+  
+  
+  
+  
+  
+  <div id="homepagepremiumad"> 
+    <script type="text/javascript"><!--// <![CDATA[
+      OA_show('Homepage Premium Ad');
+    // ]]> --></script> 
+  </div>
+
+	
+  
+  
+</div>
+
+
+<script type="text/javascript"><!--// <![CDATA[
+function adMover(item, target) {
+var target = document.getElementById(target);
+var item = document.getElementById(item);
+if (target && item)
+  target.appendChild(item);
+}
+
+adMover("sidebarbanners", "sidebarbannerscontainer");
+adMover("premiumsponsors", "premiumsponsorscontainer");
+adMover("contentad", "contentadcontainer");
+adMover("topad", "topadcontainer");
+adMover("commentad", "commentadcontainer");
+adMover("logobadge", "logobadgecontainer");
+adMover("premiumsponsorbottom", "premiumsponsorbottomcontainer");
+adMover("homepagepremiumad", "homepagepremiumadcontainer");
+adMover("skyscraper", "skyscrapercontainer");
+adMover("textads", "textadscontainer");
+adMover("abovepremium", "abovepremiumcontainer");
+
+function hidetrackinglinks(){var urls=document.getElementsByTagName("a");var urlcount=(urls.length);for(var i=0;i<urlcount;i++){var url=document.getElementsByTagName("a")[i].href;if(url.substring(0,68)=="http://auslieferung.commindo-media-ressourcen.de/www/delivery/ck.php"){var urlsplit=url.split("oadest=");var newurl=unescape(urlsplit[1]);urls[i].href=newurl;urls[i].setAttribute("onmousedown","this.href='"+url+"'")}}}
+hidetrackinglinks();
+
+// ]]> --></script>
+
+<style type="text/css">
+<!--
+#abovepremium .abovepremiumsponsor
+{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+#premiumsponsors .premiumsponsor {
+  margin-bottom:5px;width:405px;overflow:hidden;
+}
+-->
+</style>
+
+<!-- Ende Bannersammelstelle -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34488222-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+
+<!-- Dynamic page generated in 0.917 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2013-02-10 19:04:41 -->
+
+<!-- super cache --></body></html>

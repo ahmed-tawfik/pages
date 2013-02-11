@@ -1,0 +1,38 @@
+#header,
+#footer,
+.bg-top,
+.bg-bottom,
+.hidden,
+#sidebar,
+.pager,
+.panel,
+.design,
+.date,
+.main-b,
+.post-details,
+#acom,
+.comments,
+#respond,
+h2,
+.holder,
+.about-box,
+.comments-form,
+.error-search,
+.categories,
+.logo{
+	display:none;
+}
+.print-logo{
+	display:none;
+	/*position:static;*/
+}
+a{
+	color:#000;
+}
+ul {	margin:0;	padding:0;	list-style:none;}
+.post{
+	margin:0 0 10px;
+}
+.blog{
+	padding:0;
+}
