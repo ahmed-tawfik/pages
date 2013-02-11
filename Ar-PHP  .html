@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://sourceforge.net/projects/ar-php/?source=dlp -->
+<html lang="en" class=" js flexbox canvas canvastext no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        
+        <meta id="webtracker" name="webtracker" content="{&quot;event_id&quot;: &quot;d989c082-720d-11e2-9770-0200ac1d1d91&quot;, &quot;project&quot;: &quot;ar-php&quot;, &quot;non_clicker&quot;: 0.7534682072477129, &quot;active_tests&quot;: [&quot;&quot;], &quot;clicker&quot;: 0.2492770558538536}">
+
+        <meta name="description" content="Our mission is to develop open source solutions and provides professional support helps small and medium size companies meet the challenges of …">
+        <meta name="keywords" content="CGI Tools/Libraries,  Open Source, Open Source Software, Development, Community, Source Code, Secure,  Downloads, Free Software">
+
+
+<meta property="og:title" content="Ar-PHP">
+<meta property="og:type" content="product">
+<meta property="og:image" content="http://sourceforge.net//c.fsdn.com/con/app/proj/ar-php/screenshots/324442.jpg">
+<meta property="og:url" content="http://sourceforge.net/projects/ar-php/">
+<meta property="og:site_name" content="SourceForge">
+<meta property="og:description" content="Our mission is to develop open source solutions and provides professional support helps small and medium size companies meet the challenges of developing ...">
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ar-PHP | Free  software downloads at SourceForge.net</title>
+        <link rel="shortcut icon" href="http://a.fsdn.com/con/img/sftheme/favicon.ico">
+        <script id="LR1" type="text/javascript" async="" src="./Ar-PHP  _files/client.js"></script><script src="./Ar-PHP  _files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Ar-PHP  _files/plusone.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./Ar-PHP  _files/ga.js"></script><script type="text/javascript">
+            /*global unescape, window, console, jQuery, $, net, SF, COMSCORE, DD_belatedPNG */
+            // Setup our namespace
+            if (!window.SF) { window.SF = {}; }
+            if (!window.net) { window.net = {}; }
+            if (!window.net.sf) { window.net.sf = {}; }
+            SF.cdn = 'http://a.fsdn.com/con';
+            SF.deploy_time = '1360284674';
+        </script>
+        <script src="./Ar-PHP  _files/sf.head.js" type="text/javascript"></script>
+        
+<!--[if lt IE 7 ]>
+  <script src="http://a.fsdn.com/con/js/sftheme/dd_belatedpng.js"></script>
+  <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+
+<link href="./Ar-PHP  _files/css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    @font-face {
+        font-family: "Pictos";
+        src: url('http://a.fsdn.com/con/css/fonts/sftheme/pictos-web.eot');
+        src: local("☺"), url('http://a.fsdn.com/con/css/fonts/sftheme/pictos-web.woff') format('woff'), url('http://a.fsdn.com/con/css/fonts/sftheme/pictos-web.ttf') format('truetype'), url('http://a.fsdn.com/con/css/fonts/sftheme/pictos-web.svg') format('svg');
+    }
+</style>
+ <link rel="stylesheet" href="./Ar-PHP  _files/sf.css" type="text/css">
+
+    <style type="text/css">.sfdl { width:250px;height:48px;padding:0;position:relative;font:bold 12px/1.17 sans-serif !important; border:1px solid #aaa;display:inline;float:left;text-decoration:none;-moz-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-webkit-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-o-box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;box-shadow:rgba(255, 255, 255, 0.6) 0 1px 0 0;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;background:no-repeat #e5e5e5 8px center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #fff), color-stop(100%, #ccc));background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), -moz-linear-gradient(top, #fff 0%, #ccc 100%);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC), linear-gradient(top, #fff 0%, #ccc 100%);background-position:8px center, 0 0;margin:0 10px 7px 0;overflow:hidden;color:#555 !important;}.sfdl:hover { cursor:pointer;text-decoration:none;background:8px center no-repeat #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNqcUosNgjAUbE0HcARGwAnqZxBxBCbQDXQE2UOkTIAj4AZsgPfMa1JeGqhecimU63HvvepxHFUq6mebY2nAdbi/Ur/hKg0IRv2H3WFvnX/Rj9qRcxH7A+BIjDK2eCYewQy8g2/WDJSk4w8xWDICz2ziUchyvMGLXIVJK9acE0+0VM53PIitE6bTcKJJT0wg6ESSHiwhHpbMDYszjhrDKcVkE5mO5dhZyrwNx72J2i9iGvMmODB372U/aCpV2NSlG0sGVbiBw2VM+BFgALYfPdL6UCEWAAAAAElFTkSuQmCC);}.sfdl-lite { background:0 center no-repeat #337733 none;color:white !important;height:auto;padding:0.5em 1em;text-align:center;-moz-border-radius:4px;-webkit-border-radius:4px;-o-border-radius:4px;-ms-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #339933), color-stop(100%, #337733));background-image:-moz-linear-gradient(top, #339933 0%, #337733 100%);background-image:linear-gradient(top, #339933 0%, #337733 100%);}.sfdl-lite:hover { background:0 center no-repeat #339933;}.sfdl span { border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;display:block;margin:3px;margin-left:35px;padding:4px;text-align:left;color:#FFF;background:#363;background-image:-moz-linear-gradient(center top, #393 0%, #373 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #393),color-stop(1, #373));background-image:linear-gradient(top, #393 0%, #373 100%);overflow:hidden;height:34px;}.sfdl b { display:block;line-height:17.0px;}.sfdl small { display:block;line-height:17.0px;color:#ADC2AD; font-weight:normal;white-space:nowrap;overflow:hidden;font-size:77%;}</style>
+
+<style type="text/css">
+    .Ldc53b954f608b5b248e66850a75e7dc0405ad61b { display: none !important; }
+</style>
+    <link rel="alternate" type="application/rss+xml" title="Ar-PHP…Recent Activity" href="http://sourceforge.net/export/rss2_keepsake.php?group_id=216003">
+    <link rel="alternate" type="application/rss+xml" title="Ar-PHP…File Releases" href="http://sourceforge.net/api/file/index/project-id/216003/mtime/desc/limit/20/rss">
+    <link rel="alternate" type="application/rss+xml" title="Ar-PHP…Reviews" href="http://sourceforge.net/projects/ar-php/reviews_feed.rss">
+    <link rel="canonical" href="http://sourceforge.net/projects/ar-php/">
+        
+<script type="text/javascript">
+    SF.adblock = true;
+    var immersion_adcode = "";
+</script>
+        <script type="text/javascript" src="./Ar-PHP  _files/adframe.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+                _gaq.push(['1._setAccount', 'UA-32013-6']);
+                _gaq.push(['2._setAccount', 'UA-36130941-1']);
+                _gaq.push(['_setAccount', 'UA-36130941-1']);
+                _gaq.push(['1._trackPageview']);
+                _gaq.push(['2._trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+    <body id="pg_project" class="bluesteel user" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" style="position: absolute; top: -9999em; width: 10px; height: 10px;" src="./Ar-PHP  _files/hub(1).html"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" style="position: absolute; top: -9999em; width: 10px; height: 10px;" src="./Ar-PHP  _files/hub.html"></iframe>
+        
+        <div id="busy-spinner" style="display: none;"></div>
+        
+<header id="site-header">
+    <div class="wrapper">
+        <a href="http://sourceforge.net/" class="logo">
+            <span>SourceForge</span>
+        </a>
+        <form method="get" action="http://sourceforge.net/directory/">
+            <input type="text" id="words" name="q" placeholder="Search">
+        </form>
+        <!--Switch to {language}-->
+        <nav id="nav-site">
+            <a href="http://sourceforge.net/directory/" title="Browse our software.">Browse</a>
+            <a href="http://sourceforge.net/blog/" title="Read the latest news from the SF HQ.">Blog</a>
+            <a href="http://sourceforge.net/support" title="Contact us for help and feedback.">Help</a>
+        </nav>
+        <nav id="nav-account">
+            
+              <div class="logged_out">
+                <a href="https://sourceforge.net/account/login.php">Log In</a>
+                <span>or</span>
+                <a href="https://sourceforge.net/user/registration">Join</a>
+              </div>
+            
+        </nav>
+    </div>
+</header>
+<header id="site-sec-header">
+    <div class="wrapper">
+        <nav id="nav-hubs">
+            <h4>Solution Centers</h4>
+            <a href="http://ibmsmartercommerce.sourceforge.net/">Smarter Commerce</a>
+            <a href="http://goparallel.sourceforge.net/">Go Parallel</a>
+            <a href="http://ibmsmarteritservices.sourceforge.net/">Smarter IT</a>
+        </nav>
+        <nav id="nav-collateral">
+            <a href="http://sourceforge.net/jobs?source=header">Jobs</a>
+            
+            
+            <a href="https://sourceforge.net/user/registration">Newsletters</a>
+            
+        </nav>
+    </div>
+</header>
+
+        
+        <div id="messages">
+        </div>
+
+        <div id="page-body">
+<div id="banner-ads" class="ads">
+    
+    
+    
+
+<script type="text/javascript">
+    if ('p1_leader'.indexOf('immersion') > 0) {
+        document.write('<div id="p1_leader" class="ad leaderboard"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p1_leader;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;dcopt=ist;tile=1;sz=728x90;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p1_leader" height="90" class="ad leaderboard" src="/static/ads/iframe_ad.html?position=p1_leader&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p1_leader%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Bdcopt%3Dist%3Btile%3D1%3Bsz%3D728x90%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=leaderboard" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p1_leader" height="93px" class="ad leaderboard" src="./Ar-PHP  _files/iframe_ad(1).html" seamless="" frameborder="0" scrolling="no" width="728px" style="width: 728px !important; height: 93px !important;"></iframe>
+    
+    
+    
+
+<script type="text/javascript">
+    if ('logo_sponsorship'.indexOf('immersion') > 0) {
+        document.write('<div id="logo_sponsorship" class="ad hub"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_pg_project_logo_sponsorship;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=2;sz=200x90;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="logo_sponsorship" height="90" class="ad hub" src="/static/ads/iframe_ad.html?position=logo_sponsorship&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_pg_project_logo_sponsorship%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D2%3Bsz%3D200x90%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=hub" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="logo_sponsorship" height="93px" class="ad hub" src="./Ar-PHP  _files/iframe_ad.html" seamless="" frameborder="0" scrolling="no" width="200px" style="width: 200px !important; height: 93px !important;"></iframe>
+</div>
+<nav id="breadcrumbs">
+    <ul>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/">Home</a></li>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory">Browse</a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory/internet/www/">WWW/HTTP</a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory/internet/www/dynamic/">Dynamic Content</a></li><li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="http://sourceforge.net/directory/internet/www/dynamic/cgi/">CGI Tools/Libraries</a></li><li class="project">Ar-PHP</li>
+    </ul>
+</nav>
+<article id="project" class="content-wrapper" itemscope="" itemtype="http://schema.org/SoftwareApplication">
+    <meta itemprop="image" content="http://a.fsdn.com/con/img/project_default.png">
+    <nav>
+        
+    <div class="firstwave">
+        <ul class="b-hornav droppy">
+            
+            <li id="menu_consume_summary" class="selected">
+                <a href="http://sourceforge.net/projects/ar-php/?source=navbar"><span><span>Summary</span></span></a>
+                <div class="diamond"></div>
+                
+            </li>
+            
+            <li id="menu_consume_files">
+                <a href="http://sourceforge.net/projects/ar-php/files/?source=navbar"><span><span>Files</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_reviews">
+                <a href="http://sourceforge.net/projects/ar-php/reviews/?source=navbar"><span><span>Reviews</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_support">
+                <a href="http://sourceforge.net/projects/ar-php/support?source=navbar"><span><span>Support</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_wiki">
+                <a href="http://sourceforge.net/p/ar-php/wiki/?source=navbar"><span><span>Wiki</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_mailing lists">
+                <a href="http://sourceforge.net/p/ar-php/mailman/?source=navbar"><span><span>Mailing Lists</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_tickets" class="" style="z-index: 1000;">
+                <a href="http://sourceforge.net/p/ar-php/_list/tickets?source=navbar" class=""><span><span>Tickets</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_discussion" class="hover" style="z-index: 10000;">
+                <a href="http://sourceforge.net/p/ar-php/discussion/?source=navbar" class="hover"><span><span>Discussion</span></span></a>
+                
+                
+            </li>
+            
+            <li id="menu_consume_code" class="" style="z-index: 1000;">
+                <a href="http://sourceforge.net/p/ar-php/code/?source=navbar" class=""><span><span>Code</span></span></a>
+                
+                
+            </li>
+            
+        </ul>
+    </div>
+    
+    </nav>
+    
+    <section id="main-content" style="min-height: 1610px;">
+        <header id="project-header">
+            
+<section id="project-title">
+    <h1 itemprop="name">
+            Ar-PHP</h1>
+    <p id="maintainers" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <b title="Group" class="ico ico-group" data-icon="g"></b>
+    <a href="http://sourceforge.net/users/kshamaa" itemprop="url"><span itemprop="name">kshamaa</span></a>
+    </p>
+    
+</section>
+        </header>
+        <section id="call-to-action">
+            <section id="counts-sharing">
+                <section class="project-info">
+                    <section class="content">
+                        <b data-icon="k" class="ico ico-heart" title="Heart"></b>
+                        <a href="http://sourceforge.net/projects/ar-php/reviews/" title="Browse reviews" id="call-to-action-reviews">23 Recommendations</a>
+                    </section>
+                </section>
+                <section id="download-stats" class="project-info">
+                    <section class="content">
+                        <b data-icon="}" class="ico ico-downarrow" title="Down"></b>
+                        <a href="http://sourceforge.net/projects/ar-php/files/stats/timeline" title="Downloads This Week" id="call-to-action-stats">59 Downloads</a>
+                        <span>(This Week)</span>
+                    </section>
+                </section>
+                <section id="last-updated" class="project-info">
+                    <section class="content">
+                        <b data-icon="\" class="ico ico-calendar" title="Last Update"></b>
+                        Last Update:
+                        <time class="dateUpdated" datetime="2013-01-19">2013-01-19</time>
+                    </section>
+                </section>
+
+                
+<section class="social-sharing">
+    <!-- Twitter -->
+    <script src="./Ar-PHP  _files/widgets.js" type="text/javascript"></script>
+    <iframe allowtransparency="true" frameborder="0" scrolling="no" src="./Ar-PHP  _files/tweet_button.1360366574.html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+    <!-- Google +1 -->
+    <script type="text/javascript">
+        (function() {
+         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+         po.src = '//apis.google.com/js/plusone.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+         })();
+    </script>
+    
+    <div style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1360500051731" name="I0_1360500051731" src="./Ar-PHP  _files/fastbutton.html" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div>
+    <!-- Facebook -->
+    <iframe src="./Ar-PHP  _files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowtransparency="true"></iframe>
+</section>
+
+            </section>
+            <section id="download_button">
+                    
+                        
+                        
+<a href="http://sourceforge.net/projects/ar-php/files/latest/download?source=dlp" title="Download /ar-php/Ar-PHP version 3.6.0/Arabic-3.6.0.zip from SourceForge  - 1.5 MB" class="sfdl">
+    <span>
+        <b>Download</b>
+        <small title="/ar-php/Ar-PHP version 3.6.0/Arabic-3.6.0.zip">Arabic-3.6.0.zip</small>
+    </span>
+</a>
+                    <meta itemprop="fileSize" content="1459642.0"><meta itemprop="fileFormat" content="application/zip; charset=binary"><div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="Free">
+                        <link itemprop="availability" href="http://schema.org/InStock">
+                    </div>
+                    <a href="http://sourceforge.net/projects/ar-php/files/?source=dlp" id="files-link" title="Browse All Files">Browse All Files</a>
+                    <section class="project-info">
+                        
+                        <span class="platform-icon windows"><meta itemprop="operatingSystems" content="Windows">Windows</span>
+                        
+                        <span class="platform-icon mac"><meta itemprop="operatingSystems" content="Mac">Mac</span>
+                        
+                        <span class="platform-icon linux"><meta itemprop="operatingSystems" content="Linux">Linux</span>
+                        
+                    </section>
+            </section>
+        </section>
+        <section id="project-screenshots" class="enhanced">
+            <header>
+                <h2>Screenshots</h2>
+            </header>
+            <div class="slider"><div title="Previous" class="previous disabled">‹</div>
+                <div class="strip" style="visibility: visible; opacity: 1;">
+                    <a rel="section" class="thumbnail" href="http://c.fsdn.com/con/app/proj/ar-php/screenshots/324442.jpg" title="Ar-PHP Project Logo">
+                        <img itemprop="screenshots" src="./Ar-PHP  _files/137" width="182" height="137" alt="Ar-PHP Project Logo">
+                    </a>
+                </div>
+            <div title="Next" class="next disabled">›</div></div>
+        </section>
+        <section id="project-description">
+            <header>
+                <h2>Description</h2>
+            </header>
+            <p id="description" itemprop="description">Our mission is to develop open source solutions and provides professional support helps small and medium size companies meet the challenges of developing professional Arabic websites in the PHP/MySQL environment based on our experience in Arabic language processing, the library that we develop helps companies save time and increase productivity.</p>
+            <p>
+                <a id="homepage" class="pspbtn" href="http://www.ar-php.org/" title="Ar-PHP Web Site">Ar-PHP Web Site</a>
+            </p>
+        </section>
+        <section id="project-categories-and-license">
+            <div class="project-container">
+                <section>
+                    <header>
+                        <h3>Categories</h3>
+                    </header><a href="http://sourceforge.net/directory/internet/www/dynamic/cgi/" itemprop="softwareApplicationSubCategory">CGI Tools/Libraries</a></section>
+                <section>
+                    <section class="project-info">
+    <header>
+        <h3>License</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/license:lgpl/">GNU Library or Lesser General Public License version 2.0 (LGPLv2)</a></section>
+</section>
+
+
+                </section>
+            </div>
+        </section>
+        <section id="project-features">
+            <header>
+                <h2>Features</h2>
+            </header>
+            <div class="content editable">
+                <ul class="features"><li class="feature">Advanced Arabic search (stem based) </li><li class="feature">Render Arabic text (PDF, GD, SWF)</li><li class="feature">Present dates in Arabic or Hijri and convert Hijri date into Unix timestamp</li><li class="feature">Transliterate English words in Arabic and vice versa</li><li class="feature">Spell numbers in Arabic idiom</li><li class="feature">Arabic text auto summarization</li><li class="feature">Phonetically alike Arabic words (soundex)</li><li class="feature">Guess gender of Arabic names</li><li class="feature">Calculate the time of Muslim prayer</li><li class="feature">Standardize Arabic text and text normalisation</li><li class="feature">and many more ...</li>
+                </ul>
+                <div id="antixsrf">
+                <input type="hidden" name="_visit_cookie" value="5114f1350b47387e3d2c0b72">
+                </div>
+            </div>
+        </section><section id="notifications">
+            <header>
+                <h2>Update Notifications</h2>
+            </header>
+            <form action="http://sourceforge.net/projects/ar-php/subscribe" method="post" id="subscribe-form">
+                <section id="subscribe-form-container">
+                    
+                    <input type="email" id="subscriber-email" name="XLzoQVDDrHFRezrzyFDBB:PNqHjA" placeholder="john.doe@example.org" value="" required="">
+                    
+                    
+                    <button type="submit" id="subscriber-submit" class="subscriber-submit">
+                        <span>
+                            
+                            Subscribe to Updates
+                            
+                        </span>
+                    </button>
+                    <p id="subscriber-existing-email" style="display: none">
+                        Sent to <code></code>.
+                        
+                    </p>
+                </section>
+                <input type="hidden" name="_visit_cookie" value="5114f1350b47387e3d2c0b72">
+                <input type="hidden" name="timestamp" value="1360341459">
+                <input type="hidden" name="spinner" value="XKl99NVmHtPM62wFOQGEHfVngyyk">
+                <p class="Ldc53b954f608b5b248e66850a75e7dc0405ad61b"><label for="XLTcSWzz:hMOSfGVb_d1TLB9lYaM">You seem to have CSS turned off. Please don't fill out this field.</label><br><input id="XLTcSWzz:hMOSfGVb_d1TLB9lYaM" name="XLDcSWzz:hFudvxTz_DVWO9xKQfw" type="text"><br></p>
+                <p class="Ldc53b954f608b5b248e66850a75e7dc0405ad61b"><label for="XLTcSWzz:hMKSfGVb_d1TLB9lYaM">You seem to have CSS turned off. Please don't fill out this field.</label><br><input id="XLTcSWzz:hMKSfGVb_d1TLB9lYaM" name="XLDcSWzz:hVudvxTz_DVWO9xKQfw" type="text"><br></p>
+            </form>
+        </section>
+        
+<section id="ratings">
+    <header>
+        <h2>User Ratings</h2>
+    </header>
+    <section class="recommended-percentage item" itemscope="" itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+        <span class="rating">
+            <span class="average" itemprop="ratingValue">100</span>%
+            <meta itemprop="bestRating" content="100">
+            <meta itemprop="worstRating" content="0">
+            <meta itemprop="ratingCount" content="23">
+            <span class="recommended">recommended</span>
+        </span>
+    </section>
+    <section class="thumbs">
+        <div class="up">&nbsp;</div>
+        <div class="down">&nbsp;</div>
+    </section>
+    <section class="bargraph">
+        <div class="thumbs-up" style="border-left-width: 200px">
+            23
+        </div>
+        <div class="thumbs-down" style="border-left-width: 1px">
+            0
+        </div>
+    </section>
+</section>
+
+        <section id="reviews-n-ratings">
+            <header>
+                <a class="pspbtn" href="http://sourceforge.net/projects/ar-php/reviews/">Write a Review</a>
+                <h2>User Reviews</h2>
+            </header>
+            <div class="sorts-n-filters">
+                <div class="drop-down-menu">
+                    <div class="sort-options">
+                        <span>Sort By</span>
+                        <div class="sort-drop-down">
+                            <a href="http://sourceforge.net/projects/ar-php/?source=dlp#">Most Helpful</a>
+                        </div>
+                        <ul>
+                            <li><a href="http://sourceforge.net/projects/ar-php/?sort=date&source=dlp#reviews-n-ratings" title="Newest" class="">Newest</a></li>
+                            <li><a href="http://sourceforge.net/projects/ar-php/?sort=usefulness&source=dlp#reviews-n-ratings" title="Most Helpful" class=" active">Most Helpful</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="drop-down-menu">
+                    <div class="sort-options">
+                        <span>Filter</span>
+                        <div class="sort-drop-down">
+                            <a href="http://sourceforge.net/projects/ar-php/?source=dlp#">All</a>
+                        </div>
+                        <ul>
+                            <li><a href="http://sourceforge.net/projects/ar-php/?filter=all&source=dlp#reviews-n-ratings" title="Show All" class=" active">All</a></li>
+                            <li><a href="http://sourceforge.net/projects/ar-php/?filter=thumbs_up&source=dlp#reviews-n-ratings" title="Show Thumbs Up Only" class="">Thumbs Up</a></li>
+                            <li><a href="http://sourceforge.net/projects/ar-php/?filter=thumbs_down&source=dlp#reviews-n-ratings" title="Show Thumbs Down Only" class="">Thumbs Down</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <ul id="project-reviews" class="reviews" itemprop="reviews">
+                    
+
+
+
+
+
+
+<li class="odd">
+    <article class="reviewed" itemscope="" itemtype="http://schema.org/Review">
+        <meta itemprop="datePublished" content="2011-01-19 21:41:05">
+        <div class="rate-container">
+            <strong class="rate up"><img src="./Ar-PHP  _files/thumbs_up_large.png"></strong>
+        </div>
+        <section class="meta">
+            <section class="review-authorship up" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                Posted by 
+
+
+<a href="http://sourceforge.net/users/atefatwan" itemscope="" itemtype="http://schema.org/Person">
+    <span itemprop="name">Atefatwan</span>
+</a>
+
+  — <span datetime="2011-01-19">2011-01-19</span>
+                <meta itemprop="ratingValue" content="1">
+                <meta itemprop="worstRating" content="-1">
+                <meta itemprop="bestRating" content="1">
+            </section>
+            <section class="review-helpfulness">
+            </section><!-- .review-helpfulness -->
+        </section><!-- .meta -->
+        <p class="review-txt " itemprop="reviewBody">very useful project</p>
+    </article><!-- .reviewed -->
+</li>
+
+
+
+
+<li class="even">
+    <article class="reviewed" itemscope="" itemtype="http://schema.org/Review">
+        <meta itemprop="datePublished" content="2010-12-09 12:14:51">
+        <div class="rate-container">
+            <strong class="rate up"><img src="./Ar-PHP  _files/thumbs_up_large.png"></strong>
+        </div>
+        <section class="meta">
+            <section class="review-authorship up" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                Posted by 
+
+
+<a href="http://sourceforge.net/users/life5" itemscope="" itemtype="http://schema.org/Person">
+    <span itemprop="name">Life</span>
+</a>
+
+  — <span datetime="2010-12-09">2010-12-09</span>
+                <meta itemprop="ratingValue" content="1">
+                <meta itemprop="worstRating" content="-1">
+                <meta itemprop="bestRating" content="1">
+            </section>
+            <section class="review-helpfulness">
+            </section><!-- .review-helpfulness -->
+        </section><!-- .meta -->
+        <p class="review-txt " itemprop="reviewBody">very useful project :)</p>
+    </article><!-- .reviewed -->
+</li>
+
+
+
+
+<li class="odd">
+    <article class="reviewed" itemscope="" itemtype="http://schema.org/Review">
+        <meta itemprop="datePublished" content="2010-05-09 17:46:52">
+        <div class="rate-container">
+            <strong class="rate up"><img src="./Ar-PHP  _files/thumbs_up_large.png"></strong>
+        </div>
+        <section class="meta">
+            <section class="review-authorship up" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                Posted by 
+
+
+<a href="http://sourceforge.net/users/vegatron77" itemscope="" itemtype="http://schema.org/Person">
+    <span itemprop="name">Ahmed Rih</span>
+</a>
+
+  — <span datetime="2010-05-09">2010-05-09</span>
+                <meta itemprop="ratingValue" content="1">
+                <meta itemprop="worstRating" content="-1">
+                <meta itemprop="bestRating" content="1">
+            </section>
+            <section class="review-helpfulness">
+            </section><!-- .review-helpfulness -->
+        </section><!-- .meta -->
+        <p class="review-txt " itemprop="reviewBody">thanx</p>
+    </article><!-- .reviewed -->
+</li>
+
+
+
+
+<li class="even">
+    <article class="reviewed" itemscope="" itemtype="http://schema.org/Review">
+        <meta itemprop="datePublished" content="2013-01-22 18:07:41.228000">
+        <div class="rate-container">
+            <strong class="rate up"><img src="./Ar-PHP  _files/thumbs_up_large.png"></strong>
+        </div>
+        <section class="meta">
+            <section class="review-authorship up" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                Posted by 
+
+
+<a href="http://sourceforge.net/users/saidbakr2" itemscope="" itemtype="http://schema.org/Person">
+    <span itemprop="name">Said Bakr</span>
+</a>
+
+  — <span datetime="2013-01-22">2013-01-22</span>
+                <meta itemprop="ratingValue" content="1">
+                <meta itemprop="worstRating" content="-1">
+                <meta itemprop="bestRating" content="1">
+            </section>
+            <section class="review-helpfulness">
+            </section><!-- .review-helpfulness -->
+        </section><!-- .meta -->
+        <p class="review-txt " itemprop="reviewBody"><div class="truncate_less">The special Quran text characters should be supported in Glyphs e.g some characters like found at http graphemica .com /06D9 This is very important. I noticed that some fixation for some characters like small alef is become supported in 3.5.6 (<a href="http://sourceforge.net/projects/ar-php/?source=dlp#" class="truncate_show">more</a>…)</div></p>
+    </article><!-- .reviewed -->
+</li>
+
+
+
+                </ul>
+                <a class="pspbtn" href="http://sourceforge.net/projects/ar-php/reviews/?sort=usefulness&filter=all#reviews-n-ratings">Read more reviews</a>
+            </section>
+        </section>
+
+        <section id="project-additional-trove">
+            <header>
+                <h2>Additional Project Details</h2>
+            </header>
+            <div class="project-container">
+                <section class="project-info">
+    <header>
+        <h3>Languages</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/natlanguage:arabic/" itemprop="inLanguage">Arabic</a>, <a href="http://sourceforge.net/directory/natlanguage:english/" itemprop="inLanguage">English</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>Intended Audience</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/audience:developers/">Developers</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>User Interface</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/environment:daemon/">Non-interactive (Daemon)</a>, <a href="http://sourceforge.net/directory/environment:web/">Web-based</a></section>
+</section>
+
+
+                <section class="project-info">
+    <header>
+        <h3>Programming Language</h3>
+    </header>
+    <section class="content"><a href="http://sourceforge.net/directory/language:php/">PHP</a></section>
+</section>
+
+
+                <section class="project-info">
+                    <header>
+                        <h3>Registered</h3>
+                    </header>
+                    <section class="content">
+                        2008-01-28
+                    </section>
+                </section>
+            </div>
+        </section>
+        <section class="ads text">
+            
+    
+    
+
+<script type="text/javascript">
+    if ('p71_text'.indexOf('immersion') > 0) {
+        document.write('<div id="p71_text" class="ad text"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p71_text;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=3;sz=1x1;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p71_text" height="1" class="ad text" src="/static/ads/iframe_ad.html?position=p71_text&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p71_text%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D3%3Bsz%3D1x1%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=text" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p71_text" height="15px" class="ad text" src="./Ar-PHP  _files/iframe_ad(2).html" seamless="" frameborder="0" scrolling="no" width="294px" style="width: 294px !important; height: 15px !important;"></iframe>
+            
+    
+    
+
+<script type="text/javascript">
+    if ('p72_text'.indexOf('immersion') > 0) {
+        document.write('<div id="p72_text" class="ad text"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p72_text;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=4;sz=1x1;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p72_text" height="1" class="ad text" src="/static/ads/iframe_ad.html?position=p72_text&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p72_text%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D4%3Bsz%3D1x1%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=text" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p72_text" height="15px" class="ad text" src="./Ar-PHP  _files/iframe_ad(3).html" seamless="" frameborder="0" scrolling="no" width="294px" style="width: 294px !important; height: 15px !important;"></iframe>
+        </section>
+    </section>
+
+    <section id="sidebar">
+        <section class="ads">
+            
+    
+    
+
+<script type="text/javascript">
+    if ('p83_medrec'.indexOf('immersion') > 0) {
+        document.write('<div id="p83_medrec" class="ad medrec"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p83_medrec;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=5;sz=300x250,300x600;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p83_medrec" height="250" class="ad medrec" src="/static/ads/iframe_ad.html?position=p83_medrec&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p83_medrec%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D5%3Bsz%3D300x250%2C300x600%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=medrec" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p83_medrec" height="253px" class="ad medrec" src="./Ar-PHP  _files/iframe_ad(4).html" seamless="" frameborder="0" scrolling="no" width="300px" style="width: 300px !important; height: 253px !important;"></iframe>
+            
+    
+    
+
+<script type="text/javascript">
+    if ('p84_medrec'.indexOf('immersion') > 0) {
+        document.write('<div id="p84_medrec" class="ad medrec"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p84_medrec;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=6;sz=300x250;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p84_medrec" height="250" class="ad medrec" src="/static/ads/iframe_ad.html?position=p84_medrec&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p84_medrec%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D6%3Bsz%3D300x250%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=medrec" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p84_medrec" height="253px" class="ad medrec" src="./Ar-PHP  _files/iframe_ad(5).html" seamless="" frameborder="0" scrolling="no" width="300px" style="width: 300px !important; height: 253px !important;"></iframe>
+        </section>
+        
+<aside class="sidebar-widget">
+	<header>
+        <h3>Recommended Projects</h3>
+	</header>
+    <ul>
+    
+        <li class="item odd">
+            <a href="http://sourceforge.net/projects/kezan/?source=recommended" title="KEzan"><img alt="Icon" src="./Ar-PHP  _files/project_default.png"></a>
+            <a href="http://sourceforge.net/projects/kezan/?source=recommended" title="Learn more about KEzan ">KEzan</a>
+        </li>
+    
+        <li class="item even">
+            <a href="http://sourceforge.net/projects/persian-log2vis.berlios/?source=recommended" title="Persian Log2Vis / Arabic Log2Vis"><img alt="Icon" src="./Ar-PHP  _files/project_default.png"></a>
+            <a href="http://sourceforge.net/projects/persian-log2vis.berlios/?source=recommended" title="Learn more about Persian Log2Vis / Arabic Log2Vis ">Persian Log2Vis / Arabic Log2Vis</a>
+        </li>
+    
+        <li class="item odd last">
+            <a href="http://sourceforge.net/projects/phptransformer/?source=recommended" title="phpTransformer"><img alt="Icon" src="./Ar-PHP  _files/pt mini logo 200-200 .png"></a>
+            <a href="http://sourceforge.net/projects/phptransformer/?source=recommended" title="Learn more about phpTransformer ">phpTransformer</a>
+        </li>
+    
+    </ul>
+</aside>
+
+        
+<aside class="sidebar-widget jobs-widget">
+    <header>
+        <h3>
+            <span>
+                Powered by
+                <a href="http://www.dice.com/?CMPID=AF_SF_UP_JS_AV_OG_BN_&utm_source=SourceForge&utm_medium=Affiliate&utm_content=&utm_campaign=Advocacy_Ongoing"> <img src="./Ar-PHP  _files/dice_logo.png" alt="Dice Logo" class="dice-logo"> </a>
+            </span>
+            Latest Tech Jobs
+        </h3>
+    </header>
+    <section>
+        <form action="http://sourceforge.net/jobs/" method="get" id="job-search">
+            <input type="text" name="text" placeholder="Senior Java Developer (Job Title)" id="job-title" value="">
+            <input type="submit" name="submit" value="Find" id="job-search-button">
+        </form>
+    </section>
+    <ul id="job-listing">
+    
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?engine=2&utm_campaign=Advocacy_Ongoing&source=76&utm_source=SourceForge&dockey=xml%2Fc%2F2%2Fc2389541d16199099eca0c7cf178ceea%40endecaindex&utm_medium=Affiliate&CMPID=AF_SF_UP_JS_AV_OG_WG_&op=302">Architect (3)</a></span>
+        <span class="job-details">Pyramid Consulting, Inc. - redmond, WA</span>
+    </li>
+    
+    <li class="item odd">
+    <span class="job-link"><a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?engine=2&utm_campaign=Advocacy_Ongoing&source=76&utm_source=SourceForge&dockey=xml%2Fd%2F0%2Fd0076b313103a340d335829743ff7d33%40endecaindex&utm_medium=Affiliate&CMPID=AF_SF_UP_JS_AV_OG_WG_&op=302">Senior VOIP Engineer</a></span>
+        <span class="job-details">Professional Alternative - Boston, MA</span>
+    </li>
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?engine=2&utm_campaign=Advocacy_Ongoing&source=76&utm_source=SourceForge&dockey=xml%2Fc%2F0%2Fc0429125b9c4d019cf8742bbbe5b74d7%40endecaindex&utm_medium=Affiliate&CMPID=AF_SF_UP_JS_AV_OG_WG_&op=302">Sr. Mobile-Web developer-Native, iOS for mobile apps developer</a></span>
+        <span class="job-details">CyberCoders - Arlington, VA</span>
+    </li>
+    
+    <li class="item odd">
+    <span class="job-link"><a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?engine=2&utm_campaign=Advocacy_Ongoing&source=76&utm_source=SourceForge&dockey=xml%2Fc%2F0%2Fc03d47a1c16b3957f441ab7efe7a0d98%40endecaindex&utm_medium=Affiliate&CMPID=AF_SF_UP_JS_AV_OG_WG_&op=302">Technology Architect-Qlikview</a></span>
+        <span class="job-details">Infosys Technologies Ltd - Atlanta, GA</span>
+    </li>
+    
+    <li class="item even">
+    <span class="job-link"><a href="http://seeker.dice.com/jobsearch/servlet/JobSearch?engine=2&utm_campaign=Advocacy_Ongoing&source=76&utm_source=SourceForge&dockey=xml%2F1%2F2%2F120e3a6136e06c10d3c66ba3f3ffd28d%40endecaindex&utm_medium=Affiliate&CMPID=AF_SF_UP_JS_AV_OG_WG_&op=302">Sr. Applications Developer</a></span>
+        <span class="job-details">Randstad Technologies - Warren, NJ</span>
+    </li>
+    
+    
+</ul>
+   <section class="all-jobs" style="border: none;">
+        <a href="http://sourceforge.net/jobs">See All Jobs ››</a>
+    </section>
+</aside>
+
+<script type="text/javascript">
+    /*global Handlebars*/
+    jQuery(function($) {
+        var source = $('#jobwidget-template').html();
+        var template = Handlebars.compile(source);
+
+        Handlebars.registerHelper('stripe', function(array, display_count, random, fn) {
+            var buffer = "";
+            for (var i = 0, len = array.length; i < display_count; i++) {
+                var item = null;
+                if (random === true) {
+                    var ri = Math.floor((Math.random()*array.length)+1);
+                    item = array[ri];
+                } else {
+                    item = array[i];
+                }
+                item.css_class = (i % 2 === 0 ? 'even' : 'odd');
+                buffer += fn.fn(item);
+            }
+            return buffer;
+        });
+
+        function load_jobBoard() {
+            $.ajax({
+                url:'/jobs/json',
+                success: function(data) {
+                    $('#job-listing').html(template(data));
+                },
+                dataType: 'json'
+            });
+        }
+        load_jobBoard();
+    });
+</script>
+
+<script type="text/x-handlebars-template" id="jobwidget-template">
+    
+    {{#stripe data.jobs 5 true}}
+    <li class="item {{css_class}}">
+    <span class="job-link"><a href="{{ this.url }}">{{ this.title }}</a></span>
+        <span class="job-details">{{ this.company}} - {{ this.location}}</span>
+    </li>
+    {{/stripe}}
+    
+</script>
+
+
+        <section class="ads">
+            
+    
+    
+
+<script type="text/javascript">
+    if ('p85_medrec'.indexOf('immersion') > 0) {
+        document.write('<div id="p85_medrec" class="ad medrec"><script type="text/javascript" src="http://ad.doubleclick.net/adj/ostg.sourceforge/cons_enterprise_p85_medrec;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=7;sz=300x250;u=e%3Ad989c082-720d-11e2-9770-0200ac1d1d91;ord=5164746088356970?"></'+'script></div>');
+    } else if (!immersion_adcode) {
+        document.write('<iframe id="p85_medrec" height="250" class="ad medrec" src="/static/ads/iframe_ad.html?position=p85_medrec&amp;ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p85_medrec%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D7%3Bsz%3D300x250%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&amp;class=medrec" seamless frameborder="0" scrolling="no"></iframe>');
+    }
+</script><iframe id="p85_medrec" height="253px" class="ad medrec" src="./Ar-PHP  _files/iframe_ad(6).html" seamless="" frameborder="0" scrolling="no" width="300px" style="width: 300px !important; height: 253px !important;"></iframe>
+        </section>
+        
+<aside class="sidebar-widget" id="project-activity">
+    <header>
+        <h3>Recent Activity</h3>
+    </header>
+    <ul>
+    <li class="item odd">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">19</span>
+        </span>
+        <a href="http://sourceforge.net/projects/ar-php/files/ar-php/Ar-PHP%20version%203.6.0/Arabic-3.6.0.zip/download">File released: /ar-php/Ar-PHP version 3.6.0/Arabic-3.6.0.zip</a>
+    </li>
+    <li class="item even">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">19</span>
+        </span>
+        <a href="http://sourceforge.net/projects/ar-php/files/ar-php/Ar-PHP%20version%203.6.0/download">File released: /ar-php/Ar-PHP version 3.6.0</a>
+    </li>
+    <li class="item odd">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item even">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item odd">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item even">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item odd">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item even">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item odd">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    <li class="item even last">
+        <span class="date">
+            <span class="monthname">Jan</span>
+            <span class="day">12</span>
+        </span>
+        <span class="title">Project Information Updated</span>
+    </li>
+    </ul>
+</aside>
+        <a id="report-inappropriate" href="http://sourceforge.net/projects/ar-php/report_inappropriate">Report inappropriate content</a>
+    </section>
+</article>
+        <script src="./Ar-PHP  _files/floatingIframeGlobalTemplate_v2_69_11.js"></script><script src="./Ar-PHP  _files/plcr_49705709_1344378262789.js"></script></div>
+
+        
+
+          
+<footer id="site-footer">
+    <div class="wrapper">
+        <nav>
+            <h5>SourceForge</h5>
+            <a href="http://sourceforge.net/about">About</a>
+            <a href="http://sourceforge.net/blog/category/sitestatus/">Site Status</a>
+            <a href="http://twitter.com/sfnet_ops">@sfnet_ops</a>
+        </nav>
+        <nav>
+            <h5>Find and Develop Software</h5>
+            <a href="http://sourceforge.net/create/">Create a Project</a>
+            <a href="http://sourceforge.net/directory/">Software Directory</a>
+            <a href="http://sourceforge.net/top">Top Downloaded Projects</a>
+        </nav>
+        <nav>
+            <h5>Community</h5>
+            <a href="http://sourceforge.net/blog/">Blog</a>
+            <a href="http://twitter.com/sourceforge">@sourceforge</a>
+            <a href="http://sourceforge.net/jobs?source=footer">Job Board</a>
+        </nav>
+        <nav>
+            <h5>Help</h5>
+            <a href="http://sourceforge.net/apps/trac/sourceforge/wiki/WikiStart">Site Documentation</a>
+            <a href="http://sourceforge.net/support">Support Request</a>
+            <a href="http://sourceforge.net/p/forge/documentation/Support%20via%20IRC/">Real-Time Support</a>
+        </nav>
+    </div>
+</footer>
+<footer id="site-copyright-footer">
+    <div class="wrapper">
+        <div id="copyright">
+            Copyright © 2013 SourceForge. All Rights Reserved.<br>
+            SourceForge is a <a href="http://www.diceholdingsinc.com/phoenix.zhtml?c=211152&p=irol-landing">Dice Holdings, Inc.</a> company.
+        </div>
+        <nav>
+            <a href="http://geeknetmedia.com/terms-of-use/">Terms</a>
+            <a href="http://geeknetmedia.com/privacy-statement/">Privacy</a>
+            <a href="http://geeknetmedia.com/opt-out-choices/">Cookies/Opt Out</a>
+            <a href="http://geeknetmedia.com/">Advertise</a>
+            <a href="http://sourceforge.jp/">SourceForge.JP</a>
+            <a href="http://ibmsmarteritservices.sourceforge.net/">Smarter IT</a>
+        </nav>
+    </div>
+</footer>
+            <script src="./Ar-PHP  _files/sf.js" type="text/javascript"></script>
+        
+        <!-- Begin comScore Tag -->
+        <script type="text/javascript">
+            document.write(unescape("%3Cscript src='" + (document.location.protocol === "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+        </script><script src="./Ar-PHP  _files/beacon.js"></script>
+        <script type="text/javascript">
+            if (window.COMSCORE) {
+                COMSCORE.beacon({
+                    c1: 2,
+                    c2: 6035546,
+                    c3: "",
+                    c4: "",
+                    c5: "",
+                    c6: "",
+                    c15: ""
+                });
+            }
+        </script>
+        <noscript>
+            &lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;amp;c2=6035546&amp;amp;c3=&amp;amp;c4=&amp;amp;c5=&amp;amp;c6=&amp;amp;c15=&amp;amp;cj=1" alt="comScore2" /&gt;
+        </noscript>
+        <!-- End comScore Tag -->
+
+<div id="icon-dialog" title="Change the project icon">
+    <form action="http://sourceforge.net/projects/ar-php/update" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="_visit_cookie" value="5114f1350b47387e3d2c0b72">
+        <label for="icon">Upload a new icon</label>
+        <div class="field">
+            <input name="icon" id="icon" class="file" type="file">
+        </div>
+        <p class="help">Icons must be PNG, GIF, or JPEG and less than 1 MiB in size.  They will be displayed as 48x48 images.</p>
+    </form>
+</div>
+    
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="DIV_504015_1_1360500058085" style="position: fixed; z-index: 1000000; visibility: visible; left: 120px; top: 745px;"><embed id="FLASH_504015_1_1360500058085" name="FLASH_504015_1_1360500058085" width="960" height="120" src="http://s0.2mdn.net/1261132/PID_2183089_3352_GoParallel_Promo_Unit_Updates.swf" quality="high" wmode="Transparent" salign="" loop="true" flashvars="src=1261132&amp;rv=1&amp;rid=49705709&amp;click=http%3A//ad.doubleclick.net/click%253Bh%253Dv8/3d85/2/0/%252a/g%253B267032405%253B0-0%253B0%253B46861289%253B255-0/0%253B49712886/49705709/1%253Bu%253De%25253Ad989c082-720d-11e2-9770-0200ac1d1d91%253B%257Eokv%253D%253Bpg%253D/projects%253Bpsrch%253D0%253Blogged_in%253D0%253Btpc%253Dar-php%253Btpc%253Dcgi%253Btpc%253Dwww%253Btpc%253Dphp%253Btpc%253Ddynamic%253Btpc%253Dinternet%253Baud%253Ddevelopers%253B%257Esscs%253D%253f&amp;clickN=&amp;rid=49705709&amp;assets=&amp;vcData=&amp;exitEvents=name%253AMainExit%252Curl%253Ahttp%25253A//goparallel.sourceforge.net/%252Ctarget%253A_blank&amp;googleDiscoveryUrl=http%3A//pagead2.googlesyndication.com/pagead/ads%3Fclient%3Ddclk-3pas-query%26output%3Dxml%26geo%3Dtrue&amp;adSiteUrl=http%3A//sourceforge.net/projects/ar-php/%3Fsource%3Ddlp&amp;isGCNAd=false&amp;JS=0&amp;varName=504015_1_1360500058085&amp;assetType=Floating&amp;td=sourceforge.net&amp;br=cr&amp;os=linux&amp;isFlashFullScreenEnabled=false" type="application/x-shockwave-flash" allowscriptaccess="always"></div></body></html>

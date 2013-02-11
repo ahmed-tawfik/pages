@@ -1,0 +1,496 @@
+/**
+ * CSS for toolbar.netcraft.com
+ *
+ * Unused but still useful colours:
+ * #DAE3E5 - light bluey grey
+ * #EFF6FF - pale blue
+ */
+
+html{
+    background-color: #DFEBFF;
+}
+
+body {
+    margin: 10px;
+    padding: 0px;
+    font-family: arial, helvetica, sans-serif;
+    color: #303030;
+    background-color: white;
+    font-size: 0.75em;
+    font-weight: normal;
+    line-height: 1.5em;
+    border: 1px solid #cacaca;
+}
+
+
+/****************************
+ * TEXT ELEMENTS
+ ****************************/
+ 
+a, a:link { 
+    color: #0040AF;
+    text-decoration: none;
+}
+a:hover { 
+    color: #F38B18;
+    text-decoration: none;
+}
+
+p{
+    /*font-size: small;*/
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+h1, div.pagetitle {
+    background:  #004288 url(/images/bar_bg.jpg) repeat-x 0 0;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+    margin: 0px 0px 10px 0px;
+    font-family: "Trebuchet MS", verdana, sans-serif;
+    font-size: 1.7em;
+    letter-spacing: 0.04em;
+}
+
+h2 {
+    background: #FFFFFF;
+    color: #000088;
+    font-size: 1.9em;
+    text-align: left;
+    font-weight: normal;
+    padding: 0;
+    margin: 20px 0px 15px 0px;
+    letter-spacing: 0.02em;
+    line-height: 110%;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: left;
+    margin: 18px 0 0 0;
+    padding: 0;
+    letter-spacing: 0.02em;
+    color: #444;
+    font-family: arial;
+}
+
+h3 img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h3 span {
+    float: right;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong {
+    background: #FFFFFF;
+    color: #000088;
+    font-weight: bold;
+}
+
+code {
+    font-family: verdana, tahoma, helvetica, arial, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+ 
+/****************************
+ * STANDARD ELEMENTS
+ ****************************/
+ 
+img {
+    border: none;
+} 
+
+ul{
+    list-style-type: square;
+    text-align: left;
+}
+
+li {
+    margin: 0px 0px 10px 0px;
+}
+
+form { 
+    padding:0;
+    margin: 0;
+}
+
+dl{
+    margin: 30px 70px;
+}
+
+dt{
+    font-weight: bold;
+}
+
+dd{
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: justify;
+}
+
+th{
+    text-align: left;
+    font-weight: bold;
+    background: #E0EAEF;
+    padding: 2px 4px;
+}
+
+span.unavailable {
+    font-style: italic;    
+}
+
+/****************************
+ * HEADER
+ ****************************/
+
+div#header {
+    padding: 10px 25px 0 25px;
+    height: 80px;
+    text-align: center;
+}
+ 
+a#netcraft_logo{
+    position: absolute;
+    top: 30px;
+    left: 35px;
+}
+
+/*******************************
+ * NAVIGATION
+ *******************************/
+
+div#nav{
+    float: left;
+    width: 170px;
+}
+
+div#nav h4{
+    border-bottom: 1px solid #cacaca;
+    font-size: 140%;
+    color: #555;
+    padding: 0;
+    margin: 20px 0 0 20px;
+    letter-spacing: 0.05em;
+    font-family: "Trebuchet MS";
+    font-weight: normal;
+}
+
+div#nav ul{
+    list-style-type: none;
+    margin-left: 20px;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+div#nav li{
+    margin: 2px 0;
+}
+
+div#nav li a{
+    display: block;
+    background: url(/images/smallarrow.jpg) no-repeat 0 50%;
+    padding-left: 20px;
+    border-bottom: none;
+}
+
+div#sitesearch{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+div#sitesearch form{
+    margin: 0;
+    padding: 0;
+}
+
+div#sitesearch .text{
+    border: solid #3E5C8F;
+    border-width: 1px 0 1px 1px;
+    margin: 0;
+    padding: 2px;
+    display: block;
+    width: 120px;
+    float: left;
+    color: #555;
+}
+
+div#sitesearch .button{
+    border: solid #3E5C8F;
+    border-width: 1px 1px 1px 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    width: 21px;
+}
+
+ 
+/*******************************
+ * CONTENT ELEMENTS
+ *******************************/
+
+div#content{
+    margin: 10px 160px 0 0;
+    border-left: 190px solid #f7f7f7;
+    padding: 0 0 0 20px;
+    /*font-size: small;*/
+}
+ 
+div#content_col{
+    font-family: verdana, arial, sans-serif;
+}
+
+div#content ul.indent{
+    padding: 0;
+    margin: 30px 30px 30px 90px;
+}
+
+div#content p a, div#content li a, table.TBtable a{
+    color: #407BCF;
+    border-bottom: 1px dotted #cacaca;
+}
+
+div#content p a:hover, div#content li a:hover, table.TBtable a:hover {
+    color: #F38B18;
+    text-decoration: none;
+}
+ 
+div#advert-skyscraper{
+    width: 130px;
+    float: right;
+}
+
+div.copyright {
+    font-family: verdana, arial, sans-serif;
+    color: #003060;
+    font-size: xx-small;
+    font-weight: bold;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    line-height: 140%;
+    text-transform: uppercase;
+    padding: 2px;
+    margin-top: 15px;
+    text-align: center;
+    letter-spacing: .2em
+}
+
+table.TBtable {
+    border: 1px solid #cacaca;
+    width: 100%;
+    display: table;
+    margin-top: 10px;
+}
+
+table.TBtable caption{
+    text-align: left;
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+table.TBtable .TBsubcaption {
+    font-size: 0.8em;
+    font-weight: normal;
+    float: right;
+}
+
+.TBtable th{
+    background: #dddddd;
+}
+
+.TBtable td{
+    padding: 2px 4px;
+}
+
+table.TBtable a{
+    color: #0000CC;
+}
+
+.TBtr {
+    background: #efefef;
+    vertical-align: top;
+}
+
+.TBtr2 {
+    background: #FFFFFF;
+    vertical-align: top;
+}
+
+a img{
+    border: none;
+}
+
+div#download{
+    margin: 20px auto;
+    font-size: 90%;
+    text-align: center;
+}
+
+img.centered, a.centered, span.centered {
+	margin: 10px auto;
+	display: block;
+}
+
+a.centered, span.centered {
+	width: 830px;
+}
+
+a.centered img, span.centered img {
+    vertical-align: middle;
+}
+
+p.centered {
+    text-align: center;    
+}
+
+div#content ul.faq li{
+    margin: 0 3px;
+}
+
+div#content ul.faq a, table.TBtable a{
+    border-width: 0px;
+}
+
+table.form{
+    margin:  10px auto;
+    border: 1px dashed #ddd;
+    background: #f7f7f7;
+    padding: 10px 20px;
+}
+
+div#downloadnow{
+    padding: 15px 20px 0 20px;
+    border: 3px solid #9F1D1D;
+    width: 450px;
+    margin: 0 auto;
+}
+
+div#downloadnow h3{
+    margin: 0 0 10px 0;
+    color: #9F1D1D;
+    width: 450px;
+    border-bottom: 1px solid #cacaca;
+}
+
+div#downloadnow table#register{
+    border: 1px dashed #ddd;
+    background: #f7f7f7;
+    padding: 8px;
+    margin: 10px 0 20px 0;
+}
+
+div#downloadnow table#version{
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+}
+
+div#content_col ul#benefits{
+    list-style-image: url(/images/ularrow.gif);
+}
+
+ul#benefits strong{
+    font-size: 1.2em;
+}
+
+/*******************************
+ * GOOGLE GEOCHART WRAPPER DIVS
+ *******************************/
+
+#phishing_map_container {
+    position: relative;
+    width:100%;
+}
+
+#map_canvas {
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+#legend_title_box {
+    display: none;
+    width: 25%;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 10;
+}
+
+/* Hide the min/max values for chart legend */
+/* Which is autogenered without an ID/Class */
+svg>g>g>g>text {
+    display: none;
+}
+
+/*******************************
+ * GOOGLE CUSTOM SEARCH
+ *******************************/
+
+#cse-search-results iframe {
+    width: 100%
+}
+
+/*******************************
+ * SITE REPORT
+ *******************************/
+
+#site_report_query {
+    margin-bottom: 1em;
+}
+
+/* Fluid-width input */
+#site_report_query span {
+    display: block;
+    overflow:hidden;
+    padding-left: 0;
+    padding-right: 4px;
+}
+
+#site_report_query input {
+    font-size: 150%;
+}
+
+#technologies_table {
+    table-layout: fixed;
+}
+
+.technology_category_label {
+    font-weight: bold;
+}
+
+.technology_category_label,
+.technology_category_description {
+    padding-left: 17px;
+}
+
+.technology_category_label.has_description {
+    background: url('/images/expand_collapse_question.gif') no-repeat left center;
+}
+
+.technology_category_label.has_description,
+.technology_category_description {
+    cursor: pointer;
+}
+
+.technology_category_description {
+    display: block;
+}

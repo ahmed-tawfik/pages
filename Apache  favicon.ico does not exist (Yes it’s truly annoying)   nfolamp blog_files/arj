@@ -1,0 +1,30 @@
+OX8727099461({"ads":
+ {
+  "version": 1,
+  "count": 1,
+  "pixels":"http://us-ads.openx.net/w/1.0/pd?plm=1",
+  "ad": [
+        {
+         "adunitid":314735,
+         "adid":0,
+         "type":"html",
+         "html":"<div id='beacon_62597127' style='position: absolute; left: 0px; top: 0px; visibility: hidden;'><img src='http://us-ads.openx.net/w/1.0/ri?ts=1fHNpZD02NTczOHxhdWlkPTMxNDczNXxyaWQ9ZjFkM2YzYTEtY2E4Zi00MGU4LWI5M2UtZjI4Y2E4NThiNmRifHBjPVVTRHxydD0xMzU2MTYxOTY4fHB1Yj03OTQ5NA&cb=62597127'/></div><!-- BEGIN JS TAG - WordAd - 300x250 < - DO NOT MODIFY --> <SCRIPT SRC=\"http://ads.audienceamplify.com/ttj?id=759964\"\nTYPE=\"text/javascript\"></SCRIPT>\n<!-- END TAG -->\n\n",
+         "is_fallback":1,
+         "creative":[
+           {
+             "width":"300",
+             "height":"250",
+             "target":"_blank",
+             "mime":"text/html",
+             "media": "<!-- BEGIN JS TAG - WordAd - 300x250 < - DO NOT MODIFY --> <SCRIPT SRC=\"http://ads.audienceamplify.com/ttj?id=759964\"\nTYPE=\"text/javascript\"></SCRIPT>\n<!-- END TAG -->\n",
+             "tracking":{
+               "impression":"http://us-ads.openx.net/w/1.0/ri?ts=1fHNpZD02NTczOHxhdWlkPTMxNDczNXxyaWQ9ZjFkM2YzYTEtY2E4Zi00MGU4LWI5M2UtZjI4Y2E4NThiNmRifHBjPVVTRHxydD0xMzU2MTYxOTY4fHB1Yj03OTQ5NA&cb=62597127",
+               "inview":"http://us-ads.openx.net/w/1.0/rvi?ts=1fHNpZD02NTczOHxhdWlkPTMxNDczNXxyaWQ9ZjFkM2YzYTEtY2E4Zi00MGU4LWI5M2UtZjI4Y2E4NThiNmRifHBjPVVTRHxydD0xMzU2MTYxOTY4fHB1Yj03OTQ5NA&cb=62597127",
+               "click":"http://us-ads.openx.net/w/1.0/rc?ts=1fHNpZD02NTczOHxhdWlkPTMxNDczNXxyaWQ9ZjFkM2YzYTEtY2E4Zi00MGU4LWI5M2UtZjI4Y2E4NThiNmRifHBjPVVTRHxydD0xMzU2MTYxOTY4fHB1Yj03OTQ5NA"
+             }
+           }
+         ]
+        }
+  ]
+ }
+});

@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./How to display UTF-8 characters in phpMyAdmin  _files/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44"></script>
+    
+    <title>mysql - How to display UTF-8 characters in phpMyAdmin? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+
+    
+    <script type="text/javascript" async="" src="./How to display UTF-8 characters in phpMyAdmin  _files/ga.js"></script><script type="text/javascript" async="" src="./How to display UTF-8 characters in phpMyAdmin  _files/quant.js"></script><script type="text/javascript" src="./How to display UTF-8 characters in phpMyAdmin  _files/jquery.min.js"></script>
+    <script type="text/javascript" src="./How to display UTF-8 characters in phpMyAdmin  _files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="./How to display UTF-8 characters in phpMyAdmin  _files/all.css">
+    
+    <meta name="relativepagescore" content="291176">
+    <link rel="canonical" href="./How to display UTF-8 characters in phpMyAdmin  _files/How to display UTF-8 characters in phpMyAdmin  .html">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How to display UTF-8 characters in phpMyAdmin?&#39;" href="http://stackoverflow.com/feeds/question/4777900">
+    <script type="text/javascript">
+        
+        StackExchange.ready(function () {
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:4,shownCommentCount:4,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:4777900});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '4777900');
+            
+                
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1357047927,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true},"user":{"fkey":"7dccc07a2a5a96d02be4a6be0a3b8a9c","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"c862bf93b3ec","js/moderator.js":"37bba549a03e","js/full-anon.js":"27033739c1ff","js/full.js":"a75bd3a05af1","js/wmd.js":"0360a509b7c2","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"6eb68240242f","js/help.js":"fc9fb0517db2","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"9ac6c13a3a7f","js/inline-tag-editing.js":"30f72b99548b","js/revisions.js":"8c6bcd93b7fe","js/review.js":"3a8e6a0a0dc8"});
+        
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.using(
+            "gps",
+            function () {
+                StackExchange.gps.init(false);
+            }
+        );
+    </script>
+<script async="" type="text/javascript" src="./How to display UTF-8 characters in phpMyAdmin  _files/full-anon.js"></script><script async="" type="text/javascript" src="./How to display UTF-8 characters in phpMyAdmin  _files/prettify-full.js"></script><script type="text/javascript" src="./How to display UTF-8 characters in phpMyAdmin  _files/ados-voting.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/ados-voting.css"><link href="./How to display UTF-8 characters in phpMyAdmin  _files/sidebar.css" type="text/css" rel="stylesheet"></head>
+<body class="question-page">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+
+
+
+
+
+
+
+
+
+<span id="hlinks-user">
+
+</span>
+<span id="hlinks-nav">
+                   <a href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f4777900%2fhow-to-display-utf-8-characters-in-phpmyadmin">log in</a>
+
+ <span class="lsep">|</span>
+                    <a href="http://careers.stackoverflow.com/">careers 2.0</a>
+
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-custom">
+        <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+            <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+        <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+    <a href="http://stackoverflow.com/faq">faq</a>
+
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <div>
+                        <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="140" size="28" value="">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">Stack Overflow</a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="custom-content"><script>
+StackExchange.ready(function () {
+    $.ajax({
+        url: "http://cdn.prom.sstatic.net/WinterBash/js/core.js?v=3",
+        dataType: "script",
+        cache: true
+    }).done(function () {
+        WinterBash.core.init('winterba.sh', 'http://cdn.prom.sstatic.net/WinterBash/');
+    });
+});
+</script></div>
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+    <h1 itemprop="name"><a href="./How to display UTF-8 characters in phpMyAdmin  _files/How to display UTF-8 characters in phpMyAdmin  .html" class="question-hyperlink">How to display UTF-8 characters in phpMyAdmin?</a></h1>
+</div>
+<div id="mainbar">
+
+
+
+<div class="question" id="question" data-questionid="4777900">
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1"><a href="http://engine.adzerk.net/redirect/0/5924/2444/8277/97d569746a8b4ec2b71eb064e20f276d/43/1178/8810/634926447286350690/?keywords=mysql%2cunicode%2cutf-8%2cphpmyadmin" rel="nofollow" target="_blank" title=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/0a96cc99c1784d6abe3cae6b8c8bf013.png" title="" alt="" border="0" height="90" width="728"></a><img width="0" height="0" src="./How to display UTF-8 characters in phpMyAdmin  _files/v.gif"><script type="text/javascript">azInitExtension("voting", "adzerk1", 414, 8277, 43, 8810, 5924);</script><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+
+
+
+    <table>
+    <tbody><tr>
+    <td class="votecell">
+        
+
+<div class="vote">
+    <input type="hidden" value="4777900">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+    <span class="vote-count-post ">18</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>8</b></div>   
+
+ 
+</div>
+
+    </td>
+    
+<td class="postcell">
+<div>          
+    <div class="post-text" itemprop="description">
+        <p>I have my database properly set to UTF-8 and am dealing with a database containing Japanese characters.  If I do SELECT *... from the mysql command line, I properly see the Japanese characters.  When pulling data out of the database and displaying it on a webpage, I see it properly.</p>
+
+<p>However, when viewing the table data in phpMyAdmin, I just see garbage text.  ie.</p>
+
+<p>ç§ã¯æ—¥æœ¬æ–™ç†ãŒå¥½ãã§ã™ã€‚æ—¥æœ¬æ–™ç†ã‚...</p>
+
+<p>How can I get phpMyAdmin to display the characters in Japanese?</p>
+
+<p>The character encoding on the HTML page is set to UTF-8.</p>
+
+<p>Edit:</p>
+
+<p>I have tried an export of my database and opened up the .sql file in geany.  The characters are still garbled even though the encoding is set to UTF-8.  (However, doing a mysqldump of the database also shows garbled characters).</p>
+
+<p>The character set is set correctly for the database and all tables ('latin' is not found anywhere in the file)</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="kwd">CREATE</span><span class="pln"> </span><span class="kwd">DATABASE</span><span class="pln"> </span><span class="pun">`</span><span class="pln">japanese</span><span class="pun">`</span><span class="pln"> </span><span class="kwd">DEFAULT</span><span class="pln"> CHARACTER </span><span class="kwd">SET</span><span class="pln"> utf8 </span><span class="kwd">COLLATE</span><span class="pln"> utf8_general_ci</span><span class="pun">;</span></code></pre>
+
+<p>I have added the lines to my.cnf and restarted mysql but there is no change.  I am using Zend Framework to insert data into the database.</p>
+
+<p>I am going to open a bounty for this question as I really want to figure this out.</p>
+
+    </div>            
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/mysql" class="post-tag" title="show questions tagged &#39;mysql&#39;" rel="tag">mysql</a> <a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a> <a href="http://stackoverflow.com/questions/tagged/utf-8" class="post-tag" title="show questions tagged &#39;utf-8&#39;" rel="tag">utf-8</a> <a href="http://stackoverflow.com/questions/tagged/phpmyadmin" class="post-tag" title="show questions tagged &#39;phpmyadmin&#39;" rel="tag">phpmyadmin</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/4777900" title="short permalink to this question" class="short-link" id="link-post-4777900">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4777900/edit" class="suggest-edit-post" title="">improve this question</a></div>
+    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/4777900/revisions" title="show all edits to this post"><span title="2011-01-27 05:12:38Z" class="relativetime">Jan 27 '11 at 5:12</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+    <td class="post-signature owner">
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    asked
+ <span title="2011-01-24 01:50:46Z" class="relativetime">Jan 24 '11 at 1:50</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/47278/matt-mccormick"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/013e6c9853d389f62a3682dda896a633" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/47278/matt-mccormick">Matt McCormick</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">1,732</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+
+        <br class="cbt">
+        <div class="accept-rate accept-answer-link" title="this user has accepted an answer for 51 of 62 eligible questions">82% accept rate</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>    </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-4777900" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-5290570" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">This is probably a problem in PhpMYAdmin's connection settings. It must be explicitly set to UTF-8 as well. I don't have a copy handy but it usually is somewhere near the front page</span> –&nbsp;<a href="http://stackoverflow.com/users/187606/pekka" title="182335 reputation" class="comment-user">Pekka</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5290570, 0)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5290570_4777900"><span title="2011-01-24 02:09:05Z" class="relativetime-clean">Jan 24 '11 at 2:09</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5290997" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">I don't see the settings anywhere in phpMyAdmin and Google searches have come up empty handed about the settings so far.</span> –&nbsp;<a href="http://stackoverflow.com/users/47278/matt-mccormick" title="1732 reputation" class="comment-user owner">Matt McCormick</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5290997, 0)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5290997_4777900"><span title="2011-01-24 03:19:46Z" class="relativetime-clean">Jan 24 '11 at 3:19</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5295201" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">What version of phpMyAdmin are you using?
+
+The landing page of phpMyAdmin displays the MySQL connection collation and also the MySQL charset - are both of them UTF-8?</span> –&nbsp;<a href="http://stackoverflow.com/users/575335/nikhil500" title="1743 reputation" class="comment-user">nikhil500</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5295201, 0)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5295201_4777900"><span title="2011-01-24 12:03:53Z" class="relativetime-clean">Jan 24 '11 at 12:03</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5297830" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">phpMyAdmin version 3.3.2deb1 - MySQL charset: UTF-8 Unicode (utf8) - MySQL connection collation defaults to utf8_general_ci</span> –&nbsp;<a href="http://stackoverflow.com/users/47278/matt-mccormick" title="1732 reputation" class="comment-user owner">Matt McCormick</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5297830, 0)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5297830_4777900"><span title="2011-01-24 15:37:57Z" class="relativetime-clean">Jan 24 '11 at 15:37</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+    
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div class="subheader answers-subheader">
+            <h2>
+                    7 Answers
+            </h2>
+            <div id="tabs">
+                <a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+            </div>
+        </div>    
+    </div>    
+
+
+
+
+
+  
+    <a name="4779380"></a>
+    <div id="answer-4779380" class="answer" data-answerid="4779380">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="4779380">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">17</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>Unfortunately, phpMyAdmin is one of the first php application that talk to MySQL about charset correctly. Your problem is most likely due to the fact that the database does not store the correct UTF-8 strings at first place.</p>
+
+<p>In order to correctly display the characters correctly in phpMyAdmin, the data must be correctly stored in the database. However, convert the database into correct charset often breaks web apps that does not aware charset-related feature provided by MySQL.</p>
+
+<p>May I ask: is MySQL &gt; version 4.1? What web app is the database for? phpBB? Was the database migrated from an older version of the web app, or an older version of MySQL?</p>
+
+<p>My suggestion is not to brother if the web app you are using is too old and not supported. Only convert database to real UTF-8 if you are sure the web app can read them correctly.</p>
+
+<hr>
+
+<p><strong>Edit:</strong> </p>
+
+<p>Your MySQL is &gt; 4.1, that means it's charset-aware. What's the charset collation settings for you database? I am pretty sure you are using <code>latin1</code>, which is MySQL name for ASCII, to store the UTF-8 text in  'bytes', into the database.</p>
+
+<p>For charset-insensitive clients (i.e. mysql-cli and php-mod-mysql), characters get displayed correctly since they are being transfer to/from database as bytes. In phpMyAdmin, bytes get read and displayed as ASCII characters, that's the garbage text you seem.</p>
+
+<p>Countless hours had been spend years ago (2005?) when MySQL 4.0 went obsolete, in many parts of Asia. There is a standard way to deal with your problem and gobbled data:</p>
+
+<ol>
+<li>Back up your database as <code>.sql</code></li>
+<li>Open it up in UTF-8 capable text editor, make sure they look correct.</li>
+<li>Look for <code>charset collation latin1_general_ci</code>, replace <code>latin1</code> to <code>utf8</code>.</li>
+<li><strong>Save as a new sql file, do not overwrite your backup</strong></li>
+<li>Import the new file, they will now look correctly in phpMyAdmin, and Japanese on your web app will become question marks. That's normal.</li>
+<li>For your php web app that rely on php-mod-mysql, insert <code>mysql_query("SET NAMES UTF8");</code> after <code>mysql_connect()</code>, now the question marks will be gone.</li>
+<li><p>Add the following configuration <code>my.ini</code> for mysql-cli:</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="pun">#</span><span class="pln"> CLIENT SECTION
+</span><span class="pun">[</span><span class="pln">mysql</span><span class="pun">]</span><span class="pln">
+default-character-set</span><span class="pun">=</span><span class="pln">utf8
+</span><span class="pun">#</span><span class="pln"> SERVER SECTION
+</span><span class="pun">[</span><span class="pln">mysqld</span><span class="pun">]</span><span class="pln">
+default-character-set</span><span class="pun">=</span><span class="pln">utf8</span></code></pre></li>
+</ol>
+
+<p>For more information about charset on MySQL, please refer to manual:
+<a href="http://dev.mysql.com/doc/refman/5.0/en/charset-server.html">http://dev.mysql.com/doc/refman/5.0/en/charset-server.html</a></p>
+
+<p>Note that I assume your web app is using php-mod-mysql to connect to the database (hence the <code>mysql_connect()</code> function), since php-mod-mysql is the only extension I can think of that still trigger the problem TO THIS DAY. </p>
+
+<p>phpMyAdmin use php-mod-mysqli to connect to MySQL. I never learned how to use it because switch to frameworks* to develop my php projects. I strongly encourage you do that too.</p>
+
+<ul>
+<li>Many frameworks, e.g. CodeIgniter, Zend, use mysqli or pdo to connect to databases. mod-mysql functions are considered obsolete cause performance and scalability issue. Also, you do not want to tie your project to a specific type of database.</li>
+</ul>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/4779380" title="short permalink to this answer" class="short-link" id="link-post-4779380">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4779380/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/4779380/revisions" title="show all edits to this post"><span title="2011-01-26 16:24:02Z" class="relativetime">Jan 26 '11 at 16:24</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-01-24 06:48:39Z" class="relativetime">Jan 24 '11 at 6:48</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/519617/timdream"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/2becaf1073957bdad2f06e183731131d" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/519617/timdream">timdream</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">2,328</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-4779380" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-5297877" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">MySQL version 5.1.41.  As I wrote, if I run a SELECT statement from the mysql command line, I see the Japanese characters correctly and see them correctly on the webpage so this is a phpMyAdmin specific issue.  The database is for my own web app that I am developing.  It is not phpBB and it has not been migrated from anything.  I am not talking about converting to UTF-8.  All the text fields have been set to UTF-8 from the beginning.</span> –&nbsp;<a href="http://stackoverflow.com/users/47278/matt-mccormick" title="1732 reputation" class="comment-user owner">Matt McCormick</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5297877, 4779380)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5297877_4779380"><span title="2011-01-24 15:42:08Z" class="relativetime-clean">Jan 24 '11 at 15:42</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5318793" class="comment">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">+1 The command line, especially on Windows, is not at all a reliable indicator of encoding; phpMyAdmin is actually typically right.</span> –&nbsp;<a href="http://stackoverflow.com/users/18936/bobince" title="186921 reputation" class="comment-user">bobince</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5318793, 4779380)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5318793_4779380"><span title="2011-01-25 22:38:22Z" class="relativetime-clean">Jan 25 '11 at 22:38</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5328212" class="comment">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">New answer for you. There are probably tons of articles that deal with the same thing, if you don't settle with my, Google for "SET NAMES UTF8".</span> –&nbsp;<a href="http://stackoverflow.com/users/519617/timdream" title="2328 reputation" class="comment-user">timdream</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5328212, 4779380)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5328212_4779380"><span title="2011-01-26 16:33:05Z" class="relativetime-clean">Jan 26 '11 at 16:33</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5336208" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Thanks for your edit Tim.  I have edited my question to provide more details.  @bobince - I am using Ubuntu.</span> –&nbsp;<a href="http://stackoverflow.com/users/47278/matt-mccormick" title="1732 reputation" class="comment-user owner">Matt McCormick</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5336208, 4779380)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5336208_4779380"><span title="2011-01-27 05:05:07Z" class="relativetime-clean">Jan 27 '11 at 5:05</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+            
+    <tr id="comment-5336332" class="comment">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">please don't say <i>Unfortunately</i>. It's very fortunate that PHPMyAdmin does that :) +1</span> –&nbsp;<a href="http://stackoverflow.com/users/180136/shamittomar" title="13368 reputation" class="comment-user">shamittomar</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5336332, 4779380)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5336332_4779380"><span title="2011-01-27 05:24:01Z" class="relativetime-clean">Jan 27 '11 at 5:24</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk3">
+        <iframe frameborder="0" scrolling="no" height="90" width="728"></iframe><script type="text/javascript">azInitExtension("voting", "adzerk3", 437, 8277, 44, 66503, 46776);</script><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+
+
+
+
+  
+    <a name="4813043"></a>
+    <div id="answer-4813043" class="answer accepted-answer" data-answerid="4813043">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="4813043">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">5</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+            <span class="vote-accepted-on load-accepted-answer-date" title="The question owner accepted this as the best answer Feb 4 &#39;11 at 16:05">accepted</span>
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>I did a little more googling and came across this page: <a href="http://blog.mikezhang.com/2007/03/30/phpmyadmin-display-utf8">http://blog.mikezhang.com/2007/03/30/phpmyadmin-display-utf8</a></p>
+
+<p>The command doesn't seem to make sense but I tried it anyway:</p>
+
+<p>In the file /usr/share/phpmyadmin/libraries/dbi/mysqli.dbi.lib.php at the end of function <code>PMA_DBI_connect()</code> just before the <code>return</code> statement I added:</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="pln">mysqli_query</span><span class="pun">($</span><span class="pln">link</span><span class="pun">,</span><span class="pln"> </span><span class="str">"SET SESSION CHARACTER_SET_RESULTS =latin1;"</span><span class="pun">);</span><span class="pln">
+mysqli_query</span><span class="pun">($</span><span class="pln">link</span><span class="pun">,</span><span class="pln"> </span><span class="str">"SET SESSION CHARACTER_SET_CLIENT =latin1;"</span><span class="pun">);</span></code></pre>
+
+<p>And it works!  I now see Japanese characters in phpMyAdmin.  WTF?  Why does this work?</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/4813043" title="short permalink to this answer" class="short-link" id="link-post-4813043">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4813043/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature owner">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-01-27 05:26:53Z" class="relativetime">Jan 27 '11 at 5:26</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/47278/matt-mccormick"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/013e6c9853d389f62a3682dda896a633" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/47278/matt-mccormick">Matt McCormick</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">1,732</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-4813043" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-5825592" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">This worked for me too. Did you find out why? I've checked and double checked every possible thing (all PHP / mb_string, MySQL connections / Apache / html headers / meta types) is correct set to UTF-8 and the data is stored correctly</span> –&nbsp;<a href="http://stackoverflow.com/users/327928/paul-norman" title="899 reputation" class="comment-user">Paul Norman</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5825592, 4813043)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5825592_4813043"><span title="2011-03-03 18:01:29Z" class="relativetime-clean">Mar 3 '11 at 18:01</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5832462" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">No, I'm still not sure. I'm assuming there is a bug somewhere else in phpMyAdmin.</span> –&nbsp;<a href="http://stackoverflow.com/users/47278/matt-mccormick" title="1732 reputation" class="comment-user owner">Matt McCormick</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5832462, 4813043)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5832462_4813043"><span title="2011-03-04 04:59:37Z" class="relativetime-clean">Mar 4 '11 at 4:59</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-5869885" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">In my case PMA was right and the error is due to me not explicitly setting my database connection from PHP. In MY scripts I needed an explicit statement $mysqli-&gt;set_charset('utf8'); I've basically been saving all my data in some kind of odd latin1 / utf-8 mush so that if it is pulled out by my sites / latin1 shell (using latin1) it returns utf-8 data, but if it is retrieved from phpMyAdmin (utf-8 connection) it gives me those fun little characters. My fix was to pull out the data using a latin1 db connection and updating it using a utf-8 one from within PHP. Sloppy, but functional!</span> –&nbsp;<a href="http://stackoverflow.com/users/327928/paul-norman" title="899 reputation" class="comment-user">Paul Norman</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(5869885, 4813043)" href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#comment5869885_4813043"><span title="2011-03-07 10:21:02Z" class="relativetime-clean">Mar 7 '11 at 10:21</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(86, 86, 86);">Was this post useful to you? &nbsp;&nbsp;<input style="opacity: 0.29424282069744556;" class="anon-vote" type="button" value="Yes"> &nbsp;<input style="opacity: 0.29424282069744556;" class="anon-vote" type="button" value="No"></div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="5028559"></a>
+    <div id="answer-5028559" class="answer" data-answerid="5028559">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="5028559">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">3</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>I had the same problem,</p>
+
+<p>Set all text/varchar collations in phpMyAdmin to utf-8 and in php files add this:</p>
+
+<p>mysql_set_charset("utf8", $your_connection_name); </p>
+
+<p>This solved it for me.</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/5028559" title="short permalink to this answer" class="short-link" id="link-post-5028559">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/5028559/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-02-17 11:52:00Z" class="relativetime">Feb 17 '11 at 11:52</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/621321/dinaga"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/ed38e21c5b9199ce1f307aacdb91eb56" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/621321/dinaga">Dinaga</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">31</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-5028559" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="9982219"></a>
+    <div id="answer-9982219" class="answer" data-answerid="9982219">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="9982219">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">3</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>If you're using PDO don't forget to initiate it with UTF8:</p>
+
+<blockquote>
+  <p>$con = new PDO('mysql:host=' . $server . ';dbname=' . $db . ';charset=UTF8', $user, $pass,  array(PDO::MYSQL_ATTR_INIT_COMMAND =&gt; "SET NAMES utf8"));</p>
+</blockquote>
+
+<p>(just spent 5 hours to figure this out, hope it will save someone precious time...) </p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/9982219" title="short permalink to this answer" class="short-link" id="link-post-9982219">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/9982219/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2012-04-02 18:59:57Z" class="relativetime">Apr 2 '12 at 18:59</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/955433/naama-katiee"><div class="gravatar-wrapper-32"><img src="./How to display UTF-8 characters in phpMyAdmin  _files/picture" alt=""></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/955433/naama-katiee">Naama Katiee</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">313</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-9982219" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="4849186"></a>
+    <div id="answer-4849186" class="answer" data-answerid="4849186">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="4849186">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>the solution for this can be as easy as :</p>
+
+<ol>
+<li>find the phpmysqladmin connection function/method</li>
+<li>add this after database is conncted <code>$db_conect-&gt;set_charset('utf8');</code></li>
+</ol>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/4849186" title="short permalink to this answer" class="short-link" id="link-post-4849186">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4849186/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-01-31 09:16:27Z" class="relativetime">Jan 31 '11 at 9:16</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/466826/ajreal"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/df6d5c2b9459bc0745f7ea9831ce3d08" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/466826/ajreal">ajreal</a><br>
+            <span class="reputation-score" title="reputation score 25533" dir="ltr">25.5k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span><span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-4849186" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="4851571"></a>
+    <div id="answer-4851571" class="answer" data-answerid="4851571">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="4851571">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>First, from the client do</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="pln">mysql</span><span class="pun">&gt;</span><span class="pln"> SHOW VARIABLES </span><span class="kwd">LIKE</span><span class="pln"> </span><span class="str">'character_set%'</span><span class="pun">;</span></code></pre>
+
+<p>This will give you something like</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="pun">+</span><span class="com">--------------------------+----------------------------+</span><span class="pln">
+</span><span class="pun">|</span><span class="pln"> Variable_name            </span><span class="pun">|</span><span class="pln"> Value                      </span><span class="pun">|</span><span class="pln">
+</span><span class="pun">+</span><span class="com">--------------------------+----------------------------+</span><span class="pln">
+</span><span class="pun">|</span><span class="pln"> character_set_client     </span><span class="pun">|</span><span class="pln"> latin1                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_connection </span><span class="pun">|</span><span class="pln"> latin1                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_database   </span><span class="pun">|</span><span class="pln"> latin1                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_filesystem </span><span class="pun">|</span><span class="pln"> binary                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_results    </span><span class="pun">|</span><span class="pln"> latin1                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_server     </span><span class="pun">|</span><span class="pln"> latin1                     </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_set_system     </span><span class="pun">|</span><span class="pln"> utf8                       </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">|</span><span class="pln"> character_sets_dir       </span><span class="pun">|</span><span class="pln"> </span><span class="pun">/</span><span class="pln">usr</span><span class="pun">/</span><span class="pln">share</span><span class="pun">/</span><span class="pln">mysql</span><span class="pun">/</span><span class="pln">charsets</span><span class="pun">/</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> 
+</span><span class="pun">+</span><span class="com">--------------------------+----------------------------+</span></code></pre>
+
+<p>where you can inspect the general settings for the client, connection, database</p>
+
+<p>Then you should also inspect the columns from which you are retrieving data with</p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="pln">SHOW </span><span class="kwd">CREATE</span><span class="pln"> </span><span class="kwd">TABLE</span><span class="pln"> TableName</span></code></pre>
+
+<p>and inspecting the charset and collation of CHAR fields (though usually people do not set them explicitly, but it is possible to give <code>CHAR[(length)] [CHARACTER SET charset_name] [COLLATE collation_name]</code> in <code>CREATE TABLE foo ADD COLUMN foo CHAR ...</code>)</p>
+
+<p>I believe that I have listed <strong>all</strong> relevant settings on the side of mysql.
+If still getting lost read fine <a href="http://dev.mysql.com/doc/refman/5.1/en/charset.html" rel="nofollow">docs</a> and perhaps this <a href="http://stackoverflow.com/questions/3823278/fixing-encondings">question</a> which might shed some light (especially how I though I got it right by looking only at mysql client in the first go).</p>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/4851571" title="short permalink to this answer" class="short-link" id="link-post-4851571">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4851571/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-01-31 13:46:28Z" class="relativetime">Jan 31 '11 at 13:46</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/207036/unreason"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/28099134fe2860c15cc5a7759e02d2c4" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/207036/unreason">Unreason</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">7,812</span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-4851571" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="8518723"></a>
+    <div id="answer-8518723" class="answer" data-answerid="8518723">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="8518723">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>phpmyadmin doesn't follow the MySQL connection because it defines its proper collation in phpmyadmin config file.</p>
+
+<p>So if we don't want or if we can't access server parameters, we should just force it to send results in a different format (encoding) compatible with client i.e. phpmyadmin</p>
+
+<p>for example if both the MySQL connection collation and the MySQL charset are utf8 but phpmyadmin is ISO, we should just add this one before any select query sent to the MYSQL via phpmyadmin :  </p>
+
+<pre class="lang-sql prettyprint prettyprinted" style=""><code><span class="kwd">SET</span><span class="pln"> SESSION CHARACTER_SET_RESULTS </span><span class="pun">=</span><span class="pln">latin1</span><span class="pun">;</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/8518723" title="short permalink to this answer" class="short-link" id="link-post-8518723">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/8518723/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2011-12-15 10:39:26Z" class="relativetime">Dec 15 '11 at 10:39</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1099625/mazic-roohi"><div class=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/660891ff267a02f4e7d5105db072c487" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1099625/mazic-roohi">mazic roohi</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-8518723" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+    <a name="new-answer"></a>
+    <form id="post-form" action="http://stackoverflow.com/questions/4777900/answer/submit" method="post" class="post-form">
+        <h2 class="space">Your Answer</h2>
+
+
+
+
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">  
+
+    
+    <div class="wmd-container">
+        <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+        <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="7dccc07a2a5a96d02be4a6be0a3b8a9c">
+        <input id="author" name="author" type="text">
+    </div>
+</div>            <div class="form-item">
+        <table>
+        <tbody><tr>
+            <td class="vm open-id-login">
+                <a id="login-link" style="font-size: 200%; margin-left: 30px;" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f4777900%2fhow-to-display-utf-8-characters-in-phpmyadmin">log in</a>
+                <script type="text/javascript">
+                    StackExchange.ready(function () {
+                        StackExchange.helpers.onClickDraftSave('#login-link');
+                    });
+                </script>
+            </td>
+            <td class="orcell">
+                <div class="orword">or</div>
+                <div class="orline"></div>
+            </td>
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="text" size="40" maxlength="100" value="" tabindex="106">
+                    <span class="edit-field-overlay">required, but never shown</span>
+                </div>
+                <div>
+                    <label for="home-page">Home Page</label>
+                    <input id="home-page" name="home-page" type="text" size="40" maxlength="200" value="" tabindex="107">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+           
+            <div class="form-submit cbt">
+            <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+            <a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#" class="discard-answer dno">discard</a>
+    <p class="privacy-policy-agreement">
+        By posting your answer, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+        </div>
+    </form>
+
+
+
+        <h2 class="bottom-notice">
+                Not the answer you're looking for? 
+            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/mysql" class="post-tag" title="show questions tagged &#39;mysql&#39;" rel="tag">mysql</a> <a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a> <a href="http://stackoverflow.com/questions/tagged/utf-8" class="post-tag" title="show questions tagged &#39;utf-8&#39;" rel="tag">utf-8</a> <a href="http://stackoverflow.com/questions/tagged/phpmyadmin" class="post-tag" title="show questions tagged &#39;phpmyadmin&#39;" rel="tag">phpmyadmin</a> 
+                or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.
+        </h2>
+</div>
+</div>
+<div id="sidebar">
+
+
+
+     <script type="text/javascript">
+        window.showNewUser = true;
+
+            
+                (function(){
+                    var cs = window.sessionStorage && window.sessionStorage['tNewsletter'];
+                    var m = /:\/\/([^\/]*)/.exec(document.referrer);
+                    var h = {'www.reddit.com':1,'news.ycombinator.com':1};
+                    if(window.sessionStorage && (cs || (m && m.length == 2 && h[m[1]]))){
+                        showNewUser = false;
+                        StackExchange.ready(function(){
+                            StackExchange.newsletterAd.loader(m[1], cs);
+                        });
+                    }
+                    if (window.localStorage && showNewUser){
+                        var c = parseInt(localStorage['nuCounter'],10); 
+                        c = isNaN(c) ? 1 : c+1;
+                        window.localStorage['nuCounter'] = c; 
+                        showNewUser = c < 10;
+                    }
+                })()
+            
+     </script>
+    <div class="module newuser newuser-greeting" id="newuser-box" style="display:none;">
+        <h4>Hello World!</h4>
+        <div>
+            <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free, no registration required.</p>
+            <p class="ar"><a href="http://stackoverflow.com/about?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;<a href="http://stackoverflow.com/faq?mnu=1">faq »</a>
+            </p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        if (showNewUser) {
+            document.getElementById('newuser-box').style.display = '';
+        }
+     </script>
+        <div class="module question-stats">
+        <p class="label-key">tagged</p>
+        <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/mysql" class="post-tag" title="show questions tagged &#39;mysql&#39;" rel="tag">mysql</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">135987</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">6457</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/utf-8" class="post-tag" title="show questions tagged &#39;utf-8&#39;" rel="tag">utf-8</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">5387</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/phpmyadmin" class="post-tag" title="show questions tagged &#39;phpmyadmin&#39;" rel="tag">phpmyadmin</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">2941</span></span><br>
+</div>
+        <table id="qinfo">
+            <tbody><tr>
+                <td><p class="label-key">asked</p></td>
+                <td style="padding-left:10px"><p class="label-key" title="2011-01-24 01:50:46Z"><b>1 year ago</b></p></td>
+            </tr>
+            <tr>
+                <td><p class="label-key">viewed</p></td>
+
+                <td style="padding-left:10px">
+                    <p class="label-key">
+                        <b>15098 times</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="label-key">active</p></td>
+                <td style="padding-left:10px"><p class="label-key"><b><a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin?lastactivity" class="lastactivity-link" title="2012-04-02 18:59:57Z">9 months ago</a></b></p></td>
+            </tr>
+        </tbody></table>
+    </div>
+        
+                <script type="text/javascript">
+                var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=mysql,unicode,utf-8,phpmyadmin";
+                if (document.referrer) {
+                    if (/\?/.test(scriptSrc))
+                        scriptSrc += "&";
+                    else
+                        scriptSrc += "?";
+                    scriptSrc += "xReferrer=" + document.referrer;
+                }
+                StackExchange.ready(function () {
+                    var z = document.createElement("script");
+                    z.type = "text/javascript";
+                    z.async = "true";
+                    z.src = scriptSrc;
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(z, s);
+                });
+            </script>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk2"><a href="http://engine.adzerk.net/redirect/0/9334/2444/8277/77527d9bf9d844d4bca2109396a69ea6/45/1178/14844/634926447286382370/?keywords=mysql%2cunicode%2cutf-8%2cphpmyadmin" rel="nofollow" target="_blank" title=""><img src="./How to display UTF-8 characters in phpMyAdmin  _files/db5df4870e4e4b6cbf42727fd434701a.jpg" title="" alt="" border="0" height="250" width="220"></a><img width="0" height="0" src="./How to display UTF-8 characters in phpMyAdmin  _files/v(1).gif"><script type="text/javascript">azInitExtension("voting", "adzerk2", 414, 8277, 45, 14844, 9334);</script><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+    <div id="hireme"> <a href="http://careers.stackoverflow.com/jobs?a=12" class="top" target="_blank"></a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/18978/engineering-manager-yelp?a=mqdB7pK" target="_blank" title="Engineering Manager at Yelp. Click to learn more."> Engineering Manager<br> <span class="company">Yelp</span> <span class="location">San Francisco, CA</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/28625/data-developer-architect-bluecava?a=xOSQepW" target="_blank" title="Data Developer/Architect at BlueCava. Click to learn more."> Data Developer/Architect<br> <span class="company">BlueCava</span> <span class="location">Irvine, CA</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/20665/software-engineer-decision-management-systems-charles-river-analytics?a=opL55iE" target="_blank" title="Software Engineer, Decision Management Systems (DM060512-BR) at Charles River Analytics. Click to learn more."> Software Engineer, Decision Management Systems (DM060512-BR)<br> <span class="company">Charles River Analytics</span> <span class="location">Cambridge, MA</span> </a> </li> </ul> <img alt="" class="impression" src="./How to display UTF-8 characters in phpMyAdmin  _files/mqdB7pK-opL55iE-xOSQepW-12" style="display:none"></div>
+
+
+
+      
+    
+    <div class="module sidebar-linked">
+        <h4 id="h-linked">Linked</h4>
+        <div class="linked" data-tracker="lq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/3823278/fixing-encodings?lq=1" class="question-hyperlink">Fixing encodings</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/6595135/problems-retrieving-arabic-text-from-the-mysql?lq=1" class="question-hyperlink">Problems retrieving arabic text from the mysql</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12242493/php-pdo-database-error-special-characters?lq=1" class="question-hyperlink">PHP PDO Database Error Special Characters</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11345892/how-to-properly-save-non-english-character-into-mysql-database-using-php?lq=1" class="question-hyperlink">How to properly save non english character into MySQL database using PHP?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10775403/wrong-letters-after-adding-strings-into-database-python?lq=1" class="question-hyperlink">Wrong letters after adding strings into database Python</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13155833/exporting-importing-database-from-to-phpmyadmin-character-encoding-issues?lq=1" class="question-hyperlink">Exporting/Importing database from/to phpMyAdmin - Character Encoding Issues</a>
+</div>
+
+        </div>
+    </div>
+    <div class="module sidebar-related">
+        <h4 id="h-related">Related</h4>
+        <div class="related" data-tracker="rq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/1933411/mysql-and-utf-8?rq=1" class="question-hyperlink">MySQL and UTF-8</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/2721302/phpmyadmin-shows-numbers-or-blob-for-mysqls-utf8-bin-callation-columns?rq=1" class="question-hyperlink">phpmyadmin shows numbers or blob for mysql's utf8_bin callation columns?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/2977238/latin-characters-in-phpmyadmin-with-utf-8-collation?rq=1" class="question-hyperlink">Latin characters in phpMyAdmin with UTF-8 collation</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/3377954/unicode-characters-become-question-marks-after-inserting-into-database?rq=1" class="question-hyperlink">Unicode characters become question marks after inserting into database</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/3823885/does-mysql-handle-a-single-utf-8-character-key-as-well-as-an-integer?rq=1" class="question-hyperlink">Does MySQL handle a single utf-8 character key as well as an integer?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4402128/input-utf-8-characters-in-management-studio?rq=1" class="question-hyperlink">Input utf-8 characters in management studio</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4539996/csv-utf8-import-with-phpmyadmin?rq=1" class="question-hyperlink">CSV utf8 import with phpmyadmin</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5010000/java-convert-iso-8859-1-to-utf-8-with-correct-unicode-characters?rq=1" class="question-hyperlink">Java convert ISO-8859-1 to UTF-8 with correct unicode characters</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5054770/just-installed-phpmyadmin-unicode-is-not-working?rq=1" class="question-hyperlink">Just installed phpmyadmin. Unicode is not working</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5151445/storage-of-unicode-characters-in-mysql-and-oracle?rq=1" class="question-hyperlink">Storage of Unicode Characters in MySql and Oracle</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5360544/select-mysql-rows-with-japanese-characters?rq=1" class="question-hyperlink">Select MySQL rows with Japanese characters</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/6006791/utf8-and-japanese-characters?rq=1" class="question-hyperlink">UTF8 and Japanese characters</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/6865242/mysql-insert-problem-utf8-characters-dont-show?rq=1" class="question-hyperlink">Mysql insert problem! (UTF8 characters don't show)</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/6909398/which-utf8-phpmyadmin-display-chinese-russian-arabic-correctly?rq=1" class="question-hyperlink">Which UTF8 - phpMyAdmin display Chinese, Russian, Arabic correctly?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7158216/telling-mysql-connection-to-use-utf-8-with-django?rq=1" class="question-hyperlink">Telling MySQL connection to use UTF-8 with Django</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7712740/utf-8-display-issues-in-phpmyadmin-gui?rq=1" class="question-hyperlink">UTF-8 display-issues in PhpMyAdmin-Gui</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/8545757/php-utf-8-to-mysql-decoding-of-french-characters?rq=1" class="question-hyperlink">PHP UTF-8 to MySQL Decoding of French Characters</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/9301591/mysql-why-is-utf-8-called-a-character-set?rq=1" class="question-hyperlink">MySQL: Why is UTF-8 called a character set?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11062330/mysql-decode-unicode-to-utf-8-function?rq=1" class="question-hyperlink">MySQL decode Unicode to UTF-8 function</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11632581/how-do-i-display-mysql-output-as-utf-8-instead-of-latin1?rq=1" class="question-hyperlink">How do I display MySql output as utf-8 instead of latin1?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11740167/phpmyadmin-displaying-utf8-but-site-doesnt?rq=1" class="question-hyperlink">phpmyadmin displaying utf8 but site doesnt</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12207291/why-does-phpmyadmin-seem-to-break-my-character-encoding?rq=1" class="question-hyperlink">Why does PhpMyAdmin seem to break my Character Encoding?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12556381/problematic-turkish-characters-in-phpmyadmin-at-media-temple?rq=1" class="question-hyperlink">Problematic Turkish Characters in phpMyAdmin at Media Temple</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13138087/how-to-edit-invalid-utf-8-strings-in-mysql-database?rq=1" class="question-hyperlink">How to edit invalid UTF-8 strings in mysql database</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13657019/how-to-remove-bad-characters-that-are-not-suitable-for-utf8-encoding-in-mysql?rq=1" class="question-hyperlink">How to remove bad characters that are not suitable for utf8 encoding in MySQL?</a>
+</div>
+
+        </div>
+    </div>
+        <div class="everyonelovesstackoverflow" id="adzerk3">
+        </div>
+
+
+</div>
+
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/4777900" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/4777900/ivc/e4a8');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/4777900/ivc/e4a8" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-sql</div></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <a href="http://stackoverflow.com/about">about</a> |
+                <a href="http://stackoverflow.com/faq">faq</a> |
+                <a href="http://blog.stackexchange.com/?blb=1">blog</a> |
+                    <a href="http://chat.stackoverflow.com/">chat</a> |
+                <a href="http://data.stackexchange.com/">data</a> |
+                <a href="http://stackexchange.com/legal">legal</a> |
+                <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> |
+                <a href="http://stackexchange.com/about/hiring">jobs</a> |
+                <a href="http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0">advertising info</a> |
+
+                <a onclick="StackExchange.switchMobile(&#39;on&#39;, &#39;/questions/4777900/how-to-display-utf-8-characters-in-phpmyadmin&#39;)">mobile</a> |
+
+                <b><a href="http://stackoverflow.com/help">contact us</a></b>
+                  | <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                <div id="footer-sites">
+                    
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackoverflow.com/">stackoverflow.com</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackapps.com/">api/apps</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://careers.stackoverflow.com/">careers 2.0</a>&nbsp; 
+                        <span style="color:#E8272C;font-size:140%">■</span>&nbsp;<a href="http://serverfault.com/">serverfault.com</a>&nbsp; 
+                        <span style="color:#00AFEF;font-size:140%">■</span>&nbsp;<a href="http://superuser.com/">superuser.com</a>&nbsp; 
+                        <span style="color:#969696;font-size:140%">■</span>&nbsp;<a href="http://meta.stackoverflow.com/">meta</a>&nbsp; 
+                        <span style="color:#46937D;font-size:140%">■</span>&nbsp;<a href="http://area51.stackexchange.com/">area&nbsp;51</a>&nbsp; 
+                        <span style="color:#C0D0DC;font-size:140%">■</span>&nbsp;<a href="http://webapps.stackexchange.com/">webapps</a>&nbsp; 
+                        <span style="color:#000000;font-size:140%">■</span>&nbsp;<a href="http://gaming.stackexchange.com/">gaming</a>&nbsp; 
+                        <span style="color:#dd4814;font-size:140%">■</span>&nbsp;<a href="http://askubuntu.com/">ubuntu</a>&nbsp; 
+                        <span style="color:#9ce4fe;font-size:140%">■</span>&nbsp;<a href="http://webmasters.stackexchange.com/">webmasters</a>&nbsp; 
+                        <span style="color:#cf4d3f;font-size:140%">■</span>&nbsp;<a href="http://cooking.stackexchange.com/">cooking</a>&nbsp; 
+                        <span style="color:#f4f28d;font-size:140%">■</span>&nbsp;<a href="http://gamedev.stackexchange.com/">game development</a>&nbsp; 
+                        <span style="color:#0f3559;font-size:140%">■</span>&nbsp;<a href="http://math.stackexchange.com/">math</a>&nbsp; 
+                        <span style="color:#f2f2f2;font-size:140%">■</span>&nbsp;<a href="http://photo.stackexchange.com/">photography</a>&nbsp; 
+                        <span style="color:#037187;font-size:140%">■</span>&nbsp;<a href="http://stats.stackexchange.com/">stats</a>&nbsp; 
+                        <span style="color:#f1e7cc;font-size:140%">■</span>&nbsp;<a href="http://tex.stackexchange.com/">tex</a>&nbsp; 
+                        <span style="color:#e1cdae;font-size:140%">■</span>&nbsp;<a href="http://english.stackexchange.com/">english</a>&nbsp; 
+                        <span style="color:#a2d9f6;font-size:140%">■</span>&nbsp;<a href="http://cstheory.stackexchange.com/">theoretical cs</a>&nbsp; 
+                        <span style="color:#1b3e6c;font-size:140%">■</span>&nbsp;<a href="http://programmers.stackexchange.com/">programmers</a>&nbsp; 
+                        <span style="color:#293a5d;font-size:140%">■</span>&nbsp;<a href="http://unix.stackexchange.com/">unix</a>&nbsp;
+                        <span style="color:#bec0cb;font-size:140%">■</span>&nbsp;<a href="http://apple.stackexchange.com/">apple</a>&nbsp;
+                        <span style="color:#939185;font-size:140%">■</span>&nbsp;<a href="http://wordpress.stackexchange.com/">wordpress</a>&nbsp;
+                        <span style="color:#ebf5f5;font-size:140%">■</span>&nbsp;<a href="http://physics.stackexchange.com/">physics</a>&nbsp;
+                        <span style="color:#4176ab;font-size:140%">■</span>&nbsp;<a href="http://diy.stackexchange.com/">home&nbsp;improvement</a>&nbsp;
+                        <span style="color:#d1d8d7;font-size:140%">■</span>&nbsp;<a href="http://gis.stackexchange.com/">gis</a>&nbsp;
+                        <span style="color:#e5e2d3;font-size:140%">■</span>&nbsp;<a href="http://electronics.stackexchange.com/">electrical&nbsp;engineering</a>&nbsp;
+                        <span style="color:#a4c639;font-size:140%">■</span>&nbsp;<a href="http://android.stackexchange.com/">android</a>&nbsp;
+                        <span style="color:#2e4e60;font-size:140%">■</span>&nbsp;<a href="http://security.stackexchange.com/">security</a>&nbsp;
+                        <span style="color:#45bcb5;font-size:140%">■</span>&nbsp;<a href="http://bicycles.stackexchange.com/">bicycles</a>&nbsp;
+                        <span style="color:#00adee;font-size:140%">■</span>&nbsp;<a href="http://dba.stackexchange.com/">dba</a>&nbsp;
+                        <span style="color:#2edaf0;font-size:140%">■</span>&nbsp;<a href="http://drupal.stackexchange.com/">drupal</a>&nbsp;
+                        <span style="color:#213951;font-size:140%">■</span>&nbsp;<a href="http://sharepoint.stackexchange.com/">sharepoint</a>&nbsp;
+                        <span style="color:#73abb3;font-size:140%">■</span>&nbsp;<a href="http://scifi.stackexchange.com/">scifi &amp; fantasy</a>&nbsp;
+                        <span style="color:#23629F;font-size:140%">■</span>&nbsp;<a href="http://ux.stackexchange.com/">user experience</a>&nbsp;
+                        <span style="color:#faff72;font-size:140%">■</span>&nbsp;<a href="http://skeptics.stackexchange.com/">skeptics</a>&nbsp;
+                        <span style="color:#623121;font-size:140%">■</span>&nbsp;<a href="http://rpg.stackexchange.com/">rpg</a>&nbsp;
+                        <span style="color:#e4be88;font-size:140%">■</span>&nbsp;<a href="http://judaism.stackexchange.com/">judaism</a>&nbsp;
+                        <span style="color:#ffecb1;font-size:140%">■</span>&nbsp;<a href="http://mathematica.stackexchange.com/">mathematica</a>&nbsp;
+                </div>
+            </div>
+            <div id="footer-flair">
+                <a class="peer1" href="http://www.peer1.com/stackoverflow"></a>  
+	            <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                <div id="svnrev">rev 2012.12.31.713</div>
+                        </div>
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; 
+                user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|mysql|unicode|utf-8|phpmyadmin|']); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function(){
+        var s=document.getElementsByTagName('script')[0];
+        var ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src='http://www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src='http://edge.quantserve.com/quant.js'; 
+        s.parentNode.insertBefore(sc,s);
+    })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>    
+    
+
+</body></html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18516664_13522066 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>php - CodeIgniter cart class Arabic regex - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+
+    
+    <script type="text/javascript" async="" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44"></script><script type="text/javascript" async="" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/ga.js"></script><script type="text/javascript" async="" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/quant.js"></script><script type="text/javascript" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/all.css">
+    
+    <meta name="relativepagescore" content="0">
+    <link rel="canonical" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;CodeIgniter cart class Arabic regex&#39;" href="http://stackoverflow.com/feeds/question/13514736">
+    <script type="text/javascript">
+        
+        StackExchange.ready(function () {
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:4,shownCommentCount:4,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:13514736});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '13514736');
+            
+                
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1358242783,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true},"user":{"fkey":"ba1dd645c12f7c60adbd0a3751be645c","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"c862bf93b3ec","js/moderator.js":"53a4fbf22d01","js/full-anon.js":"0c5a6d031738","js/full.js":"49f402052a06","js/wmd.js":"d11f8684ed6c","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"6eb68240242f","js/help.js":"fc9fb0517db2","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"c36cbe2f618c","js/inline-tag-editing.js":"30f72b99548b","js/revisions.js":"7273bb714bba","js/review.js":"b0ed21b3aeef"});
+        
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.using(
+            "gps",
+            function () {
+                StackExchange.gps.init(false);
+            }
+        );
+    </script>
+
+<script async="" type="text/javascript" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/full-anon.js"></script><script async="" type="text/javascript" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/prettify-full.js"></script><script type="text/javascript" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/ados-voting.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/ados-voting.css"><link href="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/sidebar.css" type="text/css" rel="stylesheet"></head>
+<body class="question-page">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+
+
+
+
+
+
+
+
+
+<span id="hlinks-user">
+
+</span>
+<span id="hlinks-nav">
+                   <a href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f13514736%2fcodeigniter-cart-class-arabic-regex%2f13522066">log in</a>
+
+ <span class="lsep">|</span>
+                    <a href="http://careers.stackoverflow.com/">careers 2.0</a>
+
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-custom">
+        <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+            <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+        <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+    <a href="http://stackoverflow.com/faq">faq</a>
+
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <div>
+                        <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="140" size="28" value="">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">Stack Overflow</a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+    <h1 itemprop="name"><a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex" class="question-hyperlink">CodeIgniter cart class Arabic regex</a></h1>
+</div>
+<div id="mainbar">
+
+
+
+<div class="question" id="question" data-questionid="13514736">
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1">
+        <iframe frameborder="0" scrolling="no" height="90" width="728"></iframe><script type="text/javascript">azInitExtension("voting", "adzerk1", 11874, 8277, 43, 61490, 43446);</script><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+
+
+
+    <table>
+    <tbody><tr>
+    <td class="votecell">
+        
+
+<div class="vote">
+    <input type="hidden" value="13514736">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+    <span class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+ 
+</div>
+
+    </td>
+    
+<td class="postcell">
+<div>          
+    <div class="post-text" itemprop="description">
+        <p>The Cart.php under system/library has a regex pattern definition that is not enabling me to use Arabic for name values. This works:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="pln">$data </span><span class="pun">=</span><span class="pln"> array</span><span class="pun">(</span><span class="pln">
+  </span><span class="str">'id'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">"221212"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'qty'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'price'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">21.2</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'name'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'dasdasdas'</span><span class="pln">
+</span><span class="pun">);</span></code></pre>
+
+<p>But this fails because of Arabic in the name:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="pln">$data </span><span class="pun">=</span><span class="pln"> array</span><span class="pun">(</span><span class="pln">
+  </span><span class="str">'id'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">"221212"</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'qty'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'price'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">21.2</span><span class="pun">,</span><span class="pln">
+  </span><span class="str">'name'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'عمر'</span><span class="pln">
+</span><span class="pun">);</span></code></pre>
+
+<p>Now in the Cart.php class, I found the following:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="com">// These are the regular expression rules that we use to validate the product ID and product name</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> $product_id_rules </span><span class="pun">=</span><span class="pln"> </span><span class="str">'\.a-z0-9_-'</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// alpha-numeric, dashes, underscores, or periods</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> $product_name_rules </span><span class="pun">=</span><span class="pln"> </span><span class="str">'\.\:\-_a-z0-9'</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// alphanumeric, dashes, underscores, colons or periods</span></code></pre>
+
+<p>I am concerned with the name rules. Clearly this is the problem because later on there is a check:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="pun">!</span><span class="pln"> preg_match</span><span class="pun">(</span><span class="str">"/^["</span><span class="pun">.</span><span class="pln">$this</span><span class="pun">-&gt;</span><span class="pln">product_name_rules</span><span class="pun">.</span><span class="str">"]+$/i"</span><span class="pun">,</span><span class="pln"> $items</span><span class="pun">[</span><span class="str">'name'</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  log_message</span><span class="pun">(</span><span class="str">'error'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'An invalid name was submitted as the product name: '</span><span class="pun">.</span><span class="pln">$items</span><span class="pun">[</span><span class="str">'name'</span><span class="pun">].</span><span class="str">' The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces'</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> FALSE</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>How can I replace the name rules string to work with Arabic? I have a very poor background with regex, so please help out. </p>
+
+<p>Thanks! </p>
+
+<p><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/uJrzn.png" alt="enter image description here"></p>
+
+    </div>            
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/php" class="post-tag" title="show questions tagged &#39;php&#39;" rel="tag">php</a> <a href="http://stackoverflow.com/questions/tagged/codeigniter" class="post-tag" title="show questions tagged &#39;codeigniter&#39;" rel="tag">codeigniter</a> <a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/13514736" title="short permalink to this question" class="short-link" id="link-post-13514736">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13514736/edit" class="suggest-edit-post" title="">improve this question</a></div>
+    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/13514736/revisions" title="show all edits to this post"><span title="2012-11-23 11:58:34Z" class="relativetime">Nov 23 '12 at 11:58</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1136195/dda"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/1cf16fce2e5a25205d75c7ac4d63dee3" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1136195/dda">dda</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">3,489</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="22 bronze badges"><span class="badge3"></span><span class="badgecount">22</span></span>
+        </div>
+    </div>
+    </td>
+    <td class="post-signature owner">
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    asked
+ <span title="2012-11-22 14:25:56Z" class="relativetime">Nov 22 '12 at 14:25</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/464885/sys-debug"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/4473a93893a800bbfae3f0cf3ddb0579" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/464885/sys-debug">sys_debug</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">635</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
+        </div>
+    </div>
+
+        <br class="cbt">
+        <div class="accept-rate cool" title="this user has accepted an answer for 73 of 124 eligible questions">59% accept rate</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>    </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13514736" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18499993" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">What of these is modifiable? You probably should be able to match arabic with this regex - <code>\.a-z0-9_-\p{Arabic}</code>. The catch is it won't work without adding <code>/u</code> modifier to the regex as well.</span> –&nbsp;<a href="http://stackoverflow.com/users/1229023/raina77ow" title="22348 reputation" class="comment-user">raina77ow</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18499993, 0)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18499993_13514736"><span title="2012-11-22 14:32:52Z" class="relativetime-clean">Nov 22 '12 at 14:32</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18500058" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Not very clear on what you just said but I tried multiple patterns not working neither one of them. Probably my use of them is incorrect. that's why I request code illustration</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18500058, 0)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18500058_13514736"><span title="2012-11-22 14:35:48Z" class="relativetime-clean">Nov 22 '12 at 14:35</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18500100" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">If its possible, you can add the arabic name as product option and use name as alphanumeric e-g
+            'id' =&gt; "221212",
+            'qty' =&gt; 1, 
+            'price' =&gt; 21.2,
+            'name' =&gt; 'umar',
+            'options' =&gt; array('arabic_name' =&gt; 'عمر')</span> –&nbsp;<a href="http://stackoverflow.com/users/1796265/abdul-haseeb" title="146 reputation" class="comment-user">Abdul Haseeb</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18500100, 0)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18500100_13514736"><span title="2012-11-22 14:38:04Z" class="relativetime-clean">Nov 22 '12 at 14:38</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+            
+    <tr id="comment-18500139" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">I thought about that @AbdulHaseeb but I am sure there must be a way to get this to work</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18500139, 0)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18500139_13514736"><span title="2012-11-22 14:39:13Z" class="relativetime-clean">Nov 22 '12 at 14:39</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+    
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div class="subheader answers-subheader">
+            <h2>
+                    3 Answers
+            </h2>
+            <div id="tabs">
+                <a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+            </div>
+        </div>    
+    </div>    
+
+
+
+
+
+  
+    <a name="13515138"></a>
+    <div id="answer-13515138" class="answer" data-answerid="13515138">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="13515138">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>If you want to accept other characters, you have to modify $this-&gt;cart-&gt;product_name_rules after you have loaded the cart library.</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="pln">$this</span><span class="pun">-&gt;</span><span class="pln">load</span><span class="pun">-&gt;</span><span class="pln">library</span><span class="pun">(</span><span class="str">'cart'</span><span class="pun">);</span><span class="pln">
+$this</span><span class="pun">-&gt;</span><span class="pln">cart</span><span class="pun">-&gt;</span><span class="pln">product_name_rules </span><span class="pun">=</span><span class="pln"> </span><span class="str">'\.a-z0-9_-\p{Arabic}'</span><span class="pun">;</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13515138" title="short permalink to this answer" class="short-link" id="link-post-13515138">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13515138/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2012-11-22 14:47:02Z" class="relativetime">Nov 22 '12 at 14:47</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1796265/abdul-haseeb"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/ceaa7ae7366f3dea3c6c8aa4b0da2a7d" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1796265/abdul-haseeb">Abdul Haseeb</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">146</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13515138" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18501502" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">oh this doesn't work either btw</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501502, 13515138)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501502_13515138"><span title="2012-11-22 15:26:06Z" class="relativetime-clean">Nov 22 '12 at 15:26</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18501756" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">How about the setting the rules to empty string to check if it works? 
+
+$this-&gt;cart-&gt;product_name_rules = '';</span> –&nbsp;<a href="http://stackoverflow.com/users/1796265/abdul-haseeb" title="146 reputation" class="comment-user">Abdul Haseeb</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501756, 13515138)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501756_13515138"><span title="2012-11-22 15:34:20Z" class="relativetime-clean">Nov 22 '12 at 15:34</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk3"><a href="http://engine.adzerk.net/redirect/0/5919/7472/8277/03b9e39d0b454ec190d8c7510a8783fc/44/1178/10184/634938395852429060/?keywords=php%2ccodeigniter%2cunicode" rel="nofollow" target="_blank" title=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/4c4f1be011a447efbce49c1811022e7a.png" title="" alt="" border="0" height="90" width="728"></a><img width="0" height="0" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/v.gif"><script type="text/javascript">azInitExtension("voting", "adzerk3", 414, 8277, 44, 10184, 5919);</script><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+
+
+
+
+  
+    <a name="13515022"></a>
+    <div id="answer-13515022" class="answer" data-answerid="13515022">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="13515022">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>It will work, if you change your <code>$product_name_rules</code> (partial) pattern into this:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln"> $product_name_rules </span><span class="pun">=</span><span class="pln"> </span><span class="str">'\.\:\-_a-z0-9\p{Arabic}'</span><span class="pun">;</span></code></pre>
+
+<p>... then add <code>/u</code> modifier to the pattern actually used by <code>preg_match</code>:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> </span><span class="pun">!</span><span class="pln"> preg_match</span><span class="pun">(</span><span class="str">"/^["</span><span class="pun">.</span><span class="pln">$this</span><span class="pun">-&gt;</span><span class="pln">product_name_rules</span><span class="pun">.</span><span class="str">"]+$/iu"</span><span class="pun">,</span><span class="pln"> 
+            $items</span><span class="pun">[</span><span class="str">'name'</span><span class="pun">]))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></code></pre>
+
+<p>Quoting the <a href="http://php.net/manual/en/reference.pcre.pattern.modifiers.php" rel="nofollow">doc</a>:</p>
+
+<blockquote>
+  <p><strong>u (PCRE_UTF8)</strong></p>
+  
+  <p>This modifier turns on additional functionality of PCRE 
+  that is incompatible with Perl. Pattern strings are treated as UTF-8. 
+  This modifier is available from PHP 4.1.0 or greater on Unix 
+  and from PHP 4.2.3 on win32. UTF-8 validity of the pattern is checked since PHP 4.3.5.</p>
+</blockquote>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13515022" title="short permalink to this answer" class="short-link" id="link-post-13515022">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13515022/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/13515022/revisions" title="show all edits to this post"><span title="2012-11-22 15:22:20Z" class="relativetime">Nov 22 '12 at 15:22</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2012-11-22 14:40:44Z" class="relativetime">Nov 22 '12 at 14:40</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1229023/raina77ow"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/75b840909603c238921a81032efd57eb" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1229023/raina77ow">raina77ow</a><br>
+            <span class="reputation-score" title="reputation score 22348" dir="ltr">22.3k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13515022" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18500710" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">This still didn't work. Because when I do the above changes (copy &amp; paste), the add to cart button doesn't work. When I change the arabic name to english, it works and contents displayed.</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18500710, 13515022)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18500710_13515022"><span title="2012-11-22 14:57:41Z" class="relativetime-clean">Nov 22 '12 at 14:57</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18501076" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Could you add version of PHP and encoding used to the question? This snippet actually works locally quite well, when I just copy-paste the string from your question - so either <code>/u</code> modifier is not supported, or encoding is not UTF-8, I suppose...</span> –&nbsp;<a href="http://stackoverflow.com/users/1229023/raina77ow" title="22348 reputation" class="comment-user">raina77ow</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501076, 13515022)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501076_13515022"><span title="2012-11-22 15:12:06Z" class="relativetime-clean">Nov 22 '12 at 15:12</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18501315" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">PHP Version 5.3.10 and am not sure what u mean by encoding?</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501315, 13515022)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501315_13515022"><span title="2012-11-22 15:19:43Z" class="relativetime-clean">Nov 22 '12 at 15:19</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18501343" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Please check <a href="http://www.joelonsoftware.com/articles/Unicode.html" rel="nofollow">this article</a>.</span> –&nbsp;<a href="http://stackoverflow.com/users/1229023/raina77ow" title="22348 reputation" class="comment-user">raina77ow</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501343, 13515022)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501343_13515022"><span title="2012-11-22 15:20:29Z" class="relativetime-clean">Nov 22 '12 at 15:20</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18501348" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">btw you not adding /u only u have /iu in the above example. I dont know what they both mean but thought should bring it up</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18501348, 13515022)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18501348_13515022"><span title="2012-11-22 15:20:41Z" class="relativetime-clean">Nov 22 '12 at 15:20</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    <a id="comments-link-13515022" class="comments-link" data-comments-count="4" title="expand to show all comments on this post">show <b>4</b> more comments</a>
+    
+    <div class="was-this-helpful">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+
+
+  
+    <a name="13522066"></a>
+    <div id="answer-13522066" class="answer" data-answerid="13522066">
+        <table>
+        <tbody><tr>
+        <td class="votecell">
+            
+
+<div class="vote">
+    <input type="hidden" value="13522066">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+        </td>
+        
+
+
+<td class="answercell">
+    <div class="post-text"><p>Change <code>product_name</code> regex to the following, which allows all:</p>
+
+<pre class="lang-php prettyprint prettyprinted" style=""><code><span class="kwd">var</span><span class="pln"> $product_name_rules </span><span class="pun">=</span><span class="pln"> </span><span class="str">'^.'</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/13522066" title="short permalink to this answer" class="short-link" id="link-post-13522066">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13522066/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/13522066/revisions" title="show all edits to this post"><span title="2013-01-09 04:05:45Z" class="relativetime">Jan 9 at 4:05</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/620249/sergiu-dumitriu"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/44c59cfa163ff8a3058ce8d4b0b97b6a" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/620249/sergiu-dumitriu">Sergiu Dumitriu</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">2,995</span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+        </div>
+    </div>
+    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2012-11-23 01:21:03Z" class="relativetime">Nov 23 '12 at 1:21</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1550476/boulevard"><div class=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/a6f65e1ee4ef61ae7241bb6a9b53e3b3" alt="" width="32" height="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1550476/boulevard">Boulevard</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">123</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-13522066" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-18516664" class="comment" style="">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">Thank you very much! that partially works. There is a problem: when I set database in codeiginter config to utf8 it works (but display of information is ?????. when I change database charset to utf-8, the words are showing but insert failing. Why?</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18516664, 13522066)" href="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/php - CodeIgniter cart class Arabic regex - Stack Overflow.html"><span title="2012-11-23 07:59:17Z" class="relativetime-clean">Nov 23 '12 at 7:59</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18521768" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">try changing your table and table fields, all to UTF-8 collation, see the following pic:
+<a href="http://i995.photobucket.com/albums/af77/lethanhpsp/new.png" rel="nofollow">i995.photobucket.com/albums/af77/lethanhpsp/new.png</a></span> –&nbsp;<a href="http://stackoverflow.com/users/1550476/boulevard" title="123 reputation" class="comment-user">Boulevard</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18521768, 13522066)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18521768_13522066"><span title="2012-11-23 11:27:23Z" class="relativetime-clean">Nov 23 '12 at 11:27</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+            
+    <tr id="comment-18521829" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">I did that and even database and all tables to utf8_unicode_ci. Still not working. I can't believe how unreliable this codeigniter is :(</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18521829, 13522066)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18521829_13522066"><span title="2012-11-23 11:29:08Z" class="relativetime-clean">Nov 23 '12 at 11:29</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18522145" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">hm, even table field?</span> –&nbsp;<a href="http://stackoverflow.com/users/1550476/boulevard" title="123 reputation" class="comment-user">Boulevard</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18522145, 13522066)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18522145_13522066"><span title="2012-11-23 11:39:30Z" class="relativetime-clean">Nov 23 '12 at 11:39</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-18522362" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">yes sir I did...left nothing in the database unturned...i attached the snapshot</span> –&nbsp;<a href="http://stackoverflow.com/users/464885/sys-debug" title="635 reputation" class="comment-user owner">sys_debug</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(18522362, 13522066)" href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#comment18522362_13522066"><span title="2012-11-23 11:47:50Z" class="relativetime-clean">Nov 23 '12 at 11:47</span></a></span><span class="edited-yes" title="this comment was edited"></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+    
+    <div class="was-this-helpful" style="color: rgb(136, 136, 136);">
+        feedback
+    </div>
+    
+</td>
+</tr>            </tbody></table>
+</div>
+    <a name="new-answer"></a>
+    <form id="post-form" action="http://stackoverflow.com/questions/13514736/answer/submit" method="post" class="post-form">
+        <h2 class="space">Your Answer</h2>
+
+
+
+
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">  
+
+    
+    <div class="wmd-container">
+        <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+        <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="ba1dd645c12f7c60adbd0a3751be645c">
+        <input id="author" name="author" type="text">
+    </div>
+</div>            <div class="form-item">
+        <table>
+        <tbody><tr>
+            <td class="vm open-id-login">
+                <a id="login-link" style="font-size: 200%; margin-left: 30px;" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f13514736%2fcodeigniter-cart-class-arabic-regex">log in</a>
+                <script type="text/javascript">
+                    StackExchange.ready(function () {
+                        StackExchange.helpers.onClickDraftSave('#login-link');
+                    });
+                </script>
+            </td>
+            <script type="text/javascript">
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+            <td class="orcell">
+                <div class="orword">or</div>
+                <div class="orline"></div>
+            </td>
+            <td class="vm">
+                    <div>
+                        <label for="display-name">Name</label>
+                        <input type="text" size="30" maxlength="30" value="" tabindex="105" style="opacity: 1; position: absolute; background-color: white; color: black; -webkit-text-fill-color: black; width: 248px; height: 15px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 13px; text-align: start; border: 1px solid rgb(153, 153, 153);" class="actual-edit-overlay" disabled="disabled"><input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105" style="opacity: 0.4; z-index: 1; position: relative;" class="edit-field-overlayed">
+                    </div>
+                    <div>
+                        <label for="m-address">Email</label>
+                        <input type="text" size="40" maxlength="100" value="" tabindex="106" style="opacity: 1; position: absolute; background-color: white; color: black; -webkit-text-fill-color: black; width: 328px; height: 15px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 13px; text-align: start; border: 1px solid rgb(153, 153, 153);" class="actual-edit-overlay" disabled="disabled"><input id="m-address" name="m-address" type="text" size="40" maxlength="100" value="" tabindex="106" style="opacity: 0.4; z-index: 1; position: relative;" class="edit-field-overlayed">
+                        <span class="edit-field-overlay">required, but never shown</span>
+                    </div>
+                    <div>
+                        <label for="home-page">Home Page</label>
+                        <input type="text" size="40" maxlength="200" value="" tabindex="107" style="opacity: 1; position: absolute; background-color: white; color: black; -webkit-text-fill-color: black; width: 328px; height: 15px; line-height: normal; font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 13px; text-align: start; border: 1px solid rgb(153, 153, 153);" class="actual-edit-overlay" disabled="disabled"><input id="home-page" name="home-page" type="text" size="40" maxlength="200" value="" tabindex="107" style="opacity: 0.4; z-index: 1; position: relative;" class="edit-field-overlayed">
+                    </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+           
+            <div class="form-submit cbt">
+            <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+            <a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#" class="discard-answer dno">discard</a>
+    <p class="privacy-policy-agreement">
+        By posting your answer, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input type="hidden" name="legalLinksShown" value="1">
+        </div>
+    </form>
+
+
+
+        <h2 class="bottom-notice">
+                Not the answer you're looking for? 
+            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/php" class="post-tag" title="show questions tagged &#39;php&#39;" rel="tag">php</a> <a href="http://stackoverflow.com/questions/tagged/codeigniter" class="post-tag" title="show questions tagged &#39;codeigniter&#39;" rel="tag">codeigniter</a> <a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a> 
+                or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.
+        </h2>
+</div>
+</div>
+<div id="sidebar">
+
+
+
+     <script type="text/javascript">
+        window.showNewUser = true;
+
+            
+                (function(){
+                    var cs = window.sessionStorage && window.sessionStorage['tNewsletter'];
+                    var m = /:\/\/([^\/]*)/.exec(document.referrer);
+                    var h = {'www.reddit.com':1,'news.ycombinator.com':1};
+                    if(window.sessionStorage && (cs || (m && m.length == 2 && h[m[1]]))){
+                        showNewUser = false;
+                        StackExchange.ready(function(){
+                            StackExchange.newsletterAd.loader(m[1], cs);
+                        });
+                    }
+                    if (window.localStorage && showNewUser){
+                        var c = parseInt(localStorage['nuCounter'],10); 
+                        c = isNaN(c) ? 1 : c+1;
+                        window.localStorage['nuCounter'] = c; 
+                        showNewUser = c < 10;
+                    }
+                })()
+            
+     </script>
+    <div class="module newuser newuser-greeting" id="newuser-box" style="display:none;">
+        <h4>Hello World!</h4>
+        <div>
+            <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free, no registration required.</p>
+            <p class="ar"><a href="http://stackoverflow.com/about?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;<a href="http://stackoverflow.com/faq?mnu=1">faq »</a>
+            </p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        if (showNewUser) {
+            document.getElementById('newuser-box').style.display = '';
+        }
+     </script>
+        <div class="module question-stats">
+        <p class="label-key">tagged</p>
+        <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/php" class="post-tag" title="show questions tagged &#39;php&#39;" rel="tag">php</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">328795</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/codeigniter" class="post-tag" title="show questions tagged &#39;codeigniter&#39;" rel="tag">codeigniter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">15556</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/unicode" class="post-tag" title="show questions tagged &#39;unicode&#39;" rel="tag">unicode</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">6555</span></span><br>
+</div>
+        <table id="qinfo">
+            <tbody><tr>
+                <td><p class="label-key">asked</p></td>
+                <td style="padding-left:10px"><p class="label-key" title="2012-11-22 14:25:56Z"><b>1 month ago</b></p></td>
+            </tr>
+            <tr>
+                <td><p class="label-key">viewed</p></td>
+
+                <td style="padding-left:10px">
+                    <p class="label-key">
+                        <b>103 times</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="label-key">active</p></td>
+                <td style="padding-left:10px"><p class="label-key"><b><a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066?lastactivity" class="lastactivity-link" title="2013-01-09 04:05:45Z">6 days ago</a></b></p></td>
+            </tr>
+        </tbody></table>
+    </div>
+        
+                <script type="text/javascript">
+                var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=php,codeigniter,unicode";
+                if (document.referrer) {
+                    if (/\?/.test(scriptSrc))
+                        scriptSrc += "&";
+                    else
+                        scriptSrc += "?";
+                    scriptSrc += "xReferrer=" + document.referrer;
+                }
+                StackExchange.ready(function () {
+                    var z = document.createElement("script");
+                    z.type = "text/javascript";
+                    z.async = "true";
+                    z.src = scriptSrc;
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(z, s);
+                });
+            </script>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk2"><a href="http://engine.adzerk.net/redirect/0/8211/2444/8277/2738663fdd3449f7b9ef514f539fdd61/45/1178/13039/634938395852389940/?keywords=php%2ccodeigniter%2cunicode" rel="nofollow" target="_blank" title=""><img src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/bd294ce7ff4c43b6aad4aa4169fb819b.jpg" title="" alt="" border="0" height="250" width="220"></a><img width="0" height="0" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/v(1).gif"><script type="text/javascript">azInitExtension("voting", "adzerk2", 414, 8277, 45, 13039, 8211);</script><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li></ul><a href="http://stackoverflow.com/questions/13514736/codeigniter-cart-class-arabic-regex/13522066#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div></div>
+    <div id="hireme"> <a href="http://careers.stackoverflow.com/jobs?a=12" class="top" target="_blank"></a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/28165/ruby-on-rails-developer-autoaccessoriesgarage-com?a=xh9pK2A" target="_blank" title="Ruby on Rails Developer at AutoAccessoriesGarage.com. Click to learn more."> Ruby on Rails Developer<br> <span class="company">AutoAccessoriesGarage.com</span> <span class="location">Chicago, IL</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/29144/senior-mobile-developer-uxp-systems?a=yqRGtva" target="_blank" title="Senior Mobile Developer at UXP Systems. Click to learn more."> Senior Mobile Developer<br> <span class="company">UXP Systems</span> <span class="location">Toronto, ON, Canada</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/28984/software-engineer-data-infrastructure-yelp?a=yf91mw0" target="_blank" title="Software Engineer - Data Infrastructure at Yelp. Click to learn more."> Software Engineer - Data Infrastructure<br> <span class="company">Yelp</span> <span class="location">San Francisco, CA</span> </a> </li> </ul> <img alt="" class="impression" src="./php - CodeIgniter cart class Arabic regex - Stack Overflow_files/xh9pK2A-yqRGtva-yf91mw0-12" style="display:none"></div>
+
+
+
+        <div style="margin-bottom: 10px;">
+        
+
+<style type="text/css">
+#newsletter-ad {
+    width: 190px;
+    height: 250px;
+    overflow: hidden;
+    background: url('http://cdn.sstatic.net/stackoverflow/img/newsletter-ad.png');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style>
+
+<script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script>
+
+<div id="newsletter-ad">
+    <p id="newsletter-ad-header">Get the <strong>weekly newsletter!</strong></p>
+    <ul>
+        <li>Top questions and answers</li>
+        <li>Important announcements</li>
+        <li>Unanswered questions</li>
+    </ul>
+    <div id="newsletter-signup-container"><input id="newsletter-signup" type="button" value="Sign up for the newsletter"></div>
+    <p id="newsletter-preview-container">see an <a href="http://stackexchange.com/newsletters/newsletter?site=stackoverflow.com" id="newsletter-preview">example newsletter</a></p>
+    <div class="dno">
+            <p class="privacy-policy-agreement">
+        By subscribing, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input type="hidden" name="legalLinksShown" value="1">
+
+    </div>
+</div>
+
+    </div>
+  
+    
+    <div class="module sidebar-linked">
+        <h4 id="h-linked">Linked</h4>
+        <div class="linked" data-tracker="lq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/13525144/codeigniter-charset-to-utf-8?lq=1" class="question-hyperlink">CodeIgniter charset to UTF-8</a>
+</div>
+
+        </div>
+    </div>
+    <div class="module sidebar-related">
+        <h4 id="h-related">Related</h4>
+        <div class="related" data-tracker="rq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/2404418/codeigniter-cart-class-additional-price-for-product-options?rq=1" class="question-hyperlink">Codeigniter Cart Class - additional price for product options</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/2981817/codeigniter-load-class-into-class?rq=1" class="question-hyperlink">CodeIgniter load class into class</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/4358497/codeigniter-does-name-regex-match-in-cart-class-support-unicode?rq=1" class="question-hyperlink">CodeIgniter - Does 'name' regex match in Cart class support Unicode?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5197074/how-to-search-unicode-characters-on-php?rq=1" class="question-hyperlink">how to search unicode characters on php?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5410688/adding-to-cart-in-codeigniter-shopping-cart-class?rq=1" class="question-hyperlink">Adding to cart in Codeigniter shopping cart class</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/6379585/codeigniter-update-cart-if-product-exists?rq=1" class="question-hyperlink">Codeigniter update cart if product exists</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7130604/why-cant-i-read-input-values-with-chinese-characters-in-codeigniter?rq=1" class="question-hyperlink">Why can't I read input values with Chinese characters in Codeigniter?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7380846/shopping-cart-not-working-properly-in-codeigniter?rq=1" class="question-hyperlink">Shopping Cart not working properly in codeigniter</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7632981/codeigniter-arabic-keyboard-form-validation?rq=1" class="question-hyperlink">codeigniter arabic keyboard form validation</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7721148/store-codeigniter-shopping-cart?rq=1" class="question-hyperlink">Store codeigniter shopping cart</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7762156/codeigniter-shopping-cart-wont-let-me-get-hidden-field-row-ids?rq=1" class="question-hyperlink">Codeigniter - Shopping Cart: Won't let me get hidden field Row IDs</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/7963087/error-adding-to-cart-in-codeigniter-shopping-cart-class?rq=1" class="question-hyperlink">Error Adding to cart in Codeigniter shopping cart class</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/9340751/codeigniter-unicode-uri-read-as-e6?rq=1" class="question-hyperlink">Codeigniter unicode URI read as %E6</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11247444/codeigniter-shopping-cart-helper-class-change-the-subtotal-value?rq=1" class="question-hyperlink">Codeigniter Shopping Cart Helper Class - Change the “subtotal” value</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11490015/do-i-need-to-change-something-in-the-cart-class-in-codeigniter-to-utilize-both-s?rq=1" class="question-hyperlink">Do I need to change something in the cart class in Codeigniter to utilize both session variables and database data?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11606116/codeigniter-cart-unable-to-hold-more-than-10-items?rq=1" class="question-hyperlink">CodeIgniter Cart unable to hold more than 10 items</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11988137/codeigniter-i-cant-remove-the-item-from-the-cart?rq=1" class="question-hyperlink">CodeIgniter: I can't remove the item from the cart</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12002247/how-to-update-multiple-rows-in-codeigniter-cart?rq=1" class="question-hyperlink">How to update multiple rows in codeigniter cart</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12019813/code-igniter-cart-class-wont-hold-cart-items-in-the-session?rq=1" class="question-hyperlink">Code igniter Cart Class, won't hold cart items in the session</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12231892/codeigniter-shopping-cart-adding-the-same-product-again?rq=1" class="question-hyperlink">Codeigniter Shopping Cart: Adding the Same Product Again</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12278339/session-issue-in-codeigniter-for-arabic-character?rq=1" class="question-hyperlink">Session issue in codeigniter for arabic character</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13014706/codeigniter-cart-check-if-item-added-to-cart?rq=1" class="question-hyperlink">Codeigniter Cart - Check if item added to cart</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13525144/codeigniter-charset-to-utf-8?rq=1" class="question-hyperlink">CodeIgniter charset to UTF-8</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13698566/codeigniter-class-error?rq=1" class="question-hyperlink">codeigniter class error</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13781355/how-to-update-cart-options-in-codeigniter?rq=1" class="question-hyperlink">how to update Cart Options in Codeigniter?</a>
+</div>
+
+        </div>
+    </div>
+        <div class="everyonelovesstackoverflow" id="adzerk3">
+        </div>
+
+
+</div>
+
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/13514736" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/13514736/ivc/2e0b');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/13514736/ivc/2e0b" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-php</div></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <a href="http://stackoverflow.com/about">about</a> |
+                <a href="http://stackoverflow.com/faq">faq</a> |
+                <a href="http://blog.stackexchange.com/?blb=1">blog</a> |
+                    <a href="http://chat.stackoverflow.com/">chat</a> |
+                <a href="http://data.stackexchange.com/">data</a> |
+                <a href="http://stackexchange.com/legal">legal</a> |
+                <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> |
+                <a href="http://stackexchange.com/about/hiring">jobs</a> |
+                <a href="http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0">advertising info</a> |
+
+                <a onclick="StackExchange.switchMobile(&#39;on&#39;, &#39;/questions/13514736/codeigniter-cart-class-arabic-regex/13522066&#39;)">mobile</a> |
+
+                <b><a href="http://stackoverflow.com/help">contact us</a></b>
+                  | <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                <div id="footer-sites">
+                    
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackoverflow.com/">stackoverflow.com</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackapps.com/">api/apps</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://careers.stackoverflow.com/">careers 2.0</a>&nbsp; 
+                        <span style="color:#E8272C;font-size:140%">■</span>&nbsp;<a href="http://serverfault.com/">serverfault.com</a>&nbsp; 
+                        <span style="color:#00AFEF;font-size:140%">■</span>&nbsp;<a href="http://superuser.com/">superuser.com</a>&nbsp; 
+                        <span style="color:#969696;font-size:140%">■</span>&nbsp;<a href="http://meta.stackoverflow.com/">meta</a>&nbsp; 
+                        <span style="color:#46937D;font-size:140%">■</span>&nbsp;<a href="http://area51.stackexchange.com/">area&nbsp;51</a>&nbsp; 
+                        <span style="color:#C0D0DC;font-size:140%">■</span>&nbsp;<a href="http://webapps.stackexchange.com/">webapps</a>&nbsp; 
+                        <span style="color:#000000;font-size:140%">■</span>&nbsp;<a href="http://gaming.stackexchange.com/">gaming</a>&nbsp; 
+                        <span style="color:#dd4814;font-size:140%">■</span>&nbsp;<a href="http://askubuntu.com/">ubuntu</a>&nbsp; 
+                        <span style="color:#9ce4fe;font-size:140%">■</span>&nbsp;<a href="http://webmasters.stackexchange.com/">webmasters</a>&nbsp; 
+                        <span style="color:#cf4d3f;font-size:140%">■</span>&nbsp;<a href="http://cooking.stackexchange.com/">cooking</a>&nbsp; 
+                        <span style="color:#f4f28d;font-size:140%">■</span>&nbsp;<a href="http://gamedev.stackexchange.com/">game development</a>&nbsp; 
+                        <span style="color:#0f3559;font-size:140%">■</span>&nbsp;<a href="http://math.stackexchange.com/">math</a>&nbsp; 
+                        <span style="color:#f2f2f2;font-size:140%">■</span>&nbsp;<a href="http://photo.stackexchange.com/">photography</a>&nbsp; 
+                        <span style="color:#037187;font-size:140%">■</span>&nbsp;<a href="http://stats.stackexchange.com/">stats</a>&nbsp; 
+                        <span style="color:#f1e7cc;font-size:140%">■</span>&nbsp;<a href="http://tex.stackexchange.com/">tex</a>&nbsp; 
+                        <span style="color:#e1cdae;font-size:140%">■</span>&nbsp;<a href="http://english.stackexchange.com/">english</a>&nbsp; 
+                        <span style="color:#a2d9f6;font-size:140%">■</span>&nbsp;<a href="http://cstheory.stackexchange.com/">theoretical cs</a>&nbsp; 
+                        <span style="color:#1b3e6c;font-size:140%">■</span>&nbsp;<a href="http://programmers.stackexchange.com/">programmers</a>&nbsp; 
+                        <span style="color:#293a5d;font-size:140%">■</span>&nbsp;<a href="http://unix.stackexchange.com/">unix</a>&nbsp;
+                        <span style="color:#bec0cb;font-size:140%">■</span>&nbsp;<a href="http://apple.stackexchange.com/">apple</a>&nbsp;
+                        <span style="color:#939185;font-size:140%">■</span>&nbsp;<a href="http://wordpress.stackexchange.com/">wordpress</a>&nbsp;
+                        <span style="color:#ebf5f5;font-size:140%">■</span>&nbsp;<a href="http://physics.stackexchange.com/">physics</a>&nbsp;
+                        <span style="color:#4176ab;font-size:140%">■</span>&nbsp;<a href="http://diy.stackexchange.com/">home&nbsp;improvement</a>&nbsp;
+                        <span style="color:#d1d8d7;font-size:140%">■</span>&nbsp;<a href="http://gis.stackexchange.com/">gis</a>&nbsp;
+                        <span style="color:#e5e2d3;font-size:140%">■</span>&nbsp;<a href="http://electronics.stackexchange.com/">electrical&nbsp;engineering</a>&nbsp;
+                        <span style="color:#a4c639;font-size:140%">■</span>&nbsp;<a href="http://android.stackexchange.com/">android</a>&nbsp;
+                        <span style="color:#2e4e60;font-size:140%">■</span>&nbsp;<a href="http://security.stackexchange.com/">security</a>&nbsp;
+                        <span style="color:#45bcb5;font-size:140%">■</span>&nbsp;<a href="http://bicycles.stackexchange.com/">bicycles</a>&nbsp;
+                        <span style="color:#00adee;font-size:140%">■</span>&nbsp;<a href="http://dba.stackexchange.com/">dba</a>&nbsp;
+                        <span style="color:#2edaf0;font-size:140%">■</span>&nbsp;<a href="http://drupal.stackexchange.com/">drupal</a>&nbsp;
+                        <span style="color:#213951;font-size:140%">■</span>&nbsp;<a href="http://sharepoint.stackexchange.com/">sharepoint</a>&nbsp;
+                        <span style="color:#73abb3;font-size:140%">■</span>&nbsp;<a href="http://scifi.stackexchange.com/">scifi &amp; fantasy</a>&nbsp;
+                        <span style="color:#23629F;font-size:140%">■</span>&nbsp;<a href="http://ux.stackexchange.com/">user experience</a>&nbsp;
+                        <span style="color:#faff72;font-size:140%">■</span>&nbsp;<a href="http://skeptics.stackexchange.com/">skeptics</a>&nbsp;
+                        <span style="color:#623121;font-size:140%">■</span>&nbsp;<a href="http://rpg.stackexchange.com/">rpg</a>&nbsp;
+                        <span style="color:#e4be88;font-size:140%">■</span>&nbsp;<a href="http://judaism.stackexchange.com/">judaism</a>&nbsp;
+                        <span style="color:#ffecb1;font-size:140%">■</span>&nbsp;<a href="http://mathematica.stackexchange.com/">mathematica</a>&nbsp;
+                </div>
+            </div>
+            <div id="footer-flair">
+                <a class="peer1" href="http://www.peer1.com/stackoverflow"></a>  
+	            <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                <div id="svnrev">rev 2013.1.15.927</div>
+                        </div>
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; 
+                user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|php|codeigniter|unicode|']); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function(){
+        var s=document.getElementsByTagName('script')[0];
+        var ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src='http://www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src='http://edge.quantserve.com/quant.js'; 
+        s.parentNode.insertBefore(sc,s);
+    })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>    
+    
+
+</body></html>

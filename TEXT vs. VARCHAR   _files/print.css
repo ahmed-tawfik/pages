@@ -1,0 +1,15 @@
+/* -- General Print Design -- */
+.innerWrapper {
+	width: 984px;
+}
+#content {
+	width: 90%;
+	margin-left: 16px;
+	background-color: #fff !important;
+}
+#contentWrapper {
+	background-color: #fff !important;
+}
+#globalNav, #footer, #mainNav, #rightSidebar, #leftSidebar, #breadcrumb, #secondaryNav  {
+	display: none;
+}

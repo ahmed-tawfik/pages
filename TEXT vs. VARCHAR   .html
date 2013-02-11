@@ -1,0 +1,1399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0049)http://www.pythian.com/news/7129/text-vs-varchar/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.innerBanner img {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}.innerBanner img {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}.rounded {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}.rounded {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}#secondaryNav li>a {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}#secondaryNav li>a {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}div.form input:text {border-radius:3px 3px 3px 3px; -moz-border-radius:3px 3px 3px 3px;}div.form input:text {-webkit-border-top-left-radius:3px 3px; -webkit-border-top-right-radius:3px 3px; -webkit-border-bottom-right-radius:3px 3px; -webkit-border-bottom-left-radius:3px 3px;}#globalSearch {border-radius:3px 3px 3px 3px; -moz-border-radius:3px 3px 3px 3px;}#globalSearch {-webkit-border-top-left-radius:3px 3px; -webkit-border-top-right-radius:3px 3px; -webkit-border-bottom-right-radius:3px 3px; -webkit-border-bottom-left-radius:3px 3px;}ul.tabs li a {border-radius:4px 4px 4px 4px; -moz-border-radius:4px 4px 4px 4px;}ul.tabs li a {-webkit-border-top-left-radius:4px 4px; -webkit-border-top-right-radius:4px 4px; -webkit-border-bottom-right-radius:4px 4px; -webkit-border-bottom-left-radius:4px 4px;}#content .box {border-radius:9px 9px 9px 9px; -moz-border-radius:9px 9px 9px 9px;}#content .box {-webkit-border-top-left-radius:9px 9px; -webkit-border-top-right-radius:9px 9px; -webkit-border-bottom-right-radius:9px 9px; -webkit-border-bottom-left-radius:9px 9px;}#rightSidebar .callout.round {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}#rightSidebar .callout.round {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}#rightSidebar #swfContent a {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}#rightSidebar #swfContent a {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}#rightSidebar .callout h3.round {border-radius:5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px;}#rightSidebar .callout h3.round {-webkit-border-top-left-radius:5px 5px; -webkit-border-top-right-radius:5px 5px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}#homePostIts {border-radius:0px 0px 5px 5px; -moz-border-radius:0px 0px 5px 5px;}#homePostIts {-webkit-border-top-left-radius:0px 0px; -webkit-border-top-right-radius:0px 0px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}#homeFeatured .navigation {border-radius:0px 0px 5px 5px; -moz-border-radius:0px 0px 5px 5px;}#homeFeatured .navigation {-webkit-border-top-left-radius:0px 0px; -webkit-border-top-right-radius:0px 0px; -webkit-border-bottom-right-radius:5px 5px; -webkit-border-bottom-left-radius:5px 5px;}</style>
+
+
+<meta name="keywords" content="oracle,mysql,sql-server,database,remote,dba,administration,support,solution,outsourcing,software,services,blog,weblog">
+
+<meta name="description" content="A public blog on subject matters of interest to DBAs, by The Pythian Group&#39;s remote DBA specialists in Oracle, SQL, and MySQL.">
+
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/pd.js"></script><script src="./TEXT vs. VARCHAR   _files/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="./TEXT vs. VARCHAR   _files/ga.js"></script><script type="text/javascript" src="./TEXT vs. VARCHAR   _files/jquery.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/ddaccordion.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/jquery.ui.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/jquery.validate.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/jquery.fade.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/view.js"></script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/hoverAccordion.js"></script>
+
+<script src="./TEXT vs. VARCHAR   _files/jquery-hoverIntent.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/jquery-superfish.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/jquery-uploadify.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/jquery-tools.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/jquery-cycle.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/jquery-tweet.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/DD-roundies-0.0.2a.js" type="text/javascript"></script>
+<script src="./TEXT vs. VARCHAR   _files/swfObject.js" type="text/javascript"></script>
+
+		<!-- begin IE-specific files-->
+			<!--[if lt IE 7]>
+				<link rel="stylesheet" type="text/css" media="all" href="/system/templates/stylesheets/ie6.css" />
+				<script src="/system/templates/js/pythian-common-ie6.js" type="text/javascript"></script>
+				<script src="/system/templates/js/DD-belatedPNG-0.0.7a.js" type="text/javascript"></script>
+			<![endif]-->
+
+			<!--[if IE 7]>
+				<link rel="stylesheet" type="text/css" media="all" href="/system/templates/stylesheets/ie7.css" />
+			<![endif]-->
+
+			<!--[if IE 8]>
+				<link rel="stylesheet" type="text/css" media="all" href="/system/templates/stylesheets/ie8.css" />
+			<![endif]-->
+
+		<!-- end IE-specific files-->
+
+		<script src="./TEXT vs. VARCHAR   _files/pythian-common.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+jQuery().ready(function(){
+
+jQuery.fn.slideFadeToggle = function(speed, easing, callback) {
+  return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);  
+};
+
+  $('.fade').click(function() {
+    $(this).next().slideFadeToggle('slow');
+	
+  });
+  
+});
+
+//--------------------------//
+
+ddaccordion.init({
+	headerclass: "head", //Shared CSS class name of headers group
+	contentclass: "subNav", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [3], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+	})
+</script><style type="text/css">
+.subNav{display: none}</style>
+
+<script type="text/javascript">
+$(document).ready(function() { 
+    $("#Content1").vkfade();
+    $("#acm-mem").vkfade("ffff00");
+})
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="The Pythian Blog RSS Feed" href="http://feeds2.feedburner.com/PythianGroupBlog">
+
+<link type="text/css" rel="stylesheet" href="./TEXT vs. VARCHAR   _files/reset.css" media="all">
+
+<link href="./TEXT vs. VARCHAR   _files/reset(1).css" rel="stylesheet" type="text/css">
+<link href="./TEXT vs. VARCHAR   _files/fonts.css" rel="stylesheet" type="text/css">
+<link href="./TEXT vs. VARCHAR   _files/base-layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="./TEXT vs. VARCHAR   _files/web-styles.css" rel="stylesheet" type="text/css" media="all">
+<link href="./TEXT vs. VARCHAR   _files/main-navigation.css" rel="stylesheet" type="text/css" media="all">
+<link href="./TEXT vs. VARCHAR   _files/print.css" rel="stylesheet" type="text/css" media="print">
+<link href="./TEXT vs. VARCHAR   _files/superfish.css" rel="stylesheet" type="text/css" media="screen">
+
+<link type="text/css" rel="stylesheet" href="./TEXT vs. VARCHAR   _files/styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="./TEXT vs. VARCHAR   _files/form.css" media="all">
+
+<!--browser-specific conditionals-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="http://www.pythian.com/news/wp-content/themes/pythian/styles/png.css" type="text/css" media="all">
+<link rel="stylesheet" href="http://www.pythian.com/news/wp-content/themes/pythian/styles/ie6.css" type="text/css" media="all">
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://www.pythian.com/news/wp-content/themes/pythian/styles/ie7.css" type="text/css" media="all">
+<![endif]-->
+
+<link rel="icon" type="image/x-icon" href="http://www.pythian.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://www.pythian.com/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="The Pythian Blog » TEXT vs. VARCHAR Comments Feed" href="http://www.pythian.com/news/7129/text-vs-varchar/feed/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.pythian.com/news/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.pythian.com/news/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="The Pythian Blog" href="http://www.pythian.com/news/">
+<link rel="start" title="Pythian Celebrates Re-implemention of Industry News" href="http://www.pythian.com/news/3/pythian-celebrates-re-implemenation-of-industry-news/">
+<link rel="prev" title="Blogrotate #13: The Weekly Roundup of News for System Administrators" href="http://www.pythian.com/news/7179/blogrotate-13-the-weekly-roundup-of-news-for-system-administrators/">
+<link rel="next" title="Oracle GoldenGate Extract Internals, Part I" href="http://www.pythian.com/news/7225/oracle-goldengate-extract-internals-part-i/">
+<meta name="generator" content="WordPress 3.0.4">
+<link rel="canonical" href="./TEXT vs. VARCHAR   _files/TEXT vs. VARCHAR   .html">
+<link rel="shortlink" href="http://wp.me/p1jKsB-1QZ">
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.1">
+<title>  TEXT vs. VARCHAR | The Pythian Blog</title>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-67672-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yD/x/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yc/x/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_iframe_widget span{position:relative;display:inline-block;vertical-align:text-bottom;text-align:justify}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yH/x/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size:24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size:13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size:11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size:10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size:10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size:22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yP/x/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/x/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size:10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size:11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size:13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><script type="text/javascript" src="./TEXT vs. VARCHAR   _files/analytics"></script><script type="text/javascript" src="./TEXT vs. VARCHAR   _files/analytics(1)"></script></head>
+
+<body id="news" class="safari">
+
+		<div id="container" class="clearfix">
+			<div id="header" class="clearfix">
+				<h1>
+					<a href="http://www.pythian.com/" title="Pythian Group">Pythian Group</a>
+				</h1>
+
+				<div id="globalNav">
+					<ul>
+						<li><a href="http://www.pythian.com/services/emergency_response/" title="Emergency">Emergency</a></li>
+						<li><a href="https://secure.pythian.com/track/" title="Client login">Client login</a></li>
+						<li><a href="http://www.pythian.com/news/" title="Pythian blog">Pythian blog</a></li>
+                                         
+<li id="global-nav-location"><a href="http://www.pythian.com/contact/#" title="Global">Global</a></li><li id="ph-number">Call: +1 613 565 8696</li>					</ul>
+				</div>
+			</div>
+			<div id="mainNav" class="clearfix">
+
+				<ul id="mainNavigation" class="sf-menu sf-navbar sf-js-enabled sf-shadow">
+					<li class="home first"><a href="http://www.pythian.com/" title="Home">Home</a></li>
+					<li class="services"><a href="http://www.pythian.com/services/" title="Services">Services</a><ul style="visibility: hidden;">
+					<li class="first"><a href="http://www.pythian.com/services/dba_consulting/" title="DBA &amp; Consulting">DBA &amp; Consulting</a></li>
+
+					<li class=""><a href="http://www.pythian.com/services/systems_administration/" title="Systems Administration">Systems Administration</a></li>
+
+					<li class=""><a href="http://www.pythian.com/services/special_projects/" title="Special Projects">Special Projects</a></li>
+					<li class="last"><a href="http://www.pythian.com/services/emergency_response/" title="Emergency Response">Emergency Response</a></li>
+				</ul>
+				</li>
+				<li class="database"><a href="http://www.pythian.com/expertise/" title="Database Expertise">Database Expertise</a><ul style="visibility: hidden;">
+					<li class="first"><a href="http://www.pythian.com/expertise/oracle/" title="Oracle">Oracle</a></li>
+					<li class=""><a href="http://www.pythian.com/expertise/sql_server/" title="SQL Server">SQL Server</a></li>
+					<li class=""><a href="http://www.pythian.com/expertise/mysql/" title="MySQL">MySQL</a></li>
+					<li class="last"><a href="http://www.pythian.com/expertise/oracle_applications/" title="Oracle Applications">Oracle Applications</a></li>
+				</ul>
+				</li>
+				<li class="solutions f2"><a href="http://www.pythian.com/solutions/" title="Solutions">Solutions</a><ul style="visibility: hidden;">
+					<li class="first"><a href="http://www.pythian.com/solutions/fractional_outsourcing/" title="Fractional Outsourcing">Fractional Outsourcing</a></li>
+					<li class=""><a href="http://www.pythian.com/solutions/full_outsourcing/" title="Full Outsourcing">Full Outsourcing</a></li>
+					<li class="last"><a href="http://www.pythian.com/solutions/by_industry/" title="By Industry">By Industry</a></li>
+
+				</ul>
+				</li>
+				<li class="resource expanded sfHover sf-breadcrumb f2"><a href="http://www.pythian.com/library/" title="Resource Library">Resource Library</a><ul style="display: block;">
+					<li class="first"><a href="http://www.pythian.com/library/webinars/" title="Webinars">Webinars</a></li>
+
+					<li class=""><a href="http://www.pythian.com/library/papers_and_books/" title="Papers &amp; Books">Papers &amp; Books</a></li>
+
+					<li class=""><a href="http://www.pythian.com/library/software/" title="Software">Software</a></li>
+					<li class="current last"><a href="http://www.pythian.com/news/" title="Blog">Blog</a></li>
+				</ul>
+				</li>
+				<li class="about"><a href="http://www.pythian.com/about/" title="About">About</a><ul style="visibility: hidden;">
+					<li class="first"><a href="http://www.pythian.com/about/why_pythian/" title="Why Pythian">Why Pythian</a></li>
+					<li class=""><a href="http://www.pythian.com/about/tools/" title="Tools">Tools</a></li>
+					<li class=""><a href="http://www.pythian.com/about/management_team/" title="Management Team">Management Team</a></li>
+					<li class=""><a href="http://www.pythian.com/about/technical_experts/" title="Technical Experts">Technical Experts</a></li>
+					<li class=""><a href="http://www.pythian.com/about/customers/" title="Customers">Customers</a></li>
+					<li class=""><a href="http://www.pythian.com/about/partners/" title="Partners">Partners</a></li>
+					<li class=""><a href="http://www.pythian.com/about/careers/" title="Careers">Careers</a></li>
+					<li class="last"><a href="http://www.pythian.com/about/contact_us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+				</li>
+				<li class="news"><a href="http://www.pythian.com/news_and_events/" title="News and events">News and Events</a><ul style="visibility: hidden;">
+					<li class="first"><a href="http://www.pythian.com/news_and_events/news_release/" title="News Release">News Release</a></li>
+					<li class=""><a href="http://www.pythian.com/news_and_events/in_the_news/" title="In the News">In the News</a></li>
+					<li class="last"><a href="http://www.pythian.com/news_and_events/events/" title="Events">Events</a></li>
+				</ul>
+				</li>
+				<li class="contact last"><a href="http://www.pythian.com/contact/" title="Contact us">Contact Us</a>
+				</li>
+				</ul>
+
+				<div id="globalSearch">
+					<div class="leftBg searchWrapper">
+						<div class="rightBg">
+							<form action="http://www.pythian.com/search/" id="cse-search-box" method="get">
+								<div>
+									<input type="hidden" name="cx" value="005457393276797549686:pirdakzaqhq">
+									<input type="hidden" name="cof" value="FORID:10">
+									<input type="hidden" name="ie" value="UTF-8">
+
+									<input type="submit" name="submit" value="Submit your search" id="globalSearchBtn" style="display:none;">
+									<input type="text" name="q" size="31" id="search">
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="contentWrapper">
+				<div id="breadcrumb">
+						<ul>
+							<li><a href="http://www.pythian.com/" title="Home">Home</a> &gt; </li>
+							<li><a href="http://www.pythian.com/news/" title="Blog">Blog</a></li>
+						</ul>
+				</div>
+<div id="wrapper" class="clearfix">
+
+<div id="rightColumn" class="rounded">
+
+<div id="filler" class="fix">
+	<div id="mainColumn" class="fix"><a name="main"></a>
+	
+	<h2 id="locationMessage" style="display: block;">Pythian is building a candidate pipeline for Oracle, SQL Server and MySQL DBAs in all geographies (you do not need to relocate to join Pythian). <a href="http://www.pythian.com/news/33405/happy-geek-pride-day/" title="•If">•If</a> <a href="http://www.pythian.com/news/31103/pythian-proud-recipient-of-hio-employer-excellence-award/" title="•you">•you</a> <a href="http://www.pythian.com/news/27333/pythian-winner-of-oracle-north-american-titan-award-for-oracle-exadata/" title="•dream of">•dream of</a> <a href="http://www.pythian.com/news/458/what-is-behind-pythians-growth-and-market-success/" title="•a">•a</a> <a href="https://www.youtube.com/watch?v=hSuYPzZu6ZE" title="•job">•job</a> <a href="http://www.pythian.com/news/23011/building-a-successful-business-is-all-about-the-people-pythian-founder-paul-vallee/" title="•like">•like</a> <a href="http://www.pythian.com/news/16887/learning-on-the-job-some-thoughts-from-mots/" title="•this">•this</a>, then <a href="http://www.pythian.com/about/careers/job-listings/" title="apply to our generic pipeline openings">apply to our generic pipeline openings</a>.</h2>
+		
+				<div id="post-7129" class="post">
+
+			<h2><a href="./TEXT vs. VARCHAR   _files/TEXT vs. VARCHAR   .html" title="TEXT vs. VARCHAR">TEXT vs. VARCHAR</a></h2>
+			<div class="entry">
+                <small class="byline">Posted by <a href="http://www.pythian.com/news/author/sheeri" title="Visit Sheeri Cabral’s website" rel="external">Sheeri Cabral</a> on Jan 20, 2010</small>
+				<p>On first glance, it looks like TEXT and VARCHAR can store the same information.  However, there are fundamental differences between the way TEXT fields and VARCHAR fields work, which are important to take into consideration.</p>
+<p><strong>Standard</strong><br>
+VARCHAR is actually part of the ISO SQL:2003 standard; The TEXT data types, including TINYTEXT, are non-standard.  </p>
+<p><strong>Storage</strong><br>
+TEXT data types are stored as separate objects from the tables and result sets that contain them.  This storage is transparent — there is no difference in how a query involving a TEXT field is written versus one involving a VARCHAR field. Since TEXT is not stored as part of a row, retrieval of TEXT fields requires extra [edited 1/22] <strong>memory</strong> overhead.</p>
+<p><span id="more-7129"></span><br>
+<strong>Maximum VARCHAR length</strong><br>
+The maximum row length of a VARCHAR is restricted by the maximum row length of a table.  This is 65,535 bytes for most storage engines (NDB has a different maximum row value).  Theoretically the maximum length of a VARCHAR is 65,536 bytes.  Overhead further limits the actual maximum size of a VARCHAR.</p>
+<p>Storing the length of a VARCHAR field takes 1 byte if the VARCHAR field has a maximum length of 0-255 bytes; if it is greater than 255 bytes, the overhead to store the length is 2 bytes.  If the VARCHAR field allows NULL values, that adds additional overhead — every table uses 1 byte of overhead for each set of 8 fields that allow NULL values.  If the VARCHAR is the only row in the table, and does not allow NULL values, the maximum length allowed for VARCHAR is 65,532 bytes.  </p>
+<p>Keep in mind that that the number in VARCHAR(x) represents number of characters, not number of bytes.  Therefore, you may have difficulties trying to define a table with only VARCHAR(65532) if the character set uses multi-byte characters, such as UTF-8.</p>
+<p>If you attempt to define a VARCHAR value that is longer than allowed, you will run into an error such as 1118 or 1074:</p>
+<p><code>ERROR 1118 (42000): Row size too large.  The maximum row size for the used table type, not counting BLOBs, is 65535.  You have to change some columns to TEXT or BLOBs.</code></p>
+<p><code>ERROR 1074 (42000): Column length too big for column 'col_name' (max=[max number here]); use BLOB or TEXT instead</code></p>
+<p><strong>Maximum TEXT length</strong><br>
+The maximum size of a TEXT data type depends on which type of TEXT data type is being used.  Because they are stored as objects, the only row overhead in the table object is a pointer (8 or 16 bytes).  Here is a list of the maximum TEXT length, and the overhead (in the TEXT object):</p>
+<p></p><ul><li>TINYTEXT – up to 255 bytes, 1 byte overhead</li><br>
+<li>TEXT – up to 64 Kb, 2 bytes overhead</li><br>
+<li>MEDIUMTEXT – up to 16 Mb, 3 bytes overhead</li><br>
+<li>LONGTEXT – up to 4 Gb, 4 bytes overhead</li></ul><p></p>
+<p><strong>DEFAULT values</strong><br>
+MySQL does not allow TEXT data types to have a default value other than NULL.  VARCHAR fields are allowed to be created with a DEFAULT value.</p>
+<p><strong>Conclusions</strong><br>
+Because of the storage implications, it is preferable to use VARCHAR instead of TINYTEXT.</p>
+<p>If you need to have a DEFAULT value that is not NULL, you must use VARCHAR (or CHAR).</p>
+<p>If you need to store strings longer than approximately 64 Kb, use MEDIUMTEXT or LONGTEXT.  VARCHAR cannot support storing values that large.</p>
+<p>Make sure you are aware of the effects of a multi-byte character set.  VARCHAR(255) stores 255 characters, which may be more than 255 bytes.</p>
+<div class="trackable_sharing"><a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.pythian.com%2Fnews%2F7129%2Ftext-vs-varchar%2F" style="text-decoration: none; white-space: nowrap;" title="Facebook" target="_blank" onclick="that=this;_gaq.push([&#39;_trackEvent&#39;,&#39;SocialSharing&#39;,&#39;Facebook&#39;,&#39;http://www.pythian.com/news/7129/text-vs-varchar/&#39;]); _trackableshare_window = window.open(this.href,&#39;share&#39;,&#39;menubar=0,resizable=1,width=500,height=350&#39;); _trackableshare_window.focus(); return false;"><img align="absmiddle" src="./TEXT vs. VARCHAR   _files/facebook.png" alt="Facebook" width="32" height="32"></a> <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.pythian.com%2Fnews%2F7129%2Ftext-vs-varchar%2F&text=TEXT+vs.+VARCHAR" style="text-decoration: none; white-space: nowrap;" title="Twitter" target="_blank" onclick="that=this;_gaq.push([&#39;_trackEvent&#39;,&#39;SocialSharing&#39;,&#39;Twitter&#39;,&#39;http://www.pythian.com/news/7129/text-vs-varchar/&#39;]); _trackableshare_window = window.open(this.href,&#39;share&#39;,&#39;menubar=0,resizable=1,width=500,height=350&#39;); _trackableshare_window.focus(); return false;"><img align="absmiddle" src="./TEXT vs. VARCHAR   _files/twitter.png" alt="Twitter" width="32" height="32"></a> <a href="mailto:?subject=Check%20out%20http%3A%2F%2Fwww.pythian.com%2Fnews%2F7129%2Ftext-vs-varchar%2F" style="text-decoration: none; white-space: nowrap;" title="Email" onclick="that=this;_gaq.push([&#39;_trackEvent&#39;,&#39;SocialSharing&#39;,&#39;Email&#39;,&#39;http://www.pythian.com/news/7129/text-vs-varchar/&#39;]); "><img align="absmiddle" src="./TEXT vs. VARCHAR   _files/email.png" alt="Email" width="32" height="32"></a> </div>			</div>
+            		<div class="postMeta fix">
+				<p class="container">
+					
+				<span class="highlight">Category:</span> <a href="http://www.pythian.com/news/category/mysql/" title="View all posts in MySQL" rel="category tag">MySQL</a>, <a href="http://www.pythian.com/news/category/technical-blog/" title="View all posts in Technical Blog" rel="category tag">Technical Blog</a><br>
+				<span class="highlight">Tags:</span> <a href="http://www.pythian.com/news/tag/data-type/" rel="tag">data type</a>, <a href="http://www.pythian.com/news/tag/mysql/" rel="tag">MySQL</a>, <a href="http://www.pythian.com/news/tag/pythian/" rel="tag">Pythian</a>, <a href="http://www.pythian.com/news/tag/storage/" rel="tag">storage</a>, <a href="http://www.pythian.com/news/tag/text/" rel="tag">text</a>, <a href="http://www.pythian.com/news/tag/varchar/" rel="tag">varchar</a><br>
+				
+										<script language="JavaScript"><!--
+						var planet = "http://planet.mysql.com/entry/vote/?apivote=1&";
+						var lk = encodeURIComponent(document.location);
+						var thumb_up = "<img src=\"http://planet.mysql.com/images/thumbs_up_blue.jpg\" border=\"0\" />";
+						//var thumb_down = "<img src=\"http://planet.mysql.com/images/thumbs_down_blue.jpg\" border=\"0\" />";
+						document.write('<div id="pmysql" style="font-size:large">');
+						document.write('<strong>Vote for this story on <a href=\"' + planet + 'vote=1&url=' + lk  +  '\">Planet MySQL</a></strong>');
+						document.write('<a title=\"Vote me Up on the Planet MySQL\" href=\"' + planet + 'vote=1&url=' + lk  +  '\">' + thumb_up + '</a><br /><br />');
+						//document.write(' ');
+						//document.write('<a title=\"Vote me Down on the Planet MySQL\" href=\"' + planet + 'vote=-1&url=' + lk  +  '\">' + thumb_down + '</a>')
+						;
+						document.write('</div><!-- /pmysql -->');
+						// --></script></p><div id="pmysql" style="font-size:large"><strong>Vote for this story on <a href="http://planet.mysql.com/entry/vote/?apivote=1&vote=1&url=http%3A%2F%2Fwww.pythian.com%2Fnews%2F7129%2Ftext-vs-varchar%2F">Planet MySQL</a></strong><a title="Vote me Up on the Planet MySQL" href="http://planet.mysql.com/entry/vote/?apivote=1&vote=1&url=http%3A%2F%2Fwww.pythian.com%2Fnews%2F7129%2Ftext-vs-varchar%2F"><img src="./TEXT vs. VARCHAR   _files/thumbs_up_blue.jpg" border="0"></a><br><br></div><!-- /pmysql -->
+				
+                <p></p>
+                <div class="clear"></div>
+                
+			</div>
+
+		</div>
+		<div id="commentsContainer">
+			
+<!-- You can start editing here. -->
+
+	<h3 id="comments">32 Responses</h3>
+	<ol class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-399345">
+				<div id="div-comment-399345" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/392856b43200ef35060b655747853c7c" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://swanhart.livejoural.com/" rel="external nofollow" class="url">Justin Swanhart</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399345">
+			January 20, 2010 at 3:35 pm</a>		</div>
+
+		<p>TEXT and BLOB columns also consume more memory for sorts.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399345#respond" onclick="return addComment.moveForm(&quot;div-comment-399345&quot;, &quot;399345&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-399369">
+				<div id="div-comment-399369" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/946dfe3ba5deba36e5afe7f2c2c292d3" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://althack.org/" rel="external nofollow" class="url">Darius Jahandarie</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399369">
+			January 20, 2010 at 7:03 pm</a>		</div>
+
+		<p>Hello,</p>
+<p>One should also note that InnoDB will only store a variable-length column (VARCHAR, VARBINARY, TEXT, BLOB) on the page if the total row length is less than half a page (about eight thousand bytes); otherwise, InnoDB will start moving variable-length columns to off-page storage.</p>
+<p>Darius</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399369#respond" onclick="return addComment.moveForm(&quot;div-comment-399369&quot;, &quot;399369&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399431">
+				<div id="div-comment-399431" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399431">
+			January 20, 2010 at 10:38 pm</a>		</div>
+
+		<p>Darius — while that is true, this article is about the difference between VARCHAR and TEXT types, and InnoDB’s storage of them is the same.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399431#respond" onclick="return addComment.moveForm(&quot;div-comment-399431&quot;, &quot;399431&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-399463">
+				<div id="div-comment-399463" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/5ccd9994f8f0ffd5167d33f116502e3b" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.shinguz.ch/" rel="external nofollow" class="url">shinguz</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399463">
+			January 21, 2010 at 2:30 am</a>		</div>
+
+		<p>Hi Sheeri,</p>
+<p>I did a long time ago some tests, at a customer with too much memory, where TEXT outperformed VARCHAR significantly (putting tmpdir to a ramdisk to avoid tmp disk tables to physical disk).</p>
+<p>Have you investigated in this direction as well? Is there still a performance difference?</p>
+<p>Regards,<br>
+Oli</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399463#respond" onclick="return addComment.moveForm(&quot;div-comment-399463&quot;, &quot;399463&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399469">
+				<div id="div-comment-399469" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/ad93f8e18cb608340a89d2159e659a83" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://kedar.nitty-witty.com/blog/" rel="external nofollow" class="url">kedar</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399469">
+			January 21, 2010 at 2:56 am</a>		</div>
+
+		<p>Good Post.<br>
+Extending Justin’s comment–<br>
+Mysql Doc Reads:<br>
+“Instances of BLOB or TEXT columns in the result of a query that is processed using a temporary table causes the server to use a table on disk rather than in memory because the MEMORY storage engine does not support those data types.”<br>
+So disk “operations” costs performance.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399469#respond" onclick="return addComment.moveForm(&quot;div-comment-399469&quot;, &quot;399469&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-399473">
+				<div id="div-comment-399473" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/533a635acbbf207d37bd37420d40c019" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Sergei Golubchik</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399473">
+			January 21, 2010 at 3:19 am</a>		</div>
+
+		<p>So, InnoDB storage of  them is the same, MyISAM storage of them is the same. In what engine the storage of VARCHAR and TEXT is different ?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399473#respond" onclick="return addComment.moveForm(&quot;div-comment-399473&quot;, &quot;399473&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399497">
+				<div id="div-comment-399497" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/c660a6eb3a4005232acb111303bef12c" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://mituzas.lt/" rel="external nofollow" class="url">Domas</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399497">
+			January 21, 2010 at 6:04 am</a>		</div>
+
+		<p>Sheeri,</p>
+<p>so, “storage is the same”, but somehow “extra i/o” is done – you seem to be a bit confused.</p>
+<p>Text storage inside MySQL’s memory is different, as it is not part of the row. Now the actual storage is version/engine specific, but in most cases TEXT and VARCHAR storage will be same.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399497#respond" onclick="return addComment.moveForm(&quot;div-comment-399497&quot;, &quot;399497&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-399531">
+				<div id="div-comment-399531" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399531">
+			January 21, 2010 at 10:48 am</a>		</div>
+
+		<p>Domas — I’m not confused — Darius said:</p>
+<p>InnoDB only stores VARCHAR and TEXT within the same page if the total row length is about 1/2 a page, otherwise it stores it off-page.</p>
+<p>———-<br>
+The point of this article was to show how TEXT and VARCHAR are different.  I explained in the post that the storage was different — TEXT fields are stored as separate objects (hence extra I/O), VARCHAR fields are stored inline.</p>
+<p>Darius was adding to that by saying “in addition, if a TEXT/VARCHAR is bigger than a certain size, it’s stored on a different memory page”.  He specifically said it’s done for both TEXT and VARCHAR — the post was about what’s *different*.</p>
+<p>So yes, general MySQL object storage is different, as explained in the post, but InnoDB doesn’t have *additional* special storage for TEXT that’s not the same for VARCHAR.  This should answer Sergei’s question too.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399531#respond" onclick="return addComment.moveForm(&quot;div-comment-399531&quot;, &quot;399531&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399555">
+				<div id="div-comment-399555" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/392856b43200ef35060b655747853c7c" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://swanhart.livejoural.com/" rel="external nofollow" class="url">Justin Swanhart</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399555">
+			January 21, 2010 at 2:31 pm</a>		</div>
+
+		<p>Kedar,</p>
+<p>At some point somebody wrote a patch that made the memory engine support variable width text..</p>
+<p>Anybody else remember that?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399555#respond" onclick="return addComment.moveForm(&quot;div-comment-399555&quot;, &quot;399555&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-399565">
+				<div id="div-comment-399565" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/d1fa154903ca7ed342c36888aab05236" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Mark Callaghan</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399565">
+			January 21, 2010 at 4:14 pm</a>		</div>
+
+		<p>@Justin — that would be the ebay patch. There were plans to get it into mariadb. It would be nice to see it in official mysql. It is a big patch.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399565#respond" onclick="return addComment.moveForm(&quot;div-comment-399565&quot;, &quot;399565&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399583">
+				<div id="div-comment-399583" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/533a635acbbf207d37bd37420d40c019" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Sergei Golubchik</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399583">
+			January 21, 2010 at 5:59 pm</a>		</div>
+
+		<p>Sheeri, I’m sorry, but it doesn’t answer my or Domas question.</p>
+<p>Darius said that InnoDB treats VARCHAR and TEXT identically, not differently. I can assure you that MyISAM does not store them separately either.</p>
+<p>So, this is my question – what engine are you talking about saying that “general MySQL object storage is different [for VARCHAR and TEXT]” ?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399583#respond" onclick="return addComment.moveForm(&quot;div-comment-399583&quot;, &quot;399583&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-399779">
+				<div id="div-comment-399779" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399779">
+			January 22, 2010 at 10:02 am</a>		</div>
+
+		<p>Sergei:  From the MySQL Manual:</p>
+<p>“Each BLOB or TEXT value is represented internally by a separately allocated object. This is in contrast to all other data types, for which storage is allocated once per column when the table is opened. ”</p>
+<p>That’s what I mean.  A TEXT value does not sit inline with other row values like INT or DATETIME, it is a “separately allocated object”.  A VARCHAR value usually does sit inline with other row values.</p>
+<p>(manual reference:<br>
+<a href="http://dev.mysql.com/doc/refman/5.0/en/blob.html" rel="nofollow">http://dev.mysql.com/doc/refman/5.0/en/blob.html</a></p>
+<p>I checked and it’s also in the 4.1 manual at:</p>
+<p><a href="http://dev.mysql.com/doc/refman/4.1/en/blob.html" rel="nofollow">http://dev.mysql.com/doc/refman/4.1/en/blob.html</a><br>
+)</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399779#respond" onclick="return addComment.moveForm(&quot;div-comment-399779&quot;, &quot;399779&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399783">
+				<div id="div-comment-399783" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/946dfe3ba5deba36e5afe7f2c2c292d3" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://althack.org/" rel="external nofollow" class="url">Darius Jahandarie</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399783">
+			January 22, 2010 at 10:06 am</a>		</div>
+
+		<p>Hello,</p>
+<p>VARCHAR and TEXT are represented with different objects internally in MySQL. However, any benefits from that difference are rendered moot when your operations involve reading off-page.</p>
+<p>The confusion likely arises from VARCHAR being “part of the row” in the MySQL internals, while in terms of pages and disk, it may be “not part of the row” (on an overflow page).</p>
+<p>Not to mention that InnoDB has two different table formats: the old one “Antelope”, and the new one “Barracuda” appearing in plugin with ROW_FORMAT=DYNAMIC. In Antelope, InnoDB will store 768 bytes of the variable length column on-page and a 20 byte pointer to  the overflow page. In Barracuda, the longer columns will be entirely stored off-page, with only the pointer on-page.</p>
+<p>But what Sheeri said is true, that everything I’m saying has nothing to do with differences between VARCHAR and TEXT. My reason for mentioning it was that the differences between VARCHAR and TEXT aren’t so important in light how the storage engine handles variable-length rows.</p>
+<p>Darius</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399783#respond" onclick="return addComment.moveForm(&quot;div-comment-399783&quot;, &quot;399783&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-399817">
+				<div id="div-comment-399817" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://www.internetdoktor.pl/2010/01/roznica-miedzy-text-i-varchar-w-mysql/" rel="external nofollow" class="url">Ró?nica mi?dzy TEXT i VARCHAR w MySQL » Internet Doktor</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399817">
+			January 22, 2010 at 12:22 pm</a>		</div>
+
+		<p>[...] informacji na temat kolumn VARCHAR i TEXT mo?na znale?? na blogu Pythian i w dokumentacji [...]</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399817#respond" onclick="return addComment.moveForm(&quot;div-comment-399817&quot;, &quot;399817&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-399823">
+				<div id="div-comment-399823" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/533a635acbbf207d37bd37420d40c019" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Sergei Golubchik</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399823">
+			January 22, 2010 at 12:28 pm</a>		</div>
+
+		<p>Sheeri, you are right. BLOBs are, indeed, represented internally by a separately allocated object. That is, in the row image in the MySQL internal row format VARCHAR (and any other type besides BLOBs) sits in the row image. While BLOB is elsewhere, in a separately allocated memory, and in the row image there is only a pointer to the real blob data.</p>
+<p>But this applies only and exclusively to how the row is internally represented in *memory* – after the row is retrieved from the storage engine. This description has nothing to do with how the row is stored.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399823#respond" onclick="return addComment.moveForm(&quot;div-comment-399823&quot;, &quot;399823&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-399831">
+				<div id="div-comment-399831" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-399831">
+			January 22, 2010 at 12:37 pm</a>		</div>
+
+		<p>Ah Sergei — that’s fair, I will change “requires extra I/O overhead” to “requires extra memory overhead”.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=399831#respond" onclick="return addComment.moveForm(&quot;div-comment-399831&quot;, &quot;399831&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-400923">
+				<div id="div-comment-400923" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/7d26e94bd3200dc41c1fea2629db8ce9" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">erin o'neill</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-400923">
+			January 27, 2010 at 5:07 pm</a>		</div>
+
+		<p>It sure would be great if Vadim over at Percona could benchmark this! I’ll have to nudge him the next time I see him. </p>
+<p>Thanks for the great post!</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=400923#respond" onclick="return addComment.moveForm(&quot;div-comment-400923&quot;, &quot;400923&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-409507">
+				<div id="div-comment-409507" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://www.integratedwebsystems.com/2010/01/walkthrough-porting-asp-net-mvc-website-to-mono-2-6-1-and-mysql-on-linux-apache-porting-to-mono-part-3-of-3/" rel="external nofollow" class="url">Walkthrough: Porting Asp.Net MVC Website to Mono 2.6.1 and MySql on Linux Apache – Porting to Mono Part 3 of 3 - Nathan Bridgewater</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-409507">
+			February 24, 2010 at 11:21 pm</a>		</div>
+
+		<p>[...] I used the MySql Migration Toolkit (part of the GUI Workbench) to perform my migration. It actually worked out pretty well with the exception of a few data type conversions. I like to use varchar(max) fields in Sql server. I also use bit fields for booleans since they parse right over to C# booleans.&nbsp; The migration tool didnt’ like varchar(max) and converted them to varchar(-1). It also converted my bit fields to tinyint(4). So during the migration, I was able to make edits to a few of my tables that contained those fields. For varchar(max), you have a choice. You can: use a smaller field like varchar(5000), use a Text field, or you can choose to store your text data in a binary blob and encode/decode it to UTF8.&nbsp; For this, application, I went the route of selecting a smaller varchar field for simplicity; but if my content pages were large, I would probably go the route of text. I found some interesting discussion in this post on the topic. [...]</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=409507#respond" onclick="return addComment.moveForm(&quot;div-comment-409507&quot;, &quot;409507&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-423463">
+				<div id="div-comment-423463" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/1dfadf9eef5a38a5db9ba3a6319d2b0b" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Janusz</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-423463">
+			April 16, 2010 at 6:35 am</a>		</div>
+
+		<p>So what about storing texts like abstracts or mails, that have 10 000 to 30 000 characters. Should one use VARCHAR(30000) or TEXT ? The most important thing for me is performance, full-text search performance. What column type would be faster? For example i have the ‘articles’ table, with columns: title (1000 chars), abstract (30000 chars), and i want to quickly find particular article(s) in a table like 20 000 000 rows using full-text search.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=423463#respond" onclick="return addComment.moveForm(&quot;div-comment-423463&quot;, &quot;423463&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-424647">
+				<div id="div-comment-424647" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-424647">
+			April 20, 2010 at 12:36 pm</a>		</div>
+
+		<p>I would use TEXT – the maximum theoretical size of varchar is 65,536 bytes and in practice it’s shorter….so if you have VARCHAR(30000) and the character set is utf-8, you won’t be able to create that column.  If you’re using a character set that is 1 or 2 bytes per character, you can create it, but I wouldn’t limit myself like that in case you want to convert in the future.</p>
+<p>If you want fast fulltext search, using MySQL’s FULLTEXT search is not the best tool — consider using Sphinx or Lucene.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=424647#respond" onclick="return addComment.moveForm(&quot;div-comment-424647&quot;, &quot;424647&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-435337">
+				<div id="div-comment-435337" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/0dc57a69b045c7811b580d4945e08baf" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.koihosting.com/" rel="external nofollow" class="url">Michael Oleksak</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-435337">
+			June 12, 2010 at 9:43 pm</a>		</div>
+
+		<p>I have a table that contains a description field set as TEXT in which my clients enter descriptive text in the CMS.</p>
+<p>It can contain regular text, and html markup.</p>
+<p>My first consideration is to perform a vetical partition on the table so the description field is in a separate table, </p>
+<p>My question is, would I benefit (overall site performance ) by converting this field to varchar with no size declaration?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=435337#respond" onclick="return addComment.moveForm(&quot;div-comment-435337&quot;, &quot;435337&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-435855">
+				<div id="div-comment-435855" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-435855">
+			June 14, 2010 at 7:38 am</a>		</div>
+
+		<p>Michael,</p>
+<p>You cannot create a varchar field with no size declaration.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=435855#respond" onclick="return addComment.moveForm(&quot;div-comment-435855&quot;, &quot;435855&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-435893">
+				<div id="div-comment-435893" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/0dc57a69b045c7811b580d4945e08baf" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.koihosting.com/" rel="external nofollow" class="url">Michael Oleksak</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-435893">
+			June 14, 2010 at 12:08 pm</a>		</div>
+
+		<p>Thank you Sheeri, I thought about it right after I typed it.  What is your opinion on setting the VARCHAR size to 30000 – which in our case should suffice, considering the number of characters being input to that particular field?</p>
+<p>Would there be an overall performance benefit?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=435893#respond" onclick="return addComment.moveForm(&quot;div-comment-435893&quot;, &quot;435893&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment byuser comment-author-sheeri bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-435907">
+				<div id="div-comment-435907" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a06e0ed6d8d3841acb19c650de623a78" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.pythian.com/news/author/sheeri" rel="external nofollow" class="url">Sheeri Cabral</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-435907">
+			June 14, 2010 at 1:18 pm</a>		</div>
+
+		<p>Michael — the “Conclusions” section of the blog post should be pretty clear about that.  </p>
+<p><i>Conclusions<br>
+Because of the storage implications, it is preferable to use VARCHAR instead of TINYTEXT.</i></p>
+<p>Of course, that’s if that’s possible, you may run into other size limitations (such as row size, or size if you are using a multi-byte character set).</p>
+<p><i>Make sure you are aware of the effects of a multi-byte character set. VARCHAR(255) stores 255 characters, which may be more than 255 bytes.</i></p>
+<p>I will also add that the answer to “would there be an overall performance benefit” is almost always “I can tell you for a general case but the best way to do it would be to get benchmarks for a system with load, then try the change out and take benchmarks again.”  I cannot stress having a testing environment enough in these cases.</p>
+<p>That being said, I would expect better performance with VARCHAR than with TINYTEXT.  However, depending on what you’re doing, the best solution might be something completely different, such as having a different storage engine or putting the text in a different application.  (MySQL’s FULLTEXT search isn’t as good as other solutions such as Sphinx and Lucene)</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=435907#respond" onclick="return addComment.moveForm(&quot;div-comment-435907&quot;, &quot;435907&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-515521">
+				<div id="div-comment-515521" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/0e88d7286bde6a8b241cf680507901d0" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">xerxes</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-515521">
+			February 28, 2011 at 9:14 am</a>		</div>
+
+		<p>Since MEMORY engine (think temp tables) maps variable-width types as appropriate fixed-width counterparts, those are obliviously padded to the maximum width of the original column. Does using NULL effectively rule out padding for specific rows thus saving memory or the value still gets padded *with* the flag included?</p>
+<p>I assume no padding occurs in case of NULL, and that’s why DEFAULT ” on variable-width types is generally considered bad practice. Am I correct?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=515521#respond" onclick="return addComment.moveForm(&quot;div-comment-515521&quot;, &quot;515521&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-625655">
+				<div id="div-comment-625655" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/a04edf1058290db4e1898e9b99518a94" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.coursesweb.net/" rel="external nofollow" class="url">OnLine</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-625655">
+			October 30, 2011 at 11:32 am</a>		</div>
+
+		<p>Hi,<br>
+From what i read on other websites, TINYTEXT uses less memory, but in long run request can fragment it.<br>
+‘i don’t know if its something better.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=625655#respond" onclick="return addComment.moveForm(&quot;div-comment-625655&quot;, &quot;625655&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-626167">
+				<div id="div-comment-626167" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/966444f5a02838d05ab3cbccf94b1fc6" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://www.google.com/" rel="external nofollow" class="url">khalid mahmood</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-626167">
+			October 31, 2011 at 5:21 am</a>		</div>
+
+		<p>So what about storing texts like abstracts or mails, that have 10 000 to 30 000 characters. Should one use VARCHAR(30000) or TEXT ? The most important thing for me is performance, full-text search performance. What column type would be faster? For example i have the ‘articles’ table, with columns: title (1000 chars), abstract (30000 chars), and i want to quickly find particular article(s) in a table like 20 000 000 rows using full-text search.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=626167#respond" onclick="return addComment.moveForm(&quot;div-comment-626167&quot;, &quot;626167&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-648253">
+				<div id="div-comment-648253" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/4dca814a1f8439760568a562d9da9ecb" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://quicksketch.org/" rel="external nofollow" class="url">Nate Haug</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-648253">
+			November 23, 2011 at 9:06 pm</a>		</div>
+
+		<blockquote><p>
+If the VARCHAR is the only row in the table, and does not allow NULL values, the maximum length allowed for VARCHAR is 65,532 bytes.
+</p></blockquote>
+<p>This sentence is incorrect. It should be “If the VARCHAR is the only COLUMN in the table”, not “row”. If you have multiple varchar columns, you should assume 65,532/(varchar columns) max per row.</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=648253#respond" onclick="return addComment.moveForm(&quot;div-comment-648253&quot;, &quot;648253&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-738631">
+				<div id="div-comment-738631" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/61dca7eb1d6384260a9c6e7e396bf756" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">Sourav</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-738631">
+			February 23, 2012 at 2:57 am</a>		</div>
+
+		<p>Hi.</p>
+<p>I want to know why is there a need of storing the TEXT/BLOB kind of data in a separate object? What is the benefit of that?</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=738631#respond" onclick="return addComment.moveForm(&quot;div-comment-738631&quot;, &quot;738631&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-755045">
+				<div id="div-comment-755045" class="comment-body">
+				<div class="comment-author vcard">
+				<cite class="fn"><a href="http://notestoweb.wordpress.com/2012/03/24/notes-on-rails-migrations/" rel="external nofollow" class="url">Notes on Rails migrations | Notes to Web</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-755045">
+			March 23, 2012 at 9:00 pm</a>		</div>
+
+		<p>[...] Note: The type :string is used for things that are relatively short, like usernames, title of articles etc. The type :text is for long pieces of text, like the contents of an article. Typically the database implementation might allows as much as gigabytes of text in a field of the :text type. (ref) [...]</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=755045#respond" onclick="return addComment.moveForm(&quot;div-comment-755045&quot;, &quot;755045&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-994657">
+				<div id="div-comment-994657" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/857f3d2bf1a847a0b534bb9c612e6a32" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn"><a href="http://opees.tk/" rel="external nofollow" class="url">christopher musni</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-994657">
+			October 10, 2012 at 10:50 pm</a>		</div>
+
+		<p>Nate Haug – you should assume 65,532/(varchar columns) max per row</p>
+<p>this is also incorrect, it should be “you should assume 65,532/(varchar columns) max per columns”</p>
+<p>Regarding Varchar ,Just want to confirm if 65,532 is the maximum varchar length/value per row? thanks in advance</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=994657#respond" onclick="return addComment.moveForm(&quot;div-comment-994657&quot;, &quot;994657&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1189745">
+				<div id="div-comment-1189745" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt="" src="./TEXT vs. VARCHAR   _files/633600822e22352f494002697ec3a7c3" class="avatar avatar-32 photo" height="32" width="32">		<cite class="fn">xingye</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://www.pythian.com/news/7129/text-vs-varchar/#comment-1189745">
+			December 6, 2012 at 5:29 am</a>		</div>
+
+		<p>The maximum row size for the used table type, not counting BLOBs, is 65535.Storing the length of a VARCHAR field takes 1 byte if the VARCHAR field has a maximum length of 0-255 bytes. “If it is greater than 255 bytes, the overhead to store the length is 2 bytes”. So I think  the maximum length allowed for VARCHAR is 65533,not 65532!!!<br>
+like this:<br>
+temp&gt;show create table var_t\G<br>
+*************************** 1. row ***************************<br>
+       Table: var_t<br>
+Create Table: CREATE TABLE `var_t` (<br>
+  `a` varchar(65533) NOT NULL<br>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1<br>
+1 row in set (0.00 sec)</p>
+
+		<div class="reply">
+		<a rel="nofollow" class="comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/?replytocom=1189745#respond" onclick="return addComment.moveForm(&quot;div-comment-1189745&quot;, &quot;1189745&quot;, &quot;respond&quot;, &quot;7129&quot;)">Reply</a>		</div>
+				</div>
+		</li>
+	</ol>
+	<div class="navigation">
+		<div class="alignleft"><span></span></div>
+		<div class="alignright"><span></span></div>
+	</div>
+	
+
+<div id="respond">
+
+<h3 id="respondTitle"><span class="hook">Leave a Reply <span class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.pythian.com/news/7129/text-vs-varchar/#respond" style="display:none;">×&nbsp;Cancel reply</a></span></span></h3>
+
+
+<form action="http://www.pythian.com/news/wp-comments-post.php" method="post" id="commentform">
+
+
+<p class="contain"><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+<label for="author"><small>Name (required)</small></label></p>
+
+<p class="contain"><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+<label for="email"><small>Mail (required)</small></label></p>
+
+<p class="contain"><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+<label for="url"><small>Website</small></label></p>
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p class="contain"><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+<input type="hidden" name="comment_post_ID" value="7129" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a24c659374"></p>
+</form>
+</div>
+
+
+		</div>
+			</div>
+
+ <a id="getStartedCallout" href="http://www.pythian.com/about/inquiry.php"><strong>Start Now</strong>With Pythian - database design, management and emergency handling capabilities...</a>
+</div>
+
+	<div id="sidebar">
+		<ul style="border:none;">
+			
+			<form method="get" id="searchform" action="http://www.pythian.com/news/">
+<div class="searchinput"><input type="text" class="inputbox" value="" name="s" id="s">
+<input type="submit" id="searchsubmit" class="button" value="Search">
+</div>
+</form>
+        	<li><h3>Contact</h3>
+        		<ul><li><a href="mailto:webmaster@pythian.com?Subject=Pythian%20Group%20Blog">Email Us About Our Blog</a></li></ul>
+        	</li>	
+           <li><h3>Network with Pythian</h3>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/en_GB"></script><script type="text/javascript">FB.init("cff87fffe4be6a8f7d02e666158547e2");</script><fb:fan profile_id="163902527671" stream="" connections="10" width="250" fb-xfbml-state="rendered" class="fb_iframe_widget"><span style="height: 550px; width: 250px;"><iframe id="f11b6c3b78" name="f298918cf4" scrolling="no" style="border: none; overflow: hidden; height: 550px; width: 250px;" class="fb_ltr" src="./TEXT vs. VARCHAR   _files/fan.html"></iframe></span></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Ottawa-ON/The-Pythian-Group/163902527671" target="_blank">Pythian on Facebook</a></div>
+<!-- with stream --><!-- <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_GB"></script><script type="text/javascript">FB.init("cff87fffe4be6a8f7d02e666158547e2");</script><fb:fan profile_id="163902527671" stream="1" connections="10" width="300"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Ottawa-ON/The-Pythian-Group/163902527671" target="_blank">Pythian on Facebook</a></div> -->
+        </li><!-- /Pythian on Facebook -->
+           <li style="border-bottom:1px groove black">  
+<!-- Include the Google Friend Connect javascript library. -->
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/friendconnect.js"></script>
+<!-- Define the div tag where the gadget will be inserted. -->
+<div id="div-3696384240048434584" style="width: 250px; border: 1px solid rgb(170, 170, 221); visibility: visible;" class="gadgets-gadget-container"><div id="gfc_iframe_1602146903_0_body"><iframe id="gfc_iframe_1602146903_0" name="gfc_iframe_1602146903_0" style="width:100%;" frameborder="0" scrolling="no" allowtransparency="true"></iframe></div></div>
+<!-- Render the gadget into a div. -->
+<script type="text/javascript">
+var skin = {}; skin['FONT_FAMILY'] = 'verdana,sans-serif'; skin['BORDER_COLOR'] = '#aaaadd'; skin['ENDCAP_BG_COLOR'] = '#eceff5'; skin['ENDCAP_TEXT_COLOR'] = '#333333'; skin['ENDCAP_LINK_COLOR'] = '#901212'; skin['ALTERNATE_BG_COLOR'] = '#ffffff'; skin['CONTENT_BG_COLOR'] = '#ffffff'; skin['CONTENT_LINK_COLOR'] = '#901212'; skin['CONTENT_TEXT_COLOR'] = '#333333'; skin['CONTENT_SECONDARY_LINK_COLOR'] = '#901212'; skin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666'; skin['CONTENT_HEADLINE_COLOR'] = '#333333'; skin['NUMBER_ROWS'] = '2';
+google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
+google.friendconnect.container.renderMembersGadget(
+{ id: 'div-3696384240048434584',
+   site: '14361221400561584250' },
+  skin);
+</script>
+           </li><!-- /Google Friend Connect -->
+           <li style="border-bottom:1px groove black">  
+          <p align="center" style="text-align:center;"><a href="http://www.linkedin.com/groups?gid=2575503" target="_blank"><img src="./TEXT vs. VARCHAR   _files/linkedin_round.png" width="60" height="70" alt="Join Linked In Group" align="middle"></a></p><div style="font-size:8px; padding-left:10px"><a href="http://www.linkedin.com/groups?gid=2575503" target="_blank">Pythian on LinkedIn</a></div> <p></p>
+          </li><!-- /Pythian on LinkedIn -->
+           <!-- li><h3><a href="/library/webinars/">Webinars</a></h3>
+            	<ul></ul>
+            </li>
+            <li><h3><a href="/news_and_events/events/">Events</a></h3>
+            	<ul></ul>
+            </li -->
+			
+			<li><h3>Log Buffer</h3>
+                                <ul><li> <a href="http://www.pythian.com/news/category/log-buffer/">Log Buffer Archives</a> </li>
+                                    <li> <a href="http://www.pythian.com/news/about-log-buffer/">About Log Buffer</a> </li>
+                                </ul>
+                        </li>
+                        
+            <li><h3>Special Projects</h3>
+
+				<ul id="special-projects" style="display: block;">
+				<li>
+				<a href="http://www.pythian.com/library/software/mysql_plug-in_for_oracle_grid_control_download">MySQL Plug-in for Oracle Grid Control</a>
+				</li>
+				<li><a href="http://www.pythian.com/news/dbd-oracle">DBD::Oracle</a>
+				</li>
+				<li>
+	  			<a href="http://www.pythian.com/library/software/flash_cache_query_tool/">Oracle Exadata Flash Cache Query Tool</a>
+				</li>
+			</ul>
+		</li>
+			
+<a href="javascript:void(0);" class="fade"><h3>Recent Posts</h3><small>Show/Hide</small></a><ul id="recentPosts" style="display:none;"><li><a href="http://www.pythian.com/news/38885/worlds-best-destination-on-budget-in-2013-for-your-data/">World’s Best Destination on Budget in 2013 for Your Data</a></li> <li><a href="http://www.pythian.com/news/38847/fit-to-be-tied-tied-handles-and-localized/">Fit To Be tied (tied handles and localized $\)</a></li> <li><a href="http://www.pythian.com/news/38865/log-buffer-302-a-carnival-of-the-vanities-for-dbas/">Log Buffer #302, A Carnival of the Vanities for DBAs</a></li> <li><a href="http://www.pythian.com/news/38855/dbdoracle-v1-54-on-its-way-to-cpan/">DBD::Oracle v1.54 on its way to CPAN</a></li> <li><a href="http://www.pythian.com/news/38839/reminiscences-of-2012-foreshadowings-of-2013/">Reminiscences of 2012, Foreshadowings of 2013</a></li> <li><a href="http://www.pythian.com/news/38831/gitcpanpatch-now-with-metacpan-power/">Git::CPAN::Patch — Now With MetaCPAN Power</a></li> <li><a href="http://www.pythian.com/news/38809/log-buffer-301-a-carnival-of-the-vanities-for-dbas/">Log Buffer #301, A Carnival of the Vanities for DBAs</a></li> <li><a href="http://www.pythian.com/news/38781/new-year-new-big-data-appliance/">New Year, New Big Data Appliance</a></li> <li><a href="http://www.pythian.com/news/38587/1-hour-virtualbox-rac-cluster/">Build an 11gR2 RAC cluster in VirtualBox in 1 Hour using OVM templates</a></li> <li><a href="http://www.pythian.com/news/38651/log-buffer-300-a-carnival-of-the-vanities-for-dbas/">Log Buffer #300, A Carnival of the Vanities for DBAs</a></li> </ul><!-- /#recentPosts -->
+
+
+
+<li><a href="javascript:void(0);" class="fade"><h3>Recent Comments</h3><small>Show/Hide</small></a><ul id="recentComments" style="display:none;"><li>Chuan Wang on <a href="http://www.pythian.com/news/36791/adaptive-log-file-sync-oracle-please-dont-do-that-again/#comment-1331679">Adaptive Log File Sync: Oracle, Please Don’t Do That Again</a></li><li>Heiko Herms on <a href="http://www.pythian.com/news/35641/duplicate-from-active-database-using-rman-step-by-step/#comment-1330909">DUPLICATE from ACTIVE database using rman step-by-step</a></li><li>Fahd Mirza on <a href="http://www.pythian.com/news/38865/log-buffer-302-a-carnival-of-the-vanities-for-dbas/#comment-1328485">Log Buffer #302, A Carnival of the Vanities for DBAs</a></li><li>Mohamed Mawla on <a href="http://www.pythian.com/news/31243/t-sqlgenerate-statements-to-add-tempdb-datafiles/#comment-1326759">T-SQL:Generate statements to add TEMPDB datafiles</a></li><li>Jerry L. Cutshaw on <a href="http://www.pythian.com/news/31243/t-sqlgenerate-statements-to-add-tempdb-datafiles/#comment-1324831">T-SQL:Generate statements to add TEMPDB datafiles</a></li></ul><!-- /#recentComments --></li><li id="tagCloud"></li><a href="javascript:void(0);" class="fade"><h3>Tag Cloud</h3><small>Show/Hide</small></a>
+<ul style="display:none;"><li><a href="http://www.pythian.com/news/tag/11g/" class="tag-link-286" title="79 topics" style="font-size: 13.807407407407pt;">11g</a>
+<a href="http://www.pythian.com/news/tag/asm/" class="tag-link-30" title="34 topics" style="font-size: 10.074074074074pt;">ASM</a>
+<a href="http://www.pythian.com/news/tag/ausoug/" class="tag-link-79" title="24 topics" style="font-size: 8.6222222222222pt;">AUSOUG</a>
+<a href="http://www.pythian.com/news/tag/australia/" class="tag-link-80" title="44 topics" style="font-size: 11.214814814815pt;">Australia</a>
+<a href="http://www.pythian.com/news/tag/blog/" class="tag-link-1820" title="23 topics" style="font-size: 8.4148148148148pt;">blog</a>
+<a href="http://www.pythian.com/news/tag/blogrotate/" class="tag-link-1796" title="26 topics" style="font-size: 8.9333333333333pt;">Blogrotate</a>
+<a href="http://www.pythian.com/news/tag/cloud/" class="tag-link-984" title="27 topics" style="font-size: 9.1407407407407pt;">cloud</a>
+<a href="http://www.pythian.com/news/tag/cloud-computing/" class="tag-link-851" title="23 topics" style="font-size: 8.4148148148148pt;">cloud computing</a>
+<a href="http://www.pythian.com/news/tag/community/" class="tag-link-362" title="45 topics" style="font-size: 11.318518518519pt;">community</a>
+<a href="http://www.pythian.com/news/tag/conference/" class="tag-link-704" title="48 topics" style="font-size: 11.62962962963pt;">conference</a>
+<a href="http://www.pythian.com/news/tag/conferences/" class="tag-link-46" title="145 topics" style="font-size: 16.503703703704pt;">conferences</a>
+<a href="http://www.pythian.com/news/tag/database/" class="tag-link-40" title="50 topics" style="font-size: 11.837037037037pt;">database</a>
+<a href="http://www.pythian.com/news/tag/db2/" class="tag-link-38" title="40 topics" style="font-size: 10.8pt;">DB2</a>
+<a href="http://www.pythian.com/news/tag/exadata/" class="tag-link-1125" title="100 topics" style="font-size: 14.844444444444pt;">exadata</a>
+<a href="http://www.pythian.com/news/tag/hardware/" class="tag-link-118" title="37 topics" style="font-size: 10.488888888889pt;">hardware</a>
+<a href="http://www.pythian.com/news/tag/hudson/" class="tag-link-1814" title="21 topics" style="font-size: 8pt;">Hudson</a>
+<a href="http://www.pythian.com/news/tag/innodb/" class="tag-link-136" title="23 topics" style="font-size: 8.4148148148148pt;">InnoDB</a>
+<a href="http://www.pythian.com/news/tag/linux/" class="tag-link-23" title="91 topics" style="font-size: 14.42962962963pt;">Linux</a>
+<a href="http://www.pythian.com/news/tag/log-buffer/" class="tag-link-6" title="73 topics" style="font-size: 13.496296296296pt;">Log Buffer</a>
+<a href="http://www.pythian.com/news/tag/mysql/" class="tag-link-8" title="428 topics" style="font-size: 21.377777777778pt;">MySQL</a>
+<a href="http://www.pythian.com/news/tag/mysqlconf/" class="tag-link-466" title="34 topics" style="font-size: 10.074074074074pt;">mysqlconf</a>
+<a href="http://www.pythian.com/news/tag/network/" class="tag-link-181" title="23 topics" style="font-size: 8.4148148148148pt;">network</a>
+<a href="http://www.pythian.com/news/tag/networking/" class="tag-link-383" title="26 topics" style="font-size: 8.9333333333333pt;">networking</a>
+<a href="http://www.pythian.com/news/tag/news/" class="tag-link-1795" title="30 topics" style="font-size: 9.5555555555556pt;">news</a>
+<a href="http://www.pythian.com/news/tag/nosql/" class="tag-link-1671" title="25 topics" style="font-size: 8.7259259259259pt;">NoSQL</a>
+<a href="http://www.pythian.com/news/tag/oow/" class="tag-link-95" title="62 topics" style="font-size: 12.77037037037pt;">OOW</a>
+<a href="http://www.pythian.com/news/tag/open-source/" class="tag-link-221" title="42 topics" style="font-size: 11.007407407407pt;">open source</a>
+<a href="http://www.pythian.com/news/tag/operating-systems/" class="tag-link-1819" title="25 topics" style="font-size: 8.7259259259259pt;">operating systems</a>
+<a href="http://www.pythian.com/news/tag/oracle/" class="tag-link-9" title="490 topics" style="font-size: 22pt;">Oracle</a>
+<a href="http://www.pythian.com/news/tag/oracle-11g/" class="tag-link-22" title="41 topics" style="font-size: 10.903703703704pt;">Oracle 11g</a>
+<a href="http://www.pythian.com/news/tag/performance/" class="tag-link-306" title="71 topics" style="font-size: 13.392592592593pt;">performance</a>
+<a href="http://www.pythian.com/news/tag/perl/" class="tag-link-833" title="39 topics" style="font-size: 10.696296296296pt;">Perl</a>
+<a href="http://www.pythian.com/news/tag/postgresql/" class="tag-link-10" title="100 topics" style="font-size: 14.844444444444pt;">PostgreSQL</a>
+<a href="http://www.pythian.com/news/tag/presentations/" class="tag-link-110" title="83 topics" style="font-size: 14.014814814815pt;">presentations</a>
+<a href="http://www.pythian.com/news/tag/pythian/" class="tag-link-4" title="151 topics" style="font-size: 16.711111111111pt;">Pythian</a>
+<a href="http://www.pythian.com/news/tag/rac/" class="tag-link-29" title="60 topics" style="font-size: 12.666666666667pt;">RAC</a>
+<a href="http://www.pythian.com/news/tag/security/" class="tag-link-138" title="31 topics" style="font-size: 9.762962962963pt;">security</a>
+<a href="http://www.pythian.com/news/tag/software/" class="tag-link-604" title="31 topics" style="font-size: 9.762962962963pt;">software</a>
+<a href="http://www.pythian.com/news/tag/sql-server/" class="tag-link-11" title="151 topics" style="font-size: 16.711111111111pt;">SQL Server</a>
+<a href="http://www.pythian.com/news/tag/sydney/" class="tag-link-102" title="27 topics" style="font-size: 9.1407407407407pt;">Sydney</a>
+<a href="http://www.pythian.com/news/tag/ubuntu/" class="tag-link-24" title="27 topics" style="font-size: 9.1407407407407pt;">Ubuntu</a>
+<a href="http://www.pythian.com/news/tag/ukoug/" class="tag-link-96" title="31 topics" style="font-size: 9.762962962963pt;">UKOUG</a>
+<a href="http://www.pythian.com/news/tag/video/" class="tag-link-479" title="28 topics" style="font-size: 9.2444444444444pt;">video</a>
+<a href="http://www.pythian.com/news/tag/virtualization/" class="tag-link-146" title="24 topics" style="font-size: 8.6222222222222pt;">virtualization</a>
+<a href="http://www.pythian.com/news/tag/windows/" class="tag-link-42" title="35 topics" style="font-size: 10.281481481481pt;">Windows</a></li></ul>
+
+
+<!-- Handle Authors in the side bar ========================= -->
+<li><a href="javascript:void(0);" class="fade"><h3>Authors</h3><small>Show/Hide</small></a>
+        <ul id="authors" style="display:none;">
+        <li><a href="http://www.pythian.com/news/author/machanic/" title="Posts by Adam Machanic">Adam Machanic</a></li><li><a href="http://www.pythian.com/news/author/alexf/" title="Posts by Alex Fatkulin">Alex Fatkulin</a></li><li><a href="http://www.pythian.com/news/author/alex/" title="Posts by Alex Gorbachev">Alex Gorbachev</a></li><li><a href="http://www.pythian.com/news/author/yuldashev/" title="Posts by Alisher Yuldashev">Alisher Yuldashev</a></li><li><a href="http://www.pythian.com/news/author/pang/" title="Posts by Allen Pang">Allen Pang</a></li><li><a href="http://www.pythian.com/news/author/araujo/" title="Posts by André Araujo">André Araujo</a></li><li><a href="http://www.pythian.com/news/author/moore/" title="Posts by Andrew Moore">Andrew Moore</a></li><li><a href="http://www.pythian.com/news/author/goryunov/" title="Posts by Andrey Goryunov">Andrey Goryunov</a></li><li><a href="http://www.pythian.com/news/author/kravchenko/" title="Posts by Anton Kravchenko">Anton Kravchenko</a></li><li><a href="http://www.pythian.com/news/author/bott/" title="Posts by Augusto Bott">Augusto Bott</a></li><li><a href="http://www.pythian.com/news/author/babettet/" title="Posts by Babette Turner-Underwood">Babette Turner-Underwood</a></li><li><a href="http://www.pythian.com/news/author/chahal/" title="Posts by Balraj Chahal">Balraj Chahal</a></li><li><a href="http://www.pythian.com/news/author/mildren/" title="Posts by Ben Mildren">Ben Mildren</a></li><li><a href="http://www.pythian.com/news/author/fraser/" title="Posts by Bill Fraser">Bill Fraser</a></li><li><a href="http://www.pythian.com/news/author/hudson/" title="Posts by Brad Hudson, SA Team Lead">Brad Hudson</a></li><li><a href="http://www.pythian.com/news/author/burns/" title="Posts by burns">Doug Burns</a></li><li><a href="http://www.pythian.com/news/author/chow/" title="Posts by Catherine Chow">Catherine Chow</a></li><li><a href="http://www.pythian.com/news/author/presley/" title="Posts by Chris Presley">Chris Presley</a></li><li><a href="http://www.pythian.com/news/author/kutrovsky/" title="Posts by Christo Kutrovsky">Christo Kutrovsky</a></li><li><a href="http://www.pythian.com/news/author/elbl/" title="Posts by Dan Elbl">Dan Elbl</a></li><li><a href="http://www.pythian.com/news/author/fink/" title="Posts by Daniel Fink">Daniel Fink</a></li><li><a href="http://www.pythian.com/news/author/zburivsky/" title="Posts by Danil Zburivsky">Danil Zburivsky</a></li><li><a href="http://www.pythian.com/news/author/leboeuf/" title="Posts by Darrin Leboeuf">Darrin Leboeuf</a></li><li><a href="http://www.pythian.com/news/author/dash/" title="Posts by David Ashlock">David Ashlock</a></li><li><a href="http://www.pythian.com/news/author/edwards/" title="Posts by David Edwards">David Edwards</a></li><li><a href="http://www.pythian.com/news/author/perry/" title="Posts by David Perry">David Perry</a></li><li><a href="http://www.pythian.com/news/author/seiler/" title="Posts by Don Seiler">Don Seiler</a></li><li><a href="http://www.pythian.com/news/author/duffy/" title="Posts by duffy">Julia Duffy</a></li><li><a href="http://www.pythian.com/news/author/sarmiento/" title="Posts by Edwin Sarmiento">Edwin Sarmiento</a></li><li><a href="http://www.pythian.com/news/author/galera/" title="Posts by Fábio Galera">Fábio Galera</a></li><li><a href="http://www.pythian.com/news/author/mirza/" title="Posts by Fahd Mirza">Fahd Mirza</a></li><li><a href="http://www.pythian.com/news/author/bordenave/" title="Posts by francisco bordenave">Francisco Bordenave</a></li><li><a href="http://www.pythian.com/news/author/gnarvaja/" title="Posts by Gerry Narvaja">Gerry Narvaja</a></li><li><a href="http://www.pythian.com/news/author/otochkin/" title="Posts by Gleb Otochkin">Gleb Otochkin</a></li><li><a href="http://www.pythian.com/news/author/todorovski/" title="Posts by Gorjan Todorovski">Gorjan Todorovski</a></li><li><a href="http://www.pythian.com/news/author/goswami/" title="Posts by goswami">Hemantgiri Goswami</a></li><li><a href="http://www.pythian.com/news/author/gratton/" title="Posts by gratton">Yannick Gratton</a></li><li><a href="http://www.pythian.com/news/author/arkzoyd/" title="Posts by Grégory Guillou">Grégory Guillou</a></li><li><a href="http://www.pythian.com/news/author/shapira/" title="Posts by Gwen Shapira">Gwen Shapira</a></li><li><a href="http://www.pythian.com/news/author/raytsin/" title="Posts by Igor Raytsin">Igor Raytsin</a></li><li><a href="http://www.pythian.com/news/author/pinarci/" title="Posts by Isabel">Isabel Gratton</a></li><li><a href="http://www.pythian.com/news/author/polnicky/" title="Posts by Jan Polnicky">Jan Polnicky</a></li><li><a href="http://www.pythian.com/news/author/schneider/" title="Posts by Jeremy Schneider">Jeremy Schneider</a></li><li><a href="http://www.pythian.com/news/author/piwowar/" title="Posts by John Piwowar">John Piwowar</a></li><li><a href="http://www.pythian.com/news/author/johns/" title="Posts by John Scoles">John Scoles</a></li><li><a href="http://www.pythian.com/news/author/stairs/" title="Posts by Jon Stairs">Jon Stairs</a></li><li><a href="http://www.pythian.com/news/author/jones/" title="Posts by Joseph Jones">Joseph Jones</a></li><li><a href="http://www.pythian.com/news/author/lamarche/" title="Posts by Julien Lamarche">Julien Lamarche</a></li><li><a href="http://www.pythian.com/news/author/bakhshandeh/" title="Posts by Kamran Bakhshandeh">Kamran Bakhshandeh</a></li><li><a href="http://www.pythian.com/news/author/karun_dutt/" title="Posts by Karun Dutt">Karun Dutt</a></li><li><a href="http://www.pythian.com/news/author/murphy/" title="Posts by Keith Murphy">Keith Murphy</a></li><li><a href="http://www.pythian.com/news/author/pedersen/" title="Posts by Kellyn Pedersen">Kellyn Pedersen</a></li><li><a href="http://www.pythian.com/news/author/klock/" title="Posts by klock">Andy Klock</a></li><li><a href="http://www.pythian.com/news/author/leger/" title="Posts by leger">Greg Leger</a></li><li><a href="http://www.pythian.com/news/author/lukas/" title="Posts by Lukas Vysusil">Lukas Vysusil</a></li><li><a href="http://www.pythian.com/news/author/luke/" title="Posts by Luke Davies">Luke Davies</a></li><li><a href="http://www.pythian.com/news/author/billette/" title="Posts by Marc Billette">Marc Billette</a></li><li><a href="http://www.pythian.com/news/author/fielding/" title="Posts by Marc Fielding">Marc Fielding</a></li><li><a href="http://www.pythian.com/news/author/lopes/" title="Posts by Marcelo Lopes">Marcelo Lopes</a></li><li><a href="http://www.pythian.com/news/author/tusa/" title="Posts by Marco Tusa">Marco Tusa</a></li><li><a href="http://www.pythian.com/news/author/elsins/" title="Posts by Maris Elsins">Maris Elsins</a></li><li><a href="http://www.pythian.com/news/author/brinsmead/" title="Posts by Mark Brinsmead">Mark Brinsmead</a></li><li><a href="http://www.pythian.com/news/author/ruthner/" title="Posts by Martin Ruthner">Martin Ruthner</a></li><li><a href="http://www.pythian.com/news/author/birksted/" title="Posts by Maryanne B">Maryanne B</a></li><li><a href="http://www.pythian.com/news/author/mcormond/" title="Posts by mcormond">James McOrmond</a></li><li><a href="http://www.pythian.com/news/author/abbey/" title="Posts by Michael S. Abbey">Michael Abbey</a></li><li><a href="http://www.pythian.com/news/author/mgutzait/" title="Posts by Michelle Gutzait">Michelle Gutzait</a></li><li><a href="http://www.pythian.com/news/author/gutzait/" title="Posts by Michelle Gutzait">Michelle Gutzait</a></li><li><a href="http://www.pythian.com/news/author/mawla/" title="Posts by Mohammed Mawla">Mohammed Mawla</a></li><li><a href="http://www.pythian.com/news/author/murilo/" title="Posts by murilo">Murilo Miranda</a></li><li><a href="http://www.pythian.com/news/author/nalgonda/" title="Posts by nalgonda">Santosh Nalgonda</a></li><li><a href="http://www.pythian.com/news/author/naumovski/" title="Posts by naumovski">Vladimir Naumovski</a></li><li><a href="http://www.pythian.com/news/author/westerlund/" title="Posts by Nicklas Westerlund">Nicklas Westerlund</a></li><li><a href="http://www.pythian.com/news/author/pythianlogan/" title="Posts by Paul Logan">Paul Logan</a></li><li><a href="http://www.pythian.com/news/author/paulm/" title="Posts by Paul Moen">Paul Moen</a></li><li><a href="http://www.pythian.com/news/author/pvallee/" title="Posts by Paul Vallee">Paul Vallee</a></li><li><a href="http://www.pythian.com/news/author/ling/" title="Posts by Pete Ling">Pete Ling</a></li><li><a href="http://www.pythian.com/news/author/simecka/" title="Posts by Peter Simecka">Peter Simecka</a></li><li><a href="http://www.pythian.com/news/author/kumar/" title="Posts by Prashant">Prashant Kumar</a></li><li><a href="http://www.pythian.com/news/author/thukral/" title="Posts by Raj Thukral">Raj Thukral</a></li><li><a href="http://www.pythian.com/news/author/shamsudeen/" title="Posts by Riyaj Shamsudeen">Riyaj Shamsudeen</a></li><li><a href="http://www.pythian.com/news/author/hamel/" title="Posts by Robert Hamel">Robert Hamel</a></li><li><a href="http://www.pythian.com/news/author/barr/" title="Posts by Sandi Barr">Sandi Barr</a></li><li><a href="http://www.pythian.com/news/author/mccormick/" title="Posts by Scott McCormick">Scott McCormick</a></li><li><a href="http://www.pythian.com/news/author/sadikali/" title="Posts by Shakir Sadikali">Shakir Sadikali</a></li><li><a href="http://www.pythian.com/news/author/sheeri/" title="Posts by Sheeri Cabral">Sheeri Cabral</a></li><li><a href="http://www.pythian.com/news/author/sheidaei/" title="Posts by sheidaei">Shervin Sheidaei</a></li><li><a href="http://www.pythian.com/news/author/singerwang/" title="Posts by Singer Wang">Singer Wang</a></li><li><a href="http://www.pythian.com/news/author/still/" title="Posts by still">Jared Still</a></li><li><a href="http://www.pythian.com/news/author/kuna/" title="Posts by Suresh Kuna">Suresh Kuna</a></li><li><a href="http://www.pythian.com/news/author/fontaine/" title="Posts by Sylvain Fontaine">Sylvain Fontaine</a></li><li><a href="http://www.pythian.com/news/author/pythianinkpen/" title="Posts by Tim Inkpen">Tim Inkpen</a></li><li><a href="http://www.pythian.com/news/author/admin/" title="Posts by Tim Procter">Tim Procter</a></li><li><a href="http://www.pythian.com/news/author/simmons/" title="Posts by Vanessa Simmons">Vanessa Simmons</a></li><li><a href="http://www.pythian.com/news/author/balla/" title="Posts by Vasu Balla">Vasu Balla</a></li><li><a href="http://www.pythian.com/news/author/waitman/" title="Posts by waitman">Andrew Waitman</a></li><li><a href="http://www.pythian.com/news/author/chaves/" title="Posts by Warner Chaves">Warner Chaves</a></li><li><a href="http://www.pythian.com/news/author/wen/" title="Posts by wen">Jasmine Wen</a></li><li><a href="http://www.pythian.com/news/author/champoux/" title="Posts by Yanick Champoux">Yanick Champoux</a></li><li><a href="http://www.pythian.com/news/author/velikanov/" title="Posts by Yury Velikanov">Yury Velikanov</a></li><li><a href="http://www.pythian.com/news/author/zea/" title="Posts by Zea">Fabio Zea</a></li>        </ul><!-- /#authors -->
+</li>
+
+			
+
+			
+			
+
+					</ul>
+        
+        
+	</div>
+
+
+</div>
+
+<div id="homePageFeeds" class="rounded">
+	
+	<div class="threeColumn">
+		<h4><a href="http://www.pythian.com/library/papers_and_books" id="homeBlogLink">Papers &amp; Books</a></h4>
+		
+		<p><a target="_blank" href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470416912.html" title="MySQL Administrator&#39;s Bible by Sheeri K. Cabral">MySQL Administrator's Bible by Sheeri K. Cabral</a></p>
+		
+		<p><a href="http://www.pythian.com/library/papers_and_books/rac_workload" title="Oracle RAC Workload Management whitepaper by Alex Gorbachev">Oracle RAC Workload Management whitepaper by Alex Gorbachev</a></p>
+		
+		<p><a target="_blank" href="http://fisl.softwarelivre.org/10/papers/pub/programacao/526" title="8 Rules for Designing More Secure Applications with MySQL by Augusto Bott and Nick Westerlund">8 Rules for Designing More Secure Applications with MySQL by Augusto Bott and Nick Westerlund</a></p>
+		
+	</div>
+	
+	<div class="threeColumn">
+		<h4><a href="http://twitter.com/pythian" target="_blank" id="homeTweetLink">Live Updates</a></h4>
+		<p>pythian: RT @FN_Press2: Schooner Information Technology Teams with Pythian to Deliver Advanced Support and High... http://finanznachrichten.de/20<br><a href="http://twitter.com/pythian/statuses/91194636823052288" target="_blank">more</a></p><br><br>
+					</div>
+	
+	<div class="threeColumn">
+		<h4><a href="http://www.pythian.com/about/customers/testimonials" id="homeRSSLink">Testimonials</a></h4>
+		<ul>
+<li><a href="http://www.pythian.com/news/testimonials/single.php?testimonial=1081"><strong>Serge Racine</strong></a><p><em>DBA</em>, <em>Brookfield Energy</em></p> <p>We are very satisfied by the service given to us by Andre and Shakir in support of our recent data quality and reorganization initiative....&nbsp;<a href="http://www.pythian.com/news/testimonials/single.php?testimonial=1081">more</a></p><br><br></li>
+</ul>
+	</div>
+	
+	<div class="clear"></div>
+</div>
+
+</div><!--close wrapper-->
+
+</div>
+
+						<div id="footer">
+				<p class="clearfix">©2009 The Pythian Group Inc.</p>
+				<!-- begin Pythian microformat -->
+				<ul class="adr left">
+					<li class="org">Headquarters</li>
+					<li class="street-address">1200 St. Laurent Blvd<br>Suite 261</li>
+					<li class="extended-address">P.O. Box 207</li>
+					<li class="locality region postal-code">Ottawa, Ontario K1K 3B8</li>
+					<li class="country-name">Canada</li>
+					<li class="tel">+1 613 565 8696</li>
+				</ul>
+				<!-- end Pythian microformat -->
+
+
+				<ul class="footerNav">
+					<li class="home" style="width: 29px;"><a href="http://www.pythian.com/" title="Home">Home</a></li>
+					<li class="services" style="width: 119px;"><a href="http://www.pythian.com/services/" title="Services">Services</a>
+						
+						<ul style="width: 119px;">
+							<li style="width: 119px;">
+							<a href="http://www.pythian.com/services/dba_consulting/" title="DBA &amp; Consulting" style="width: 119px;">DBA &amp; Consulting</a>
+							</li>
+						<li class="widthOfSecondWidest" style="width: 119px;">
+							<a href="http://www.pythian.com/services/systems_administration/" title="Systems Administration" style="width: 119px;">Systems Administration</a>
+							</li>
+						<li style="width: 119px;">
+							<a href="http://www.pythian.com/services/special_projects/" title="Special Projects" style="width: 119px;">Special Projects</a>
+							</li>
+						<li style="width: 119px;">
+							<a href="http://www.pythian.com/services/emergency_response/" title="Emergency Response" style="width: 119px;">Emergency Response</a>
+							</li>
+							
+						</ul>
+							</li>
+					<li class="database" style="width: 96px;"><a href="http://www.pythian.com/expertise/" title="Database Expertise">Database Expertise</a>
+						
+						<ul>
+							<li style="width: 96px;">
+							<a href="http://www.pythian.com/expertise/oracle/" title="Oracle">Oracle</a>
+							</li>	
+						<li style="width: 96px;">
+							<a href="http://www.pythian.com/expertise/sql_server/" title="SQL Server">SQL Server</a>
+							</li>	
+						<li style="width: 96px;">
+							<a href="http://www.pythian.com/expertise/mysql/" title="MySQL">MySQL</a>
+							</li>	
+						<li style="width: 96px;">
+							<a href="http://www.pythian.com/expertise/oracle_applications/" title="Oracle Applications">Oracle Applications</a>
+							</li>
+						</ul>
+							</li>
+					<li class="solutions" style="width: 104px;"><a href="http://www.pythian.com/solutions/" title="Solutions">Solutions</a>
+						
+						<ul>
+							<li style="width: 104px;">
+							<a href="http://www.pythian.com/solutions/fractional_outsourcing/" title="Fractional Outsourcing">Fractional Outsourcing</a>
+							</li>	
+						<li style="width: 104px;">
+							<a href="http://www.pythian.com/solutions/full_outsourcing/" title="Full Outsourcing">Full Outsourcing</a>
+							</li>	
+						<li style="width: 104px;">
+							<a href="http://www.pythian.com/solutions/by_industry/" title="By Industry">By Industry</a>
+							</li>
+						</ul>
+							</li>
+					<li class="resource" style="width: 85px;"><a href="http://www.pythian.com/library/" title="Resource Library">Resource Library</a>
+						
+						<ul>
+							<li style="width: 85px;">
+							<a href="http://www.pythian.com/library/webinars/" title="Webinars">Webinars</a>
+																</li>
+						<li style="width: 85px;">
+							<a href="http://www.pythian.com/library/papers_and_books/" title="Papers &amp; Books">Papers &amp; Books</a>
+																</li>
+						<li style="width: 85px;">
+							<a href="http://www.pythian.com/library/software/" title="Software">Software</a>
+																</li>	
+						<li style="width: 85px;">
+				<a href="http://www.pythian.com/news/" title="Blog" target="_blank">Blog</a>
+								</li>
+							</ul>
+							</li>
+					<li class="about" style="width: 93px;"><a href="http://www.pythian.com/about/" title="About">About</a>
+						
+						<ul>
+							<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/why_pythian/" title="Why Pythian">Why Pythian</a>
+							</li>
+							
+						
+						
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/tools/" title="Tools">Tools</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/management_team/" title="Management Team">Management Team</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/technical_experts/" title="Technical Experts">Technical Experts</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/customers/" title="Customers">Customers</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/partners/" title="Partners">Partners</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/careers/" title="Careers">Careers</a>
+							</li>	
+						<li style="width: 93px;">
+							<a href="http://www.pythian.com/about/contact_us/" title="Contact Us">Contact Us</a>
+							</li>
+							</ul>
+							</li>
+					<li class="news current" style="width: 86px;"><a href="http://www.pythian.com/news_and_events/" title="News and events">News and Events</a>
+						
+						<ul>
+							<li style="width: 86px;">
+							<a href="http://www.pythian.com/news_and_events/news_release/" title="News Release">News Release</a>
+							</li>	
+						<li style="width: 86px;">
+							<a href="http://www.pythian.com/news_and_events/in_the_news/" title="In the News">In the News</a>
+							</li>
+							
+						<li class="current" style="width: 86px;">
+							<a href="http://www.pythian.com/news_and_events/events/" title="Events">Events</a>
+							</li>
+							
+						</ul>
+							</li>
+					<li class="contact" style="width: 63px;"><a href="http://www.pythian.com/contact/" title="Contact us">Contact Us</a>
+						<ul>
+							<li style="width: 63px;"><a href="http://www.pythian.com/terms_of_use/" title="Terms of Use">Terms of Use</a></li>
+							<li style="width: 63px;"><a href="http://www.pythian.com/privacy_policy/" title="Privacy Policy">Privacy Policy</a></li>
+							<li style="width: 63px;"><a href="http://www.pythian.com/site_map/" title="Site Map">Site Map</a></li>
+						</ul></li>
+</ul>
+
+			</div>
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe id="fb_xdm_frame_http" name="fb_xdm_frame_http" src="./TEXT vs. VARCHAR   _files/xd_arbiter.html" tabindex="-1"></iframe><iframe id="fb_xdm_frame_https" name="fb_xdm_frame_https" src="./TEXT vs. VARCHAR   _files/xd_arbiter(1).html" tabindex="-1"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe style="display: none;" id="f3e16983bc" name="f3e16983bc" src="./TEXT vs. VARCHAR   _files/oauth.html"></iframe></div></div></div>
+
+<!-- Start code pardot chat tool tracking system  -->
+<script type="text/javascript">
+	piAId = '7712';
+	piCId = '1041';
+	
+	(function() {
+		function async_load(){
+			var s = document.createElement('script'); s.type = 'text/javascript';
+			s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+			var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+		}
+		if(window.attachEvent) { window.attachEvent('onload', async_load); }
+		else { window.addEventListener('load', async_load, false); }
+	})();
+</script>
+<!-- End code pardot chat tool tracking system -->
+
+<!--LeadLander-->
+
+<script type="text/javascript" language="javascript">llactid=15159</script> 
+<script type="text/javascript" language="javascript" src="./TEXT vs. VARCHAR   _files/trackalyze.js"></script><img src="./TEXT vs. VARCHAR   _files/trackalyze.asp">
+
+<!--End LeadLander-->
+
+<!-- Google Code for Remarketing tag -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 994702062;
+var google_conversion_label = "vjM-CJLF9gMQ7uWn2gM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/conversion.js">
+</script><iframe name="google_conversion_frame" width="300" height="13" src="./TEXT vs. VARCHAR   _files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no">&lt;img height="1" width="1" border="0" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/994702062/?frame=0&amp;random=1357721969337&amp;cv=7&amp;fst=1357721969337&amp;num=1&amp;fmt=1&amp;label=vjM-CJLF9gMQ7uWn2gM&amp;guid=ON&amp;u_h=1024&amp;u_w=1280&amp;u_ah=1000&amp;u_aw=1215&amp;u_cd=24&amp;u_his=1&amp;u_tz=120&amp;u_java=true&amp;u_nplug=11&amp;u_nmime=85&amp;ref=https%3A//www.google.com.eg/&amp;url=http%3A//www.pythian.com/news/7129/text-vs-varchar/&amp;frm=0" /&gt;</iframe>
+<noscript>
+&lt;div style="display:inline;"&gt;
+&lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/994702062/?value=0&amp;amp;label=vjM-CJLF9gMQ7uWn2gM&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+&lt;/div&gt;
+</noscript>
+
+<script type="text/javascript" src="./TEXT vs. VARCHAR   _files/locator.php"></script>
+<div id="trackable_credits" style="text-align: center; color: ;">Social links powered by <a href="http://www.ecreativeim.com/trackable-social-share-icons" target="_blank" style="color:;">Ecreative Internet Marketing</a></div><!--stats_footer_test--><script src="./TEXT vs. VARCHAR   _files/e-201302.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'19483165',v:'ext',post:'7129'});
+var load_cmc = function(){linktracker_init(19483165,7129,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script><img id="wpstats" src="./TEXT vs. VARCHAR   _files/g.gif" alt="">
+
+
+
+</body></html>

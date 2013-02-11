@@ -1,0 +1,127 @@
+/**
+ * CSS for uptime.netcraft.com
+ *
+ * $Id: uptime_news.css,v 1.1.4.2 2011/07/27 13:32:00 pw Exp $
+ * 
+ * This CSS beautifies uptime so that it looks similar to news.netcraft.com
+ */
+
+#mainheader {
+    padding: 10px;
+}
+
+#mainheader tbody tr td:first-child {
+    width: 340px;
+}
+
+#mainheader tbody tr td:last-child {
+    width: 340px;
+}
+
+#sidebanner {
+    padding: 20px;
+}
+
+#sidemenu {
+    background: #f7f7f7;
+    /*width: 250px;*/
+    padding: 10px;
+    right: 260px;
+    margin: 0;
+}
+
+#sidemenu .tableheader td{
+    padding-top: 3px;
+    border-bottom: 1px solid #CACACA;
+    color: #555555;
+    font-family: "Trebuchet MS";
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+#sidemenu tr td {
+    background: #f7f7f7;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#sidemenu tr td b {
+    font-size:1em;
+    font-weight:bold;
+    margin-top:5px;
+    display:block;
+    padding-top: 0;
+}
+
+#sidemenu tr td a {
+    background:url("http://news.netcraft.com/images/smallarrow.jpg") no-repeat scroll 0 50% transparent;
+    border-bottom:medium none;
+    display:block;
+    padding-left:20px;
+}
+
+#mainbody hr {
+    height: 1px;
+    color: #CACACA;
+    margin: 0;
+}
+
+.netcraftmajorheading {
+    border-bottom: 1px solid #CACACA;
+    padding-bottom: 3px;
+    color: #008;
+    font-size: 1.9em;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    font-family: verdana;
+}
+
+.netcraftsecondaryheading {
+
+}
+
+#mainbody {
+    padding: 10px;
+}
+
+#bluehr {
+    border-bottom: 5px solid #4B679F;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.netcraftlogo {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.netcraftcontenttable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.netcraftcontenttable th {
+    background: #E0EAEF;
+    font-weight:bold;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 3px solid white;
+    padding: 3px 7px;
+}
+
+.TBtr td {
+    text-align: left;
+}
+
+.TBtr {
+    background: #FFFFFF;
+}
+
+.TRtr2 td {
+    text-align: left;
+}

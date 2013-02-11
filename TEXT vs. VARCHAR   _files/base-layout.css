@@ -1,0 +1,103 @@
+/* -- General Layout Formatting -- */
+
+body {
+	margin:0 0 20px;
+	padding:0;
+	position: relative;
+}
+#container {
+	margin: 0 auto;
+	padding: 0;
+	width: 975px;
+	position: relative;
+}
+#header {
+	width: 975px;
+}
+#mainNav {
+	width: 975px;
+	height: 77px;
+	position: relative;
+}
+#mainNav #globalSearch{
+	width: 975px;
+	height: 38px;
+}
+/* Main Content Area -- */
+
+#contentWrapper, #mainNav, .innerWrapper, #content, #header, #leftSidebar, #rightSidebar, #breadcrumb, #footer{
+	float: left;
+}
+#contentWrapper{
+	width: 975px;
+	background-color: #ebebeb;
+	position: relative;
+}
+#content {
+	width: 512px;
+	padding: 12px 14px 12px 16px;
+	position: relative;
+}
+
+/* Sidebar Areas -- */
+#leftSidebar {
+	width: 209px;
+	padding-bottom: 40px;
+}
+#rightSidebar {
+	width: 195px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+#home-page #rightSidebar {
+	width: 248px;
+	padding-top: 16px;
+	padding-bottom: 20px;
+}
+.tabbed-page #rightSidebar {
+	padding-top: 108px !important;
+}
+.searchResultsWrapper {
+	width: 945px !important;
+	margin-left: 14px;
+}
+.library-landing-page #rightSidebar {
+	padding-top:45px;
+}
+#breadcrumb {
+	width: 975px;
+}
+#footer {
+	width: 975px;
+	min-height: 200px;
+	padding-top: 6px;
+}
+
+/* -- General Classes -- */
+.left {
+	display:block;
+	float: left;
+	position: relative !important;
+}
+.relative {
+	display:block;
+	position: relative !important;
+
+}
+.right {
+	display:block;
+	float: right;
+}
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

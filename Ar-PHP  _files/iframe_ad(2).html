@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0413)http://sourceforge.net/static/ads/iframe_ad.html?position=p71_text&ad=http%3A%2F%2Fad.doubleclick.net%2Fadj%2Fostg.sourceforge%2Fcons_enterprise_p71_text%3Bpg%3D%2Fprojects%3Bpsrch%3D0%3Blogged_in%3D0%3Btpc%3Dar-php%3Btpc%3Dcgi%3Btpc%3Dwww%3Btpc%3Dphp%3Btpc%3Ddynamic%3Btpc%3Dinternet%3Baud%3Ddevelopers%3Btile%3D3%3Bsz%3D1x1%3Bu%3De%253Ad989c082-720d-11e2-9770-0200ac1d1d91%3Bord%3D5164746088356970%3F&class=text -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var qs=function(a){if(""==a)return{};for(var d={},b=0;b<a.length;++b){var c=a[b].split("=");2==c.length&&(d[c[0]]=decodeURIComponent(c[1].replace(/\+/g," ")))}return d}(window.location.search.substr(1).split("&"));
+            function resize(frame, width, height) {
+                // Resize iframe to fit content
+                // Setting both CSS and iframe elements seems to result in the
+                // most consistent rendering; CSS needs !important.
+                frame.width = width;
+                frame.height = height;
+                frame.style.cssText += 'width:' + width + ' !important; height:' + height + ' !important;';
+            }
+            function load() {
+                var ad = document.getElementById('ad'),
+                    frame = parent.document.getElementById(qs.position),
+                    width = ad.scrollWidth + 'px',
+                    height = ad.scrollHeight + 'px';
+                resize(frame, width, height);
+                // Try resizing again after a 1 sec delay, just in case.
+                setTimeout(function() {
+                    var newHeight = ad.scrollHeight + 'px',
+                        newWidth = ad.scrollWidth + 'px';
+                    resize(frame, newWidth, newHeight);
+                }, 1000);
+            }
+        </script>
+        <style type="text/css">
+            body { margin: 0; padding: 0; font: 13px/1.22 sans-serif; color: #555; }
+            a { text-decoration: none; color: #07a; outline: medium none; }
+                a:visited { color: #069; }
+                a:hover { color: #09c; text-decoration: underline; }
+                a:active { color: #07a; }
+                a:hover, a:active { outline: medium none; }
+            .ad { margin: 0 auto 20px; overflow: hidden; }
+                /*
+                 * Reset CSS sets <ins> to a yellow background; Google AFC uses
+                 * <ins> as a wrapper for certain ads and we don't want them to
+                 * have a yellow background.
+                 */
+                .ad ins { background-color: transparent; }
+            .medrec { width: 300px; display: block; }
+            .leaderboard { width: 728px; height: 90px; overflow: hidden; text-align: center; margin: 0 auto; line-height: 0; }
+                .leaderboard .google_afc { margin: 0 auto; }
+            .hub { width: 200px; overflow: hidden; }
+        </style>
+        <!--<base target="_top">--><base href="." target="_top">
+    </head>
+    <body onload="load()">
+        <div id="ad" class="ad text">
+            <script type="text/javascript">
+                if (parent.immersion_adcode) {
+                    document.write(parent.immersion_adcode);
+                } else {
+                    document.write('<script type="text/javascript" src="' + qs.ad + '"><' + '/script>');
+                }
+            </script><script type="text/javascript" src="projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;tile=3;sz=1x1;u=e-d989c082-720d-11e2-9770-0200ac1d1d91"></script><a target="_top" href="http://ad.doubleclick.net/click;h=v8/3d85/0/0/%2a/y;44306;0-0;0;38024543;31-1/1;0/0/0;u=e:d989c082-720d-11e2-9770-0200ac1d1d91;~okv=;pg=/projects;psrch=0;logged_in=0;tpc=ar-php;tpc=cgi;tpc=www;tpc=php;tpc=dynamic;tpc=internet;aud=developers;~sscs=%3f"><img src="817-grey.gif" border="0" alt="Click here to find out more!"></a>
+        </div>
+        <script type="text/javascript">
+            if (qs['class']) {
+                document.getElementById('ad').className += ' ' + qs['class'];
+            }
+        </script>
+    
+
+</body></html>

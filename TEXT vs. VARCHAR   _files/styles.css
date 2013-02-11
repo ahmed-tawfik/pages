@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*--------------------------------------------------------------GENERAL STYLES--------------------------------------------------------------*/
+
+#wrapper {
+	width:975px;
+    font-size: 10px;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+#wrapper p,
+#wrapper div,
+#wrapper span,
+#wrapper td,
+#wrapper th,
+#wrapper .entry ul li {
+    font-family: Calibri,'Lucida Grande','Liberation Sans',Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+	color: #5A5A5A;
+}
+
+#wrapper .entry ul {
+    margin:0 25px 20px 25px !important; 
+}
+
+#wrapper h1 { font-size:2em; text-transform:uppercase; font-weight:normal; }
+
+#wrapper #leftColumn { width:256px; float:left; }
+
+#wrapper #rightColumn { width:943px; float:left; padding:25px 0 0 0; margin-left: 16px; background-color: #fff; }
+
+#wrapper #filler { width:624px; float:left; margin: 0 26px; }
+
+#wrapper a { color:#901212; text-decoration:none; }
+
+#wrapper a.more-link { font-weight:bold; text-transform:uppercase; display:block; margin:12px 0 0 0;}
+
+#wrapper a:hover { color:#000; text-decoration:underline; }
+
+#wrapper h4 a:hover { text-decoration:none; }
+
+#wrapper p { line-height:1.5em; }
+
+#wrapper .clear { clear:both; }
+
+#wrapper strong { font-weight:bold; }
+
+#wrapper h3 { font-size:1.4em; color:#000; font-weight:bold; }
+
+#wrapper #rightColumn h3 { line-height:2em; }
+
+#wrapper #rightColumn #locationNav h3 { line-height:1.4em; }
+
+#wrapper h4 { font-size:1.2em; color:#000; font-weight:bold; margin:1ex 0;}
+
+#wrapper h5 { font-size:1em; color:#000; font-weight:bold; margin:1ex 0;}
+
+#wrapper h5 { font-size:1em; color:#000; font-weight:bold; }
+
+#wrapper h3.blue, h3.blue strong { color:#901212 !important; }
+
+#wrapper h2.blue, h2.blue strong { color:#901212 !important; }
+
+#wrapper h3 a, #wrapper h4 a, #wrapper h5 a { color:#000; }
+
+#wrapper #home h2.blue, #emergencyCallout h2, #home h2.blue strong { color:#901212 !important; font-size:30px; line-height:34px; margin-bottom:0; }
+
+#wrapper #emergencyCallout p { font-size:12px; }
+
+#wrapper h3.grey, h3.grey span, h4.grey, h4.grey span { color:#a7a7a7 !important; }
+
+#home h4.grey { margin-bottom:0.5em; }
+
+#wrapper .lowercase { text-transform: lowercase; }
+
+#wrapper img { margin-top:1.2em; }
+
+#wrapper #rightColumn table { margin-bottom:3em; }
+
+#wrapper .noMargin { margin:0 !important; }
+
+#wrapper .noBG { background:none !important; }
+
+#wrapper #news small { line-height:16px; font-size:1.1em; font-weight:bold; }
+
+#wrapper p.black { color:#000000; }
+
+/*------------------------------------------------------------END GENERAL STYLES------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------NAVIGATION----------------------------------------------------------------*/
+
+#wrapper ul.bulleted { list-style:disc; list-style-position:outside; margin-left:13px; font-size:1.2em; line-height:1.5em; padding-bottom:1em; }
+
+#wrapper #filler ul { list-style:circle; list-style-position:outside; margin:0 0 10px 15px; font-size:1.2em; line-height:1.5em; }
+
+#wrapper ol { font-size: 12px; margin:0 25px 20px 35px; padding:0; list-style:decimal; }
+
+#wrapper ol li{ font-size: inherit; line-height: 1.2em; margin-bottom: 3px; }
+
+#wrapper ol.numbered { list-style:decimal; list-style-position:outside; font-size:1.2em; line-height:1.5em; margin:0 25px; padding:0; }
+
+#wrapper ol.numbered li { margin-bottom:1em; }
+
+#wrapper ul.nav { font-size:14px !important; line-height:18px; background:url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x bottom left; }
+
+#wrapper ul.nav li, #wrapper ul.nav li a { color:#7a7a79; font-weight:bold; text-transform:uppercase; display:block; }
+
+#wrapper ul.nav li { zoom:1; }
+
+#wrapper ul.nav li a:hover { color:#000; }
+
+#wrapper ul.subNav, ul.subNavSitemap { font-size:10px; line-height:13px; padding:0 0 1.2em 1em; }
+
+#wrapper ul.nested { padding:0 0 0 1em; }
+
+#wrapper ul#footerNav li a:hover { color:#000; }
+
+#wrapper #siteMapNavLeft, #wrapper #siteMapNavRight { width:50%; float:left; background:none; }
+
+#wrapper #phoneNum { font-family:"Arial Black", Arial, Helvetica, sans-serif; font-size:1.9em; color:#e0e0e0; text-align:right; margin-bottom:11px; height:19px; }
+
+#wrapper #pythianLogo { cursor:pointer; }
+
+#wrapper #pythianLogo a { display:block; background:url(/news/wp-content/themes/pythian/images/pythianLogo.gif) no-repeat top left; width:264px; height:62px; text-indent:-9999px; float:left; cursor:pointer; }
+
+/*--------------------------------------------------------------END NAVIGATION--------------------------------------------------------------*/
+
+#wrapper h1.pageTitle { text-align:right; font-size:2.8em; font-family:"Arial Black", Arial, Helvetica, sans-serif; text-transform:uppercase; color:#000; 
+padding:5px 0; border-top:1px solid #d4d4d3; border-bottom:1px solid #8a8a89; }
+
+#wrapper h2 { font-size:1.8em; color:#000; margin-bottom:1em; font-family: Arial, Verdana, Helvetica, sans-serif; width:80%; }
+
+#wrapper .home h2 { font-size:1.4em; line-height:1.3em; }
+
+#wrapper h2.pageTitle { text-align:right; font-size:2em; font-family:"Arial Black", Arial, Helvetica, sans-serif; text-transform:uppercase; color:#000; 
+padding:5px 0; }
+
+#wrapper h2.rightCol { width: 620px; margin-top: 0 !important; }
+
+#wrapper #rightColumn p { line-height:1.2em; margin-bottom:1.2em; text-align:justify; }
+
+#wrapper #footerCopyright { float:left; }
+
+/*--left nav f2--*/
+
+#wrapper #about #navAbout { color:#000; }
+
+#wrapper #advantage #navAdvantage { color:#000; }
+
+#wrapper #home #navHome { color:#000; }
+
+#wrapper #news #navNews { color:#000; }
+
+#wrapper #services #navServices { color:#000; }
+
+
+/*----------------------------------------------------------------FORM STYLES---------------------------------------------------------------*/
+
+#wrapper #rightColumn form { margin-bottom:10px; }
+
+#wrapper #rightColumn fieldset { margin:5px; background:#e6f3f7; padding:10px 5px; }
+
+#wrapper #contactFormWrapper { width:336px; float:right; }
+
+#wrapper #contactHeader { background:#f0f0f0; padding:10px; margin:0 0 4px 0; }
+
+#wrapper #contactForm { background:#f0f0f0; padding:10px; margin:0 0 4px 0; }
+
+#loginForm { background:#f0f0f0; padding:10px; margin:0 0 4px 0; display:inline; float:left; width:300px; }
+
+#loginForm input.textInput { width:213px; }
+
+#loginForm h3 { margin-bottom:10px; }
+
+#loginForm input { margin-bottom:8px; }
+
+#contactHeader p { font-size:1.1em; line-height:1.2em; }
+
+#wrapper span.formLabel { text-align:right; width:70px;  display:block; float:left; padding:5px 3px 0 0; }
+
+#loginRightCol { width:300px; float:left;  padding:10px; }
+
+#wrapper fieldset.right { color:#000; text-align:right; }
+
+#wrapper fieldset.right label { margin-bottom:5px; line-height:1.5em; }
+
+#wrapper #enquiryForm fieldset textarea, #00N80000002lj2U fieldset textarea { width:350px; height:60px; margin-top:5px; }
+
+#wrapper #news form { border:none; }
+
+#wrapper #downloadForm fieldset { width:399px; }
+
+#wrapper #downloadForm .first label { float:left; }
+
+#wrapper #captchaImage { width:140px; float:right; text-align:right; }
+
+#wrapper label.captchaText { width:100px; }
+
+/*--------------------------------------------------------------END FORM STYLES-------------------------------------------------------------*/
+
+#wrapper ul.bios { font-size:1.2em; line-height:1.4em; margin-bottom:1em; }
+
+#wrapper ul.bios span, #wrapper span.narrow { letter-spacing:-0.5px; }
+
+/*--*/
+
+#wrapper #mainNav ul { border:1px solid #ffffff; background:#ffffff; }
+
+/*---------------------------------------------------------------BLOG STYLES----------------------------------------------------------------*/
+
+#wrapper #filler textarea { width:365px; }
+
+#wrapper #filler form { margin:0 0 10px 0; padding:0 0 10px 0; }
+
+#wrapper #mainColumn p.container { display:block;margin:0 0 4em 0; }
+
+#wrapper #mainColumn.home h2 a { font-size:130%; }
+
+.entry small.byline { display:block; margin:1em 0; font-style:italic; font-size:smaller; }
+
+#wrapper #sidebar { width:250px; float: left; }
+
+#wrapper #sidebar h3, #sidebar ul { margin:0 0 0.5em 0 !important; }
+
+#wrapper #sidebar h3 { line-height:13px; font-size:14px; }
+
+#wrapper #sidebar ul { padding:0 0 0.5em 0; border-bottom:1px solid #8a8a89; }
+
+/*border-top:1px solid #d4d4d3; border-bottom:1px solid #8a8a89; */
+
+#wrapper .entry { border-bottom:0px solid #d4d4d3; margin-bottom:12px; }
+
+#wrapper .entry ul li p, #wrapper .entry ol li p  { font-size: inherit !important; }
+
+#wrapper .entry ul li { list-style-type: disc; margin:0 0 1ex 0 !important; } 
+
+#rightColumn .postMeta, #rightColumn .postMeta p { text-align:right; }
+
+#wrapper span.date{ background:#ffffff; padding:0 0 0 3px; }
+
+#wrapper span.comments { background:#ffffff; padding:0 2px 0 0; }
+
+#wrapper #sidebar ul { font-size:1em; line-height:1.3em; }
+
+#wrapper #sidebar ul li { padding-bottom:6px; }
+
+#wrapper #sidebar ul ul { padding-top:10px; }
+
+#wrapper #sidebar h3 { padding-top:6px; }
+
+#wrapper #sidebar small { font-size:0.9em; }
+
+#wrapper #searchform { margin:0 0 10px 0; padding:0 0 10px 0; border-bottom:1px solid #8a8a89; }
+
+#wrapper pre { 
+    font-size:8px;
+    line-height:12px;
+    margin:10px 0px;
+    font-family:'Andale Mono',Monaco,'Bitstream Vera Sans Mono','Courier New',Courier,monospace;
+    margin-left:0px;
+    width:370px;
+    word-wrap:break-word;
+    white-space: -moz-pre-wrap; /* Mozilla */
+}
+
+#wrapper code { font-family:'Andale Mono',Monaco,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; }
+
+#wrapper .entry blockquote {
+    margin:0 20px 10px 10px;
+    padding:0 1em; /* put 1em of padding on the right and left */
+    border:1px solid #e1ebf5; /* all borders */
+    border-left:5px solid #ebf0f5; /* left-border a little different */
+    color:inherit;
+    background:#fefefe; /* subtly darker background */
+    line-height: 1.2em;
+}
+
+#wrapper .entry abbr, .entry acronym { cursor:help; border-bottom:1px dashed #999; }
+
+#wrapper sup {
+    font-size:75%;
+    vertical-align:text-top;
+}
+
+#wrapper .commentlist p { font-size:12px !important; text-align:left !important; }
+
+#wrapper .entry td, #wrapper .entry th {
+    font-size:9px;
+    padding:0.7ex;
+    line-height:12px;
+    border:1px solid #ccc;
+}
+
+#sidebar h3 a{
+color:#000000;
+text-decoration:none;
+
+}
+
+#sidebar h3 a:hover{
+color:#901212;
+text-decoration:underline;
+}
+
+/*--------------------------------------------------------------END BLOG STYLES-------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------HOMEPAGE  STYLES--------------------------------------------------------------*/
+
+#wrapper #home h3 { font-size:1.6em; color:#3f3f3f; margin-bottom:0.5em; }
+
+#wrapper #home p { line-height:1.2em; }
+
+#wrapper #homePageMain { width:413px; float:left; display:inline; }
+
+#wrapper #homePageSideBar { width:225px; float:right; display:inline; }
+
+#wrapper #homePageSideBar #specialProjects {  }
+
+#wrapper #homePageSideBar ul { border-bottom:1px solid #adadac; margin:0 0 10px 0; }
+
+#wrapper #homePageSideBar li { border-top:1px solid #adadac; padding:6px 0; }
+
+#wrapper #homePageSideBar li p { margin:0; text-align:left; }
+
+#wrapper #homePageSideBar li a { color:#7a7a79; }
+
+#wrapper #homePageSideBar li a strong { color:#000; }
+
+#wrapper #homePageSideBar li a:hover { text-decoration:underline; }
+
+#wrapper #homePageCallouts { width:943px; float:left; padding:20px 0 0 0; margin-left: 16px; background: url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x top; background-color: #fff; }
+
+#wrapper #homePageFeeds { width:913px; float:left; padding:20px 0 0 30px; margin: 16px 0 0 16px; background-color: #fff; }
+
+#wrapper #home #homePageCallouts { margin:0; padding:20px 0 0 0; background: url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x top; }
+
+#wrapper .fourColumn { width:25%; float:left; }
+
+#wrapper .fourColumn ul { background:none; }
+
+#wrapper #home #homePageCallouts h3 { font-size:1.4em; color:#7a7a79; font-weight:bold; text-transform:uppercase; display:block; }
+
+#wrapper #home #homePageCallouts p { font-size:1.2em; max-width:285px; }
+
+#wrapper .homeDots { padding:10px 0; background:url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x bottom; }
+
+#wrapper .homeDotsWrapper { background:url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x top; }
+
+#wrapper #home .homeDots p { font-size:1.2em; }
+
+#wrapper #homePageFeeds h4 { font-size:1.2em; font-weight:bold; padding:0 0 3px 0; margin:0 0 3px 0; background: url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x bottom; width:260px; }
+
+#wrapper #homePageFeeds h4 a { color:#585958; padding:8px 0 0 0; display:block; }
+
+#wrapper #homePageFeeds h4 a:hover { color:#000; }
+
+#wrapper #homePageFeeds #homeTweetLink { padding: 8px 0 0 0; }
+
+#wrapper #homePageFeeds #homeTestimonialRSS { padding: 0; width:25px; height:20px; background-position:0 -95px; text-indent:-9999px; overflow:hidden; float:left; }
+
+#homePageFeeds #homeRSSLink { padding: 8px 0 0 0; background:none; display:block; }
+
+#wrapper .threeColumn { width:33%; float:left; padding:12px 0 4px 0; }
+
+#wrapper #homePageFeeds p, #wrapper #homePageFeeds span { max-width:275px; }
+
+#wrapper .threeColumn img { margin:0 1em 3em 0; float:left; display:inline; }
+
+#wrapper img#iconRSS { position:relative; top:4px; }
+
+#wrapper #homeGetStarted { padding:0 0 13px 0; }
+
+#wrapper #homeGetStarted p, #homeGetStarted h3 { margin:0 !important; }
+
+#wrapper #locationMessage { text-align:right;font-size:2em;font-family:"Arial Black", Arial, Helvetica, sans-serif;color:#000; }
+
+/*-----------------------------------------------------------END HOMEPAGE  STYLES-----------------------------------------------------------*/
+
+#wrapper .phoneBox { padding:10px; background:#d2d2d2; margin-bottom:1em; }
+
+#wrapper #rightColumn .phoneBox p { margin:0 0 0.5em 0; }
+
+#wrapper #rightColumn .phoneBox h3 { font-family:"Arial Black", Arial, Helvetica, sans-serif; font-size:1.4em; color:#901212; }
+
+#wrapper #tagCloud { line-height:2.2em; }
+
+#wrapper .tag-link-8 { line-height:1.2em !important; }
+
+#wrapper #sidebar a h3:hover { color:#652727; }
+
+#wrapper #sidebar small { margin-top:-3px; }
+
+#wrapper #home #emergencyCallout { }
+
+#wrapper #home #emergencyCallout a { margin:0 0 0 0; background:url(/news/wp-content/themes/pythian/images/emergencyCallout.jpg) no-repeat top left; display:block; width:653px; height:42px; text-indent:-9999px; }
+
+#wrapper #emergencyCallout {  }
+
+#wrapper #rightColumn ol { list-style:decimal; margin-left:25px; }
+
+#wrapper #getStartedCallout { display:block; width:242px; height:74px; overflow:hidden; text-indent:-9999px; background:url(/news/wp-content/themes/pythian/images/getStarted.gif) no-repeat top left; margin:40px 0 40px 0; }
+
+#wrapper .customerHeader { width:100%; display:block; padding-bottom:5px; background:url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x bottom; }
+
+#wrapper label.left { float:left; }
+
+#wrapper a#PDF { text-indent:-9999px; display:block; background:url(/news/wp-content/themes/pythian/images/whitePaper.jpg) no-repeat top left; width:391px; height:83px; margin-bottom:20px; }
+
+#wrapper a#PDF:hover { background-position: 0px -83px; }
+
+#wrapper .homePageNews { width:50%; float:left; padding-top:5px; text-align:left; }
+
+#wrapper .homePageNews p { text-align:left !important; line-height:18px !important; }
+
+#wrapper .dots { background:url(/news/wp-content/themes/pythian/images/dots.gif) repeat-x bottom left; height:1px; clear:both; margin:20px 0 20px 0; }
+
+#wrapper .homePageNews h3 { font-size:14px !important; line-height:16px !important; }
+
+#wrapper .textLeft p { text-align:left !important; }
+
+#wrapper h2#locationMessage { font-size:1.4em; word-wrap:break-word; text-align:left; font-family:arial, trebuchet ms, sans-serif; margin:0 0 10px 0; padding:0; width:100%; }
+
+#wrapper h2.rightCol { padding-left:26px; }
