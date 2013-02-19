@@ -1,0 +1,1063 @@
+
+<!-- saved from url=(0040)http://www.agiledata.org/essays/tdd.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="keywords" content="Agile data, database administrator, dba, Sybase, Oracle, Agile Alliance, Agile Software Development, Agile Modeling, Agile Database Technique">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Introduction to Test Driven Development (TDD)</title>
+<link rel="stylesheet" type="text/css" href="./Introduction to Test Driven Development (TDD)_files/global.css">
+<link rel="shortcut icon" href="http://www.agiledata.org/images/adfavicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<table border="0" width="100%">
+  <tbody><tr>
+    <td width="6%"><a href="http://www.agiledata.org/">
+	<img border="0" src="./Introduction to Test Driven Development (TDD)_files/logoAgileData.gif" alt="Agile Data"></a></td>
+    <td width="100%">
+      <h1 align="center" class="maintitle">Introduction to Test Driven 
+		Development (TDD)</h1>      
+      <p align="center"><b><a href="http://www.agiledata.org/">
+		AgileData.org</a><font size="2">: Techniques for Disciplined Agile 
+		Database Development</font></b></p></td>
+    <td width="94%">
+      <a href="http://scottambler.com/" target="_blank">
+			<img src="./Introduction to Test Driven Development (TDD)_files/logoSWAA.gif" alt="Scott Ambler + Associates" border="0" align="left"></a></td>
+  </tr>
+
+    <!-- Menu Bar -->
+    <tr>
+    <td width="200%" colspan="3" style="border-style: solid; border-width: 1px">
+
+			<!-- SiteSearch Google -->
+			<form method="get" action="http://www.google.com/custom">
+			<input type="hidden" name="cof" value="L:http://www.agiledata.org/images/logoAgileData.gif;BGC:#ffffcc;AH:center;GL:0;S:http://www.agiledata.org;AWFID:9f873e648db9a709;">
+			<input type="hidden" name="domains" value="www.agiledata.org;www.agilemodeling.com;www.ambysoft.com;www.enterpriseunifiedprocess.com">
+			<input type="hidden" name="hl" value="en">
+			<input type="hidden" name="safe" value="active">
+			<input type="hidden" name="oe" value="ISO-8859-1">
+			<input type="hidden" name="ie" value="ISO-8859-1">
+			<input type="hidden" name="forid" value="1">
+			<input type="hidden" name="client" value="pub-1563172974921293">
+			<input type="hidden" name="sitesearch" value="www.agiledata.org">
+            <input type="text" name="q" size="31" maxlength="255" value="">
+			<input type="submit" name="sa" value="Search"><font size="2"> &nbsp; </font>
+			<!-- SiteSearch Google -->
+
+ 			<!-- Menu Items -->
+			&nbsp;<a href="http://www.agiledata.org/" class="nav">Home</a>&nbsp; 
+			|&nbsp; <a href="http://www.agiledata.org/essays/dbaSkills.html">Agile DBAs</a>&nbsp; 
+			|&nbsp; <a href="http://www.agiledata.org/essays/developerSkills.html">Developers</a>&nbsp; 
+			|&nbsp; <a href="http://www.agiledata.org/essays/enterpriseArchitecture.html">Enterprise Architects</a>&nbsp; 
+			|&nbsp; <a href="http://www.agiledata.org/essays/enterpriseAdministration.html">Enterprise Administrators</a>&nbsp; 
+			|&nbsp; <a href="http://www.agiledata.org/essays/bestPractices.html">Best Practices</a>&nbsp; 
+			|&nbsp; <a target="_blank" href="http://www.ibm.com/developerworks/blogs/page/ambler">Agility@Scale Blog</a>&nbsp; 
+			|&nbsp;
+			<a href="http://www.ambysoft.com/mailingList.html">Announcements</a>&nbsp; 
+			|&nbsp;
+			<a href="http://scottambler.com/">Contact U</a></form>
+    </td>
+    </tr>
+    <!-- Menu Bar -->
+
+     </tbody></table>
+	
+    
+
+
+
+
+<!-- Intro and Google Ad Table -->
+<table border="0" width="100%">
+	<tbody><tr>
+		<td>
+				
+		<a href="http://www.ambysoft.com/books/reviews/current.html" target="_blank">
+<img src="./Introduction to Test Driven Development (TDD)_files/current.jpg" alt="Recently reviewed" border="0"></a></td>
+		<td>
+				
+		<font size="2">Test-driven development (TDD) (</font><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc">Beck
+2003</a><font size="2">; </font> 
+		<a href="http://www.amazon.com/exec/obidos/ASIN/0131016490/ambysoftinc">Astels
+2003</a><font size="2">), is an
+evolutionary approach to development which combines test-first development where 
+you write a test before you write just enough production code to fulfill that 
+test and </font> <a href="http://www.agiledata.org/essays/databaseRefactoring.html">
+refactoring</a><font size="2">.<span style="mso-spacerun: yes">&nbsp;
+&nbsp;</span>What is the primary goal of TDD?<span style="mso-spacerun: yes">&nbsp;
+</span>One view is the goal of TDD is specification and not validation (</font><a href="http://www.amazon.com/exec/obidos/ASIN/0135974445/ambysoftinc">Martin,
+Newkirk, and Kess 2003</a><font size="2">).<span style="mso-spacerun:
+yes">&nbsp; </span>In other words, it’s one way to think through your 
+		requirements or design
+before your write your functional code (implying that TDD is both an important
+		<a target="_blank" href="http://www.agilemodeling.com/essays/agileRequirements.htm">
+		agile requirements</a> and
+		<a target="_blank" href="http://www.agilemodeling.com/essays/agileDesign.htm">
+		agile design</a> technique).<span style="mso-spacerun: yes">&nbsp; </span>Another
+view is that TDD is a programming technique.<span style="mso-spacerun: yes">&nbsp;
+</span>As Ron Jeffries likes to say, the goal of TDD is to write clean code that
+works.<span style="mso-spacerun: yes">&nbsp; </span>I think that there is merit
+in both arguments, although I lean towards the specification view, but I leave it for you to decide.</font><o:p><font size="2">
+		</font>
+</o:p>
+				
+		</td>
+		<td width="4"><font size="2">&nbsp;
+		
+		<!-- Google Ad -->
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-1563172974921293";
+		google_alternate_ad_url = "http://www.agilemodeling.com/amRedirector.html";
+		google_ad_width = 120;
+		google_ad_height = 90;
+		google_ad_format = "120x90_0ads_al_s";
+		google_ad_channel ="7984240882";
+		google_color_border = "6699CC";
+		google_color_bg = "003366";
+		google_color_link = "FFFFFF";
+		google_color_url = "AECCEB";
+		google_color_text = "AECCEB";
+		//--></script>
+		<script type="text/javascript" src="./Introduction to Test Driven Development (TDD)_files/show_ads.js">
+		</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:120px"><iframe width="120" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+		<!-- End Google Ad -->
+		
+        </font>
+		
+        <p align="left">&nbsp;</p>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+<h3>Table of Contents</h3>
+<ol>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#WhatIsTDD">What is TDD?</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#TraditionalTesting">TDD and traditional testing</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#Documentation">TDD and documentation</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#TestDrivenDatabaseDevelopment">Test-driven database development</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#TDDAMDD">Scaling TDD via Agile Model-Driven Development (AMDD)</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#PartingThoughts">Why TDD?</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#Misconceptions">Myths and misconceptions</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#ActuallyDoing">Who is actually doing this?</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#Summary">Summary</a></li>
+	<li><a href="http://www.agiledata.org/essays/tdd.html#Tools">Tools</a></li>
+</ol>
+<p>&nbsp;</p>
+<h3>1. <a name="WhatIsTDD">What is TDD</a>?</h3>
+<table border="0" width="100%" id="table22">
+	<tbody><tr>
+		<td><font size="2">The
+steps of test first development (TFD) are overviewed in the 
+		<a target="_blank" href="http://www.agilemodeling.com/artifacts/activityDiagram.htm">UML activity diagram</a> of
+		</font> <a href="http://www.agiledata.org/essays/tdd.html#Figure1StepsOfTDD">Figure 1</a><font size="2">.&nbsp;
+The
+first step is to quickly add a test, basically just enough code to fail.&nbsp;
+Next you run your tests, often the complete test suite although for sake of
+speed you may decide to run only a subset, to ensure that the new test does in
+fact fail.&nbsp; You then update your functional code to make it pass the new
+tests.&nbsp; The fourth step is to run your tests again.&nbsp; If they fail you
+need to update your functional code and retest.&nbsp; Once the tests pass the
+next step is to start over (you may first need to refactor any duplication out of
+your design as needed, turning TFD into TDD).</font></td>
+		<td width="126">
+				
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0131016490/ambysoftinc">
+<img src="./Introduction to Test Driven Development (TDD)_files/0131016490.01.MZZZZZZZ.jpg" alt="TDD: A Practical Guide" border="0" align="right"></a></b></td>
+	</tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p>
+<span style="mso-bidi-font-size: 10.0pt; font-family: Times; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-bidi-language: AR-SA"><b><a name="Figure1StepsOfTDD">
+<font size="2">Figure
+1. The Steps of test-first development (TFD)</font></a><font size="2">.</font></b></span></p>
+<p align="center">
+<img border="0" src="./Introduction to Test Driven Development (TDD)_files/tddSteps.jpg"></p>
+<p>&nbsp;</p>
+<p>I like to describe TDD with this simple formula:</p>
+<p align="left"><b>&nbsp;&nbsp; TDD = Refactoring + TFD.</b></p>
+<p class="BT">TDD completely turns traditional development around.<span style="mso-spacerun: yes"> 
+When you first go to implement a new feature, the first question that you ask is 
+whether the existing design is the best design possible that enables you to 
+implement that functionality.&nbsp; If so, you proceed via a TFD approach.&nbsp; 
+If not, you refactor it locally to change the portion of the design affected by 
+the new feature, enabling you to add that feature as easy as possible.&nbsp; As 
+a result you will always be improving the quality of your design, thereby making 
+it easier to work with in the future.</span></p>
+<p class="BT">Instead of writing functional code first and then your testing code as an
+afterthought, if you write it at all, you instead write your test code before
+your functional code.<span style="mso-spacerun:
+yes">&nbsp; </span>Furthermore, you do so in very small steps – one test and a
+small bit of corresponding functional code at a time.<span style="mso-spacerun:
+yes">&nbsp; </span>A programmer taking a TDD approach refuses to write a new
+function until there is first a test that fails because that function isn’t
+present.<span style="mso-spacerun: yes">&nbsp; </span>In fact, they refuse to
+add even a single line of code until a test exists for it.<span style="mso-spacerun: yes">&nbsp;
+</span>Once the test is in place they then do the work required to ensure that
+the test suite now passes (your new code may break several existing tests as
+well as the new one).<span style="mso-spacerun:
+yes">&nbsp; </span>This sounds simple in principle, but when you are first
+learning to take a TDD approach it proves require great discipline because it is
+easy to “slip” and write functional code without first writing a new test.<span style="mso-spacerun: yes">&nbsp;
+</span>One of the advantages of 
+<a href="http://www.amazon.com/exec/obidos/ASIN/0201745763/ambysoftinc">pair programming</a> 
+is
+that your pair helps you to stay on track.<o:p>
+</o:p>
+</p>
+<table border="0" width="100%" id="table25">
+	<tbody><tr>
+		<td>
+		<p class="BT"><font size="2">There are two levels of TDD:</font></p>
+		<ol>
+			<li>
+			<p class="BT"><b><font size="2">Acceptance TDD (ATDD)</font></b><font size="2">.&nbsp; 
+			With ATDD you write a single
+			<a target="_blank" href="http://www.agilemodeling.com/artifacts/acceptanceTests.htm">
+			acceptance test</a>, or behavioral specification depending on your 
+			preferred terminology, and then just enough production 
+			functionality/code to fulfill that test.&nbsp; The goal of ATDD is 
+			to specify detailed, executable requirements for your solution on a 
+			just in time (JIT) basis. ATDD is also called Behavior Driven 
+			Development (BDD).</font></p></li>
+			<li>
+			<p class="BT"><b><font size="2">Developer TDD</font></b><font size="2">. 
+			With developer TDD you write a single developer test, sometimes 
+			inaccurately referred to as a unit test, and then just enough 
+			production code to fulfill that test.&nbsp; The goal of developer 
+			TDD is to specify a detailed, executable design for your solution on 
+			a JIT basis.&nbsp; Developer TDD is often simply called TDD.</font></p>
+			</li>
+		</ol>
+		<p class="BT"><font size="2"><a href="http://www.agiledata.org/essays/tdd.html#Figure2">Figure 2</a> depicts a 
+		UML activity diagram showing how ATDD and developer TDD fit together.&nbsp; 
+		Ideally, you'll write a single acceptance test, then to implement the 
+		production code required to fulfill that test you'll take a developer 
+		TDD approach. This in turn requires you to iterate several times through 
+		the write a test, write production code, get it working cycle at the 
+		developer TDD level.</font></p>
+		</td>
+		<td width="134">
+				
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530//ambysoftinc">
+<img src="./Introduction to Test Driven Development (TDD)_files/01.MZZZZZZZ.jpg" alt="TDD" border="0" align="right"></a><a href="http://www.amazon.com/exec/obidos/ASIN/1617290084/ambysoftinc" target="_blank"><img src="./Introduction to Test Driven Development (TDD)_files/1617290084.01.MZZZZZZZ.jpg" alt="Specification by Example" border="0" align="right"></a></b></td>
+	</tr>
+</tbody></table>
+<p class="BT"><b><a name="Figure2">Figure 2.</a> How acceptance TDD and 
+developer TDD work together.</b></p>
+<p class="BT" align="center">&nbsp;<img border="0" src="./Introduction to Test Driven Development (TDD)_files/atdd.jpg" alt="ATDD and TDD"></p>
+<p class="BT"><font size="2">Note that <a href="http://www.agiledata.org/essays/tdd.html#Figure2">Figure 2</a> assumes 
+that you're doing both, although it is possible to do either one without the 
+other.&nbsp; In fact, some teams will do developer TDD without doing ATDD, see
+<a href="http://www.agiledata.org/essays/tdd.html#ActuallyDoing">survey results below</a>, although if you're doing ATDD 
+then it's pretty much certain you're also doing developer TDD.&nbsp; The 
+challenge is that both forms of TDD require practitioners to have technical 
+testing skills, skills that many requirement professionals often don't have (yet 
+another reason why
+<a target="_blank" href="http://www.agilemodeling.com/essays/generalizingSpecialists.htm">
+generalizing specialists</a> are preferable to specialists).</font></p>
+<p class="BT">An underlying assumption of TDD is that you have a testing
+framework available to you.<span style="mso-spacerun: yes">&nbsp; For acceptance 
+TDD people will use tools such as <a target="_blank" href="http://fitnesse.org/">
+Fitnesse</a> or <a target="_blank" href="https://www.relishapp.com/rspec">RSpec</a> 
+and for developer TDD a</span>gile
+software developers often use the xUnit family of open source tools, such as <a href="http://www.junit.org/">JUnit</a>
+or <a href="http://www.vbunit.org/">VBUnit</a>, although commercial tools are
+also viable options.<span style="mso-spacerun: yes">&nbsp; </span>Without such
+tools TDD is virtually impossible.<span style="mso-spacerun: yes">&nbsp; </span>
+<a href="http://www.agiledata.org/essays/tdd.html#Figure3XUnitTesting">Figure
+3</a> presents a UML state chart diagram for how people typically work with such tools.&nbsp; This diagram was suggested to me by 
+<a href="http://homepage.mac.com/keithray/blog/index.html">Keith Ray.<o:p>
+</o:p>
+</a>
+</p>
+<p class="BT">&nbsp;</p>
+<p class="BT"><b><a name="Figure3XUnitTesting">Figure 3. Testing via the xUnit
+Framework.</a></b></p>
+<p class="BT" align="center">
+<img border="0" src="./Introduction to Test Driven Development (TDD)_files/tddStates.jpg"></p>
+<p class="BT"></p>
+<table border="0" width="100%" id="table23">
+	<tbody><tr>
+		<td>
+		<p class="MsoNormal"><font size="2">Kent Beck, who popularized TDD in eXtreme Programming (XP)
+(</font><a href="http://www.amazon.com/exec/obidos/ASIN/0201616416/ambysoftinc">Beck
+2000</a><font size="2">), defines two simple rules for TDD (</font><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc">Beck
+2003</a><font size="2">).<span style="mso-spacerun: yes">&nbsp;
+</span>First, you should write new business code only when an automated test has
+failed.<span style="mso-spacerun: yes">&nbsp; </span>Second, you should
+eliminate any duplication that you find.<span style="mso-spacerun: yes">&nbsp; </span>Beck
+explains how these two simple rules generate complex individual and group
+behavior:</font></p>
+<ul>
+  <li>
+    <p class="MsoNormal"><font size="2">You develop organically, with the running code providing
+    feedback between decisions.</font></p></li>
+  <li>
+    <p class="MsoNormal"><font size="2">You write your own tests because you can't wait 20
+    times per day for someone else to write them for you.</font><span style="mso-spacerun: yes"><font size="2">&nbsp;</font></span></p></li>
+  <li>
+    <p class="MsoNormal"><font size="2">Your development environment must provide rapid
+    response to small changes (e.g you need a fast compiler and regression test
+    suite).</font></p></li>
+  <li>
+    <p class="MsoNormal"><font size="2">Your designs must consist of highly cohesive, loosely
+    coupled components (e.g. your design is highly normalized) to make testing
+    easier (this also makes evolution and maintenance of your system easier
+    too).</font></p></li>
+</ul>
+		</td>
+		<td width="134">
+				
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530//ambysoftinc">
+<img src="./Introduction to Test Driven Development (TDD)_files/01.MZZZZZZZ.jpg" alt="TDD" border="0" align="right"></a><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc" target="_blank"><img src="./Introduction to Test Driven Development (TDD)_files/0321146530.01.MZZZZZZZ.jpg" alt="TDD" border="0" align="right"></a></b></td>
+	</tr>
+</tbody></table>
+<p class="MsoNormal">For developers, the implication is that they need to learn
+how to write effective unit tests.<span style="mso-spacerun: yes">&nbsp; </span>Beck’s
+experience is that good unit tests:</p>
+<ul>
+  <li>
+    <p class="MsoNormal">Run fast (they have short setups, run times, and break
+    downs).</p></li>
+  <li>
+    <p class="MsoNormal">Run in isolation (you should be able to reorder them).</p></li>
+  <li>
+    <p class="MsoNormal">Use data that makes them easy to read and to
+    understand.</p></li>
+  <li>
+    <p class="MsoNormal">Use real data (e.g. copies of production data) when
+    they need to.</p></li>
+  <li>
+    <p class="MsoNormal">Represent one step towards your overall goal.</p></li>
+</ul>
+<p class="MsoNormal">&nbsp;</p>
+<h3>2. <a name="TraditionalTesting">TDD and Traditional Testing</a></h3>
+<table border="0" width="100%" id="table24">
+	<tbody><tr>
+		<td>
+		<p class="MsoNormal"><font size="2">TDD is primarily a specification technique with a side effect
+of ensuring that your source code is thoroughly tested at a confirmatory level.<span style="mso-spacerun:
+yes">&nbsp; </span>However, there is more to testing than this.<span style="mso-spacerun: yes">&nbsp;
+		Particularly at scale y</span>ou'll still need to consider other  
+<a target="_blank" href="http://www.ambysoft.com/essays/agileTesting.html">agile 
+testing</a> techniques such as
+</font>
+		<a target="_blank" href="http://www.ambysoft.com/essays/agileTesting.html#AgileTestingStrategies">
+		pre-production integration testing and investigative testing</a><font size="2">.<span style="mso-spacerun: yes">&nbsp; </span>Much of this testing can also
+be done early in your project if you choose to do so (and you should).<span style="mso-spacerun: yes">&nbsp;
+</span></font>
+</p>
+<p class="MsoNormal"><font size="2">With traditional testing a successful test finds one or
+more defects.<span style="mso-spacerun: yes">&nbsp; </span>It is the same with
+TDD; when a test fails you have made progress because you now know that you need
+to resolve the problem.<span style="mso-spacerun: yes">&nbsp; </span>More
+importantly, you have a clear measure of success when the test no longer fails.
+TDD increases your confidence that your system actually meets the requirements
+defined for it, that your system actually works and therefore you can proceed
+with confidence.</font><span style="mso-spacerun: yes"><font size="2">&nbsp;</font></span></p>
+		</td>
+		<td width="122">
+				
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0321714083/ambysoftinc" target="_blank">
+		<img src="./Introduction to Test Driven Development (TDD)_files/0321714083.01.MZZZZZZZ.jpg" alt="Lean-Agile ATDD" border="0" align="right"></a></b></td>
+	</tr>
+</tbody></table>
+<p>As
+with traditional testing, the greater the risk profile of the system the more
+thorough your tests need to be. With both traditional testing and TDD you aren't
+striving for perfection, instead you are testing to the importance of the
+system.&nbsp; To paraphrase <a href="http://www.agilemodeling.com/">Agile
+Modeling (AM)</a>, you should "test with a purpose" and know why you
+are testing something and to what level it needs to be tested.&nbsp;
+An interesting side effect of TDD is that you achieve 100% coverage test
+– every single line of code is tested – something that traditional testing
+doesn’t guarantee (although it does recommend it). &nbsp;In
+general I think it’s fairly safe to say that although TDD is a specification 
+technique, a valuable side effect is that it results in significantly
+better code testing than do traditional techniques. &nbsp;&nbsp;</p>
+<table border="0" width="60%" id="table2">
+	<tbody><tr>
+		<td width="141">&nbsp;</td>
+		<td>
+		<table border="1" width="100%" bgcolor="#FFFFCC" id="table3">
+			<tbody><tr>
+				<td>
+				<p align="center"><font size="2">If it's worth building, it's 
+				worth testing.</font></p>
+				<p align="center"><font size="2">If it's not worth testing, why 
+				are you wasting your time working on it?</font></p></td>
+			</tr>
+		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<p class="H1">&nbsp;</p>
+<h3>3. TDD and <a name="Documentation">Documentation</a></h3>
+<p>Like it or not most programmers don’t read the written
+documentation for a system, instead they prefer to work with the code.&nbsp;
+And there’s nothing wrong with this.&nbsp;
+When trying to understand a class or operation most programmers will
+first look for sample code that already invokes it.&nbsp;
+Well-written unit tests do exactly this – the provide a working
+specification of your functional code – and as a result unit tests effectively
+become a significant portion of your technical documentation. The implication is
+that the expectations of the pro-documentation crowd need to reflect this
+reality.&nbsp; 
+Similarly, acceptance tests can
+form an important part of your requirements documentation.&nbsp;
+This makes a lot of sense when you stop and think about it.&nbsp;
+Your acceptance tests define exactly what your stakeholders expect of
+your system, therefore they specify your critical requirements.&nbsp;
+Your regression test suite, particularly with a test-first approach, effectively 
+becomes detailed
+<a href="http://www.agilemodeling.com/essays/executableSpecifications.htm">
+executable specifications</a>.</p>
+<p>Are tests sufficient documentation?&nbsp; Very likely not, but they do form an important part of it.&nbsp;
+For example, you are likely to find that you still need user, system
+overview, operations, and support documentation.&nbsp;
+You may even find that you require summary documentation overviewing the
+business process that your system supports.&nbsp;
+When you approach documentation with an open mind, I suspect that you
+will find that these two types of tests cover the majority of your documentation
+needs for developers and business stakeholders.&nbsp; Furthermore, they are a 
+wonderful example of AM's
+<a target="_blank" href="http://www.agilemodeling.com/essays/singleSourceInformation.htm">Single 
+Source Information practice</a> and an important part of your overall efforts to 
+remain as 
+<a target="_blank" href="http://www.agilemodeling.com/essays/agileDocumentation.htm">agile as possible regarding documentation</a>.</p>
+<p>&nbsp;</p>
+<h3>4. <a name="TestDrivenDatabaseDevelopment">Test-Driven Database Development</a></h3>
+<p>At
+the time of this writing an important question being asked within the agile
+community is “can TDD work for data-oriented development?”&nbsp; When you look at the process depicted in <a href="http://www.agiledata.org/essays/tdd.html#Figure1StepsOfTDD">Figure
+1</a> it is important to note that none of the steps specify object programming
+languages, such as Java or C#, even though those are the environments TDD is
+typically used in.&nbsp; Why couldn't you
+write a test before making a change to your database schema?&nbsp;
+Why couldn't you make the change, run the tests, and refactor your schema
+as required?&nbsp; It seems to me that
+you only need to choose to work this way.</p>
+<p>My
+guess is that in the near term database TDD, or perhaps Test Driven Database 
+Design (TDDD), won't work as smoothly as
+application TDD.&nbsp; The first
+challenge is tool support.&nbsp; Although
+unit-testing tools, such as <a target="_blank" href="http://www.dbunit.org/">DBUnit</a>, are
+now available they are still an emerging technology at the time of this writing.
+Some
+DBAs are improving the quality of the testing they doing, but I haven’t yet
+seen anyone take a TDD approach to database development.&nbsp; One challenge is that &nbsp;unit testing tools are still not well accepted within the data
+community, although that is changing, so my expectation is that over the next
+few years database TDD will grow.&nbsp; Second,
+the concept of 
+<a target="_blank" href="http://www.agiledata.org/essays/evolutionaryDevelopment.html">evolutionary development</a> is new to many data professionals and as
+a result the motivation to take a TDD approach has yet to take hold.&nbsp;
+This issue affects the nature of the tools available to data
+professionals – because a 
+<a target="_blank" href="http://www.agiledata.org/essays/culturalImpedanceMismatch.html">serial mindset</a> still dominates within the
+traditional data community most tools do not support evolutionary development.&nbsp;
+My hope is that tool vendors will catch on to this shift in paradigm, but
+my expectation is that we'll need to develop open source tools instead.&nbsp;
+Third, my experience is that most people who do data-oriented work seem
+to prefer a model-driven, and not a test-driven approach.&nbsp;
+One cause of this is likely because a test-driven approach hasn't been
+widely considered until now, another reason might be that many data
+professionals are likely visual thinkers and therefore prefer a modeling-driven
+approach.</p>
+<p>&nbsp;</p>
+<h3>5. Scaling <a name="TDDAMDD">TDD via Agile Model-Driven Development (AMDD</a>)</h3>
+<p class="MsoNormal">TDD is very good at detailed specification and validation, 
+but not so good at thinking through bigger issues such as the overall design, 
+how people will use the system, or the UI design (for example).&nbsp; Modeling,
+or more to the point <a target="_blank" href="http://www.agilemodeling.com/">agile model-driven
+development (AMDD)</a> (the lifecycle for which is captured in
+<a href="http://www.agiledata.org/essays/tdd.html#Figure4">Figure 4</a>)<span style="mso-spacerun: yes"> is better 
+suited for this.&nbsp; AMDD addresses the 
+<a target="_blank" href="https://www.ibm.com/developerworks/mydeveloperworks/blogs/ambler/">
+agile scaling</a> issues that TDD does not.&nbsp; </span>
+</p>
+<p class="BT"><b><a name="Figure4">Figure 4</a>. The Agile Model Driven 
+Development (AMDD) lifecycle.</b></p>
+<p class="BT" align="center">
+<a href="http://www.agilemodeling.com/essays/amdd.htm">
+<img border="0" src="./Introduction to Test Driven Development (TDD)_files/AMDD.gif" alt="AMDD Lifecycle"></a></p>
+<p class="MsoNormal"><span style="mso-spacerun: yes">Comparing TDD and AMDD</span>:<o:p>
+</o:p>
+</p>
+<ul>
+  <li>
+    <p class="MsoNormal">TDD shortens the programming feedback loop whereas AMDD
+    shortens the modeling feedback loop.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD provides detailed specification (tests) whereas
+    AMDD is better for thinking through bigger issues.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD promotes the development of high-quality code
+    whereas AMDD promotes high-quality communication with your stakeholders and
+    other developers.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD provides concrete evidence that your software works
+    whereas AMDD supports your team, including stakeholders, in working toward a
+    common understanding.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD “speaks” to programmers whereas AMDD speaks to
+    business analysts, stakeholders, and data professionals.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD is provides very finely grained concrete feedback
+    on the order of minutes whereas AMDD enables verbal feedback on the order
+    minutes (concrete feedback requires developers to follow the practice Prove
+    It With Code and thus becomes dependent on non-AM techniques).<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD helps to ensure that your design is clean by
+    focusing on creation of operations that are callable and testable whereas
+    AMDD provides an opportunity to think through larger design/architectural
+    issues before you code.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">TDD is non-visually oriented whereas AMDD is visually
+    oriented.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">Both techniques are new to traditional developers and
+    therefore may be threatening to them.<o:p>
+    </o:p>
+  </p></li>
+  <li>
+    <p class="MsoNormal">Both techniques support evolutionary development.<o:p>
+    </o:p>
+  </p></li>
+</ul>
+<p class="BT">Which approach should you take?<span style="mso-spacerun: yes">&nbsp;
+</span>The answer depends on your, and your teammates, cognitive preferences.<span style="mso-spacerun: yes">&nbsp;
+</span>Some people are primarily "visual thinkers", also called
+spatial thinkers, and they may prefer to think things through via drawing.<span style="mso-spacerun: yes">&nbsp;
+</span>Other people are primarily text oriented, non-visual or non-spatial
+thinkers, who don't work well with drawings and therefore they may prefer a TDD
+approach.<span style="mso-spacerun: yes">&nbsp; </span>Of course most people
+land somewhere in the middle of these two extremes and as a result they prefer
+to use each technique when it makes the most sense.<span style="mso-spacerun:
+yes">&nbsp; </span><span style="mso-spacerun: yes">&nbsp;&nbsp;</span>In short,
+the answer is to use the two techniques together so as to gain the advantages of
+both.<o:p>
+</o:p>
+</p>
+How do you combine the two
+approaches? &nbsp;AMDD should be used to
+create models with your project stakeholders to help explore their requirements
+and then to explore those requirements sufficiently in architectural and design
+models (often simple sketches).&nbsp; TDD
+should be used as a critical part of your build efforts to ensure that you
+develop clean, working code.&nbsp; The
+end result is that you will have a high-quality, working system that meets the
+actual needs of your project stakeholders.
+<p>&nbsp;</p>
+<h3>6. <a name="PartingThoughts">Why TDD?</a></h3>
+<p class="BT">A significant advantage of TDD is that it enables you to take
+small steps when writing software.<span style="mso-spacerun: yes">&nbsp; </span>This
+is a practice that I have promoted for years because it is far more productive
+than attempting to code in large steps.<span style="mso-spacerun: yes">&nbsp; </span>For
+example, assume you add some new functional code, compile, and test it.<span style="mso-spacerun: yes">&nbsp;
+</span>Chances are pretty good that your tests will be broken by defects that
+exist in the new code.<span style="mso-spacerun: yes">&nbsp; </span>It is much
+easier to find, and then fix, those defects if you've written two new lines of
+code than two thousand. The implication is that the faster your compiler and
+regression test suite, the more attractive it is to proceed in smaller and
+smaller steps.<span style="mso-spacerun: yes">&nbsp; </span>I generally prefer
+to add a few new lines of functional code, typically less than ten, before I
+recompile and rerun my tests.</p>
+<p class="BT">I think 
+<a href="http://www.amazon.com/exec/obidos/ASIN/0135974445/ambysoftinc">Bob Martin</a> says it well “The act of writing a unit test
+is more an act of design than of verification.<span style="mso-spacerun: yes">&nbsp;
+</span>It is also more an act of documentation than of verification.<span style="mso-spacerun: yes">&nbsp;
+</span>The act of writing a unit test closes a remarkable number of feedback 
+loops, the least of which is the one pertaining to verification of function”.</p>
+<p class="BT">The first reaction that many people have to agile techniques is
+that they're ok for small projects, perhaps involving a handful of people for
+several months, but that they wouldn't work for "real" projects that
+are much larger.<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>That’s
+simply not true.<span style="mso-spacerun: yes">&nbsp; </span><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc">Beck (2003)</a>
+reports working on a Smalltalk system taking a completely test-driven approach
+which took 4 years and 40 person years of effort, resulting in 250,000 lines of
+functional code and 250,000 lines of test code.<span style="mso-spacerun: yes">&nbsp;
+</span>There are 4000 tests running in under 20 minutes, with the full suite
+being run several times a day.<span style="mso-spacerun: yes">&nbsp; </span>Although
+there are larger systems out there, I've personally worked on systems where
+several hundred person years of effort were involved, it is clear that TDD works
+for good-sized systems.<span style="mso-spacerun: yes">&nbsp;</span></p>
+<p class="BT">&nbsp;</p>
+<h3>7. Myths and <a name="Misconceptions">Misconceptions</a></h3>
+<p class="BT">There are several common myths and misconceptions which people 
+have regarding TDD which I would like to clear up if possible. <a href="http://www.agiledata.org/essays/tdd.html#Table1">Table 1</a> lists these myths and describes the reality.</p>
+<p class="BT"><b><a name="Table1">Table 1</a>. Addressing the myths and 
+misconceptions surrounding TDD.</b></p>
+<table border="1" width="100%" id="table4">
+	<tbody><tr>
+		<td><b><font size="2">Myth</font></b></td>
+		<td><b><font size="2">Reality</font></b></td>
+	</tr>
+	<tr>
+		<td><font size="2">You create a 100% regression test suite</font></td>
+		<td><font size="2">Although this sounds like a good goal, and it is, it 
+		unfortunately isn't realistic for several reasons:</font><ul>
+			<li><font size="2">I may have some reusable 
+			components/frameworks/... which I've downloaded or purchased which 
+			do not come with a test suite, nor perhaps even with source code.&nbsp; 
+			Although I can, and often do, create black-box tests which validate 
+			the interface of the component these tests won't completely validate 
+			the component.&nbsp; </font></li>
+			<li><font size="2">The user interface is really hard to test.&nbsp; 
+			Although user interface testing tools do in fact exist, not everyone 
+			owns them and sometimes they are difficult to use.&nbsp; A common 
+			strategy is to not automate user interface testing but instead to 
+			hope that
+			<a href="http://www.agilemodeling.com/essays/agileUsability.htm#UserTesting">
+			user testing</a> efforts cover this important aspect of your system.&nbsp; 
+			Not an ideal approach, but still a common one.&nbsp;&nbsp; </font>
+			</li>
+			<li><font size="2">Some developers on the team may not have adequate 
+			testing skills.&nbsp; </font></li>
+			<li><font size="2">
+			<a href="http://www.agiledata.org/essays/databaseTesting.html">
+			Database regression testing</a> is a fairly new concept and not yet 
+			well supported by tools.&nbsp; </font></li>
+			<li><font size="2">I may be working on a
+			<a href="http://www.amazon.com/exec/obidos/ASIN/0131177052/ambysoftinc/">
+			legacy system</a> and may not yet have gotten around to writing the 
+			tests for some of the legacy functionality.</font></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td><font size="2">The unit tests form 100% of your design specification</font></td>
+		<td><font size="2">People new to agile software development, or
+		<a href="http://www.ddj.com/184415255">people claiming to be agile</a> 
+		but who really aren't, or perhaps people who have never been involved 
+		with an actual agile project, will sometimes say this.&nbsp; The reality 
+		is that the unit test form a fair bit of the
+		<a href="http://www.agilemodeling.com/essays/agileDesign.htm">design</a> 
+		specification, similarly
+		<a href="http://www.agilemodeling.com/artifacts/acceptanceTests.htm">
+		acceptance tests</a> form a fair bit of your
+		<a href="http://www.agilemodeling.com/essays/agileRequirements.htm">
+		requirements</a> specification, but there's more to it than this.&nbsp; 
+		As <a href="http://www.agiledata.org/essays/tdd.html#Figure4">Figure 4 </a>indicates, agilists do in fact
+		<a href="http://www.agilemodeling.com/">model</a> (and
+		<a href="http://www.agilemodeling.com/essays/agileDocumentation.htm">
+		document</a> for that matter), it's just that we're very smart about how 
+		we do it.&nbsp; Because you think about the production code before you 
+		write it, you effectively perform detailed design as&nbsp; I highly 
+		suggest reading my
+		<a href="http://www.agilemodeling.com/essays/singleSourceInformation.htm">
+		Single Source Information: An Agile Practice for Effective Documentation</a> 
+		article.</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">You only need to unit test</font></td>
+		<td><font size="2">For all but the simplest systems this is completely 
+		false.&nbsp; The agile community is very clear about the need for
+		a host of
+		<a href="http://www.ambysoft.com/essays/floot.html">other testing 
+		techniques</a>.&nbsp; </font></td>
+	</tr>
+	<tr>
+		<td><font size="2">TDD is sufficient for testing</font></td>
+		<td><font size="2">TDD, at the unit/developer test as well as at the 
+		customer test level, is only part of your overall testing efforts.&nbsp; 
+		At best it comprises your confirmatory testing efforts, but as
+		<a href="http://www.agiledata.org/essays/tdd.html#Figure5">Figure 5</a> shows you must also be concerned about 
+		<a target="_blank" href="http://www.ambysoft.com/essays/agileTesting.html#IndependentParallelTesting">
+		independent testing</a> efforts which go beyond this.&nbsp; See 
+		<a target="_blank" href="http://www.ambysoft.com/essays/agileTesting.html">
+		Agile Testing and Quality Strategies: Reality over Rhetoric</a> for details 
+		about agile testing strategies.</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">TDD doesn't scale</font></td>
+		<td><font size="2">This is partly true, although easy to overcome.&nbsp; 
+		TDD scalability issues include:</font><ol>
+			<li><font size="2"><b>Your test suite takes too long to run</b>.&nbsp; 
+			This is a common problem with a equally common solutions.&nbsp; 
+			First, separate your test suite into two or more components.&nbsp; One test 
+			suite contains the tests for the new functionality that you're 
+			currently working on, the other test suite contains all tests.&nbsp; 
+			You run the first test suite regularly, migrating older tests for 
+			mature portions of your production code to the overall test suite as 
+			appropriate.&nbsp; The overall test suite is run in the background, 
+			often on a separate machine(s), and/or at night.&nbsp; At scale, 
+			I've seen several levels of test suite -- development sandbox tests 
+			which run in 5 minutes or less, project integration tests which run 
+			in a few hours or less, a test suite that runs in many hours or even 
+			several days that is run less often.&nbsp; On one project I have 
+			seen a test suite that runs for several months (the focus is on 
+			load/stress testing and availability).&nbsp; Second, throw 
+			some hardware at the problem.&nbsp; </font></li>
+			<li><font size="2"><b>Not all developers know how to test</b>.&nbsp; 
+			That's often true, so get them some appropriate training and get 
+			them pairing with people with unit testing skills.&nbsp; Anybody who 
+			complains about this issue more often than not seems to be looking 
+			for an excuse not to adopt TDD.</font></li>
+			<li><font size="2"><b>Everyone might not be taking a TDD approach</b>.&nbsp; 
+			Taking a TDD approach to development is something that everyone on 
+			the team needs to agree to do.&nbsp; If some people aren't doing so, 
+			then in order of preference: they either need to start, they need to 
+			be motivated to leave the team, or your team should give up on TDD.</font></li>
+		</ol>
+		</td>
+	</tr>
+</tbody></table>
+<p class="BT">&nbsp;</p>
+<p class="BT"><b><a name="Figure5">Figure 5</a>. Overview of testing on agile 
+project teams.</b></p>
+<p class="BT" align="center">
+<img border="0" src="./Introduction to Test Driven Development (TDD)_files/agileLifecycleTesting.jpg" alt="Agile Testing"></p>
+<p class="BT">&nbsp;</p>
+<p>&nbsp;</p>
+<h3>8. Who is <a name="ActuallyDoing">Actually Doing</a> This?</h3>
+<p>Unfortunately the adoption rate of TDD isn't as high as I would hope.&nbsp;
+<a href="http://www.agiledata.org/essays/tdd.html#Figure6AgileValidation">Figure 6</a>, which summarizes results from 
+the
+<a target="_blank" href="http://www.ambysoft.com/surveys/howAgileAreYou2010.html">
+2010 How Agile Are You? survey</a>, provides insight into which validation 
+strategies are being followed by the teams claiming to be agile.&nbsp; I suspect 
+that the adoption rates reported for developer TDD and acceptance TDD, 53% and 
+44% respectively, are much more realistic than those reported in
+my
+<a style="text-underline: single" target="_blank" href="http://www.ambysoft.com/surveys/tdd2008.html">
+2008 Test Driven Development (TDD) Survey</a>.</p>
+<p>&nbsp;</p>
+<p><b><a name="Figure6AgileValidation">Figure 6</a>. How agile teams validate 
+their own work.</b></p>
+<p align="center">
+<a href="http://www.ambysoft.com/surveys/howAgileAreYou2010.html" target="_blank">
+<img border="0" src="./Introduction to Test Driven Development (TDD)_files/agileCriteria2010Validating.jpg" alt="Agile Criterion: Validation"></a></p>
+<p>&nbsp;</p>
+<h3>9. <a name="Summary">Summary</a></h3>
+<p class="BT">
+Test-driven development (TDD) is a development technique where you must
+first write a test that fails before you write new functional code.<span style="mso-spacerun: yes">&nbsp;
+</span>TDD is being quickly adopted by agile software developers for development
+of application source code and is even being adopted by Agile DBAs for 
+<a href="http://www.agiledata.org/essays/databaseTesting.html">database
+development</a>.<span style="mso-spacerun:
+yes">&nbsp; </span>TDD should be seen as complementary to <a href="http://www.agilemodeling.com/">Agile
+Model Driven Development (AMDD)</a> approaches and the two can and should be
+used together.<span style="mso-spacerun: yes">&nbsp; </span>TDD does not replace
+traditional testing, instead it defines a proven way to ensure effective unit
+testing.<span style="mso-spacerun: yes">&nbsp; </span>A side effect of TDD is
+that the resulting tests are working examples for invoking the code, thereby
+providing a working specification for the code. My experience is that TDD works
+incredibly well in practice and it is something that all software
+developers should consider adopting.<o:p>
+</o:p>
+</p>
+<p class="BT">
+&nbsp;</p>
+<h3>10. <a name="Tools">Tools</a></h3>
+<p>The following is a representative list of TDD tools available to you.&nbsp; 
+Please <a href="http://www.ambysoft.com/scottAmbler.html#Email">email me</a> 
+with suggestions.&nbsp; I also maintain a list of
+<a href="http://www.agiledata.org/essays/tools.html">agile database development 
+tools</a>.</p>
+<ul>
+	<li><a target="_blank" href="http://www.cpputest.org/">cpputest</a></li>
+	<li><a href="http://www.csunit.org/">csUnit</a> (.Net)</li>
+	<li><a href="http://cunit.sourceforge.net/">CUnit</a></li>
+	<li><a href="http://dunit.sourceforge.net/">DUnit (Delphi)</a></li>
+	<li><a href="http://gojko.net/fitnesse/dbfit">DBFit</a></li>
+	<li><a href="http://www.dbunit.org/">DBUnit</a></li>
+	<li><a target="_blank" href="http://wiki.python.org/moin/DocTest">DocTest 
+	(Python)</a></li>
+	<li><a target="_blank" href="http://code.google.com/p/googletest/">
+	Googletest</a></li>
+		<li>
+		<p class="MsoNormal"><font size="2">
+		<a href="http://htmlunit.sourceforge.net/">HTMLUnit</a></font></p>
+		</li>
+	<li>
+		<p class="MsoNormal"><font size="2">
+		<a href="http://httpunit.sourceforge.net/">HTTPUnit</a></font></p>
+		</li>
+	<li><a href="http://www.jmock.org/">JMock</a></li>
+	<li><a href="http://www.junit.org/">JUnit</a></li>
+	<li><a target="_blank" href="http://code.google.com/p/moq/">Moq</a></li>
+	<li><a href="http://www.ndbunit.org/">NDbUnit</a></li>
+	<li><a href="http://www.nunit.com/">NUnit</a></li>
+	<li><a href="http://www.ounit.com/">OUnit</a></li>
+	<li><a href="http://www.phpunit.de/">PHPUnit</a></li>
+	<li><a href="http://pyunit.sourceforge.net/">PyUnit (Python)</a></li>
+	<li><a href="http://www.lastcraft.com/simple_test.php">SimpleTest</a></li>
+	<li><a href="http://testng.org/">TestNG</a></li>
+	<li><a target="_blank" href="http://wiki.python.org/moin/TestOob">TestOoB 
+	(Python)</a></li>
+	<li>
+	<a href="http://www.ruby-doc.org/stdlib/libdoc/test/unit/rdoc/classes/Test/Unit.html">
+	Test::Unit (Ruby)</a></li>
+	<li><a href="http://www.vbunit.org/">VBUnit</a></li>
+	<li>
+	<a href="http://weblogs.asp.net/rosherove/archive/2004/10/05/238201.aspx">
+	XTUnit</a></li>
+	<li>
+	<a target="_blank" href="http://xunit.codeplex.com/">xUnit.net </a></li>
+</ul>
+<p>.Net developers may find this
+<a target="_blank" href="http://xunit.codeplex.com/wikipage?title=Comparisons&referringTitle=Home">
+comparison of .Net TDD tools</a> interesting.</p>
+<p>&nbsp;</p>
+<h3>11. <a name="References">References</a> and Suggested Online Readings</h3>
+
+<table border="0" width="100%" id="table18">
+	<tbody><tr>
+		<td>
+		<ul>
+  <li><a href="http://www.agiledata.org/essays/bestPractices.html">Agile Database 
+	Best Practices</a></li>
+			<li>
+			<a href="http://www.agiledata.org/essays/agileDataModeling.html">Agile/Evolutionary 
+	Data Modeling</a></li>
+			<li>
+	<a href="http://www.agilemodeling.com/essays/agileDocumentation.htm">Agile 
+	Documentation: Strategies for Agile Software Development</a></li>
+	<li>
+	<a href="http://www.agilemodeling.com/essays/amdd.htm">Agile Model Driven 
+	Development (AMDD)</a></li>
+	<li>
+	<a target="_blank" href="http://www.ambysoft.com/essays/agileTesting.html">
+	Agile Testing and Quality Strategies: Discipline Over Rhetoric</a></li>
+	<li>
+	<a href="http://www.ddj.com/dept/architect/197007231?cid=Ambysoft">AMDD and 
+	TDD Go Hand-In-Hand</a></li>
+	<li><a href="http://www.methodsandtools.com/archive/archive.php?id=78">
+	Behavior-Driven Database Development</a><font size="2"> (Pramod Sadalage)</font></li>
+	<li>
+							<a href="http://www.agilemodeling.com/essays/modelingApproaches.htm">
+							Comparing the Various Approaches to Modeling in 
+							Software Development</a></li>
+	<li>
+<a href="http://www.agiledata.org/essays/culturalImpedanceMismatch.html">The 
+Cultural Impedance Mismatch Between Data Professionals and Application 
+Developers</a></li>
+	<li>
+	<a href="http://www.agiledata.org/essays/databaseTesting.html">Database 
+	Regression Testing</a></li>
+	<li>
+	<a href="http://www.ddj.com/dept/architect/193402922?cid=Ambysoft">Ensuring 
+	Database Quality</a></li>
+	<li>
+	<a href="http://www.agilemodeling.com/essays/executableSpecifications.htm">
+	Executable Specifications: An Agile Best Practice</a></li>
+	<li>
+	<a href="http://www.agiledata.org/essays/evolutionaryDevelopment.html">
+	Evolutionary Development: How Data Activities Fit In</a></li>
+	<li>
+	<a target="_blank" href="http://agilepainrelief.com/notesfromatooluser/2008/11/misconceptions-with-test-driven-development.html">
+	Misconceptions with TDD</a></li>
+	<li>
+													<o:p>
+													<a href="http://www.agilemodeling.com/essays/prioritizedRequirements.htm">
+													Prioritized Requirements: An 
+													Agile Best Practice</a></o:p></li>
+	<li>
+							<a href="http://www.agiledata.org/essays/databaseRefactoring.html">
+							The Process of Database Refactoring</a></li>
+			<li><font size="2">
+			<a href="http://www.agilemodeling.com/essays/singleSourceInformation.htm">Single Source Information: An Agile Practice for Effective Documentation</a></font></li>
+	<li>
+	<a target="_blank" href="http://biblio.gdinwiddie.com/biblio/StudiesOfTestDrivenDevelopment">
+	Studies about Test-Driven Development</a> (Bibliography maintained by George 
+	Dinwiddie)</li>
+	<li><a href="http://www.ambysoft.com/surveys/">Survey Results (Agile and 
+			Data Management)</a></li>
+	<li>
+	<a href="http://www.tassq.org/quarterly/docs/tassq_magazine-0609.pdf">Test 
+	Driven Database Development (TDDD)</a><font size="2">: September 2006 issue 
+	of <a href="http://www.tassq.org/quarterly/">Quality Software and Testing</a>.</font></li>
+	<li>
+	<a href="http://www.developer.com/design/article.php/3622546">Test 
+	Driven Development, A Portable Methodology</a></li>
+	<li>
+	<a href="http://www.amazon.com/exec/obidos/ASIN/0131016490/ambysoftinc">Test 
+	Driven Development: A Practical Guide</a><font size="2"> by Dave Astels</font></li>
+	<li>
+	<a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc">Test 
+	Driven Development: By Example</a><font size="2"> by Kent Beck</font></li>
+	<li>
+	<a href="http://doi.ieeecomputersociety.org/10.1109/MS.2007.91">Test Driven 
+	Development of Relational Databases</a><font size="2"> (IEEE Software, 
+	May/June 2007)</font></li>
+		</ul>
+
+<table border="0" width="100%" id="table19">
+  <tbody><tr>
+    <td width="7%">
+<b><a href="http://www.ambysoft.com/books/agileDatabaseTechniques.html">
+<img src="./Introduction to Test Driven Development (TDD)_files/0471202835.01.MZZZZZZZ.jpg" alt="Agile Database Techniques" border="0" width="114" height="140"></a></b></td>
+    <td width="93%"><font size="2">This book describes the philosophies and skills required for 
+    developers and database administrators to work together effectively on 
+    project teams following evolutionary software processes such as Extreme 
+    Programming (XP), the 
+	</font> 
+	<a href="http://www.ambysoft.com/unifiedprocess/rupIntroduction.html">Rational Unified Process (RUP)</a><font size="2">, the
+	</font>
+	<a href="http://www.ambysoft.com/unifiedprocess/agileUP.html">Agile Unified 
+	Process (AUP)</a><font size="2">, Feature Driven 
+    Development (FDD), Dynamic System Development 
+    Method (DSDM), or </font> <a href="http://www.enterpriseunifiedprocess.com/">The Enterprise Unified Process (EUP)</a><font size="2">.&nbsp; In March 2004 
+	it won a Jolt Productivity award.</font></td>
+  </tr>
+	</tbody></table>
+		</td>
+		<td>&nbsp;
+			<script type="text/javascript"><!--
+			google_ad_client = "pub-1563172974921293";
+			google_ad_width = 160;
+			google_ad_height = 600;
+			google_ad_format = "160x600_as";
+			google_ad_type = "text_image";
+			google_color_border = "6699CC";
+			google_color_bg = "003366";
+			google_color_link = "FFFFFF";
+			google_color_url = "AECCEB";
+			google_color_text = "AECCEB";
+			//2007-01-19: PageBottom
+			google_ad_channel = "5375874871";
+			//--></script>
+			<script type="text/javascript" src="./Introduction to Test Driven Development (TDD)_files/show_ads.js">
+			</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></td>
+	</tr>
+</tbody></table>
+
+<table border="0" width="100%" id="table20">
+	<tbody><tr>
+    <td width="7%">
+<b>
+      	<a href="http://www.ambysoft.com/books/refactoringDatabases.html">
+      <img src="./Introduction to Test Driven Development (TDD)_files/0321293533.01.MZZZZZZZ.jpg" alt="Refactoring Databases" border="0"></a></b></td>
+    <td width="92%">
+<p class="IT"><font size="2">This book describes, in detail, how to 
+</font> 
+<a href="http://www.agiledata.org/essays/databaseRefactoring.html">refactor a database schema</a><font size="2"> 
+to improve its design. The first section of the book overviews the fundamentals evolutionary database techniques in 
+	general and of database refactoring in detail.&nbsp; More importantly it 
+	presents strategies for implementing and deploying database refactorings, in 
+	the context of both "simple" single application databases and in "complex" 
+	multi-application databases.&nbsp; The second section, the majority of the 
+book, is a 
+</font> 
+<a href="http://www.agiledata.org/essays/databaseRefactoringCatalog.html">database refactoring reference catalog</a><font size="2">.&nbsp; It describes over 60 database refactorings, presenting 
+	data models overviewing each refactoring and the code to implement it.
+</font> </p>
+	<p>&nbsp;</p></td>
+  </tr>
+	<tr>
+    <td width="7%">
+<b><a href="http://www.ambysoft.com/books/theObjectPrimer.html"><img src="./Introduction to Test Driven Development (TDD)_files/0521540186.01.MZZZZZZZ.jpg" alt="The Object Primer 3rd Edition: Agile Model Driven Development (AMDD) with UML 2" border="0" width="106" height="140"></a></b></td>
+    <td width="92%"><font size="2">This book presents a full-lifecycle, 
+	</font> 
+	<a href="http://www.agilemodeling.com/essays/amdd.htm">agile model driven 
+	development (AMDD)</a><font size="2"> approach to software development.&nbsp; It is one of the 
+	few books which covers both object-oriented and data-oriented development in 
+	a comprehensive and coherent manner.&nbsp; Techniques the book covers 
+	include </font> <a href="http://www.agilemodeling.com/">Agile Modeling (AM)</a><font size="2">, 
+	</font> 
+	<a href="http://www.ambysoft.com/essays/floot.html">Full Lifecycle Object-Oriented Testing (FLOOT)</a><font size="2">, 
+	over 30 </font> <a href="http://www.agilemodeling.com/artifacts/">modeling techniques</a><font size="2">,
+	</font>
+	<a href="http://www.ambysoft.com/agileDatabaseTechniques.html">agile database techniques</a><font size="2">,
+	</font>
+	<a href="http://www.agiledata.org/essays/databaseRefactoring.html">refactoring</a><font size="2">, and 
+	</font> 
+	<a href="./Introduction to Test Driven Development (TDD)_files/Introduction to Test Driven Development (TDD).html">test driven development (TDD)</a><font size="2">.&nbsp; If you want to gain the skills required to 
+	build mission-critical applications in an agile manner, this is the book for 
+	you. </font> </td>
+  </tr>
+	<tr>
+    <td width="7%">
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0131016490/ambysoftinc">
+<img src="./Introduction to Test Driven Development (TDD)_files/0131016490.01.MZZZZZZZ.jpg" alt="TDD: A Practical Guide" border="0"></a></b></td>
+    <td width="92%"><font size="2">This is one of the first books about TDD, and 
+	in my opinion it still one of the best.&nbsp; This book is a Jolt award 
+	winner.</font></td>
+  </tr>
+	<tr>
+    <td width="7%">
+<b><a href="http://www.amazon.com/exec/obidos/ASIN/0321146530/ambysoftinc">
+<img src="./Introduction to Test Driven Development (TDD)_files/0321146530.01.MZZZZZZZ.jpg" alt="TDD by Example" border="0"></a></b></td>
+    <td width="92%"><font size="2">This is also a great overview of TDD and is 
+	also a great starting point for anyone new to it.</font></td>
+  </tr>
+	</tbody></table>
+		<p>&nbsp;</p>
+<h3>12. Translations</h3>
+<ul>
+	<li><a href="http://dingsea.cnblogs.com/archive/2006/05/08/393944.html">
+	Chinese</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3> <a name="LetUsHelp">Let Us Help</a></h3>
+                        <p>We actively work with clients around the world to 
+						improve their information technology (IT) practices, 
+						typically in the role of mentor/coach, team lead, or trainer.&nbsp; A full 
+						description of what we do, and how to contact us, can be
+						found at <a href="http://www.scottambler.com/">Scott W. 
+						Ambler + Associates</a>.</p>
+                        <p>&nbsp;<o:p></o:p></p><hr size="1">	
+
+				
+<p><a href="http://disciplinedagiledelivery.com/" target="_blank"><img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonDAD.gif" alt="Disciplined Agile Delivery: The Foundation for Scaling Agile"></a>
+<a href="http://agilemodeling.com/" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonAM.gif" alt="Agile Modeling: Practices for Scaling Agile"></a>
+<a href="http://agiledata.org/" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonAD.gif" alt="Agile Data: Practices for Scaling Agile"></a>
+<a href="http://enterpriseunifiedprocess.com/" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonEUP.gif" alt="EnterpriseUP: Agility at Scale"></a>
+<a href="http://www.ambysoft.com/unifiedprocess/agileUP.html" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonAUP.gif" alt="AgileUP: Towards Disciplined Agile Delivery"></a><a href="http://www.ambysoft.com/" target="_blank"><img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonAmbysoft.gif" alt="Ambysoft Inc."></a>
+<a href="http://www.software-development-experts.com/" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonSDPA.gif" alt="Software Development Practices Advisor"></a>
+<a href="http://scottambler.com/" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/logoSWAA.gif" alt="Scott Ambler + Associates"></a> <a href="http://twitter.com/scottwambler" target="_blank">
+								<img border="0" src="./Introduction to Test Driven Development (TDD)_files/buttonSWATwitter.gif" alt="Follow @scottwambler on Twitter!"></a></p>
+
+<hr size="1">	
+
+				
+<font size="2">
+	</font><table width="100%" id="table26">
+<tbody><tr>
+		<td>
+		<p align="left">
+<a href="http://www.ambysoft.com/licensing.html">Copyright</a><font size="2"> © 
+2002-2012 </font> <a href="http://www.ambysoft.com/scottAmbler.html">Scott W. Ambler</a></p></td>
+		<td>
+		<p align="right"><font size="2">This site owned by </font> <a href="http://www.ambysoft.com/">Ambysoft Inc.</a><font size="2">
+		</font>
+		</p></td>
+	</tr>
+
+</tbody></table>
+
+				
+<p class="MsoNormal">&nbsp;</p>
+
+
+
+</body></html>
